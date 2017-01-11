@@ -1,0 +1,51 @@
+ 【时间】:2016-10-22 20:11:50,129
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:MachineLayout
+ 【线程ID】: 10 
+ 【日志内容】:机台信息为空
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-22 20:13:56,769
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetParamChartProperties
+ 【线程ID】: 27 
+ 【日志内容】:获取模块参数失败
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.GetParamChartProperties(Int32 layoutId) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 604
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-22 20:14:14,056
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetParamChartProperties
+ 【线程ID】: 27 
+ 【日志内容】:获取模块参数失败
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.GetParamChartProperties(Int32 layoutId) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 604
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-22 20:14:26,202
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetParamChartProperties
+ 【线程ID】: 29 
+ 【日志内容】:获取模块参数失败
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.GetParamChartProperties(Int32 layoutId) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 604
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-22 20:14:34,538
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetParamChartProperties
+ 【线程ID】: 26 
+ 【日志内容】:获取模块参数失败
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.GetParamChartProperties(Int32 layoutId) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 604
+ 
+---------------------------------------------------------------------------------------------------------------

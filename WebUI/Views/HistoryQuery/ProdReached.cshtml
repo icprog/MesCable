@@ -1,0 +1,142 @@
+﻿@section Style{
+    @Styles.Render("~/Content/jsmind")
+    @Styles.Render("~/Content/bootstrap-table")
+
+
+}
+
+@section Header{
+    <style type="text/css">
+        #proc_jsmind {
+            height: 400px;
+        }
+    </style>}
+<body class="gray-bg">
+
+    <div class="row">
+
+        <div class="col-sm-12" id="qt_picture">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+
+                    <div class="row">
+
+                        <div class="col-sm-9">
+                            <label class="col-sm-2 control-label" style="text-align:right; padding-right:0px;margin-top:8px">轴号：</label>
+                            <div class="col-sm-7">
+                                <div class="input-group" style="margin-left:2px">
+                                    <input type="text" id="axis_input" class="form-control">
+                                    <div class="input-group-btn">
+
+                                        <button type="button" class="btn btn-white" id="axis_btn">
+                                            <span class="fa fa-search"></span>
+                                        </button>
+                                        <ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>
+                                    </div>
+                                </div>
+                                <!-- /btn-group -->
+                            </div>
+
+                           
+                        </div>
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+        <div class="row " style="background-color:white">
+            <div class="col-sm-12">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <i class="fa fa-info-circle"></i> 详情
+                    </div>
+                    <div class="panel-body" style="padding:initial">
+                        <div class="container" style="width:100%">
+                            <table id="qt_detail_table"></table>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+@section Footer{
+    @Scripts.Render("~/Scripts/bootstrap-suggest")
+    @Scripts.Render("~/Scripts/jsmind")
+    @Scripts.Render("~/Scripts/bootstrap-table")
+
+
+    <script type="text/javascript">
+        $(function (mcAdmin) {
+            var procJsMind = {};
+
+            var $detailTable = $('#qt_detail_table');
+            ///////////////////////quality trace picture load //////////////////////
+            $("#axis_btn").on("click", function () {
+                var axisNumStr = $("#axis_input").val();
+                $detailTable.bootstrapTable("removeAll");
+
+                $.post("/HistoryQuery/GetAxisDetailAction", { axisNumStr: axisNumStr }, function (retData) {
+                    mcAdmin.dealRetData(retData, function () {
+                        var tabData = retData.Appendix;
+                        $detailTable.bootstrapTable('append', tabData);
+                    })
+                }, "json")
+
+            })
+
+            ////////////////////////////talbe//////////////////
+
+            $detailTable.bootstrapTable({
+                columns: [{
+                    field: 'Axis_No',
+                    title: '轴号'
+                }, {
+                    field: 'SpecName',
+                    title: '规格'
+                }, {
+                    field: 'SpecColor',
+                    title: '颜色'
+                }, {
+                    field: 'ODMax',
+                    title: '线径最大值'
+                },
+                 {
+                     field: 'ODMin',
+                     title: '线径最小值'
+                 },
+                 
+                 {
+                     field: 'MachineName',
+                     title: '机台'
+                 },
+                 {
+                     field: 'RolledYield',
+                     title: '直通率'
+                 },
+                 {
+                     field: 'EmployeeName',
+                     title: '操作人员'
+                 },
+                 {
+                     field: 'GeneratorTime',
+                     title: '日期'
+                 },
+                 {
+                     field: 'Supplier',
+                     title: '供应商'
+                 }, ]
+
+            })
+
+
+        }(window.parent.mcAdmin))
+        
+
+    </script>
+}

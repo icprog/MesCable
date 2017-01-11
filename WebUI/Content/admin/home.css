@@ -1,0 +1,67 @@
+﻿.info-top {
+    position: fixed;
+    z-index: 2;
+    background: #FFF;
+    border-radius: 2px;
+    box-shadow: 0px 2px 4px #ddd;
+    margin: 0px;
+    opacity: 0.95;
+    width: calc(100% - 40px);
+}
+
+    .info-top ul {
+        margin: 8px;
+    }
+
+    .info-top li {
+        color: #627D9C;
+        display: inline-block;
+        font-size: 14px;
+        height: 33px;
+        line-height: 33px;
+        padding-left: 28px;
+        margin-left: 10px;
+    }
+
+        .info-top li.green {
+            background: url(/img/map-green.png) no-repeat center left;
+        }
+
+        .info-top li.red {
+            background: url(/img/map-red.png) no-repeat center left;
+        }
+
+        .info-top li.yellow {
+            background: url(/img/map-yellow.png) no-repeat center left;
+        }
+
+        .info-top li.black {
+            background: url(/img/map-black.png) no-repeat center left;
+        }
+
+        .info-top li.back {
+            background: url(/img/map-back.png) no-repeat center left;
+            cursor: pointer;
+        }
+
+        .info-top li.user {
+            background: url(/img/map-user.png) no-repeat center left;
+        }
+
+        .info-top li.phone {
+            background: url(/img/map-phone.png) no-repeat center left;
+        }
+
+
+.map-but {
+    font-family: "微软雅黑",Arial, Helvetica, sans-serif;
+    border-radius: 2px;
+    width: 88px;
+    background: #0A7FF9 url(//img/map-search.png) no-repeat 10px center;
+    height: 32px;
+    font-size: 16px;
+    padding-left: 18px;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+}

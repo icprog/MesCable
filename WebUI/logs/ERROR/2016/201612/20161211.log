@@ -1,0 +1,1440 @@
+ 【时间】:2016-12-11 10:42:20,670
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 24 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 127
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 10:42:26,380
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 8 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016113'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 127
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:18:09,215
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 8 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:18:11,169
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 8 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:18:12,714
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 21 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:18:14,210
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 8 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:18:15,602
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 34 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:18:17,284
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 34 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:18:18,824
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 33 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:18:21,748
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 8 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:18:23,190
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 25 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:18:24,942
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 8 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:18:28,322
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 33 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:18:31,938
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 8 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:18:33,336
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 33 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:18:34,886
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 8 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:18:38,144
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 25 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:18:40,416
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 49 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:18:45,194
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 8 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:18:46,600
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 34 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:18:47,964
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 8 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:18:49,310
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 21 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:18:50,779
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 8 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:18:52,328
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 8 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:18:53,858
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 8 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:18:55,750
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 8 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:18:57,079
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 33 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:18:58,671
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 33 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:19:00,473
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 8 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:19:01,912
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 8 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:19:09,128
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 15 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:19:18,344
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 33 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:19:19,986
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 8 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:29:57,894
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 54 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:31:08,845
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 73 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:31:10,390
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 67 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:31:12,124
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 67 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:31:13,713
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 75 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:31:15,433
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 67 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:31:17,401
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 70 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:31:19,090
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 67 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:31:20,577
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 74 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:31:25,486
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 67 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:31:27,432
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 67 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:31:30,072
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 75 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:31:35,497
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 67 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:31:36,992
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 70 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:31:38,405
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 74 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:31:39,788
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 69 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:31:41,667
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 67 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:31:43,615
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 69 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:31:45,270
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 67 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:31:46,541
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 75 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:31:48,346
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 67 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:32:12,400
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 67 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:32:14,704
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 67 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:32:16,484
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 67 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:32:19,000
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 67 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:32:20,639
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 75 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:32:22,165
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 67 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 11:32:25,180
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 67 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 125
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 15:39:39,104
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 25 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 34
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 27
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 141
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 16:03:52,402
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 7 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 158
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 16:03:54,603
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 7 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 158
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 16:04:28,978
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 7 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 158
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 16:05:18,041
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 9 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 158
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 16:06:35,887
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 8 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 158
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 16:11:37,978
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 7 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 202
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 16:11:39,283
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 9 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 202
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 16:11:40,578
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 14 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 202
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 16:11:41,793
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 9 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 202
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 16:11:42,754
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 7 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 202
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 16:11:43,233
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 9 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 202
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 16:11:43,937
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 8 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 202
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 16:11:44,639
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 15 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 202
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 16:11:45,086
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 8 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 202
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 16:11:45,521
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 9 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 202
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 16:12:49,098
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 8 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 202
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 16:12:50,329
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 11 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 202
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 16:12:51,372
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 7 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 202
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 16:12:51,867
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 9 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 202
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 16:12:52,326
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 8 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 202
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 16:17:24,952
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 7 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 203
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 16:17:31,023
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 7 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 203
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 16:17:50,647
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 7 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 203
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 16:17:51,616
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 9 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 203
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 16:17:52,114
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 8 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 203
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 16:17:52,704
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 10 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 203
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 16:18:02,687
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 7 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 203
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 16:18:04,858
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 7 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 203
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 16:18:05,424
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 10 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 203
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 16:18:06,583
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 7 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 203
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 16:18:16,433
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 7 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 203
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 16:18:32,532
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 7 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 16:18:38,632
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 7 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 16:18:53,246
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 7 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 16:19:17,217
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 7 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 16:19:22,580
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 7 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 16:21:48,504
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 10 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 16:25:39,160
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 7 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 16:30:37,730
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 8 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 16:32:02,161
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 31 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 16:33:09,612
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 33 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 16:33:10,453
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 8 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 16:48:14,839
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 5 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 204
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 16:56:17,089
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 7 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 204
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 17:01:34,244
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 9 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 204
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 17:02:16,719
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 7 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 204
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 17:02:18,757
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 8 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 204
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 17:02:19,512
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 7 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 204
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 17:02:20,144
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 7 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 204
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 17:02:20,727
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 7 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 204
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 17:02:51,485
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 9 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 204
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 17:09:11,517
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 24 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 204
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 17:13:13,540
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 34 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 204
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 17:13:14,207
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 17 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 204
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 17:13:14,659
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 11 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 204
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 17:13:15,091
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 17 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 204
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 17:15:01,337
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 38 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 204
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 17:15:02,025
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 20 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 204
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 17:15:02,619
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 34 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 204
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 17:15:03,218
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 11 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 204
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 17:15:04,037
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 34 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 204
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 18:55:31,712
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 8 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 204
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 18:55:32,678
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 10 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 204
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 18:56:00,949
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 5 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 204
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 18:56:01,907
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 9 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 204
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 18:56:02,958
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 8 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 204
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 18:56:03,406
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 10 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 204
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 18:56:04,068
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 9 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 204
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 18:56:04,651
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 5 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 204
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 18:56:05,307
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 8 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 204
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 18:56:05,942
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 10 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 204
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 18:56:06,480
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 5 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 204
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 18:56:07,119
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 9 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 204
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 18:56:08,497
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 8 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 204
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 18:56:09,065
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 5 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 204
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-11 18:56:09,566
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 9 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Invalid object name 'HISDATA2016114'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 204
+ 
+---------------------------------------------------------------------------------------------------------------

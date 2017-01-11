@@ -1,0 +1,11 @@
+D:\MES\MesCable\DALFactory\bin\Release\MesWeb.DALFactory.dll
+D:\MES\MesCable\DALFactory\bin\Release\MesWeb.IDAL.dll
+D:\MES\MesCable\DALFactory\bin\Release\MesWeb.Model.dll
+D:\MES\MesCable\DALFactory\bin\Release\MesWeb.OracleDAL.dll
+D:\MES\MesCable\DALFactory\bin\Release\MesWeb.Common.dll
+D:\MES\MesCable\DALFactory\bin\Release\MesWeb.DBUtility.dll
+D:\MES\MesCable\DALFactory\bin\Release\OpenSmtp.dll
+D:\MES\MesCable\DALFactory\bin\Release\System.Data.SQLite.dll
+D:\MES\MesCable\DALFactory\bin\Release\MySql.Data.dll
+D:\MES\MesCable\DALFactory\obj\Release\DALFactory.csprojResolveAssemblyReference.cache
+D:\MES\MesCable\DALFactory\obj\Release\MesWeb.DALFactory.dll

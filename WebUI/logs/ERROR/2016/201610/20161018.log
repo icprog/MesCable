@@ -1,0 +1,200 @@
+ 【时间】:2016-10-18 14:33:05,571
+ 【级别】:ERROR
+ 【类名】:WebUI.Models.RealTimeConnection.TCPConnection:StartConnection
+ 【线程ID】: 19 
+ 【日志内容】:连接数据服务器失败，请检查IP和端口
+ 【日记详细】：System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:7788
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 WebUI.Models.RealTimeConnection.TCPConnection.<StartConnection>b__16_0(IAsyncResult asyncResult) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Models\RealTimeConnection\TCPConnection.cs:行号 217
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-18 14:33:05,571
+ 【级别】:ERROR
+ 【类名】:WebUI.Models.RealTimeConnection.TCPConnection:StartConnection
+ 【线程ID】: 17 
+ 【日志内容】:连接数据服务器失败，请检查IP和端口
+ 【日记详细】：System.ArgumentException: 未从此类上对应的异步方法中返回 IAsyncResult 对象。
+参数名: asyncResult
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 WebUI.Models.RealTimeConnection.TCPConnection.<StartConnection>b__16_0(IAsyncResult asyncResult) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Models\RealTimeConnection\TCPConnection.cs:行号 217
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-18 14:33:10,269
+ 【级别】:ERROR
+ 【类名】:WebUI.Models.RealTimeConnection.TCPConnection:StartConnection
+ 【线程ID】: 17 
+ 【日志内容】:连接数据服务器失败，请检查IP和端口
+ 【日记详细】：System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:7788
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 WebUI.Models.RealTimeConnection.TCPConnection.<StartConnection>b__16_0(IAsyncResult asyncResult) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Models\RealTimeConnection\TCPConnection.cs:行号 217
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-18 14:33:15,599
+ 【级别】:ERROR
+ 【类名】:WebUI.Models.RealTimeConnection.TCPConnection:StartConnection
+ 【线程ID】: 19 
+ 【日志内容】:连接数据服务器失败，请检查IP和端口
+ 【日记详细】：System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:7788
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 WebUI.Models.RealTimeConnection.TCPConnection.<StartConnection>b__16_0(IAsyncResult asyncResult) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Models\RealTimeConnection\TCPConnection.cs:行号 217
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-18 14:33:20,796
+ 【级别】:ERROR
+ 【类名】:WebUI.Models.RealTimeConnection.TCPConnection:StartConnection
+ 【线程ID】: 17 
+ 【日志内容】:连接数据服务器失败，请检查IP和端口
+ 【日记详细】：System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:7788
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 WebUI.Models.RealTimeConnection.TCPConnection.<StartConnection>b__16_0(IAsyncResult asyncResult) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Models\RealTimeConnection\TCPConnection.cs:行号 217
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-18 14:33:24,483
+ 【级别】:ERROR
+ 【类名】:WebUI.Models.RealTimeConnection.TCPConnection:StartConnection
+ 【线程ID】: 17 
+ 【日志内容】:连接数据服务器失败，请检查IP和端口
+ 【日记详细】：System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:7788
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 WebUI.Models.RealTimeConnection.TCPConnection.<StartConnection>b__16_0(IAsyncResult asyncResult) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Models\RealTimeConnection\TCPConnection.cs:行号 217
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-18 14:33:53,569
+ 【级别】:ERROR
+ 【类名】:WebUI.Models.RealTimeConnection.TCPConnection:StartConnection
+ 【线程ID】: 17 
+ 【日志内容】:连接数据服务器失败，请检查IP和端口
+ 【日记详细】：System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:7788
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 WebUI.Models.RealTimeConnection.TCPConnection.<StartConnection>b__16_0(IAsyncResult asyncResult) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Models\RealTimeConnection\TCPConnection.cs:行号 217
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-18 14:34:15,105
+ 【级别】:ERROR
+ 【类名】:WebUI.Models.RealTimeConnection.TCPConnection:StartConnection
+ 【线程ID】: 17 
+ 【日志内容】:连接数据服务器失败，请检查IP和端口
+ 【日记详细】：System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:7788
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 WebUI.Models.RealTimeConnection.TCPConnection.<StartConnection>b__16_0(IAsyncResult asyncResult) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Models\RealTimeConnection\TCPConnection.cs:行号 217
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-18 14:34:21,507
+ 【级别】:ERROR
+ 【类名】:WebUI.Models.RealTimeConnection.TCPConnection:StartConnection
+ 【线程ID】: 17 
+ 【日志内容】:连接数据服务器失败，请检查IP和端口
+ 【日记详细】：System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:7788
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 WebUI.Models.RealTimeConnection.TCPConnection.<StartConnection>b__16_0(IAsyncResult asyncResult) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Models\RealTimeConnection\TCPConnection.cs:行号 217
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-18 14:34:49,474
+ 【级别】:ERROR
+ 【类名】:WebUI.Models.RealTimeConnection.TCPConnection:StartConnection
+ 【线程ID】: 17 
+ 【日志内容】:连接数据服务器失败，请检查IP和端口
+ 【日记详细】：System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:7788
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 WebUI.Models.RealTimeConnection.TCPConnection.<StartConnection>b__16_0(IAsyncResult asyncResult) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Models\RealTimeConnection\TCPConnection.cs:行号 217
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-18 14:34:58,647
+ 【级别】:ERROR
+ 【类名】:WebUI.Models.RealTimeConnection.TCPConnection:StartConnection
+ 【线程ID】: 17 
+ 【日志内容】:连接数据服务器失败，请检查IP和端口
+ 【日记详细】：System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:7788
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 WebUI.Models.RealTimeConnection.TCPConnection.<StartConnection>b__16_0(IAsyncResult asyncResult) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Models\RealTimeConnection\TCPConnection.cs:行号 217
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-18 14:35:36,025
+ 【级别】:ERROR
+ 【类名】:WebUI.Models.RealTimeConnection.TCPConnection:StartConnection
+ 【线程ID】: 17 
+ 【日志内容】:连接数据服务器失败，请检查IP和端口
+ 【日记详细】：System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:7788
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 WebUI.Models.RealTimeConnection.TCPConnection.<StartConnection>b__16_0(IAsyncResult asyncResult) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Models\RealTimeConnection\TCPConnection.cs:行号 217
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-18 14:35:39,112
+ 【级别】:ERROR
+ 【类名】:WebUI.Models.RealTimeConnection.TCPConnection:StartConnection
+ 【线程ID】: 17 
+ 【日志内容】:连接数据服务器失败，请检查IP和端口
+ 【日记详细】：System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:7788
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 WebUI.Models.RealTimeConnection.TCPConnection.<StartConnection>b__16_0(IAsyncResult asyncResult) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Models\RealTimeConnection\TCPConnection.cs:行号 217
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-18 14:36:13,961
+ 【级别】:ERROR
+ 【类名】:WebUI.Models.RealTimeConnection.TCPConnection:StartConnection
+ 【线程ID】: 17 
+ 【日志内容】:连接数据服务器失败，请检查IP和端口
+ 【日记详细】：System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:7788
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 WebUI.Models.RealTimeConnection.TCPConnection.<StartConnection>b__16_0(IAsyncResult asyncResult) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Models\RealTimeConnection\TCPConnection.cs:行号 217
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-18 15:20:06,646
+ 【级别】:ERROR
+ 【类名】:WebUI.Models.RealTimeConnection.TCPConnection:StartConnection
+ 【线程ID】: 8 
+ 【日志内容】:连接数据服务器失败，请检查IP和端口
+ 【日记详细】：System.ArgumentException: 未从此类上对应的异步方法中返回 IAsyncResult 对象。
+参数名: asyncResult
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 WebUI.Models.RealTimeConnection.TCPConnection.<StartConnection>b__16_0(IAsyncResult asyncResult) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Models\RealTimeConnection\TCPConnection.cs:行号 217
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-18 15:20:06,647
+ 【级别】:ERROR
+ 【类名】:WebUI.Models.RealTimeConnection.TCPConnection:StartConnection
+ 【线程ID】: 36 
+ 【日志内容】:连接数据服务器失败，请检查IP和端口
+ 【日记详细】：System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:7788
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 WebUI.Models.RealTimeConnection.TCPConnection.<StartConnection>b__16_0(IAsyncResult asyncResult) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Models\RealTimeConnection\TCPConnection.cs:行号 217
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-18 17:07:31,379
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.StoreMgmtController:SearchMaterials
+ 【线程ID】: 7 
+ 【日志内容】:查询物料的操作人员不存在
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-18 17:21:55,677
+ 【级别】:ERROR
+ 【类名】:WebUI.Models.RealTimeConnection.TCPConnection:StartConnection
+ 【线程ID】: 8 
+ 【日志内容】:连接数据服务器失败，请检查IP和端口
+ 【日记详细】：System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:7788
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 WebUI.Models.RealTimeConnection.TCPConnection.<StartConnection>b__16_0(IAsyncResult asyncResult) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Models\RealTimeConnection\TCPConnection.cs:行号 217
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-18 17:21:55,682
+ 【级别】:ERROR
+ 【类名】:WebUI.Models.RealTimeConnection.TCPConnection:StartConnection
+ 【线程ID】: 23 
+ 【日志内容】:连接数据服务器失败，请检查IP和端口
+ 【日记详细】：System.ArgumentException: 未从此类上对应的异步方法中返回 IAsyncResult 对象。
+参数名: asyncResult
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 WebUI.Models.RealTimeConnection.TCPConnection.<StartConnection>b__16_0(IAsyncResult asyncResult) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Models\RealTimeConnection\TCPConnection.cs:行号 217
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-18 17:33:20,083
+ 【级别】:ERROR
+ 【类名】:WebUI.Models.RealTimeConnection.TCPConnection:StartConnection
+ 【线程ID】: 44 
+ 【日志内容】:连接数据服务器失败，请检查IP和端口
+ 【日记详细】：System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:7788
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 WebUI.Models.RealTimeConnection.TCPConnection.<StartConnection>b__16_0(IAsyncResult asyncResult) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Models\RealTimeConnection\TCPConnection.cs:行号 217
+ 
+---------------------------------------------------------------------------------------------------------------

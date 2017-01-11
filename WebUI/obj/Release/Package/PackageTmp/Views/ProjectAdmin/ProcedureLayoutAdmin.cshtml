@@ -1,0 +1,319 @@
+﻿@model MesWeb.ViewModel.Mes.VM_LayoutPicture
+@section Style{
+    @Styles.Render("~/Content/hotspot")
+    @Styles.Render("~/Content/context-menu")
+    @Styles.Render("~/Content/sweetalert")
+    @Styles.Render("~/Content/bootstrap-datepicker")
+}
+@section Header{
+    <style>
+        .left-offset {
+            margin-left: -20px;
+        }
+    </style>
+}
+<body>
+    <div class="col-sm-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>车间区域分布情况 </h5>
+                <div class="ibox-tools">
+                    <a class="collapse-link">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="calendar.html#">
+                        <i class="fa fa-wrench"></i>
+                    </a>
+                    <a class="close-link">
+                        <i class="fa fa-times"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="ibox-content" id="topview_div">
+                <img src="@Html.Raw(Model.PicUrl)" id="topview_pic" class="img-responsive center-block HotspotPlugin_Overlay">
+            </div>
+        </div>
+    </div>
+
+
+    @*add sensor modal dialog*@
+    <div class="modal inmodal" id="add_layout_modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content animated flipInY">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">添加机台</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal m-t" id="add_layout_modal_form">
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">名称：</label>
+                            <div class="col-sm-4">
+                                <input name="MachineName" type="text" class="form-control">
+                            </div>
+                            <label class="col-sm-2 control-label">编号：</label>
+                            <div class="col-sm-4">
+                                <input name="AddressNumber" type="text" class="form-control">
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">功率：</label>
+                            <div class="col-sm-4">
+                                <input name="MachinePower" type="text" class="form-control">
+                            </div>
+                            <label class="col-sm-2 control-label">效率：</label>
+                            <div class="col-sm-4">
+                                <input name="MachineEfficiency" type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">厂家：</label>
+                            <div class="col-sm-4">
+                                <input name="ManufactureName" type="text" class="form-control">
+                            </div>
+                            <label class="col-sm-3 control-label left-offset">购入日期：</label>
+                            <div class="input-group date col-sm-3">
+                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                <input name="ProductDate" type="text" class="form-control" value="2016-9-30">
+                            </div>
+                        </div>
+                        <div class="form-group " id="machine_type_csd">
+                            <label class="col-sm-2 left control-label">类型：</label>
+                            <div class="col-sm-4">
+                                <select class="step1 form-control" name="MachineTypeID">
+                                </select>
+                            </div>
+
+                        </div>
+
+                    </form>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" id="add_layout_modal_submit">提交</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+@section Footer{
+    @Scripts.Render("~/Scripts/hotspot")
+    @Scripts.Render("~/Scripts/context-menu")
+    @Scripts.Render("~/Scripts/sweetalert")
+    @Scripts.Render("~/Scripts/bootstrap-datepicker")
+    @Scripts.Render("~/Scripts/cascadingdropdown")
+    <script>
+        var hp;
+        var wsLayout = @Html.Raw(Json.Encode(Model));
+        var imgEvent;
+
+        (function($,mcAdmin){
+
+            $("#machine_type_csd").cascadingDropdown({
+                selectBoxes: [
+                    {
+                        selector: '.step1',
+                        source: "/ProjectAdmin/GetMachieTypeListAction/",
+                        usePost: true,
+                        useJson: true
+                    }
+
+                ],
+                onReady: function (event, allValues) {
+
+                }
+
+            });
+
+
+            hp = $("#topview_div").hotspot({
+                expandAll:true,
+                mode:"admin",
+                interactivity: 'mousedown',
+                data: {
+                    Id: wsLayout.LayoutPictureID,
+                    Pixel: { width: $("#topview_pic").width(), height: $("#topview_pic").height() },
+                    Spots:wsLayout.SubSpotItems
+                },
+                spotRightClick: function (div, spot, spotIndex, e) {
+
+
+                },
+                imgRightClick: function (e) {
+                    imgEvent = e;
+                }
+            });
+
+            $.contextMenu({
+                selector: '.HotspotPlugin_Hotspot',
+                callback: function(key, options) {
+                    switch (key) {
+                        case "view":
+                            viewSubLayout();
+                            break;
+                        case "delete":
+                            deleteClickLayoutView();
+                            break;
+                        case "property":
+                            break;
+                        default:
+                            break;
+                    }
+                },
+                items: {
+                    "view": {name: "查看", icon: "fa-eye"},
+                    "delete": {name: "删除", icon: "fa-edit"},
+                    "quit": {name: "离开", icon:"fa-sign-out" }
+                }
+            });
+
+            function viewSubLayout() {
+                mcAdmin.addTab(hp.getSelectSpot().Title+"机台"+"施工管理","/ProjectAdmin/MachineLayoutAdmin/"+hp.getSelectSpot().LayoutPictureID);
+
+            }
+
+
+            $(".Hotspot_Block").on("click",function(e){
+
+                return false;
+            });
+
+            /*############################Start Admin Model###########################################*/
+
+            $('.input-group.date').datepicker({
+                todayBtn: "linked",
+                keyboardNavigation: false,
+                forceParse: false,
+                calendarWeeks: true,
+                autoclose: true
+            });
+
+
+          
+
+            $("#add_layout_modal_submit").on("click",submitNewLayoutView);
+
+            function serialFormInput(form){
+                var jsonObj ={};
+                $(form+"  input").each(function (i, v) {
+                    jsonObj[$(v).attr("name")] = $(v).val();
+                })
+                $(form+"  select").each(function (i, v) {
+                    jsonObj[$(v).attr("name")] = $(v).val();
+                })
+                return jsonObj;
+            }
+
+            function resetFormInput(form){
+                $(form+"  input").each(function (i, v) {
+                    $(v).val("");
+                });
+            }
+
+            //add img context menu
+            $.contextMenu({
+                selector: '#topview_pic',
+                callback: function(key, options) {
+                    switch (key) {
+                        case "add":
+                            addClickLayoutView();
+                            break;
+                        default:
+                            break;
+                    }
+
+                },
+                items: {
+                    "add":      {name: "添加", icon: "fa-plus"},
+                    "quit":     {name: "离开", icon:"fa-sign-out" }
+                }
+            })
+
+            function addClickLayoutView() {
+                resetFormInput("#add_layout_modal_form");
+                $("#add_layout_modal").modal();
+            }
+
+            function deleteClickLayoutView(){
+                $.ajax({
+                    url:"/ProjectAdmin/DeleteMachineLayoutAction",
+                    data:{Id:hp.getSelectSpot().LayoutPictureID},
+                    type:"post",
+                    dataType:"json",
+                    success:function(retData){
+                        if(retData.Code==RESULT_CODE.OK){
+                            swal({
+                                title: "恭喜！",
+                                text: retData.Content,
+                                type: "success",
+                            },function(){
+
+                                mcAdmin.reloadCurrentTab()
+                            });
+                        }else{
+                            swal({
+                                title: "抱歉！",
+                                text: retData.Content,
+                                type: "error",
+                            },function(){
+
+                                mcAdmin.reloadCurrentTab()
+                            });
+                        }
+                    }
+                })
+            }
+
+
+            function submitNewLayoutView(){
+                var layout = serialFormInput("#add_layout_modal_form");
+                layout.ParentLayoutPictureID = wsLayout.LayoutPictureID;
+                layout.XPostion = hp.getRelativeXY(imgEvent).X.toFixed(0);
+                layout.YPostion = hp.getRelativeXY(imgEvent).Y.toFixed(0);
+                layout.PicWidth = $("#topview_pic").width();
+                layout.PicHeight = $("#topview_pic").height();
+                layout.State = -1;
+                console.log(layout)
+                $("#add_layout_modal").modal("hide");
+                addLayoutAction(layout);
+            }
+
+            function addLayoutAction(layout) {
+                $.ajax({
+                    url:"/ProjectAdmin/AddMachineLayoutAction",
+                    data:{machineAdmin:layout},
+                    dataType:"json",
+                    async:true,
+                    type:"post",
+                    success:function(retData){
+                        if(retData.Code == RESULT_CODE.OK){
+                            swal({
+                                title: "恭喜！",
+                                text: retData.Content,
+                                type: "success",
+                            },function(){
+                                mcAdmin.reloadCurrentTab()
+                            });
+
+                        }else{
+                            swal({
+                                title: "系统故障！",
+                                text: retData.Content,
+                                type: "error",
+                            });
+                        }
+
+                    }
+
+                })
+            }
+
+
+
+            /*############################End Admin Model###########################################*/
+        }($,window.parent.mcAdmin))
+    </script>
+}

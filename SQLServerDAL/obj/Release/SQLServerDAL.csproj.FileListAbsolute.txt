@@ -1,0 +1,13 @@
+D:\MES\MesCable\SQLServerDAL\obj\Release\SQLServerDAL.csprojResolveAssemblyReference.cache
+D:\MES\MesCable\SQLServerDAL\bin\Release\MesWeb.SQLServerDAL.dll
+D:\MES\MesCable\SQLServerDAL\bin\Release\MesWeb.Common.dll
+D:\MES\MesCable\SQLServerDAL\bin\Release\MesWeb.DBUtility.dll
+D:\MES\MesCable\SQLServerDAL\bin\Release\MesWeb.IDAL.dll
+D:\MES\MesCable\SQLServerDAL\bin\Release\MesWeb.Model.dll
+D:\MES\MesCable\SQLServerDAL\bin\Release\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\MES\MesCable\SQLServerDAL\bin\Release\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\MES\MesCable\SQLServerDAL\bin\Release\Microsoft.Practices.ObjectBuilder.dll
+D:\MES\MesCable\SQLServerDAL\bin\Release\OpenSmtp.dll
+D:\MES\MesCable\SQLServerDAL\bin\Release\System.Data.SQLite.dll
+D:\MES\MesCable\SQLServerDAL\bin\Release\MySql.Data.dll
+D:\MES\MesCable\SQLServerDAL\obj\Release\MesWeb.SQLServerDAL.dll

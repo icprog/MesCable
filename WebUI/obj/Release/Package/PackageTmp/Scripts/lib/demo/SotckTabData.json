@@ -1,0 +1,38 @@
+﻿[
+  {
+    "cat": "胶料",
+    "stock": "598",
+    "amount": "1000",
+    "unit": "千克",
+    "model": "glue-0x58"
+  },
+  {
+    "cat": "铜线",
+    "stock": "128",
+    "amount": "1000",
+    "unit": "千米",
+    "model": "copper-0x56"
+  },
+  {
+    "cat": "铝线",
+    "stock": "586",
+    "amount": "1000",
+    "unit": "千米",
+    "model": "alum-0x57"
+  },
+  {
+    "cat": "铁丝",
+    "stock": "363",
+    "amount": "1000",
+    "unit": "千米",
+    "model": "iron-0x55"
+  },
+  {
+    "cat": "橡胶",
+    "stock": "165",
+    "amount": "500",
+    "unit": "千克",
+    "model": "sbr-0x54"
+
+  }
+]

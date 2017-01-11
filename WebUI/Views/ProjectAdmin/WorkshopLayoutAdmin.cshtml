@@ -1,0 +1,409 @@
+﻿@model MesWeb.ViewModel.Mes.VM_LayoutPicture
+@section Style{
+    @Styles.Render("~/Content/hotspot")
+    @Styles.Render("~/Content/context-menu")
+    @Styles.Render("~/Content/chosen")
+
+
+}
+
+<body>
+    <div class="col-sm-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>车间区域分布情况 </h5>
+                <div class="ibox-tools">
+                    <a class="collapse-link">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="calendar.html#">
+                        <i class="fa fa-wrench"></i>
+                    </a>
+                    <a class="close-link">
+                        <i class="fa fa-times"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="ibox-content" id="topview_div">
+                <img src="@Html.Raw(Model.PicUrl)" id="topview_pic" class="img-responsive center-block HotspotPlugin_Overlay">
+            </div>
+        </div>
+    </div>
+
+
+    @*add dist modal dialog*@
+    <div class="modal inmodal" id="add_layout_modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content animated flipInY">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">添加区域</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal m-t" id="add_layout_modal_form">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">区域名称：</label>
+                            <div class="col-sm-8">
+                                <input name="Title" type="text" class="form-control">
+                            </div>
+                        </div>
+                        @*<div id="layout_cat_dropdown" class="form-group">
+                            <label class="col-sm-3 control-label">区域类别：</label>
+                            <div class="col-sm-6">
+                                <select class="step1 form-control" name="LayoutTypeID"></select>
+                            </div>
+
+                        </div>*@
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">备注：</label>
+                            <div class="col-sm-8">
+                                <input name="Message" type="text" class="form-control">
+                            </div>
+                        </div>
+                    </form>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" id="add_layout_modal_submit">提交</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    @*add sensor modal dialog*@
+    <div class="modal inmodal" id="add_sensor_modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content animated flipInY">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">添加传感器</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal m-t" id="add_sensor_modal_form">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">名称：</label>
+                            <div class="col-sm-3">
+                                <input name="Title" type="text" class="form-control">
+                            </div>
+                            <label class="col-sm-3 control-label">编号：</label>
+                            <div class="col-sm-3">
+                                <input class="form-control" name="SerialNum">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-3">采集类型</label>
+                            <div class="input-group col-sm-9" style="margin-left:158px">
+                                <select id="param_type_select" data-placeholder="选择采集参数类型" class="chosen-select" multiple style="width:350px;" tabindex="4"></select>
+                            </div>
+                        </div>
+                    </form>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" id="add_sensor_modal_submit">提交</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+@section Footer{
+    @Scripts.Render("~/Scripts/hotspot")
+    @Scripts.Render("~/Scripts/context-menu")
+    @Scripts.Render("~/Scripts/cascadingdropdown")
+    @Scripts.Render("~/Scripts/chosen")
+
+
+
+
+    <script>
+        var hp;
+        var wsLayout = @Html.Raw(Json.Encode(Model));
+        var imgEvent;
+
+        (function($,mcAdmin){
+            hp = $("#topview_div").hotspot({
+                expandAll:true,
+                interactivity: 'mousedown',
+                mode:"admin",
+                data: {
+                    Id: wsLayout.LayoutPictureID,
+                    Pixel: { width: $("#topview_pic").width(), height: $("#topview_pic").height() },
+                    Spots:wsLayout.SubSpotItems
+                },
+                spotRightClick: function (div, spot, spotIndex, e) {
+
+
+                },
+                imgRightClick: function (e) {
+                    imgEvent = e;
+                }
+            });
+
+            $.contextMenu({
+                selector: '.HotspotPlugin_Hotspot',
+                callback: function(key, options) {
+                    switch (key) {
+                        case "view":
+                            viewSubLayout();
+                            break;
+                        case "delete":
+                            deleteClickLayoutView();
+                            break;
+                        case "property":
+                            break;
+                        default:
+                            break;
+                    }
+                },
+                items: {
+                    "view": {name: "查看", icon: "fa-eye"},
+                    "delete": {name: "删除", icon: "fa-edit"},
+                    "quit": {name: "离开", icon:"fa-sign-out" }
+                }
+            });
+
+            function viewSubLayout() {
+                mcAdmin.addTab(hp.getSelectSpot().Title+"工序分布"+"施工管理","/ProjectAdmin/AreaDetailAdmin/"+hp.getSelectSpot().LayoutPictureID);
+
+            }
+
+
+            $(".Hotspot_Block").on("click",function(e){
+                // viewSubLayout();
+                return false;
+            });
+
+
+            /*##################################Drop down ######################################################*/
+            $("#layout_cat_dropdown").cascadingDropdown({
+                selectBoxes: [
+                    {
+                        selector: '.step1',
+                        source: "/ProjectAdmin/GetAreaCategoryList",
+                        usePost: true,
+                        useJson: true
+                    }
+                ],
+                onReady: function (event, allValues) {
+
+                }
+
+            });
+            /*############################Start Admin Model###########################################*/
+
+
+
+            $("#add_layout_modal_submit").on("click",submitNewLayoutView);
+
+            function serialFormInput(form){
+                var jsonObj ={};
+                $(form+"  input").each(function (i, v) {
+
+                    jsonObj[$(v).attr("name")] = $(v).val();
+                })
+                $(form + "  select").each(function (i, v) {
+                   
+                    jsonObj[$(v).attr("name")] = $(v).find("option:selected").val();
+                })
+                console.log(jsonObj)
+                return jsonObj;
+            }
+
+            function resetFormInput(form){
+                $(form+"  input").each(function (i, v) {
+                    $(v).val("");
+                });
+            }
+
+            //add img context menu
+            $.contextMenu({
+                selector: '#topview_pic',
+                callback: function(key, options) {
+                    switch (key) {
+                        case "add":
+                            addClickLayoutView();
+                            break;
+                        case "addSensor":
+                            addSensor();
+                        default:
+                            break;
+                    }
+
+                },
+                items: {
+                    "add":      {name: "添加区域", icon: "fa-plus"},
+                    "addSensor":      {name: "添加传感器", icon: "fa-plus"},
+                    "quit":     {name: "离开", icon:"fa-sign-out" }
+                }
+            })
+
+
+            function addClickLayoutView() {
+                resetFormInput("#add_layout_modal_form");
+                $("#add_layout_modal").modal();
+            }
+
+            ////////////////////////////////add sensor/////////////////////////////////////
+
+            $("#add_sensor_modal").on('shown.bs.modal',function(){       
+                $("#param_type_select").chosen({
+                    no_results_text: '对不起，未找到该选项',                  
+                })
+                $("#param_type_select").chosen().change(function(e,params){
+                })           
+            })
+
+            $("#add_sensor_modal_submit").on("click",function(){
+                var layout = serialFormInput("#add_sensor_modal_form");
+                layout.ParameterCodeIDs = $("#param_type_select").chosen().val();
+                layout.ParentLayoutPictureID = wsLayout.LayoutPictureID;
+                layout.XPostion = hp.getRelativeXY(imgEvent).X;
+                layout.YPostion = hp.getRelativeXY(imgEvent).Y;
+                layout.State = -1;
+                console.log(layout);
+                $("#add_layout_modal").modal("hide");
+                addExtraSensor(layout);
+            })
+
+            function addExtraSensor(layout) {
+                $.ajax({
+                    url:"/ProjectAdmin/AddExtraSensorAction",
+                    data:{sensorAdmin:layout},
+                    dataType:"json",
+                    async:true,
+                    type:"post",
+                    success:function(retData){
+                        if(retData.Code == RESULT_CODE.OK){
+                            swal({
+                                title: "恭喜！",
+                                text: retData.Content,
+                                type: "success",
+                            },function(){
+                                mcAdmin.reloadCurrentTab()
+                            });
+
+                        }else{
+                            swal({
+                                title: "系统故障！",
+                                text: retData.Content,
+                                type: "error",
+                            });
+                        }
+
+                    }
+
+                })
+            }
+
+            $.post("/ProjectAdmin/GetExtraSensorParameterType",function(retData){
+                if(retData.Code == RESULT_CODE.OK){
+                    var data = retData.Appendix;
+                    $.each(data,function(i,v){
+                        $("<option value='"+v.value+"'>"+v.label+"</option>").appendTo("#param_type_select");
+                    });
+
+                }else{
+                    swal({
+                        title: "系统故障！",
+                        text: retData.Content,
+                        type: "error",
+                    });
+                }
+            })
+
+            function addSensor() {
+                resetFormInput("#add_sensor_modal_form");
+                $("#add_sensor_modal").modal();
+
+            }
+            //////////////////////////////////////end add sensor ///////////////////////////////////
+            function deleteClickLayoutView(){
+                console.log(hp.getSelectSpot())
+                $.ajax({
+                    url:"/ProjectAdmin/DeleteProcOrStoreLayout/",
+                    data:{Id:hp.getSelectSpot().LayoutPictureID},
+                    type:"post",
+                    dataType:"json",
+                    success:function(retData){
+                        if(retData.Code==RESULT_CODE.OK){
+                            swal({
+                                title: "恭喜！",
+                                text: retData.Content,
+                                type: "success",
+                            },function(){
+
+                                mcAdmin.reloadCurrentTab()
+                            });
+                        }else{
+                            swal({
+                                title: "抱歉！",
+                                text: retData.Content,
+                                type: "error",
+                            },function(){
+
+                                mcAdmin.reloadCurrentTab()
+                            });
+                        }
+                    }
+                })
+            }
+
+
+            function submitNewLayoutView(){
+                var layout = serialFormInput("#add_layout_modal_form");
+                layout.ParentLayoutPictureID = wsLayout.LayoutPictureID;
+                layout.XPostion = hp.getRelativeXY(imgEvent).X.toFixed(0);
+                layout.YPostion = hp.getRelativeXY(imgEvent).Y.toFixed(0);
+                layout.PicWidth = $("#topview_pic").width();
+                layout.PicHeight = $("#topview_pic").height();
+                layout.LayoutTypeID = 4;
+                layout.State = -1;
+
+
+                $("#add_layout_modal").modal("hide");
+                addLayoutAction(layout);
+            }
+
+            function addLayoutAction(layout) {
+                $.ajax({
+                    url:"/ProjectAdmin/AddLayoutAction",
+                    data:{layout:layout},
+                    dataType:"json",
+                    async:true,
+                    type:"post",
+                    success:function(retData){
+                        if(retData.Code == RESULT_CODE.OK){
+                            swal({
+                                title: "恭喜！",
+                                text: retData.Content,
+                                type: "success",
+                            },function(){
+
+                                mcAdmin.reloadCurrentTab()
+                            });
+
+                        }else{
+                            swal({
+                                title: "系统故障！",
+                                text: retData.Content,
+                                type: "error",
+                            });
+                        }
+
+                    }
+
+                })
+            }
+
+
+
+            /*############################End Admin Model###########################################*/
+        }($,window.parent.mcAdmin))
+    </script>
+}

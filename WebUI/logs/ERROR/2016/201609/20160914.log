@@ -1,0 +1,79 @@
+ 【时间】:2016-09-14 23:00:52,930
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.ProjectAdminController:GetDetailList
+ 【线程ID】: 7 
+ 【日志内容】:获取表数据 T_Machine 失败
+ 【日记详细】：System.ArgumentNullException: 值不能为 null。
+参数名: type
+   在 System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   在 System.Activator.CreateInstance(Type type)
+   在 WebUI.Controllers.ProjectAdminController.GetDetailList(Int32 LayoutTypeID) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\ProjectAdminController.cs:行号 306
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-14 23:02:25,473
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.ProjectAdminController:GetDetailList
+ 【线程ID】: 7 
+ 【日志内容】:获取表数据 T_LayoutPicture 失败
+ 【日记详细】：System.InvalidCastException: 无法将类型为“MesWeb.Model.T_LayoutPicture”的对象强制转换为类型“MesWeb.Model.ILayoutTypeTable”。
+   在 CallSite.Target(Closure , CallSite , Object )
+   在 System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   在 CallSite.Target(Closure , CallSite , Object )
+   在 WebUI.Controllers.ProjectAdminController.GetDetailList(Int32 LayoutTypeID) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\ProjectAdminController.cs:行号 309
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-14 23:02:38,707
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.ProjectAdminController:GetDetailList
+ 【线程ID】: 7 
+ 【日志内容】:获取表数据 T_LayoutPicture 失败
+ 【日记详细】：System.InvalidCastException: 无法将类型为“MesWeb.Model.T_LayoutPicture”的对象强制转换为类型“MesWeb.Model.ILayoutTypeTable”。
+   在 CallSite.Target(Closure , CallSite , Object )
+   在 System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   在 CallSite.Target(Closure , CallSite , Object )
+   在 WebUI.Controllers.ProjectAdminController.GetDetailList(Int32 LayoutTypeID) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\ProjectAdminController.cs:行号 309
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-14 23:04:22,317
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.ProjectAdminController:GetDetailList
+ 【线程ID】: 9 
+ 【日志内容】:获取表数据 T_Machine2 失败
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-14 23:06:40,618
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.ProjectAdminController:GetDetailList
+ 【线程ID】: 8 
+ 【日志内容】:获取表数据 T_Machine2 失败
+ 【日记详细】：System.ArgumentNullException: 值不能为 null。
+参数名: type
+   在 System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   在 System.Activator.CreateInstance(Type type)
+   在 WebUI.Controllers.ProjectAdminController.GetDetailList(Int32 LayoutTypeID) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\ProjectAdminController.cs:行号 306
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-14 23:07:11,102
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.ProjectAdminController:GetDetailList
+ 【线程ID】: 9 
+ 【日志内容】:获取表数据 T_Machine2 失败
+ 【日记详细】：System.ArgumentNullException: 值不能为 null。
+参数名: type
+   在 System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   在 System.Activator.CreateInstance(Type type)
+   在 WebUI.Controllers.ProjectAdminController.GetDetailList(Int32 LayoutTypeID) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\ProjectAdminController.cs:行号 306
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-14 23:07:49,646
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.ProjectAdminController:GetDetailList
+ 【线程ID】: 8 
+ 【日志内容】:获取表数据 T_Machine2 失败
+ 【日记详细】：System.ArgumentNullException: 值不能为 null。
+参数名: type
+   在 System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   在 System.Activator.CreateInstance(Type type)
+   在 WebUI.Controllers.ProjectAdminController.GetDetailList(Int32 LayoutTypeID) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\ProjectAdminController.cs:行号 306
+ 
+---------------------------------------------------------------------------------------------------------------

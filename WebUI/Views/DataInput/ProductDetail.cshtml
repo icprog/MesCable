@@ -1,0 +1,262 @@
+﻿@model MesWeb.ViewModel.Mes.VM_Report_Product
+
+@section Style{
+    @Styles.Render("~/Content/icheck-square-green")
+}
+@section Header{
+    @Styles.Render("~/Content/bootstrap-switch")
+    <style>
+        .center {
+            width: auto;
+            display: table;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .no-border-left {
+            border-left: 0px !important;
+        }
+
+        .no-border-right {
+            border-right: 0px !important;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        td {
+            text-align: center;
+            padding: 2px !important;
+            border: 1px solid !important;
+        }
+
+        .no-border {
+            border: 0px !important;
+        }
+
+        .header-table td {
+            border: 0px !important;
+        }
+
+        .large-input {
+            height: 77px;
+        }
+
+        #report input {
+            /*outline: none !important;
+            border-left: 0px !important;
+            border-top: 0px !important;
+            border-right: 0px !important;
+            border-bottom: 1px !important;*/
+        }
+    </style>
+}
+<body>
+    <div class="row">
+        <div class="col-sm-2 col-sm-offset-10" style="text-align:left">
+            <div class="input-group">
+                <label class="form-control" style="text-align:right;border:0px!important">编辑</label>
+                <div class="input-group-btn">
+
+                    <div class="switch">
+                        <input id="ps_enable_edit_btn" type="checkbox" />
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row center" style="margin-top:30px;display:inline" id="product">
+
+        <div>
+            <table class="header-table" style="width:100%">
+                <tr>
+                    <td colspan="1" style="width:50%;padding-left:20%!important"><input style="font-size:20px;"  name="Supplier" value="广东中德电缆有限公司"/></td>
+                </tr>
+
+                <tr>
+                    <td colspan="1" style="padding-left:20%!important"><span style="font-size:20px;">成品检验记录表</span></td>
+                    <td colspan="1" style="width:10%"><span style="float:right">录入时间</span></td>
+                    <td colspan="2">
+                        <div class="input-group date" style="z-index:9999">
+                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                            <input name="InputDate" type="text" class="form-control">
+                        </div>
+                    </td>
+                    <td colspan="1" style="width:10%"><span style="float:right">表单编号</span></td>
+                    <td colspan="1" sty><input name="Code" class="form-control" /></td>
+                </tr>
+            </table>
+        </div>
+        <table id="pd_table" align="center" class="table table-bordered center-block">
+            <tr>
+                <td rowspan="3">成品盘号</td>
+                <td rowspan="3">型号规格</td>
+                <td rowspan="3">数量(m)</td>
+                <td rowspan="3">检验数据</td>
+                <td rowspan="3">导体结构</td>
+                <td colspan="4" rowspan="1">线材垂直外径 （mm）</td>
+                <td colspan="4" rowspan="1">绝缘规格尺寸 （mm）</td>
+                <td colspan="4" rowspan="1">护套 （mm）</td>
+                <td rowspan="3">20°C导体<br />直流电阻Ω/km</td>
+                <td rowspan="3">耐压测试KV/min</td>
+                <td rowspan="3">外观</td>
+                <td rowspan="3">检验结论</td>
+            </tr>
+            <tr>
+                <td colspan="2" rowspan="2">盘头</td>
+                <td colspan="2" rowspan="2">盘尾</td>
+                <td colspan="2" rowspan="1">平均厚度</td>
+                <td colspan="2" rowspan="1">最薄点</td>
+                <td colspan="2" rowspan="1">平均厚度</td>
+                <td colspan="2" rowspan="1">最薄点</td>
+            </tr>
+            <tr>
+                <td colspan="1" rowspan="1">盘头</td>
+                <td colspan="1" rowspan="1">盘尾</td>
+                <td colspan="1" rowspan="1">盘头</td>
+                <td colspan="1" rowspan="1">盘尾</td>
+                <td colspan="1" rowspan="1">盘头</td>
+                <td colspan="1" rowspan="1">盘尾</td>
+                <td colspan="1" rowspan="1">盘头</td>
+                <td colspan="1" rowspan="1">盘尾</td>
+            </tr>
+            <tr>
+                <td rowspan="2" style="width:4%"><textarea name="VolNum" class="form-control large-input" rows="3" cols="3"></textarea></td>
+                <td rowspan="2" style="width:4%"><textarea name="SpecNum" class="form-control large-input" rows="3" cols="3"></textarea></td>
+                <td rowspan="2" style="width:4%"><textarea name="Num" class="form-control large-input" rows="3" cols="3"></textarea></td>
+                <td rowspan="1" colspan="1">标准</td>
+                <td colspan="1"><input name="Std_ConductorStruct" class="form-control" /></td>
+                <td colspan="4"><input name="Std_VerticalDia" class="form-control" /></td>
+                <td colspan="2"><input name="Std_EdgeDiaAvg" class="form-control" /></td>
+                <td colspan="2"><input name="Std_EdgeDiaMin" class="form-control" /></td>
+                <td colspan="2"><input name="Std_SheathAvg" class="form-control" /></td>
+                <td colspan="2"><input name="Std_SheathMin" class="form-control" /></td>
+                <td colspan="1"><input name="Std_Resistance" class="form-control" /></td>
+                <td colspan="1"><input name="Std_VoltageTest" class="form-control" /></td>
+                <td colspan="1" rowspan="2" style="width:4%"><textarea name="Appearance" class="form-control large-input" rows="3" cols="5"></textarea></td>
+                <td colspan="1" rowspan="2" style="width:4%"><textarea name="CheckResult" class="form-control large-input" rows="3" cols="5"></textarea></td>
+
+            </tr>
+            <tr>
+                <td colspan="1">实测</td>
+                <td colspan="1"><input name="Actual_ConductorStruct" class="form-control" /></td>
+                <td colspan="1"><input name="Actual_VerticalDiaHeader1" class="form-control" /></td>
+                <td colspan="1"><input name="Actual_VerticalDiaHeader2" class="form-control" /></td>
+                <td colspan="1"><input name="Actual_VerticalDiaFooter1" class="form-control" /></td>
+                <td colspan="1"><input name="Actual_VerticalDiaFooter2" class="form-control" /></td>
+                <td colspan="1"><input name="Actual_EdgeDiaAvgHeader" class="form-control" /></td>
+                <td colspan="1"><input name="Actual_EdgeDiaAvgFooter" class="form-control" /></td>
+                <td colspan="1"><input name="Actual_EdgeDiaMinHeader" class="form-control" /></td>
+                <td colspan="1"><input name="Actual_EdgeDiaMinFooter" class="form-control" /></td>
+                <td colspan="1"><input name="Actual_SheathAvgHeader" class="form-control" /></td>
+                <td colspan="1"><input name="Actual_SheathAvgFooter" class="form-control" /></td>
+                <td colspan="1"><input name="Actual_SheathMinHeader" class="form-control" /></td>
+                <td colspan="1"><input name="Actual_SheathMinFooter" class="form-control" /></td>
+                <td colspan="1"><input name="Actual_Resistance" class="form-control" /></td>
+                <td colspan="1"><input name="Actual_VoltageTest" class="form-control" /></td>
+            </tr>
+
+
+        </table>
+        <button disabled style="float:right;display:none" class="btn btn-primary dim" type="button" id="ps_export_btn">
+            导出
+        </button>
+        <button style="float:right;display:inline" class="btn btn-primary dim" type="button" id="ps_save_btn">
+            保存
+        </button>
+
+
+    </div>
+</body>
+
+@section Footer{
+    @Scripts.Render("~/Scripts/bootstrap-switch")
+    @Scripts.Render("~/Scripts/icheck")
+    @Scripts.Render("~/Scripts/bootstrap-datepicker")
+    <script>
+        $(function (mcAdmin) {
+            var $product = $("#product");
+            $('.input-group.date').datepicker({
+                todayBtn: "linked",
+                keyboardNavigation: false,
+                forceParse: false,
+                calendarWeeks: true,
+                autoclose: true
+            });
+            var detail = @Html.Raw(Json.Encode(Model));
+            console.log(detail);
+            deserailzeTable("product", detail);
+            //控制编辑状态
+            (function () {
+                endableEdit(false);
+                $("#ps_enable_edit_btn").bootstrapSwitch();
+                $("#ps_enable_edit_btn").on("switchChange.bootstrapSwitch", function (event, state) {
+                    endableEdit(state);
+                });
+
+            }())
+            function endableEdit(state) {
+                $product.find("input,textarea").map(function () {
+                    $(this).attr("disabled", !state)
+                })
+            }
+            //保存修改
+            $("#ps_save_btn").on("click", function () {
+                //var product = $("#product").serializeForm();
+                var product = serailzeTable("product");
+                console.log("保存的product: " + JSON.stringify(product));
+                $.post("/DataInput/SaveReportProductAction", { product: product }, function (retData) {
+                    mcAdmin.dealRetData(retData, function () {
+                        swal({
+                            title: "恭喜！",
+                            text: retData.Content,
+                            type: "success",
+                        }, function () {
+
+                        })
+                    }
+                    );
+                })
+            })
+
+            function serailzeTable(table){
+                var jsonObj = {}
+                if (table.indexOf("#") == -1) {
+                    table = "#" + table;
+                }                        
+                $(table).find("input,textarea").each(function (i, v) {
+                    jsonObj[$(v).attr("name")] = $(v).val();
+                })
+                return jsonObj
+            }
+
+            function deserailzeTable(table, data) {
+                if (table.indexOf("#") == -1) {
+                    table = "#" + table;
+                }
+               
+                $(table).find("input,textarea").each(function (i, v) {
+                   
+                    var value = data[$(v).attr("name")];
+                    if ($(v).attr("name") == "InputDate") {
+
+                        var re = /-?\d+/;
+                        var m = re.exec(value);
+                        var d = new Date(parseInt(m[0]));
+                        $(v).val(d.getFullYear() + '-' + (d.getMonth() + 1) + "-" + d.getDate())
+                        return;
+                    }
+
+                    if ($(v).attr("type") == "radio") {
+                        return;
+                    }
+
+                    $(v).val(value);
+                });
+            }
+        }(window.parent.mcAdmin))
+    </script>
+}
+

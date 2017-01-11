@@ -1,0 +1,103 @@
+﻿@model MesWeb.ViewModel.Mes.VM_LayoutPicture
+@section Style{
+    @Styles.Render("~/Content/hotspot")
+    @Styles.Render("~/Content/context-menu")
+    @Styles.Render("~/Content/sweetalert")
+}
+
+<body>
+    <div class="col-sm-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>车间区域分布情况 </h5>
+                <div class="ibox-tools">
+                    <a class="collapse-link">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="calendar.html#">
+                        <i class="fa fa-wrench"></i>
+                    </a>
+                    <a class="close-link">
+                        <i class="fa fa-times"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="ibox-content" id="topview_div">
+                <img src="@Html.Raw(Model.PicUrl)" id="topview_pic" class="img-responsive center-block HotspotPlugin_Overlay">
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+@section Footer{
+    @Scripts.Render("~/Scripts/hotspot")
+    @Scripts.Render("~/Scripts/context-menu")
+    @Scripts.Render("~/Scripts/sweetalert")
+    @Scripts.Render("~/Scripts/cascadingdropdown")
+
+    <script>
+        var hp;
+        var wsLayout = @Html.Raw(Json.Encode(Model));
+        var imgEvent;
+
+        $(function($,mcAdmin){
+           // console.log($("#topview_pic").width() + " , "+$("#topview_pic").height() );
+
+            hp = $("#topview_div").hotspot({
+                expandAll:true,
+                interactivity:"hover",
+                mode:"admin",
+                data: {
+                    Id: wsLayout.LayoutPictureID,
+                    Pixel: { width: $("#topview_pic").width(), height: $("#topview_pic").height() },
+                    Spots:wsLayout.SubSpotItems
+                },
+                spotRightClick: function (div, spot, spotIndex, e) {
+
+
+                },
+                imgRightClick: function (e) {
+                    imgEvent = e;
+                },spotLeftClickWhenHover:function (div, spot, spotIndex, e) {
+                    viewSubLayout();
+
+                },
+            });
+
+            $.contextMenu({
+                selector: 'none',
+                // selector: '.HotspotPlugin_Hotspot',
+                callback: function(key, options) {
+                    switch (key) {
+                        case "view":
+                            viewSubLayout();
+                            break;
+                        default:
+                            break;
+                    }
+                },
+                items: {
+                    "view": {name: "查看", icon: "fa-eye"},
+
+                    "quit": {name: "离开", icon:"fa-sign-out" }
+                }
+            });
+
+            function viewSubLayout() {
+                mcAdmin.addTab(hp.getSelectSpot().Title,"/OnlineData/AreaDetail/"+hp.getSelectSpot().LayoutPictureID);
+
+            }
+
+
+            $(".Hotspot_Block").on("click",function(e){
+                 viewSubLayout();
+                return false;
+            });
+
+
+
+        }($,window.parent.mcAdmin))
+    </script>
+}

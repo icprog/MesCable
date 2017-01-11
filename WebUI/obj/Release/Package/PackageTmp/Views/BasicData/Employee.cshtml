@@ -1,0 +1,182 @@
+﻿<body class="gray-bg">
+    <div class="row">
+        <div class="col-sm-6 col-sm-push-3">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>添加员工</h5>
+                </div>
+                <div class="ibox-content">
+                    <form class="form-horizontal m-t" id="form_add_employee">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">姓名：</label>
+                            <div class="col-sm-8">
+                                <input name="EmployeeName" minlength="2" type="text" class="form-control" required="" aria-required="true">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">卡号：</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" name="EmployeeCode" required="" aria-required="true">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">部门：</label>
+                            <div class="col-sm-8" id="sel_department">
+                                <select required class="step1 form-control" name="DepartmentID" id="sel_dep">
+                                    <option value="0">添加部门...</option>
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">性别：</label>
+                            <div class="col-sm-8">
+                                <select class="step1 form-control" name="EmployeeSex">
+                                    <option value="1">男</option>
+                                    <option value="0">女</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">年龄：</label>
+                            <div class="col-sm-8">
+                                <input type="text" name="EmployeeAge" class="form-control" required="" aria-required="true"></input>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">电话：</label>
+                            <div class="col-sm-8">
+                                <input type="tel" name="EmployeeTel" class="form-control" required="" aria-required="true"></input>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-4 col-sm-offset-9">
+                                <button class="btn btn-primary" id="sbt_add_emp" type="button">提交</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    @*add department modal dialog*@
+    <div class="modal inmodal" id="modal_add_dept" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content animated flipInY">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">添加部门</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal m-t" id="form_add_dept">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">名称：</label>
+                            <div class="col-sm-8">
+                                <input required type="text" name="DepartmentName" class="form-control" aria-required="true" />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">负责人：</label>
+                            <div class="col-sm-8">
+                                <input type="text" name="DepartmentContactPerson" class="form-control" required="" aria-required="true" />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">电话：</label>
+                            <div class="col-sm-8">
+                                <input type="tel" name="DepartmentTel" class="form-control" required="" aria-required="true" />
+                            </div>
+                        </div>
+                    </form>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" id="sbt_add_dept">提交</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+@section Footer{
+    @Scripts.Render("~/Scripts/cascadingdropdown")
+    <script>
+
+        $(function (mcAdmin) {
+            function serialForm(form) {
+                /// <summary>
+                /// Serials the form data
+                /// </summary>
+                /// <param name="form">the form controller</param>
+                var jsonObj = {};
+                $(form + "  input").each(function (i, v) {
+                    jsonObj[$(v).attr("name")] = $(v).val();
+                })
+                $(form + "  select").each(function (i, v) {
+                    jsonObj[$(v).attr("name")] = $(v).find("option:selected").val();
+                })
+                return jsonObj;
+            }
+
+            $("#sbt_add_dept").on("click", function () {
+                var dept = serialForm("#form_add_dept");
+                $.post("/BasicData/AddDepartment", { dept: dept }, function (retData) {
+                    mcAdmin.dealRetData(retData, function () {
+                        swal({
+                            title: "恭喜！",
+                            text: retData.Content,
+                            type: "success",
+                        }, function () {
+                            mcAdmin.reloadCurrentTab()
+                        })
+                    });
+                }, "json")
+            })
+
+            $("#sbt_add_emp").on("click", function () {
+                var emp = serialForm("#form_add_employee");
+             
+                $.post("/BasicData/AddEmployee", { emp: emp }, function (retData) {
+                    mcAdmin.dealRetData(retData, function () {
+                        swal({
+                            title: "恭喜！",
+                            text: retData.Content,
+                            type: "success",
+                        }, function () {
+                            mcAdmin.reloadCurrentTab()
+                        });
+                    })
+                }, "json")
+            })
+
+
+
+
+            $("#sel_department").cascadingDropdown({
+                selectBoxes: [
+                    {
+                        selector: '.step1',
+                        source: "/BasicData/GetDepartmentAction/",
+                        usePost: true,
+                        useJson: true
+                    }
+                ],
+                onChange: function (event, allValues) {
+                    if (allValues.DepartmentID == "0") {
+                        $("#modal_add_dept").modal();
+
+                    }
+                }
+
+            });
+
+          
+        }(window.parent.mcAdmin))
+    </script>
+
+}

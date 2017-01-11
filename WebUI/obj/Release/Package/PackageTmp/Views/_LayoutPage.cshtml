@@ -1,0 +1,80 @@
+﻿@{ 
+    ViewBag.Title = "线缆运维平台";
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="UTF-8">
+
+    <title>@ViewBag.Title</title>
+
+    @Styles.Render("~/Content/bootstrap")
+    @Styles.Render("~/Content/font-awesome")
+    @RenderSection("Style",false)
+    @Styles.Render("~/Content/style")
+    @Styles.Render("~/Content/animate")
+
+    @Scripts.Render("~/Scripts/jquery")
+    @Scripts.Render("~/Scripts/bootstrap")
+    @Styles.Render("~/Content/sweetalert")
+
+
+    @RenderSection("Script",false)
+    @RenderSection("Header",false)
+</head>
+
+        @RenderBody()
+
+</html>
+<footer>
+    @Scripts.Render("~/Scripts/sweetalert")
+
+
+    @RenderSection("Footer",false)
+    <script>
+        $.ajaxSetup({
+            type: "POST",
+            error: function (jqXHR, textStatus, errorThrown) {
+                switch (jqXHR.status) {
+                    case (500):
+                        swal({
+                            title: "系统故障",
+                            text: "请联系管理员！",
+                            type: "error",
+                        });
+
+                        break;
+                    case (401):
+                        swal({
+                            title: "未登录！",
+                            text: "请登陆访问",
+                            type: "error",
+                        });
+                        break;
+                    case (403):
+                        swal({
+                            title: "权限错误！",
+                            text: "您无权操作！",
+                            type: "error",
+                        });
+                        break;
+                    case (408):
+                        swal({
+                            title: "请求超时",
+                            text: "请联系管理员！",
+                            type: "error",
+                        });
+                        break;
+                    default:
+                        swal({
+                            title: "未知错误",
+                            text: "请联系管理员！",
+                            type: "error",
+                        });
+                }
+            }
+        });
+    </script>
+</footer>

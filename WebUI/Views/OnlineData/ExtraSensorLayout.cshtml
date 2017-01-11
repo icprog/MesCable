@@ -1,0 +1,77 @@
+﻿@model System.Nullable<int>
+
+<body>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5 id="chart_title">传感器曲线</h5>
+
+                </div>
+                <div class="ibox-content">
+
+                    <div class="echarts" id="fc_extra_sensor"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+@section Footer{
+    @Scripts.Render("~/Scripts/fusioncharts")
+    @Scripts.Render("~/Scripts/fusioncharts-theme-fint")
+    <script>
+        $(function (mcAdmin) {
+            var postUrl = "/OnlineData/GetExtraSensorData/@Model";
+            var fusionCharts = {};
+            $.post(postUrl, function (retData) {
+                mcAdmin.dealRetData(retData, function () {
+                    initExtraSensorChart(retData.Appendix);
+                })
+            }, "json");
+
+
+            function initExtraSensorChart(fusion) {
+                console.log(fusion);
+                var chart = fusion.chart;
+                var data = fusion.data;
+                var fcChart = {
+                    "caption": chart.title,
+                    "xAxisName": chart.xAxisName,
+                    "yAxisName": chart.yAxisName,
+                    "plotFillAlpha": "80",
+                    "theme": "fint",
+                    "rotateValues": "0",
+                    "numberSuffix": chart.numberSuffix,
+                };
+                var fcData = [];
+                $.each(data, function (i, v) {
+                    var time = v.label.split(" ")[1];
+                    fcData.push({ "value": v.value, "label": time })
+                })
+                fusion.trendlines[0].line[0].color = "#ff0000";
+                fusion.trendlines[0].line[1].color = "#ff0000";
+                var fcDataSource = {
+                    "chart": fcChart,
+                    "data": fcData,
+                    trendlines: fusion.trendlines
+                }
+                var fcTrendlines = fusion.trendlines;
+             
+                var fcChartInst = new FusionCharts({
+                    id: "fc_sensor",
+                    renderAt: "chart_sensor_data",
+                    type: "line",
+                    dataFormat: 'json',
+                    dataSource: fcDataSource,
+                    width: "100%",
+
+                })
+                fcChartInst.render();
+                fusionCharts = FusionCharts.items["fc_sensor"];
+            }
+
+        }(window.parent.mcAdmin))
+
+    </script>
+}

@@ -1,0 +1,4 @@
+D:\MES\MesCable\IDAL\bin\Release\MesWeb.IDAL.dll
+D:\MES\MesCable\IDAL\bin\Release\MesWeb.Model.dll
+D:\MES\MesCable\IDAL\obj\Release\IDAL.csprojResolveAssemblyReference.cache
+D:\MES\MesCable\IDAL\obj\Release\MesWeb.IDAL.dll

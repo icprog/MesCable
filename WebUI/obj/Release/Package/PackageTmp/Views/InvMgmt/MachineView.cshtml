@@ -1,0 +1,424 @@
+﻿@model MesWeb.ViewModel.Promise.VM_Result_Data
+@section Style{
+    @Styles.Render("~/Content/hotspot")
+    @Styles.Render("~/Content/context-menu")
+    @Styles.Render("~/Content/sweetalert")
+    @Styles.Render("~/Content/bootstrap-table")
+
+}
+@section Header{
+    <style>
+        .alarm_trend_anchor:hover {
+            cursor: pointer;
+        }
+    </style>
+}
+
+<body>
+
+    @*layout picture*@
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <i class="fa fa-info-circle"></i> 机台情况
+                </div>
+                <div class="panel-body">
+                    <div id="layout_div">
+                        <img style="position: relative;" src="@Html.Raw(Model.Appendix.PicUrl)" id="topview_pic" class="HotspotPlugin_Overlay">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @*machine table*@
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <i class="fa fa-info-circle"></i> 实时监测
+                </div>
+                <div class="panel-body">
+                    <table id="alarm_table"
+                           data-show-export="true"
+                           data-toggle="table">
+                        <thead>
+                            <tr>
+                                <th data-field="SeqNum">序号</th>
+                                <th data-field="MachineName">机台</th>
+                                <th data-field="GeneralAlarm">普通报警</th>
+                                <th data-field="ModerateAlarm">中度报警</th>
+                                <th data-field="SeriousAlarm">严重报警</th>
+                                <th data-field="Time">时间</th>
+                                <th data-field="AlexNum">轴号</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>ST-MT-005</td>
+                                <td class="alarm_trend_anchor"><font color="orange">1</font></td>
+                                <td class="alarm_trend_anchor"><font color="#ffcc00">1</font></td>
+                                <td class="alarm_trend_anchor"><font color="red">1</font></td>
+                                <td>2016/08/24 12:33:45</td>
+                                <td>20160906-05-906-B</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @*relative info*@
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <i class="fa fa-info-circle"></i> 线缆信息
+                </div>
+                <div class="panel-body">
+                    <div class="row gray-bg">
+                        <div class="col-sm-6">
+                            <div class="ibox float-e-margins">
+                                <div class="ibox-title">
+                                    <h5>线缆属性</h5>
+                                </div>
+                                <div class="ibox-content">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>规格</th>
+                                                <th>工单号</th>
+                                                <th>轴号</th>
+                                                <th>颜色</th>
+                                                <th>人员RFID</th>
+                                                <th>物料RFID</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>GG-1</td>
+                                                <td>GD-1</td>
+                                                <td>20160906-05-906-A</td>
+                                                <td><font color="red">红色</font></td>
+                                                <td>RF-PS-008</td>
+                                                <td>RF-TH-010</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="ibox float-e-margins">
+                                <div class="ibox-title">
+                                    <h5>线缆参数</h5>
+                                </div>
+                                <div class="ibox-content">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>生产达成</th>
+                                                <th>时间</th>
+                                                <th>最小外径</th>
+                                                <th>最大外径</th>
+                                                <th>预计完成时间</th>
+                                                <th>单位成本</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><font color="green">76%</font></td>
+                                                <td>3.3h</td>
+                                                <td>38mm</td>
+                                                <td>53mm</td>
+                                                <td>2016/09/08 12:33:54</td>
+                                                <td>2元/米</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    @*realtime trend*@
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <i class="fa fa-info-circle"></i> 传感器实时温度
+                </div>
+                <div class="panel-body">
+                    <div class="echarts" id="echarts_line_temp"></div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    @*add sensor modal dialog*@
+    <div class="modal inmodal" id="add_layout_modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content animated flipInY">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">添加传感器</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal m-t" id="add_layout_modal_form">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">传感器名称：</label>
+                            <div class="col-sm-8">
+                                <input name="Title" type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">备注信息：</label>
+                            <div class="col-sm-8">
+                                <input class="form-control" name="Message">
+                            </div>
+                        </div>
+                    </form>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" id="add_layout_modal_submit">提交</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+@section Footer{
+    @Scripts.Render("~/Scripts/hotspot")
+    @Scripts.Render("~/Scripts/context-menu")
+    @Scripts.Render("~/Scripts/sweetalert")
+
+    @Scripts.Render("~/Scripts/echarts")
+    @Scripts.Render("~/Scripts/echarts-demo")
+    @Scripts.Render("~/Scripts/bootstrap-table")
+    @Scripts.Render("~/Scripts/bootstrap-table-export")
+    <script>
+        echartsMahineDemo();
+        var hp;
+        var layoutView = @Html.Raw(Json.Encode(Model.Appendix));
+        var imgEvent ;
+        (function($,mcAdmin){
+
+            // init layout view
+            hp = $("#layout_div").hotspot({
+                mode:"admin",
+                data: {
+                    Id: layoutView.LayoutPictureID,
+                    Pixel: { width: layoutView.PicWidth, height: layoutView.PicHeight },
+                    Spots:layoutView.SubSpotItems
+                },
+                spotRightClick: function (div, spot, spotIndex, e) {
+
+
+                },
+                imgRightClick: function (e) {
+                    imgEvent = e;
+                }
+            });
+
+            // add spot context menu
+            $.contextMenu({
+                selector: '.HotspotPlugin_Hotspot',
+                callback: function(key, options) {
+                    switch (key) {
+                        case "view":
+                            break;
+                        case "property":
+                            break;
+                        case "delete":
+                            deleteClickLayoutView();
+                            break;
+                        default:
+                            break;
+                    }
+
+                },
+                items: {
+                    "view": {name: "查看", icon: "fa-eye"},
+                    "edit": {name: "编辑", icon: "fa-edit"},
+                    "delete":   {name: "删除", icon: "fa-minus"},
+                    "property": {name: "属性", icon: "fa-info"},
+                    "quit": {name: "离开", icon:"fa-sign-out" }
+                }
+            });
+
+
+
+            $(function(){
+                //alarm detail view
+                $(".alarm_trend_anchor").on("click",function(){
+                    alert("o")
+                })
+               
+            })
+
+
+
+            /*############################Start Admin Model###########################################*/
+
+            $.ajaxSetup({
+                type: "POST",
+                error: function(jqXHR, textStatus, errorThrown){
+                    switch (jqXHR.status){
+                        case(500):
+                            swal({
+                                title: "系统故障",
+                                text: "请联系管理员！",
+                                type: "error",
+                            });
+
+                            break;
+                        case(401):
+                            swal({
+                                title: "未登录！",
+                                text: "请登陆访问",
+                                type: "error",
+                            });
+                            break;
+                        case(403):
+                            swal({
+                                title: "权限错误！",
+                                text: "您无权操作！",
+                                type: "error",
+                            });
+                            break;
+                        case(408):
+                            swal({
+                                title: "请求超时",
+                                text: "请联系管理员！",
+                                type: "error",
+                            });
+                            break;
+                        default:
+                            swal({
+                                title: "未知错误",
+                                text: "请联系管理员！",
+                                type: "error",
+                            });
+                    }
+                }});
+
+            $("#add_layout_modal_submit").on("click",submitNewLayoutView);
+
+            function serialFormInput(form){
+                var jsonObj ={};
+                $(form+"  input").each(function (i, v) {
+                    jsonObj[$(v).attr("name")] = $(v).val();
+                })
+                return jsonObj;
+            }
+
+            function resetFormInput(form){
+                $(form+"  input").each(function (i, v) {
+                    $(v).val("");
+                });
+            }
+
+            //add img context menu
+            $.contextMenu({
+                selector: '#topview_pic',
+                callback: function(key, options) {
+                    switch (key) {
+                        case "add":
+                            addClickLayoutView();
+                            break;
+                        default:
+                            break;
+                    }
+
+                },
+                items: {
+                    "add":      {name: "添加", icon: "fa-plus"},
+                    "quit":     {name: "离开", icon:"fa-sign-out" }
+                }
+            })
+
+            function addClickLayoutView() {
+                resetFormInput("#add_layout_modal_form");
+                $("#add_layout_modal").modal();
+            }
+
+            function deleteClickLayoutView(){
+                console.log(hp.getSelectSpot())
+                $.ajax({
+                    url:"/InvMgmtAdmin/DeleteLayoutView",
+                    data:{delLayoutPic:hp.getSelectSpot()},
+                    type:"post",
+                    dataType:"json",
+                    success:function(retData){
+
+                    }
+                })
+            }
+
+
+            function submitNewLayoutView(){
+                var layoutPic = serialFormInput("#add_layout_modal_form");
+                layoutPic.ParentLayoutPictureID = layoutView.LayoutPictureID;
+                layoutPic.XPostion = hp.getRelativeXY(imgEvent).X;
+                layoutPic.YPostion = hp.getRelativeXY(imgEvent).Y;
+                layoutPic.State = -1;
+                console.log(layoutPic);
+                $("#add_layout_modal").modal("hide");
+                addLayoutViewAction(layoutPic);
+            }
+
+            function addLayoutViewAction(layoutPic) {
+                $.ajax({
+                    url:"/InvMgmtAdmin/AddLayoutView",
+                    data:{layoutPic:layoutPic},
+                    dataType:"json",
+                    async:true,
+                    type:"post",
+                    success:function(retData){
+                        if(retData.Code == RESULT_CODE.OK){
+                            swal({
+                                title: "恭喜！",
+                                text: retData.Content,
+                                type: "success",
+                            },function(){
+                                mcAdmin.reloadCurrentTab()
+                            });
+
+                        }else{
+                            swal({
+                                title: "系统故障！",
+                                text: retData.Content,
+                                type: "error",
+                            });
+                        }
+
+                    }
+
+                })
+            }
+
+
+
+            /*############################End Admin Model###########################################*/
+
+        }($,window.parent.mcAdmin))
+
+
+
+    </script>
+}

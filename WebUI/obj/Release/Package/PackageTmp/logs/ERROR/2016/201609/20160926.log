@@ -1,0 +1,1330 @@
+ 【时间】:2016-09-26 07:56:37,168
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:MachineLayout
+ 【线程ID】: 7 
+ 【日志内容】:机台信息为空
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 08:44:59,323
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:MachineLayout
+ 【线程ID】: 22 
+ 【日志内容】:机台信息为空
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 09:13:27,908
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:MachineLayout
+ 【线程ID】: 8 
+ 【日志内容】:机台信息为空
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 09:50:40,825
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:MachineLayout
+ 【线程ID】: 19 
+ 【日志内容】:机台信息为空
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 11:55:00,409
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.BasicDataController:EditParamCode
+ 【线程ID】: 9 
+ 【日志内容】:更新参数失败
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 11:55:28,771
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.BasicDataController:EditParamCode
+ 【线程ID】: 9 
+ 【日志内容】:更新参数失败
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 11:57:18,754
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.BasicDataController:EditParamCode
+ 【线程ID】: 12 
+ 【日志内容】:更新参数失败
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 11:58:05,383
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.BasicDataController:EditParamCode
+ 【线程ID】: 4 
+ 【日志内容】:更新参数失败
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 13:52:12,844
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 3 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetailTable hisData) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 113
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 13:52:14,699
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 13 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetailTable hisData) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 113
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 13:53:52,822
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 12 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetailTable hisData) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 113
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 14:02:58,427
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 24 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetailTable hisData) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 113
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 14:02:59,813
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 24 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetailTable hisData) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 113
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 14:07:16,477
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 28 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetailTable hisData) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 113
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 14:08:07,722
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 39 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetailTable hisData) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 113
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 14:19:12,992
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 28 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetailTable hisData) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 113
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 14:40:22,135
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:MachineLayout
+ 【线程ID】: 10 
+ 【日志内容】:机台信息为空
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:22:08,953
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:MachineLayout
+ 【线程ID】: 12 
+ 【日志内容】:机台信息为空
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:45:07,653
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 15 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:45:10,077
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 16 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:45:11,582
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 12 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:45:13,589
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 11 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:45:15,590
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 12 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:45:17,591
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 11 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:45:19,581
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 12 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:45:21,582
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 12 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:45:23,578
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 11 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:45:25,588
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 16 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:45:27,584
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 17 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:45:29,629
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 17 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:45:31,578
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 20 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:45:33,599
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 17 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:45:35,616
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 20 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:45:37,583
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 20 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:45:39,590
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 20 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:45:41,595
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 11 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:45:43,582
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 12 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:45:45,599
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 11 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:45:47,596
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 12 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:45:49,587
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 12 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:45:51,588
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 12 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:45:54,093
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 12 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:45:55,605
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 17 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:45:58,083
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 16 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:45:59,586
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 12 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:46:01,584
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 12 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:46:03,598
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 11 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:46:05,607
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 11 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:46:07,640
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 12 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:46:09,618
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 11 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:46:11,593
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 11 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:46:13,605
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 11 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:46:15,598
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 12 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:46:17,625
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 16 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:46:19,588
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 20 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:46:21,591
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 16 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:46:23,581
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 20 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:46:25,580
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 12 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:46:27,582
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 16 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:46:29,585
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 20 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:46:32,160
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 12 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:46:34,098
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 4 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:46:35,580
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 20 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:46:38,106
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 20 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:46:40,118
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 16 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:46:42,107
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 12 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:46:43,635
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 20 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:46:45,580
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 16 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:46:47,584
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 16 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:46:49,582
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 20 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:46:51,582
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 16 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:46:53,577
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 20 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:46:55,606
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 10 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:46:57,604
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 16 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:46:59,603
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 20 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:47:01,597
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 20 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:47:04,090
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 16 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:47:05,584
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 20 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:47:08,137
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 21 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:47:09,592
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 22 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:47:12,097
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 19 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:47:13,583
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 19 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:47:15,595
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 20 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:47:17,606
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 21 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:47:19,665
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 19 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:47:22,110
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 4 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:47:23,596
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 20 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:47:37,380
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 12 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:49:34,688
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 26 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:51:14,310
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 33 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:51:15,244
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 33 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:51:16,268
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 30 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:51:17,006
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 30 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:51:17,652
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 30 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:51:18,475
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 30 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:51:19,312
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 30 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:51:20,018
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 33 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:51:20,720
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 31 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:51:21,551
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 31 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:51:22,345
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 30 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:51:23,149
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 30 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:51:23,945
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 33 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:51:24,533
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 40 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:51:25,178
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 39 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:51:25,333
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 30 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:51:25,528
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 30 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:51:36,205
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 31 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:52:25,538
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 37 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:52:27,921
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 37 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:52:29,892
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 39 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:58:23,396
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 11 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 16:59:58,683
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 11 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 440
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 253
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 17:02:57,000
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorChartAction
+ 【线程ID】: 11 
+ 【日志内容】:获取实时曲线数据失败！
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getSensorLineChart(Int32 machineID, Int32 paramCodeID, Int32 top)
+   在 WebUI.Controllers.OnlineDataController.GetSensorChartAction(Int32 Id)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 18:37:51,728
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryQueryController:GetAxisDetailAction
+ 【线程ID】: 9 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Incorrect syntax near the keyword 'where'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 MesWeb.SQLServerDAL.T_HistoryData.GetList(String strWhere) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\SQLServerDAL\T_HistoryData.cs:行号 63
+   在 MesWeb.BLL.T_HistoryData.GetModelList(String strWhere) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\BLL\T_HistoryData.cs:行号 50
+   在 WebUI.Controllers.HistoryQueryController.GetAxisDetailAction(String axisNumStr) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\HistoryQueryController.cs:行号 35
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 18:37:57,467
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryQueryController:GetAxisDetailAction
+ 【线程ID】: 11 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Incorrect syntax near the keyword 'where'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 MesWeb.SQLServerDAL.T_HistoryData.GetList(String strWhere) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\SQLServerDAL\T_HistoryData.cs:行号 63
+   在 MesWeb.BLL.T_HistoryData.GetModelList(String strWhere) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\BLL\T_HistoryData.cs:行号 50
+   在 WebUI.Controllers.HistoryQueryController.GetAxisDetailAction(String axisNumStr) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\HistoryQueryController.cs:行号 35
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 18:38:01,546
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryQueryController:GetAxisDetailAction
+ 【线程ID】: 9 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Incorrect syntax near the keyword 'where'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 MesWeb.SQLServerDAL.T_HistoryData.GetList(String strWhere) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\SQLServerDAL\T_HistoryData.cs:行号 63
+   在 MesWeb.BLL.T_HistoryData.GetModelList(String strWhere) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\BLL\T_HistoryData.cs:行号 50
+   在 WebUI.Controllers.HistoryQueryController.GetAxisDetailAction(String axisNumStr) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\HistoryQueryController.cs:行号 35
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-26 18:38:24,258
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryQueryController:GetAxisDetailAction
+ 【线程ID】: 10 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Incorrect syntax near the keyword 'where'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 MesWeb.SQLServerDAL.T_HistoryData.GetList(String strWhere) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\SQLServerDAL\T_HistoryData.cs:行号 63
+   在 MesWeb.BLL.T_HistoryData.GetModelList(String strWhere) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\BLL\T_HistoryData.cs:行号 50
+   在 WebUI.Controllers.HistoryQueryController.GetAxisDetailAction(String axisNumStr)
+ 
+---------------------------------------------------------------------------------------------------------------

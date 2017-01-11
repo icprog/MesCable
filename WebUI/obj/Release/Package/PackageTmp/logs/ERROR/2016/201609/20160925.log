@@ -1,0 +1,70 @@
+ 【时间】:2016-09-25 08:05:30,753
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetExtraSensorData
+ 【线程ID】: 12 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.OnlineDataController.GetExtraSensorData(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 97
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-25 10:21:12,120
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 12 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 211
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-25 10:22:48,396
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 12 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 211
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-25 10:23:16,719
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 12 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 211
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-25 14:07:29,578
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetODCPKChartDataAction
+ 【线程ID】: 11 
+ 【日志内容】:OD的CPK出错
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.OnlineDataController.GetCPKValue(Int32 paramCodeID, Int32 machineID) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 168
+   在 WebUI.Controllers.OnlineDataController.getMachineCPKMSLineData(Int32 machineID, T_ParameterCode code, Int32 dataCount) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 549
+   在 WebUI.Controllers.OnlineDataController.getMachineCPKMSLineData(Int32 machineID, Int32 CodeID, Int32 dataCount) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 495
+   在 WebUI.Controllers.OnlineDataController.GetODCPKChartDataAction(Int32 layoutID) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 126
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-25 16:43:07,842
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:MachineLayout
+ 【线程ID】: 24 
+ 【日志内容】:机台信息为空
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-25 20:25:35,633
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.BasicDataController:AddEmployee
+ 【线程ID】: 8 
+ 【日志内容】:添加职工数据库出错
+ 【日记详细】：System.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_T_Deparatment_T_Employee". The conflict occurred in database "Mes", table "dbo.T_Department", column 'DepartmentID'.
+The statement has been terminated.
+   在 MES.DBUtility.DbHelperSQL.GetSingle(String SQLString, SqlParameter[] cmdParms) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\DBUtility\DbHelperSQL.cs:行号 801
+   在 MesWeb.SQLServerDAL.T_Employee.Add(T_Employee model) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\SQLServerDAL\T_Employee.cs:行号 71
+   在 MesWeb.BLL.T_Employee.Add(T_Employee model) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\BLL\T_Employee.cs:行号 42
+   在 WebUI.Controllers.BasicDataController.AddEmployee(T_Employee emp) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\BasicDataController.cs:行号 59
+ClientConnectionId:030fba21-4d94-44ce-b179-e5d565ac7629
+Error Number:547,State:0,Class:16
+ 
+---------------------------------------------------------------------------------------------------------------

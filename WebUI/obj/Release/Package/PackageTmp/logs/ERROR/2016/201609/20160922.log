@@ -1,0 +1,296 @@
+ 【时间】:2016-09-22 09:16:44,275
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:AreaDetail
+ 【线程ID】: 7 
+ 【日志内容】:未指定该标记的类别
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-22 09:21:48,689
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:AreaDetail
+ 【线程ID】: 8 
+ 【日志内容】:未指定该标记的类别
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-22 09:21:54,272
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:AreaDetail
+ 【线程ID】: 8 
+ 【日志内容】:未指定该标记的类别
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-22 09:23:37,341
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 12 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetailTable hisData) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 113
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-22 09:27:38,297
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.ProjectAdminController:AreaDetailAdmin
+ 【线程ID】: 26 
+ 【日志内容】:未指定该标记的类别
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-22 11:51:01,437
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetExtraSensorData
+ 【线程ID】: 8 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.OnlineDataController.GetExtraSensorData(Int32 Id) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 97
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-22 11:51:04,331
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetExtraSensorData
+ 【线程ID】: 9 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.OnlineDataController.GetExtraSensorData(Int32 Id) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 97
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-22 11:52:40,000
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetExtraSensorData
+ 【线程ID】: 8 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.OnlineDataController.GetExtraSensorData(Int32 Id) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 97
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-22 11:52:43,492
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetExtraSensorData
+ 【线程ID】: 9 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.OnlineDataController.GetExtraSensorData(Int32 Id) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 97
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-22 11:52:45,651
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetExtraSensorData
+ 【线程ID】: 9 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.OnlineDataController.GetExtraSensorData(Int32 Id) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 97
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-22 11:53:50,960
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetExtraSensorData
+ 【线程ID】: 8 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.OnlineDataController.GetExtraSensorData(Int32 Id) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 97
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-22 14:22:21,871
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetMachineProperty
+ 【线程ID】: 8 
+ 【日志内容】:数据库操作失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.OnlineDataController.GetMachineProperty(Int32 Id) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 241
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-22 14:47:25,180
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetMachineProperty
+ 【线程ID】: 8 
+ 【日志内容】:数据库操作失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.OnlineDataController.GetMachineProperty(Int32 Id) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 250
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-22 14:47:40,190
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetMachineProperty
+ 【线程ID】: 12 
+ 【日志内容】:数据库操作失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.OnlineDataController.GetMachineProperty(Int32 Id) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 250
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-22 15:17:59,404
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetExtraSensorData
+ 【线程ID】: 7 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.OnlineDataController.GetExtraSensorData(Int32 Id) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 97
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-22 16:01:54,462
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetExtraSensorData
+ 【线程ID】: 85 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.OnlineDataController.GetExtraSensorData(Int32 Id)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-22 16:02:22,528
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 82 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-22 16:02:24,435
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 96 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-22 16:02:26,566
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 96 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-22 16:05:43,773
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 96 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-22 16:05:47,230
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 96 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-22 16:06:43,209
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 96 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-22 16:06:52,883
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 96 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-22 16:07:22,133
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 96 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-22 16:07:49,479
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 96 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-22 16:08:26,745
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 96 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-22 16:13:31,402
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetExtraSensorData
+ 【线程ID】: 46 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.OnlineDataController.GetExtraSensorData(Int32 Id)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-22 16:36:46,700
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 5 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 146
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-22 16:37:27,920
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 9 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 146
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-22 16:38:07,656
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 15 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 146
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-22 16:38:54,332
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 9 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 146
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-22 16:38:57,308
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 5 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 146
+ 
+---------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,392 @@
+ 【时间】:2016-09-24 10:52:40,499
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 7 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.Exception: Invalid column name 'State'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString, SqlParameter[] cmdParms) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\DBUtility\DbHelperSQL.cs:行号 856
+   在 MesWeb.SQLServerDAL.T_SensorModule.GetModel(Int32 SensorModuleID) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\SQLServerDAL\T_SensorModule.cs:行号 174
+   在 MesWeb.BLL.T_SensorModule.GetModel(Int32 SensorModuleID) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\BLL\T_SensorModule.cs:行号 75
+   在 WebUI.Controllers.OnlineDataController.getSensorChartList(Int32 sensorModuleID, Int32 machineID, Int32 size) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 278
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 177
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-24 10:52:41,212
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetMachineProperty
+ 【线程ID】: 10 
+ 【日志内容】:数据库操作失败
+ 【日记详细】：System.Exception: Invalid column name 'CurrentDataID'.
+Invalid column name 'CollectedParameterID'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 MesWeb.SQLServerDAL.T_CollectedDataParameters.GetList(String strWhere) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\SQLServerDAL\T_CollectedDataParameters.cs:行号 231
+   在 MesWeb.BLL.T_CollectedDataParameters.GetModelList(String strWhere) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\BLL\T_CollectedDataParameters.cs:行号 121
+   在 WebUI.Controllers.OnlineDataController.GetMachineProperty(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 239
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-24 10:52:45,505
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 14 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.Exception: Invalid column name 'State'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString, SqlParameter[] cmdParms) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\DBUtility\DbHelperSQL.cs:行号 856
+   在 MesWeb.SQLServerDAL.T_SensorModule.GetModel(Int32 SensorModuleID) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\SQLServerDAL\T_SensorModule.cs:行号 174
+   在 MesWeb.BLL.T_SensorModule.GetModel(Int32 SensorModuleID) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\BLL\T_SensorModule.cs:行号 75
+   在 WebUI.Controllers.OnlineDataController.getSensorChartList(Int32 sensorModuleID, Int32 machineID, Int32 size) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 278
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 177
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-24 10:52:46,004
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetMachineProperty
+ 【线程ID】: 14 
+ 【日志内容】:数据库操作失败
+ 【日记详细】：System.Exception: Invalid column name 'CurrentDataID'.
+Invalid column name 'CollectedParameterID'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 MesWeb.SQLServerDAL.T_CollectedDataParameters.GetList(String strWhere) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\SQLServerDAL\T_CollectedDataParameters.cs:行号 231
+   在 MesWeb.BLL.T_CollectedDataParameters.GetModelList(String strWhere) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\BLL\T_CollectedDataParameters.cs:行号 121
+   在 WebUI.Controllers.OnlineDataController.GetMachineProperty(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 239
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-24 10:52:51,050
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 8 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.Exception: Invalid column name 'State'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString, SqlParameter[] cmdParms) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\DBUtility\DbHelperSQL.cs:行号 856
+   在 MesWeb.SQLServerDAL.T_SensorModule.GetModel(Int32 SensorModuleID) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\SQLServerDAL\T_SensorModule.cs:行号 174
+   在 MesWeb.BLL.T_SensorModule.GetModel(Int32 SensorModuleID) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\BLL\T_SensorModule.cs:行号 75
+   在 WebUI.Controllers.OnlineDataController.getSensorChartList(Int32 sensorModuleID, Int32 machineID, Int32 size) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 278
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 177
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-24 10:52:53,049
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 7 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.Exception: Invalid column name 'State'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString, SqlParameter[] cmdParms) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\DBUtility\DbHelperSQL.cs:行号 856
+   在 MesWeb.SQLServerDAL.T_SensorModule.GetModel(Int32 SensorModuleID) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\SQLServerDAL\T_SensorModule.cs:行号 174
+   在 MesWeb.BLL.T_SensorModule.GetModel(Int32 SensorModuleID) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\BLL\T_SensorModule.cs:行号 75
+   在 WebUI.Controllers.OnlineDataController.getSensorChartList(Int32 sensorModuleID, Int32 machineID, Int32 size) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 278
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 177
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-24 10:52:55,062
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 8 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.Exception: Invalid column name 'State'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString, SqlParameter[] cmdParms) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\DBUtility\DbHelperSQL.cs:行号 856
+   在 MesWeb.SQLServerDAL.T_SensorModule.GetModel(Int32 SensorModuleID) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\SQLServerDAL\T_SensorModule.cs:行号 174
+   在 MesWeb.BLL.T_SensorModule.GetModel(Int32 SensorModuleID) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\BLL\T_SensorModule.cs:行号 75
+   在 WebUI.Controllers.OnlineDataController.getSensorChartList(Int32 sensorModuleID, Int32 machineID, Int32 size) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 278
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 177
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-24 10:52:57,050
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 7 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.Exception: Invalid column name 'State'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString, SqlParameter[] cmdParms) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\DBUtility\DbHelperSQL.cs:行号 856
+   在 MesWeb.SQLServerDAL.T_SensorModule.GetModel(Int32 SensorModuleID) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\SQLServerDAL\T_SensorModule.cs:行号 174
+   在 MesWeb.BLL.T_SensorModule.GetModel(Int32 SensorModuleID) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\BLL\T_SensorModule.cs:行号 75
+   在 WebUI.Controllers.OnlineDataController.getSensorChartList(Int32 sensorModuleID, Int32 machineID, Int32 size) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 278
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 177
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-24 10:52:59,065
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 7 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.Exception: Invalid column name 'State'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString, SqlParameter[] cmdParms) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\DBUtility\DbHelperSQL.cs:行号 856
+   在 MesWeb.SQLServerDAL.T_SensorModule.GetModel(Int32 SensorModuleID) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\SQLServerDAL\T_SensorModule.cs:行号 174
+   在 MesWeb.BLL.T_SensorModule.GetModel(Int32 SensorModuleID) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\BLL\T_SensorModule.cs:行号 75
+   在 WebUI.Controllers.OnlineDataController.getSensorChartList(Int32 sensorModuleID, Int32 machineID, Int32 size) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 278
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 177
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-24 10:53:01,071
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 14 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.Exception: Invalid column name 'State'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString, SqlParameter[] cmdParms) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\DBUtility\DbHelperSQL.cs:行号 856
+   在 MesWeb.SQLServerDAL.T_SensorModule.GetModel(Int32 SensorModuleID) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\SQLServerDAL\T_SensorModule.cs:行号 174
+   在 MesWeb.BLL.T_SensorModule.GetModel(Int32 SensorModuleID) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\BLL\T_SensorModule.cs:行号 75
+   在 WebUI.Controllers.OnlineDataController.getSensorChartList(Int32 sensorModuleID, Int32 machineID, Int32 size) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 278
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 177
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-24 10:53:08,090
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 10 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.Exception: Invalid column name 'State'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString, SqlParameter[] cmdParms) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\DBUtility\DbHelperSQL.cs:行号 856
+   在 MesWeb.SQLServerDAL.T_SensorModule.GetModel(Int32 SensorModuleID) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\SQLServerDAL\T_SensorModule.cs:行号 174
+   在 MesWeb.BLL.T_SensorModule.GetModel(Int32 SensorModuleID) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\BLL\T_SensorModule.cs:行号 75
+   在 WebUI.Controllers.OnlineDataController.getSensorChartList(Int32 sensorModuleID, Int32 machineID, Int32 size) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 278
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 177
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-24 10:53:08,588
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 10 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.Exception: Invalid column name 'State'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString, SqlParameter[] cmdParms) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\DBUtility\DbHelperSQL.cs:行号 856
+   在 MesWeb.SQLServerDAL.T_SensorModule.GetModel(Int32 SensorModuleID) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\SQLServerDAL\T_SensorModule.cs:行号 174
+   在 MesWeb.BLL.T_SensorModule.GetModel(Int32 SensorModuleID) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\BLL\T_SensorModule.cs:行号 75
+   在 WebUI.Controllers.OnlineDataController.getSensorChartList(Int32 sensorModuleID, Int32 machineID, Int32 size) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 278
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 177
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-24 10:53:09,072
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 14 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.Exception: Invalid column name 'State'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString, SqlParameter[] cmdParms) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\DBUtility\DbHelperSQL.cs:行号 856
+   在 MesWeb.SQLServerDAL.T_SensorModule.GetModel(Int32 SensorModuleID) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\SQLServerDAL\T_SensorModule.cs:行号 174
+   在 MesWeb.BLL.T_SensorModule.GetModel(Int32 SensorModuleID) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\BLL\T_SensorModule.cs:行号 75
+   在 WebUI.Controllers.OnlineDataController.getSensorChartList(Int32 sensorModuleID, Int32 machineID, Int32 size) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 278
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 177
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-24 10:53:09,155
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 8 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.Exception: Invalid column name 'State'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString, SqlParameter[] cmdParms) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\DBUtility\DbHelperSQL.cs:行号 856
+   在 MesWeb.SQLServerDAL.T_SensorModule.GetModel(Int32 SensorModuleID) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\SQLServerDAL\T_SensorModule.cs:行号 174
+   在 MesWeb.BLL.T_SensorModule.GetModel(Int32 SensorModuleID) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\BLL\T_SensorModule.cs:行号 75
+   在 WebUI.Controllers.OnlineDataController.getSensorChartList(Int32 sensorModuleID, Int32 machineID, Int32 size) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 278
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 177
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-24 10:53:11,058
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 7 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.Exception: Invalid column name 'State'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString, SqlParameter[] cmdParms) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\DBUtility\DbHelperSQL.cs:行号 856
+   在 MesWeb.SQLServerDAL.T_SensorModule.GetModel(Int32 SensorModuleID) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\SQLServerDAL\T_SensorModule.cs:行号 174
+   在 MesWeb.BLL.T_SensorModule.GetModel(Int32 SensorModuleID) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\BLL\T_SensorModule.cs:行号 75
+   在 WebUI.Controllers.OnlineDataController.getSensorChartList(Int32 sensorModuleID, Int32 machineID, Int32 size) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 278
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 177
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-24 10:53:13,046
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 7 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.Exception: Invalid column name 'State'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString, SqlParameter[] cmdParms) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\DBUtility\DbHelperSQL.cs:行号 856
+   在 MesWeb.SQLServerDAL.T_SensorModule.GetModel(Int32 SensorModuleID) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\SQLServerDAL\T_SensorModule.cs:行号 174
+   在 MesWeb.BLL.T_SensorModule.GetModel(Int32 SensorModuleID) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\BLL\T_SensorModule.cs:行号 75
+   在 WebUI.Controllers.OnlineDataController.getSensorChartList(Int32 sensorModuleID, Int32 machineID, Int32 size) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 278
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 177
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-24 10:53:15,050
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 10 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.Exception: Invalid column name 'State'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString, SqlParameter[] cmdParms) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\DBUtility\DbHelperSQL.cs:行号 856
+   在 MesWeb.SQLServerDAL.T_SensorModule.GetModel(Int32 SensorModuleID) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\SQLServerDAL\T_SensorModule.cs:行号 174
+   在 MesWeb.BLL.T_SensorModule.GetModel(Int32 SensorModuleID) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\BLL\T_SensorModule.cs:行号 75
+   在 WebUI.Controllers.OnlineDataController.getSensorChartList(Int32 sensorModuleID, Int32 machineID, Int32 size) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 278
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 177
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-24 10:53:17,070
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 8 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.Exception: Invalid column name 'State'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString, SqlParameter[] cmdParms) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\DBUtility\DbHelperSQL.cs:行号 856
+   在 MesWeb.SQLServerDAL.T_SensorModule.GetModel(Int32 SensorModuleID) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\SQLServerDAL\T_SensorModule.cs:行号 174
+   在 MesWeb.BLL.T_SensorModule.GetModel(Int32 SensorModuleID) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\BLL\T_SensorModule.cs:行号 75
+   在 WebUI.Controllers.OnlineDataController.getSensorChartList(Int32 sensorModuleID, Int32 machineID, Int32 size) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 278
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 177
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-24 14:23:40,416
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetODCPKChartDataAction
+ 【线程ID】: 10 
+ 【日志内容】:OD的CPK出错
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getParamsChartList(Int32 machineID, T_ParameterCode[] paramCodeIDList) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 324
+   在 WebUI.Controllers.OnlineDataController.getParamsChartList(Int32 machineID, Int32[] paramCodeIDs) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 369
+   在 WebUI.Controllers.OnlineDataController.GetODCPKChartDataAction(Int32 layoutID) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 129
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-24 14:24:43,736
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetODCPKChartDataAction
+ 【线程ID】: 11 
+ 【日志内容】:OD的CPK出错
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getParamsChartList(Int32 machineID, T_ParameterCode[] paramCodeIDList) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 324
+   在 WebUI.Controllers.OnlineDataController.getParamsChartList(Int32 machineID, Int32[] paramCodeIDs) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 369
+   在 WebUI.Controllers.OnlineDataController.GetODCPKChartDataAction(Int32 layoutID) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 129
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-24 14:25:32,096
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetODCPKChartDataAction
+ 【线程ID】: 11 
+ 【日志内容】:OD的CPK出错
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getParamsChartList(Int32 machineID, T_ParameterCode[] paramCodeIDList) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 324
+   在 WebUI.Controllers.OnlineDataController.getParamsChartList(Int32 machineID, Int32[] paramCodeIDs) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 369
+   在 WebUI.Controllers.OnlineDataController.GetODCPKChartDataAction(Int32 layoutID) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 129
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-24 14:25:58,841
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetODCPKChartDataAction
+ 【线程ID】: 11 
+ 【日志内容】:OD的CPK出错
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getParamsChartList(Int32 machineID, T_ParameterCode[] paramCodeIDList) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 324
+   在 WebUI.Controllers.OnlineDataController.getParamsChartList(Int32 machineID, Int32[] paramCodeIDs) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 369
+   在 WebUI.Controllers.OnlineDataController.GetODCPKChartDataAction(Int32 layoutID) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 129
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-24 14:27:14,073
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetODCPKChartDataAction
+ 【线程ID】: 6 
+ 【日志内容】:OD的CPK出错
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getParamsChartList(Int32 machineID, T_ParameterCode[] paramCodeIDList) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 324
+   在 WebUI.Controllers.OnlineDataController.getParamsChartList(Int32 machineID, Int32[] paramCodeIDs) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 369
+   在 WebUI.Controllers.OnlineDataController.GetODCPKChartDataAction(Int32 layoutID) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 129
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-24 14:27:41,597
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetODCPKChartDataAction
+ 【线程ID】: 6 
+ 【日志内容】:OD的CPK出错
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getParamsChartList(Int32 machineID, T_ParameterCode[] paramCodeIDList) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 324
+   在 WebUI.Controllers.OnlineDataController.getParamsChartList(Int32 machineID, Int32[] paramCodeIDs) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 369
+   在 WebUI.Controllers.OnlineDataController.GetODCPKChartDataAction(Int32 layoutID) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 129
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-24 14:28:20,652
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetODCPKChartDataAction
+ 【线程ID】: 4 
+ 【日志内容】:OD的CPK出错
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.getParamsChartList(Int32 machineID, T_ParameterCode[] paramCodeIDList) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 324
+   在 WebUI.Controllers.OnlineDataController.getParamsChartList(Int32 machineID, Int32[] paramCodeIDs) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 369
+   在 WebUI.Controllers.OnlineDataController.GetODCPKChartDataAction(Int32 layoutID) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 129
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-24 16:07:18,008
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetODCPKChartDataAction
+ 【线程ID】: 9 
+ 【日志内容】:OD的CPK出错
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.OnlineDataController.getMachineCPKMSLineData(Int32 machineID, T_ParameterCode code) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 442
+   在 WebUI.Controllers.OnlineDataController.getMachineCPKMSLineData(Int32 machineID, Int32 CodeID) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 391
+   在 WebUI.Controllers.OnlineDataController.GetODCPKChartDataAction(Int32 layoutID) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 128
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-24 16:09:02,749
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetODCPKChartDataAction
+ 【线程ID】: 4 
+ 【日志内容】:OD的CPK出错
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.OnlineDataController.getMachineCPKMSLineData(Int32 machineID, T_ParameterCode code) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 442
+   在 WebUI.Controllers.OnlineDataController.getMachineCPKMSLineData(Int32 machineID, Int32 CodeID) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 391
+   在 WebUI.Controllers.OnlineDataController.GetODCPKChartDataAction(Int32 layoutID) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 128
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-24 20:18:45,823
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 21 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetailTable hisData) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 113
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-24 20:18:48,788
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 21 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetailTable hisData) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 113
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-24 20:18:50,536
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 21 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetailTable hisData) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 113
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-24 20:19:07,449
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 26 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetailTable hisData) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 113
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-24 20:19:11,321
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 26 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetailTable hisData) 位置 C:\Users\ychost\Desktop\WorkSpace\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 113
+ 
+---------------------------------------------------------------------------------------------------------------

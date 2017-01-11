@@ -1,0 +1,41 @@
+ 【时间】:2016-12-04 13:04:32,799
+ 【级别】:FATAL
+ 【类名】:WebUI.Controllers.ProjectAdminController:AddSensorAction
+ 【线程ID】: 344 
+ 【日志内容】:往数据库写入数据失败
+ 【日记详细】：System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.Int32.Parse(String s)
+   在 WebUI.Controllers.ProjectAdminController.AddSensorAction(VM_AddSensorAdmin sensorAdmin) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\ProjectAdminController.cs:行号 500
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-04 13:05:07,951
+ 【级别】:FATAL
+ 【类名】:WebUI.Controllers.ProjectAdminController:AddSensorAction
+ 【线程ID】: 344 
+ 【日志内容】:往数据库写入数据失败
+ 【日记详细】：System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.Int32.Parse(String s)
+   在 WebUI.Controllers.ProjectAdminController.AddSensorAction(VM_AddSensorAdmin sensorAdmin) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\ProjectAdminController.cs:行号 500
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-04 21:37:37,181
+ 【级别】:FATAL
+ 【类名】:WebUI.Controllers.ProjectAdminController:AddMachineLayoutAction
+ 【线程ID】: 5 
+ 【日志内容】:数据库发生错误!
+ 【日记详细】：System.Data.SqlTypes.SqlTypeException: SqlDateTime 溢出。必须介于 1/1/1753 12:00:00 AM 和 12/31/9999 11:59:59 PM 之间。
+   在 System.Data.SqlClient.TdsParser.TdsExecuteRPC(SqlCommand cmd, _SqlRPC[] rpcArray, Int32 timeout, Boolean inSchema, SqlNotificationRequest notificationRequest, TdsParserStateObject stateObj, Boolean isCommandProc, Boolean sync, TaskCompletionSource`1 completion, Int32 startRpc, Int32 startParam)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 MES.DBUtility.DbHelperSQL.RunProcedure(String storedProcName, IDataParameter[] parameters, Int32& rowsAffected) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 990
+   在 MesWeb.SQLServerDAL.T_Machine.Add(T_Machine model) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\SQLServerDAL\T_Machine.cs:行号 81
+   在 MesWeb.BLL.T_Machine.Add(T_Machine model) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\BLL\T_Machine.cs:行号 42
+   在 WebUI.Controllers.ProjectAdminController.AddMachineLayoutAction(VM_AddMachineAdmin machineAdmin) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\ProjectAdminController.cs:行号 412
+ 
+---------------------------------------------------------------------------------------------------------------

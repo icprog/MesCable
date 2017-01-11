@@ -1,0 +1,137 @@
+ 【时间】:2016-10-11 09:28:40,048
+ 【级别】:ERROR
+ 【类名】:WebUI.Models.RealTimeConnection.TCPConnection:StartConnection
+ 【线程ID】: 17 
+ 【日志内容】:连接数据服务器失败，请检查IP和端口
+ 【日记详细】：System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:7788
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 WebUI.Models.RealTimeConnection.TCPConnection.<StartConnection>b__16_0(IAsyncResult asyncResult) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Models\RealTimeConnection\TCPConnection.cs:行号 217
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-11 09:28:40,051
+ 【级别】:ERROR
+ 【类名】:WebUI.Models.RealTimeConnection.TCPConnection:StartConnection
+ 【线程ID】: 16 
+ 【日志内容】:连接数据服务器失败，请检查IP和端口
+ 【日记详细】：System.ArgumentException: 未从此类上对应的异步方法中返回 IAsyncResult 对象。
+参数名: asyncResult
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 WebUI.Models.RealTimeConnection.TCPConnection.<StartConnection>b__16_0(IAsyncResult asyncResult) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Models\RealTimeConnection\TCPConnection.cs:行号 217
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-11 09:44:12,785
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 10 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail hisData) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 121
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-11 09:44:15,109
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 7 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail hisData) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 121
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-11 09:44:16,915
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 7 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail hisData) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 121
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-11 09:44:21,563
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 7 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail hisData) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 121
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-11 09:44:28,630
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 7 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail hisData) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 121
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-11 09:45:09,435
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 7 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail hisData) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 121
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-11 09:46:10,784
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 7 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail hisData) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 121
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-11 09:46:27,218
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 7 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail hisData) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 121
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-11 09:51:01,449
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.LayoutBaseController:GetMachineProperty
+ 【线程ID】: 10 
+ 【日志内容】:数据库操作失败
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.LayoutBaseController.GetMachineProperty(Int32 Id)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-11 09:51:04,709
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.LayoutBaseController:GetMachineProperty
+ 【线程ID】: 9 
+ 【日志内容】:数据库操作失败
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.LayoutBaseController.GetMachineProperty(Int32 Id)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-11 09:52:05,088
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.LayoutBaseController:GetMachineProperty
+ 【线程ID】: 17 
+ 【日志内容】:数据库操作失败
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.LayoutBaseController.GetMachineProperty(Int32 Id)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-11 09:52:56,414
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.LayoutBaseController:GetMachineProperty
+ 【线程ID】: 10 
+ 【日志内容】:数据库操作失败
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.LayoutBaseController.GetMachineProperty(Int32 Id)
+ 
+---------------------------------------------------------------------------------------------------------------

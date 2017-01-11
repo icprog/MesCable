@@ -1,0 +1,60 @@
+ 【时间】:2016-09-18 15:36:38,353
+ 【级别】:FATAL
+ 【类名】:WebUI.Controllers.ProjectAdminController:AddMachineLayoutAction
+ 【线程ID】: 8 
+ 【日志内容】:数据库发生错误!
+ 【日记详细】：System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'T_Machine_ADD' expects parameter '@MachineID', which was not supplied.
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 MES.DBUtility.DbHelperSQL.RunProcedure(String storedProcName, IDataParameter[] parameters, Int32& rowsAffected) 位置 C:\Users\ychost\Desktop\MesCable\DBUtility\DbHelperSQL.cs:行号 989
+   在 MesWeb.SQLServerDAL.T_Machine.Add(T_Machine model) 位置 C:\Users\ychost\Desktop\MesCable\SQLServerDAL\T_Machine.cs:行号 81
+   在 MesWeb.BLL.T_Machine.Add(T_Machine model) 位置 C:\Users\ychost\Desktop\MesCable\BLL\T_Machine.cs:行号 42
+   在 WebUI.Controllers.ProjectAdminController.AddMachineLayoutAction(VM_AddMachineAdmin machineAdmin) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\ProjectAdminController.cs:行号 412
+ClientConnectionId:ec4e4b37-140a-4d64-b811-10e2eb2182a8
+Error Number:201,State:4,Class:16
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-18 15:37:27,938
+ 【级别】:FATAL
+ 【类名】:WebUI.Controllers.ProjectAdminController:AddMachineLayoutAction
+ 【线程ID】: 7 
+ 【日志内容】:数据库发生错误!
+ 【日记详细】：System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'T_Machine_ADD' expects parameter '@MachineID', which was not supplied.
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 MES.DBUtility.DbHelperSQL.RunProcedure(String storedProcName, IDataParameter[] parameters, Int32& rowsAffected) 位置 C:\Users\ychost\Desktop\MesCable\DBUtility\DbHelperSQL.cs:行号 989
+   在 MesWeb.SQLServerDAL.T_Machine.Add(T_Machine model) 位置 C:\Users\ychost\Desktop\MesCable\SQLServerDAL\T_Machine.cs:行号 81
+   在 MesWeb.BLL.T_Machine.Add(T_Machine model) 位置 C:\Users\ychost\Desktop\MesCable\BLL\T_Machine.cs:行号 42
+   在 WebUI.Controllers.ProjectAdminController.AddMachineLayoutAction(VM_AddMachineAdmin machineAdmin) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\ProjectAdminController.cs:行号 412
+ClientConnectionId:ec4e4b37-140a-4d64-b811-10e2eb2182a8
+Error Number:201,State:4,Class:16
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-18 15:57:21,790
+ 【级别】:FATAL
+ 【类名】:WebUI.Controllers.ProjectAdminController:DeleteSensorLayoutAction
+ 【线程ID】: 7 
+ 【日志内容】:系统错误
+ 【日记详细】：System.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near ')'.
+   在 MES.DBUtility.DbHelperSQL.ExecuteSql(String SQLString) 位置 C:\Users\ychost\Desktop\MesCable\DBUtility\DbHelperSQL.cs:行号 147
+   在 MesWeb.SQLServerDAL.T_SensorModule_T_ParameterCode.DeleteList(String SensorModule_PARCODEIDlist) 位置 C:\Users\ychost\Desktop\MesCable\SQLServerDAL\T_SensorModule_T_ParameterCode.cs:行号 121
+   在 MesWeb.BLL.T_SensorModule_T_ParameterCode.DeleteList(String SensorModule_PARCODEIDlist) 位置 C:\Users\ychost\Desktop\MesCable\BLL\T_SensorModule_T_ParameterCode.cs:行号 66
+   在 WebUI.Controllers.ProjectAdminController.DeleteSensorLayoutAction(T_LayoutPicture layout) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\ProjectAdminController.cs:行号 549
+ClientConnectionId:23c001e4-f51e-4495-9214-50543de5e480
+Error Number:102,State:1,Class:15
+ 
+---------------------------------------------------------------------------------------------------------------

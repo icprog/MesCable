@@ -1,0 +1,544 @@
+﻿@section Style{
+    @Styles.Render("~/Content/icheck-square-green")
+}
+@section Header{
+    @Styles.Render("~/Content/bootstrap-switch")
+    <style>
+        .center {
+            width: auto;
+            display: table;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .no-border-left {
+            border-left: 0px !important;
+        }
+
+        .no-border-right {
+            border-right: 0px !important;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        td {
+            text-align: center;
+            padding: 2px !important;
+            border: 1px solid !important;
+        }
+
+        .no-border {
+            border: 0px !important;
+        }
+
+        .header-table td {
+            border: 0px !important;
+        }
+
+        .large-input {
+            height: 77px;
+        }
+
+        #report input {
+            /*outline: none !important;
+            border-left: 0px !important;
+            border-top: 0px !important;
+            border-right: 0px !important;
+            border-bottom: 1px !important;*/
+        }
+    </style>
+}
+
+<body>
+    <div class="col-sm-12" id="qt_picture">
+        <div class="ibox float-e-margins" id="plastic">
+            <div class="ibox-title">
+
+                <div class="row">
+
+                    <div class="col-sm-12">
+                        
+                        <div class="col-sm-1 col-sm-offset-1" style="text-align:right">
+                            <select class="form-control m-b" Id="search_condition">
+                                <option value="1">规格</option>
+                                <option value="2">厂家</option>
+                                <option value="3">批次</option>
+                                <option value="4">时间</option>
+                            </select>
+                        </div>                        <div class="col-sm-5">
+                            <div class="input-group" style="margin-left:2px">
+                                <input type="text"value="3521-B8-BL4"  id="ps_sepcnum_input" class="form-control">
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-white" id="ps_search_btn">
+                                        <span class="fa fa-search"></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- /btn-group -->
+                        </div>
+                        <div class="col-sm-3" style="text-align:left">
+                            <div class="input-group">
+                                <label class="form-control" style="text-align:right;border:0px!important;margin-top:-8px;padding-top: 15px;">编辑</label>
+                                <div class="input-group-btn">
+
+                                    <div class="switch">
+                                        <input id="ps_enable_edit_btn" type="checkbox" />
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ibox-content">
+                            <div id="report" class="row center" style="margin-top:30px;display:none">
+                                <table id="pls_table" align="center" class="table table-bordered center-block" style="width:80%">
+
+                                    <tr>
+                                        <td colspan="5" style="text-align:left;" class="no-border-right">
+                                            <span style="font-size:30px;padding-left:52%!important;">塑料检验报告</span>
+                                        <td colspan="2" class="no-border-left">
+                                            <div class="input-group date" style="z-index:9999">
+                                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                                <input name="Header_InputDate" type="text" class="form-control">
+                                            </div>
+                                        </td>
+                                        <td colspan="1"class="no-border-right no-border-left"><sub style="float:right ">编号JL/ZD-</sub></td>
+                                        <td colspan="2" class="no-border-left">
+                                            <input style="color:red;border-bottom:1px !important
+    " class="form-control" name="Code" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1" style="width:10%">规格型号：</td>
+                                        <td colspan="2"><input class="form-control" name="Header_SpecNum" /></td>
+                                        <td colspan="1">供应商：</td>
+                                        <td colspan="6"><input class="form-control" name="Header_Supplier" size="10" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1">样品颜色：</td>
+                                        <td colspan="2"><input class="form-control" name="Header_SampleColor" /></td>
+                                        <td colspan="1">批号：</td>
+                                        <td colspan="6"><input class="form-control" name="Header_BatchNum" size="10" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1">来料数量：</td>
+                                        <td colspan="2"><input class="form-control" name="Header_IncomingQty" /></td>
+                                        <td colspan="1">是否有出厂检验报告：</td>
+                                        <td colspan="6"><input class="form-control" name="Header_HasOutFactoryReport" size="10" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1">抽样数量：</td>
+                                        <td colspan="2"><input class="form-control" name="Header_SampleNum" /></td>
+                                        <td>检验日期：</td>
+                                        <td colspan="6"><input class="form-control" name="Header_CheckDate" size="10" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" style="height:35px">检验项目</td>
+                                        <td colspan="1">单位</td>
+                                        <td colspan="1">标准</td>
+                                        <td colspan="5">实测</td>
+                                        <td colspan="1">结果判定</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="2">性能测试</td>
+                                        <td colspan="1" style="width:8%">20&#8451;体积电阻率</td>
+                                        <td colspan="1">&#937;·m</td>
+                                        <td colspan="1"><input name="ElecRat_Std" class="form-control" /></td>
+                                        <td colspan="1"><input name="ElecRat_Actual1" class="form-control" /></td>
+                                        <td colspan="1"><input name="ElecRat_Actual2" class="form-control" /></td>
+                                        <td colspan="1"><input name="ElecRat_Actual3" class="form-control" /></td>
+                                        <td colspan="1"><input name="ElecRat_Actual4" class="form-control" /></td>
+                                        <td colspan="1"><input name="ElecRat_Actual5" class="form-control" /></td>
+                                        <td colspan="1"><input name="ElecRat_Result" class="form-control" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1">介电强度</td>
+                                        <td colspan="1">Mv/m</td>
+                                        <td colspan="1" style="width:6%"><input name="ElecStrength_Std" class="form-control" /></td>
+                                        <td colspan="1" style="width:6%"><input name="ElecStrength_Actual1" class="form-control" /></td>
+                                        <td colspan="1" style="width:6%"><input name="ElecStrength_Actual2" class="form-control" /></td>
+                                        <td colspan="1" style="width:6%"><input name="ElecStrength_Actual3" class="form-control" /></td>
+                                        <td colspan="1" style="width:6%"><input name="ElecStrength_Actual4" class="form-control" /></td>
+                                        <td colspan="1" style="width:6%"><input name="ElecStrength_Actual5" class="form-control" /></td>
+                                        <td colspan="1" style="width:6%"><input name="ElecStrength_Result" class="form-control" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td colspan="1">老化前抗拉强度</td>
+                                        <td colspan="1">Mpa</td>
+                                        <td colspan="1"><input name="MpaBefore_Std" class="form-control" /></td>
+                                        <td colspan="1"><input name="MpaBefore_Actual1" class="form-control" /></td>
+                                        <td colspan="1"><input name="MpaBefore_Actual2" class="form-control" /></td>
+                                        <td colspan="1"><input name="MpaBefore_Actual3" class="form-control" /></td>
+                                        <td colspan="1"><input name="MpaBefore_Actual4" class="form-control" /></td>
+                                        <td colspan="1"><input name="MpaBefore_Actual5" class="form-control" /></td>
+                                        <td colspan="1"><input name="MpaBefore_Result" class="form-control" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td colspan="1">老化前断裂伸长率</td>
+                                        <td colspan="1">%</td>
+                                        <td colspan="1"><input name="ElongBefore_Std" class="form-control" /></td>
+                                        <td colspan="1"><input name="ElongBefore_Acutal1" class="form-control" /></td>
+                                        <td colspan="1"><input name="ElongBefore_Acutal2" class="form-control" /></td>
+                                        <td colspan="1"><input name="ElongBefore_Acutal3" class="form-control" /></td>
+                                        <td colspan="1"><input name="ElongBefore_Acutal4" class="form-control" /></td>
+                                        <td colspan="1"><input name="ElongBefore_Acutal5" class="form-control" /></td>
+                                        <td colspan="1"><input name="ElongBefore_Result" class="form-control" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td colspan="1">老化条件</td>
+                                        <td colspan="2"><input name="AgingCondition_Std" class="form-control" /></td>
+                                        <td colspan="1"><input name="AgingCondition_Actual1" class="form-control" /></td>
+                                        <td colspan="1"><input name="AgingCondition_Actual2" class="form-control" /></td>
+                                        <td colspan="1"><input name="AgingCondition_Actual3" class="form-control" /></td>
+                                        <td colspan="1"><input name="AgingCondition_Actual4" class="form-control" /></td>
+                                        <td colspan="1"><input name="AgingCondition_Actual5" class="form-control" /></td>
+                                        <td colspan="1"><input name="AgingCondition_Result" class="form-control" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td colspan="1">老化后抗拉强度</td>
+                                        <td colspan="1">Mpa</td>
+                                        <td colspan="1"><input name="MpaAfter_Std" class="form-control" /></td>
+                                        <td colspan="1"><input name="MpaAfter_Actual1" class="form-control" /></td>
+                                        <td colspan="1"><input name="MpaAfter_Actual2" class="form-control" /></td>
+                                        <td colspan="1"><input name="MpaAfter_Actual3" class="form-control" /></td>
+                                        <td colspan="1"><input name="MpaAfter_Actual4" class="form-control" /></td>
+                                        <td colspan="1"><input name="MpaAfter_Actual5" class="form-control" /></td>
+                                        <td colspan="1"><input name="MpaAfter_Result" class="form-control" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td colspan="1">老化后断裂伸长率</td>
+                                        <td colspan="1">%</td>
+                                        <td colspan="1"><input name="ElongAfter_Std" class="form-control" /></td>
+                                        <td colspan="1"><input name="ElongAfter_Actual1" class="form-control" /></td>
+                                        <td colspan="1"><input name="ElongAfter_Actual2" class="form-control" /></td>
+                                        <td colspan="1"><input name="ElongAfter_Actual3" class="form-control" /></td>
+                                        <td colspan="1"><input name="ElongAfter_Actual4" class="form-control" /></td>
+                                        <td colspan="1"><input name="ElongAfter_Actual5" class="form-control" /></td>
+                                        <td colspan="1"><input name="ElongAfter_Result" class="form-control" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td colspan="1">抗拉强度变化率最大</td>
+                                        <td colspan="1">%</td>
+                                        <td colspan="1"><input name="MpaRateMax_Std" class="form-control" /></td>
+                                        <td colspan="1"><input name="MpaRateMax_Actual1" class="form-control" /></td>
+                                        <td colspan="1"><input name="MpaRateMax_Actual2" class="form-control" /></td>
+                                        <td colspan="1"><input name="MpaRateMax_Actual3" class="form-control" /></td>
+                                        <td colspan="1"><input name="MpaRateMax_Actual4" class="form-control" /></td>
+                                        <td colspan="1"><input name="MpaRateMax_Actual5" class="form-control" /></td>
+                                        <td colspan="1"><input name="MpaRateMax_Result" class="form-control" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td colspan="1">断裂伸长率变化率最大</td>
+                                        <td colspan="1">%</td>
+                                        <td colspan="1"><input name="ElongRateMax_Std" class="form-control" /></td>
+                                        <td colspan="1"><input name="ElongRateMax_Actual1" class="form-control" /></td>
+                                        <td colspan="1"><input name="ElongRateMax_Actual2" class="form-control" /></td>
+                                        <td colspan="1"><input name="ElongRateMax_Actual3" class="form-control" /></td>
+                                        <td colspan="1"><input name="ElongRateMax_Actual4" class="form-control" /></td>
+                                        <td colspan="1"><input name="ElongRateMax_Actual5" class="form-control" /></td>
+                                        <td colspan="1"><input name="ElongRateMax_Result" class="form-control" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td colspan="1">热老化质量损失</td>
+                                        <td colspan="1">g/m<sup>2</sup></td>
+                                        <td colspan="1"><input name="AgingQualityLoss_Std" class="form-control" /></td>
+                                        <td colspan="1"><input name="AgingQualityLoss_Actual1" class="form-control" /></td>
+                                        <td colspan="1"><input name="AgingQualityLoss_Actual2" class="form-control" /></td>
+                                        <td colspan="1"><input name="AgingQualityLoss_Actual3" class="form-control" /></td>
+                                        <td colspan="1"><input name="AgingQualityLoss_Actual4" class="form-control" /></td>
+                                        <td colspan="1"><input name="AgingQualityLoss_Actual5" class="form-control" /></td>
+                                        <td colspan="1"><input name="AgingQualityLoss_Result" class="form-control" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td colspan="1">200&#8451;时热稳定时间</td>
+                                        <td colspan="1">m|n</td>
+                                        <td colspan="1"><input name="ThermalStablityTime_Std" class="form-control" /></td>
+                                        <td colspan="1"><input name="ThermalStablityTime_Actual1" class="form-control" /></td>
+                                        <td colspan="1"><input name="ThermalStablityTime_Actual2" class="form-control" /></td>
+                                        <td colspan="1"><input name="ThermalStablityTime_Actual3" class="form-control" /></td>
+                                        <td colspan="1"><input name="ThermalStablityTime_Actual4" class="form-control" /></td>
+                                        <td colspan="1"><input name="ThermalStablityTime_Actual5" class="form-control" /></td>
+                                        <td colspan="1"><input name="ThermalStablityTime_Result" class="form-control" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td colspan="1">冲击脆化试验</td>
+                                        <td colspan="1">&#8451;</td>
+                                        <td colspan="1"><input name="BittleImpactTes_Std" class="form-control" /></td>
+                                        <td colspan="1"><input name="BittleImpactTes_Actual1" class="form-control" /></td>
+                                        <td colspan="1"><input name="BittleImpactTes_Actual2" class="form-control" /></td>
+                                        <td colspan="1"><input name="BittleImpactTes_Actual3" class="form-control" /></td>
+                                        <td colspan="1"><input name="BittleImpactTes_Actual4" class="form-control" /></td>
+                                        <td colspan="1"><input name="BittleImpactTes_Actual5" class="form-control" /></td>
+                                        <td colspan="1"><input name="BittleImpactTes_Result" class="form-control" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td colspan="1">热变形</td>
+                                        <td colspan="1">%</td>
+                                        <td colspan="1"><input name="ThermalDeformation_Std" class="form-control" /></td>
+                                        <td colspan="1"><input name="ThermalDeformation_Actual1" class="form-control" /></td>
+                                        <td colspan="1"><input name="ThermalDeformation_Actual2" class="form-control" /></td>
+                                        <td colspan="1"><input name="ThermalDeformation_Actual3" class="form-control" /></td>
+                                        <td colspan="1"><input name="ThermalDeformation_Actual4" class="form-control" /></td>
+                                        <td colspan="1"><input name="ThermalDeformation_Actual5" class="form-control" /></td>
+                                        <td colspan="1"><input name="ThermalDeformation_Result" class="form-control" /></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td></td>
+                                        <td colspan="1">氧指数</td>
+                                        <td colspan="1">O|</td>
+                                        <td colspan="1"><input name="OxyIndex_Std" class="form-control" /></td>
+                                        <td colspan="1"><input name="OxyIndex_Actual1" class="form-control" /></td>
+                                        <td colspan="1"><input name="OxyIndex_Actual2" class="form-control" /></td>
+                                        <td colspan="1"><input name="OxyIndex_Actual3" class="form-control" /></td>
+                                        <td colspan="1"><input name="OxyIndex_Actual4" class="form-control" /></td>
+                                        <td colspan="1"><input name="OxyIndex_Actual5" class="form-control" /></td>
+                                        <td colspan="1"><input name="OxyIndex_Result" class="form-control" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td colspan="1">比重</td>
+                                        <td colspan="1">g/cm<sup>3</sup></td>
+                                        <td colspan="1"><input name="SpecGravity_Std" class="form-control" /></td>
+                                        <td colspan="1"><input name="SpecGravity_Actual1" class="form-control" /></td>
+                                        <td colspan="1"><input name="SpecGravity_Actual2" class="form-control" /></td>
+                                        <td colspan="1"><input name="SpecGravity_Actual3" class="form-control" /></td>
+                                        <td colspan="1"><input name="SpecGravity_Actual4" class="form-control" /></td>
+                                        <td colspan="1"><input name="SpecGravity_Actual5" class="form-control" /></td>
+                                        <td colspan="1"><input name="SpecGravity_Result" class="form-control" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td colspan="1">邵氏硬度试验</td>
+                                        <td colspan="1">P</td>
+                                        <td colspan="1"><input name="ShoreHBTestI_Std" class="form-control" /></td>
+                                        <td colspan="1"><input name="ShoreHBTestI_Actual1" class="form-control" /></td>
+                                        <td colspan="1"><input name="ShoreHBTestI_Actual2" class="form-control" /></td>
+                                        <td colspan="1"><input name="ShoreHBTestI_Actual3" class="form-control" /></td>
+                                        <td colspan="1"><input name="ShoreHBTestI_Actual4" class="form-control" /></td>
+                                        <td colspan="1"><input name="ShoreHBTestI_Actual5" class="form-control" /></td>
+                                        <td colspan="1"><input name="ShoreHBTestI_Result" class="form-control" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1">外观质量</td>
+                                        <td colspan="3">塑料粒应塑化良好、色泽均匀，不应有明显杂质，色差≤4</td>
+                                        <td colspan="1"><input name="ApperanceQuality_Actual1" class="form-control" /></td>
+                                        <td colspan="1"><input name="ApperanceQuality_Actual2" class="form-control" /></td>
+                                        <td colspan="1"><input name="ApperanceQuality_Actual3" class="form-control" /></td>
+                                        <td colspan="1"><input name="ApperanceQuality_Actual4" class="form-control" /></td>
+                                        <td colspan="1"><input name="ApperanceQuality_Actual5" class="form-control" /></td>
+                                        <td colspan="1"><input name="ApperanceQuality_Result" class="form-control" /></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1">包装与标示</td>
+                                        <td colspan="3">符合《原辅材料检验规范》标准要求</td>
+                                        <td colspan="1"><input name="PkgAndLabel_Actual1" class="form-control" /></td>
+                                        <td colspan="1"><input name="PkgAndLabel_Actual2" class="form-control" /></td>
+                                        <td colspan="1"><input name="PkgAndLabel_Actual3" class="form-control" /></td>
+                                        <td colspan="1"><input name="PkgAndLabel_Actual4" class="form-control" /></td>
+                                        <td colspan="1"><input name="PkgAndLabel_Actual5" class="form-control" /></td>
+                                        <td colspan="1"><input name="PkgAndLabel_Result" class="form-control" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1" style="height:35px">环保检验</td>
+                                        <td colspan="3" class="no-border-right" name="Footer_ICPReporter">
+                                            是否有ICP报告
+                                            <input class="form-control" name="ICPReporter" type="radio" /> 有&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <input class="form-control" name="ICPReporter" type="radio" /> 无
+
+                                        </td>
+                                        <td colspan="6" class="no-border-left" name="Footer_ZDEnvTestResult">
+                                            中德环保测试结果
+                                            <input class="form-control" type="radio" name="ZDEnvTestResult" /> 合格&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <input class="form-control" type="radio" name="ZDEnvTestResult" /> 不合格
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1">合格数量</td>
+                                        <td colspan="1"><input name="Footer_PassNum" class="form-control" /></td>
+                                        <td colspan="1" style="width:10%">不良率%：</td>
+                                        <td colspan="1"><input name="Footer_DefectNum" class="form-control" /></td>
+                                        <td colspan="5">不合格品处理单编号：</td>
+                                        <td colspan="1"><input name="Footer_DefectCode" class="form-control" size="6" /></td>
+                                    </tr>
+                                    <tr name="Footer_VerifyResult">
+                                        <td colspan="1" style="height:35px">检验结果</td>
+                                        <td colspan="1" style="border:0px!important"><input name="VerifyResult" class="form-control" type="radio" />&nbsp;允许</td>
+                                        <td colspan="1" style="border:0px!important"><input name="VerifyResult" class="form-control" type="radio" />&nbsp;退货</td>
+                                        <td colspan="2" style="border:0px!important"><input name="VerifyResult" class="form-control" type="radio" />&nbsp;特采</td>
+                                        <td colspan="3" style="border:0px!important"><input name="VerifyResult" class="form-control" type="radio" />&nbsp;挑选退货</td>
+                                        <td colspan="2" class="no-border-left"><input class="form-control" name="VerifyResult" type="radio" />&nbsp;返工</td>
+                                    </tr>
+                                    <tr>
+
+                                        <td colspan="1">检验员</td>
+                                        <td colspan="3"><input name="Footer_Inspector" class="form-control" /></td>
+                                        <td colspan="1">审核</td>
+                                        <td colspan="2"><input name="Footer_Auditer" class="form-control" /></td>
+                                        <td colspan="1">批准</td>
+                                        <td colspan="2"><input name="Footer_Approver" class="form-control" /></td>
+                                    </tr>
+                                    <tr style="border:0px !important">
+                                        <td colspan="10" style="text-align:right">
+                                            <button class="btn btn-primary dim" type="button" id="pls_submit_btn">
+                                                保存
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+@section Footer{
+    @Scripts.Render("~/Scripts/bootstrap-switch")
+    @Scripts.Render("~/Scripts/icheck")
+
+    <script>
+        $(function (mcAdmin) {
+            var $report = $("#report");
+            $('input').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+                increaseArea: '20%' // optional
+            });
+            //控制编辑状态
+            (function () {
+                endableEdit(false);
+                $("#ps_enable_edit_btn").bootstrapSwitch();
+                $("#ps_enable_edit_btn").on("switchChange.bootstrapSwitch", function (event, state) {
+                    endableEdit(state);
+                });
+
+            }())
+
+            $("#ps_search_btn").on("click", function () {
+                var specNum = $("#ps_sepcnum_input").val();
+                if (specNum + "" == "") {
+                    swal({
+                        title: "错误！",
+                        text: "请输入盘号",
+                        type: "error",
+                    }, function () {
+
+                    })
+                    return;
+                }
+                $.post("/DataInput/SearchPlastictBySpecNumAction", { specNum: specNum }, function (retData) {
+                    mcAdmin.dealRetData(retData, function () {
+                   
+                        deserailzeTable("report", retData.Appendix);
+                        $report.css("display", "inline");
+
+                    })
+                })
+            })
+            
+            $("#pls_submit_btn").on("click", function () {
+                var plastic = $("#plastic").serializeForm();
+                var icpReport = findInputChecked("td[name='Footer_ICPReporter'] ");
+                var zdEnvTestResult = findInputChecked("td[name='Footer_ZDEnvTestResult']");
+                var verifyResult = findInputChecked("tr[name= 'Footer_VerifyResult']");
+                plastic.Footer_ICPReporter = icpReport;
+                plastic.Footer_ZDEnvTestResult = zdEnvTestResult;
+                plastic.Footer_VerifyResult = verifyResult;
+                if (plastic.Header_SpecNum + "" == "") {
+                    swal({
+                        title: "错误",
+                        title: "请输入规格型号",
+                        type: "error"
+                    });
+                    return;
+                }
+
+                $.post("/DataInput/SaveReportPlasticAction", { plastic: plastic }, function (retData) {
+                    mcAdmin.dealRetData(retData, function () {
+                        swal({
+                            title: "恭喜！",
+                            text: retData.Content,
+                            type: "success",
+                        }, function () {
+
+                        })
+                    })
+                })
+            })
+
+            //找到选中的序号
+            function findInputChecked(td) {
+                var $div = $(td + " div");
+                var checkResult = $div.map(function (i) {
+                    if ($(this).hasClass("checked")) {
+                        return i
+                    }
+                }).get(0);
+                if (checkResult == null) {
+                    checkResult = -1;
+                }
+                return checkResult;
+            }
+            function endableEdit(state) {
+                console.log(state);
+                $report.find("input,textarea").map(function () {
+                    $(this).attr("disabled", !state)
+                })
+            }
+            function deserailzeTable(table, data) {
+                if (table.indexOf("#") == -1) {
+                    table = "#" + table;
+                }
+                $(table).find("input,textarea").each(function (i, v) {
+                    var value = data[$(v).attr("name")];
+                    var name = $(v).attr("name");
+                    if ($(v).attr("type") == "radio") {
+                        var value = data["Footer_" + name];
+                        if (name != "VerifyResult") {
+                            setInputCheck($(v).parent().parent(), value);
+                        } else {
+                            setInputCheck($("tr[name= 'Footer_VerifyResult']"), value);
+                        }
+                        return;
+                    }
+                    if (name == "Header_InputDate") {
+
+                        var re = /-?\d+/;
+                        var m = re.exec(value);
+                        var d = new Date(parseInt(m[0]));
+                        $(v).val(d.getFullYear() + '-' + (d.getMonth() + 1) + "-" + d.getDate())
+                        return;
+                    }
+                    $(v).val(value);
+                });
+            }
+            function setInputCheck($input, index) {
+                if (index < 0) {
+                    return;
+                }
+                var checkbox = $input.find("input").eq(index);
+              
+                checkbox.iCheck('check')
+            }
+
+
+        }(window.parent.mcAdmin))
+    </script>
+}

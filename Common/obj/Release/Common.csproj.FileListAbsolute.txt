@@ -1,0 +1,5 @@
+D:\MES\MesCable\Common\bin\Release\MesWeb.Common.dll
+D:\MES\MesCable\Common\bin\Release\COM.Excel.dll
+D:\MES\MesCable\Common\bin\Release\OpenSmtp.dll
+D:\MES\MesCable\Common\bin\Release\OWC10Chart.dll
+D:\MES\MesCable\Common\obj\Release\MesWeb.Common.dll

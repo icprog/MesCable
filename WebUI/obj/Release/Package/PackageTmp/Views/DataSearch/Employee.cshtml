@@ -1,0 +1,222 @@
+﻿
+@section Style{
+    @Styles.Render("~/Content/bootstrap-table")
+}
+
+<body class="gray-bg">
+
+    <div class="row">
+
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+
+                    <div class="row">
+
+
+                        @*<label class="col-sm-2 control-label" style="text-align:right; padding-right:0px;margin-top:8px">姓名或轴号：</label>*@
+                        <div class="col-sm-10" style="margin-bottom:10px">
+                            <div class="form-inline" style="text-align:center">
+                                <select required class="form-control" id="ds_search_type_sel">
+                                    <option value="0" selected>姓名</option>
+                                    <option value="1">卡号</option>
+                                </select>
+                                <input type="text" id="ds_search_val_input" class="form-control" value="rqw" style="width:500px">
+                                <button type="button" class="btn btn-white" id="ds_search_btn" style="margin-bottom:0px">
+                                    <span class="fa fa-search"></span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="ibox-content">
+                        <div class="row " style="background-color:white">
+                            <div class="col-sm-12">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <i class="fa fa-info-circle"></i> 查询结果
+                                    </div>
+                                    <div class="panel-body" style="padding:initial">
+                                        <div class="container" style="width:100%">
+                                            <table id="ds_result_table"></table>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+@section Footer{
+    @Scripts.Render("~/Scripts/bootstrap-table")
+
+
+    <script>
+        //查
+        var $dsResultTable = $("#ds_result_table");
+        $(function (mcAdmin) {
+
+            //初始化查询结果table
+            (function () {
+
+                var operateEvents = {
+                    'click .like': function (e, value, row, index) {
+                        alert('You click like action, row: ' + JSON.stringify(row));
+                    },
+                    'click .remove': function (e, value, row, index) {
+                        swal({
+                            title: "您确定删除" + row.EmployeeName + "吗",
+                            text: "请谨慎操作！",
+                            type: "warning",
+                            showCancelButton: true,
+                            confirmButtonColor: "#DD6B55",
+                            confirmButtonText: "删除",
+                            cancelButtonText: "取消",
+                            closeOnConfirm: false
+                        }, function () {
+                            swal({
+                                title: "暂时不提供删除",
+                                text: "",
+                                type: "error"
+
+                            })
+                            return;
+                            $.post("/DataSearch/DeleteEmployeeAction", { employee: row }, function (retData) {
+                                mcAdmin.dealRetData(retData, function () {
+                                    swal({
+                                        title: retData.Content,
+                                        text: "",
+                                        type: "success"
+
+                                    })
+                                });
+                            });
+
+                        });
+
+                    }
+                };
+                $dsResultTable.bootstrapTable({
+                    columns: [{
+                        field: 'Index',
+                        title: '序号',
+                        formatter: indexFormatter
+                    }, {
+                        field: 'EmployeeName',
+                        title: '姓名'
+                    }, {
+                        field: 'EmployeeCode',
+                        title: '卡号'
+                    }, {
+                        field: 'EmployeeSex',
+                        title: '性别'
+                    },
+                     {
+                         field: 'EmployeeAge',
+                         title: '年龄'
+                     },
+                     {
+                         field: 'EmployeeTel',
+                         title: '电话'
+                     },
+                     {
+                         field: 'DepartmentName',
+                         title: '部门'
+                     },
+                     {
+                         field: 'GeneratorTime',
+                         title: '注册时间'
+                     },
+                     {
+                         field: 'Operate',
+                         title: '操作',
+                         align: 'center',
+                         events: operateEvents,
+                         formatter: operateFormatter
+                     }]
+
+                });
+                function operateFormatter(value, row, index) {
+                    return [
+                          
+                '<a class="remove" href="javascript:void(0)" title="Remove">',
+                '<i class="glyphicon glyphicon-remove"></i>',
+                '</a>'
+                    ].join('');
+                }
+
+                function indexFormatter(value, row, index) {
+                    return index + 1;
+                }
+
+            }());
+
+            function checkSearchValue(val) {
+                if (val + "" == "") {
+                    return false;
+                }
+                return true;
+            }
+
+            $("#ds_search_btn").on("click", function () {
+                //查询种类
+                var type = $("#ds_search_type_sel").val();
+                var searchVal = $("#ds_search_val_input").val();
+                if (!checkSearchValue(searchVal)) {
+                    swal({
+                        title: "输入有误！",
+                        type: "error",
+                    });
+                    return;
+                }
+                switch (type) {
+                    //按姓名查询
+                    case "0":
+                        searchByName(searchVal);
+                        break;
+                        //按卡号查询
+                    case "1":
+                        searchByCode(searchVal);
+                        break;
+                    default:
+                        break;
+
+                }
+            })
+
+            //通过姓名查询
+            function searchByName(name) {
+                $dsResultTable.bootstrapTable("removeAll");
+                $.post("/DataSearch/SearchEmployeeByNameAction", { name: name }, function (retData) {
+                    console.log(retData);
+                    mcAdmin.dealRetData(retData, function () {
+                        $dsResultTable.bootstrapTable('load', retData.Appendix);
+
+                    });
+                })
+            }
+            //通过员工卡号查询
+            function searchByCode(code) {
+                console.log(code);
+                $dsResultTable.bootstrapTable("removeAll");
+
+                $.post("/DataSearch/SearchEmployeeByCodeAction", { code: code }, function (retData) {
+                    mcAdmin.dealRetData(retData, function () {
+                        $dsResultTable.bootstrapTable('load', retData.Appendix);
+                    });
+                })
+            }
+
+
+        }(window.parent.mcAdmin))
+
+    </script>
+}

@@ -1,0 +1,155 @@
+﻿@section Style{
+    @Styles.Render("~/Content/bootstrap-datepicker")
+    @Styles.Render("~/Content/bootstrap-table")
+}
+@section Header{
+    <style>
+        .top-offset {
+            margin-top: 5px;
+        }
+    </style>
+
+}
+
+<body>
+    <div class="col-sm-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+
+                <div class="row">
+                    <form id="material_search_form">
+                        <div class="form-group col-sm-3">
+                            <label class="col-sm-4 control-label top-offset">起始日期：</label>
+                            <div class="input-group date col-sm-8">
+                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                <input name="StartDate" type="text" class="form-control" value="2016-9-30">
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-3">
+                            <label class="col-sm-4 control-label top-offset">结束日期：</label>
+                            <div class="input-group date col-sm-8">
+                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                <input name="EndDate" type="text" class="form-control" value="2016-9-30">
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-3">
+                            <label class="col-sm-4 control-label top-offset">操作人员：</label>
+                            <div class="col-sm-8">
+                                <input name="EmployeeName" type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-3">
+                            <button class="btn btn-success " type="button" id="search_btn">
+                                <i class="fa fa-search"></i>&nbsp;&nbsp;<span class="bold">查询</span>
+                            </button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+            <div class="ibox-content">
+            </div>
+
+        </div>
+
+        <div class="row " style="background-color:white">
+            <div class="col-sm-12">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <i class="fa fa-info-circle"></i> 详情
+                    </div>
+                    <div class="panel-body" style="padding:initial">
+                        <div class="container" style="padding:initial;width:100%">
+                            <table id="marterial_detail_table"></table>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</body>
+
+@section Footer{
+    @Scripts.Render("~/Scripts/bootstrap-datepicker")
+    @Scripts.Render("~/Scripts/bootstrap-table")
+
+
+    <script>
+        $(function (mcAdmin) {
+            $("#search_btn").on("click", function () {
+                var cond = serialForm("#material_search_form");
+               
+                $.post("/StoreMgmt/SearchMaterials/", {cond:cond}, function (retData) {
+                    mcAdmin.dealRetData(retData, function () {
+                        $detailTable.bootstrapTable("removeAll");
+                        var tabData = retData.Appendix;
+                        $detailTable.bootstrapTable('append', tabData);
+
+                    });
+                })
+            })
+
+            $detailTable = $("#marterial_detail_table");
+            $detailTable.bootstrapTable({
+                columns: [{
+                    field: 'Index',
+                    title: '序号'
+                }, {
+                    field: 'MaterialNum',
+                    title: '物料卡号'
+                }, {
+                    field: 'Weight',
+                    title: '重量'
+                }, {
+                    field: 'Color',
+                    title: '颜色'
+                },
+                 {
+
+                     field: 'EmployeeName',
+                     title: '操作人员'
+                 },
+                 {
+                     field: 'GenerateTime',
+                     title: '生成时间'
+                 },
+                 {
+                     field: 'Certificate',
+                     title: '证书下载'
+                 },
+                ]
+
+            })
+
+            $('.input-group.date').datepicker({
+                todayBtn: "linked",
+                keyboardNavigation: false,
+                forceParse: false,
+                calendarWeeks: true,
+                autoclose: true
+            });
+            function serialForm(form) {
+
+                /// <summary>
+                /// Serials the form data
+                /// </summary>
+                /// <param name="form">the form controller</param>
+                if (form.indexOf("#") < 0) {
+                    form = "#" + form;
+                }
+                var jsonObj = {};
+                $(form + "  input").each(function (i, v) {
+                    jsonObj[$(v).attr("name")] = $(v).val();
+                })
+                $(form + "  select").each(function (i, v) {
+                    jsonObj[$(v).attr("name")] = $(v).find("option:selected").val();
+                })
+                return jsonObj;
+
+            }
+        }(window.parent.mcAdmin))
+    </script>
+}

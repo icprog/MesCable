@@ -1,0 +1,526 @@
+ 【时间】:2016-10-28 09:55:33,025
+ 【级别】:ERROR
+ 【类名】:WebUI.Models.RealTimeConnection.TCPConnection:StartConnection
+ 【线程ID】: 6 
+ 【日志内容】:连接数据服务器失败，请检查IP和端口
+ 【日记详细】：System.ArgumentException: 未从此类上对应的异步方法中返回 IAsyncResult 对象。
+参数名: asyncResult
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 WebUI.Models.RealTimeConnection.TCPConnection.<StartConnection>b__16_0(IAsyncResult asyncResult) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Models\RealTimeConnection\TCPConnection.cs:行号 217
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-28 09:55:33,026
+ 【级别】:ERROR
+ 【类名】:WebUI.Models.RealTimeConnection.TCPConnection:StartConnection
+ 【线程ID】: 3 
+ 【日志内容】:连接数据服务器失败，请检查IP和端口
+ 【日记详细】：System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:7788
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 WebUI.Models.RealTimeConnection.TCPConnection.<StartConnection>b__16_0(IAsyncResult asyncResult) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Models\RealTimeConnection\TCPConnection.cs:行号 217
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-28 09:58:44,347
+ 【级别】:ERROR
+ 【类名】:WebUI.Models.RealTimeConnection.TCPConnection:StartConnection
+ 【线程ID】: 18 
+ 【日志内容】:连接数据服务器失败，请检查IP和端口
+ 【日记详细】：System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:7788
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 WebUI.Models.RealTimeConnection.TCPConnection.<StartConnection>b__16_0(IAsyncResult asyncResult) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Models\RealTimeConnection\TCPConnection.cs:行号 217
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-28 10:15:28,078
+ 【级别】:ERROR
+ 【类名】:WebUI.Models.RealTimeConnection.TCPConnection:StartConnection
+ 【线程ID】: 3 
+ 【日志内容】:连接数据服务器失败，请检查IP和端口
+ 【日记详细】：System.ArgumentException: 未从此类上对应的异步方法中返回 IAsyncResult 对象。
+参数名: asyncResult
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 WebUI.Models.RealTimeConnection.TCPConnection.<StartConnection>b__16_0(IAsyncResult asyncResult) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Models\RealTimeConnection\TCPConnection.cs:行号 217
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-28 10:15:28,150
+ 【级别】:ERROR
+ 【类名】:WebUI.Models.RealTimeConnection.TCPConnection:StartConnection
+ 【线程ID】: 14 
+ 【日志内容】:连接数据服务器失败，请检查IP和端口
+ 【日记详细】：System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:7788
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 WebUI.Models.RealTimeConnection.TCPConnection.<StartConnection>b__16_0(IAsyncResult asyncResult) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Models\RealTimeConnection\TCPConnection.cs:行号 217
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-28 10:16:21,763
+ 【级别】:ERROR
+ 【类名】:WebUI.Models.RealTimeConnection.TCPConnection:StartConnection
+ 【线程ID】: 19 
+ 【日志内容】:连接数据服务器失败，请检查IP和端口
+ 【日记详细】：System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:7788
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 WebUI.Models.RealTimeConnection.TCPConnection.<StartConnection>b__16_0(IAsyncResult asyncResult)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-28 10:20:45,945
+ 【级别】:ERROR
+ 【类名】:WebUI.Models.RealTimeConnection.TCPConnection:StartConnection
+ 【线程ID】: 3 
+ 【日志内容】:连接数据服务器失败，请检查IP和端口
+ 【日记详细】：System.ArgumentException: 未从此类上对应的异步方法中返回 IAsyncResult 对象。
+参数名: asyncResult
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 WebUI.Models.RealTimeConnection.TCPConnection.<StartConnection>b__16_0(IAsyncResult asyncResult) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Models\RealTimeConnection\TCPConnection.cs:行号 217
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-28 10:20:45,946
+ 【级别】:ERROR
+ 【类名】:WebUI.Models.RealTimeConnection.TCPConnection:StartConnection
+ 【线程ID】: 5 
+ 【日志内容】:连接数据服务器失败，请检查IP和端口
+ 【日记详细】：System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:7788
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 WebUI.Models.RealTimeConnection.TCPConnection.<StartConnection>b__16_0(IAsyncResult asyncResult) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Models\RealTimeConnection\TCPConnection.cs:行号 217
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-28 10:39:34,839
+ 【级别】:ERROR
+ 【类名】:WebUI.Models.RealTimeConnection.TCPConnection:StartConnection
+ 【线程ID】: 5 
+ 【日志内容】:连接数据服务器失败，请检查IP和端口
+ 【日记详细】：System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:7788
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 WebUI.Models.RealTimeConnection.TCPConnection.<StartConnection>b__16_0(IAsyncResult asyncResult) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Models\RealTimeConnection\TCPConnection.cs:行号 217
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-28 10:39:35,026
+ 【级别】:ERROR
+ 【类名】:WebUI.Models.RealTimeConnection.TCPConnection:StartConnection
+ 【线程ID】: 14 
+ 【日志内容】:连接数据服务器失败，请检查IP和端口
+ 【日记详细】：System.ArgumentException: 未从此类上对应的异步方法中返回 IAsyncResult 对象。
+参数名: asyncResult
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 WebUI.Models.RealTimeConnection.TCPConnection.<StartConnection>b__16_0(IAsyncResult asyncResult) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Models\RealTimeConnection\TCPConnection.cs:行号 217
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-28 10:42:27,082
+ 【级别】:ERROR
+ 【类名】:WebUI.Models.RealTimeConnection.TCPConnection:StartConnection
+ 【线程ID】: 20 
+ 【日志内容】:连接数据服务器失败，请检查IP和端口
+ 【日记详细】：System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:7788
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 WebUI.Models.RealTimeConnection.TCPConnection.<StartConnection>b__16_0(IAsyncResult asyncResult)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-28 11:06:08,436
+ 【级别】:ERROR
+ 【类名】:WebUI.Models.RealTimeConnection.TCPConnection:StartConnection
+ 【线程ID】: 88 
+ 【日志内容】:连接数据服务器失败，请检查IP和端口
+ 【日记详细】：System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:7788
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 WebUI.Models.RealTimeConnection.TCPConnection.<StartConnection>b__16_0(IAsyncResult asyncResult)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-28 11:09:36,882
+ 【级别】:ERROR
+ 【类名】:WebUI.Models.RealTimeConnection.TCPConnection:StartConnection
+ 【线程ID】: 73 
+ 【日志内容】:连接数据服务器失败，请检查IP和端口
+ 【日记详细】：System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:7788
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 WebUI.Models.RealTimeConnection.TCPConnection.<StartConnection>b__16_0(IAsyncResult asyncResult)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-28 11:10:03,205
+ 【级别】:ERROR
+ 【类名】:WebUI.Models.RealTimeConnection.TCPConnection:StartConnection
+ 【线程ID】: 80 
+ 【日志内容】:连接数据服务器失败，请检查IP和端口
+ 【日记详细】：System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:7788
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 WebUI.Models.RealTimeConnection.TCPConnection.<StartConnection>b__16_0(IAsyncResult asyncResult)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-28 11:38:35,808
+ 【级别】:ERROR
+ 【类名】:WebUI.Models.RealTimeConnection.TCPConnection:StartConnection
+ 【线程ID】: 18 
+ 【日志内容】:连接数据服务器失败，请检查IP和端口
+ 【日记详细】：System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:7788
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 WebUI.Models.RealTimeConnection.TCPConnection.<StartConnection>b__16_0(IAsyncResult asyncResult)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-28 11:44:07,021
+ 【级别】:ERROR
+ 【类名】:WebUI.Models.RealTimeConnection.TCPConnection:StartConnection
+ 【线程ID】: 3 
+ 【日志内容】:连接数据服务器失败，请检查IP和端口
+ 【日记详细】：System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:7788
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 WebUI.Models.RealTimeConnection.TCPConnection.<StartConnection>b__16_0(IAsyncResult asyncResult)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-28 11:45:14,751
+ 【级别】:ERROR
+ 【类名】:WebUI.Models.RealTimeConnection.TCPConnection:StartConnection
+ 【线程ID】: 31 
+ 【日志内容】:连接数据服务器失败，请检查IP和端口
+ 【日记详细】：System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:7788
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 WebUI.Models.RealTimeConnection.TCPConnection.<StartConnection>b__16_0(IAsyncResult asyncResult)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-28 11:47:36,569
+ 【级别】:ERROR
+ 【类名】:WebUI.Models.RealTimeConnection.TCPConnection:StartConnection
+ 【线程ID】: 22 
+ 【日志内容】:连接数据服务器失败，请检查IP和端口
+ 【日记详细】：System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:7788
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 WebUI.Models.RealTimeConnection.TCPConnection.<StartConnection>b__16_0(IAsyncResult asyncResult)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-28 11:48:36,927
+ 【级别】:ERROR
+ 【类名】:WebUI.Models.RealTimeConnection.TCPConnection:StartConnection
+ 【线程ID】: 5 
+ 【日志内容】:连接数据服务器失败，请检查IP和端口
+ 【日记详细】：System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:7788
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 WebUI.Models.RealTimeConnection.TCPConnection.<StartConnection>b__16_0(IAsyncResult asyncResult)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-28 12:29:23,399
+ 【级别】:ERROR
+ 【类名】:WebUI.Models.RealTimeConnection.TCPConnection:StartConnection
+ 【线程ID】: 11 
+ 【日志内容】:连接数据服务器失败，请检查IP和端口
+ 【日记详细】：System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:7788
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 WebUI.Models.RealTimeConnection.TCPConnection.<StartConnection>b__16_0(IAsyncResult asyncResult)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-28 15:10:34,119
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetParamChartProperties
+ 【线程ID】: 45 
+ 【日志内容】:获取模块参数失败
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.GetParamChartProperties(Int32 layoutId) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 604
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-28 15:10:53,030
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetParamChartProperties
+ 【线程ID】: 45 
+ 【日志内容】:获取模块参数失败
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.GetParamChartProperties(Int32 layoutId) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 604
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-28 15:13:43,647
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetParamChartProperties
+ 【线程ID】: 9 
+ 【日志内容】:获取模块参数失败
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.GetParamChartProperties(Int32 layoutId) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 604
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-28 15:13:44,061
+ 【级别】:ERROR
+ 【类名】:WebUI.Models.RealTimeConnection.TCPConnection:StartConnection
+ 【线程ID】: 19 
+ 【日志内容】:连接数据服务器失败，请检查IP和端口
+ 【日记详细】：System.ArgumentException: 未从此类上对应的异步方法中返回 IAsyncResult 对象。
+参数名: asyncResult
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 WebUI.Models.RealTimeConnection.TCPConnection.<StartConnection>b__16_0(IAsyncResult asyncResult) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Models\RealTimeConnection\TCPConnection.cs:行号 217
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-28 15:14:27,908
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetParamChartProperties
+ 【线程ID】: 10 
+ 【日志内容】:获取模块参数失败
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.GetParamChartProperties(Int32 layoutId) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 604
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-28 15:16:03,415
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetParamChartProperties
+ 【线程ID】: 9 
+ 【日志内容】:获取模块参数失败
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.GetParamChartProperties(Int32 layoutId) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 604
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-28 15:17:26,739
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetParamChartProperties
+ 【线程ID】: 17 
+ 【日志内容】:获取模块参数失败
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.GetParamChartProperties(Int32 layoutId) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 604
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-28 15:17:53,391
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetParamChartProperties
+ 【线程ID】: 17 
+ 【日志内容】:获取模块参数失败
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.GetParamChartProperties(Int32 layoutId) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 604
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-28 15:19:28,188
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetParamChartProperties
+ 【线程ID】: 17 
+ 【日志内容】:获取模块参数失败
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.GetParamChartProperties(Int32 layoutId) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 604
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-28 15:27:10,954
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetParamChartProperties
+ 【线程ID】: 45 
+ 【日志内容】:获取模块参数失败
+ 【日记详细】：System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.ParseSingle(String value, NumberStyles options, NumberFormatInfo numfmt)
+   在 System.Single.Parse(String s)
+   在 WebUI.Controllers.OnlineDataController.GetParamChartProperties(Int32 layoutId) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 611
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-28 15:27:53,443
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetParamChartProperties
+ 【线程ID】: 42 
+ 【日志内容】:获取模块参数失败
+ 【日记详细】：System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.ParseSingle(String value, NumberStyles options, NumberFormatInfo numfmt)
+   在 System.Single.Parse(String s)
+   在 WebUI.Controllers.OnlineDataController.GetParamChartProperties(Int32 layoutId) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 611
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-28 15:28:50,049
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetParamChartProperties
+ 【线程ID】: 30 
+ 【日志内容】:获取模块参数失败
+ 【日记详细】：System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.ParseSingle(String value, NumberStyles options, NumberFormatInfo numfmt)
+   在 System.Single.Parse(String s)
+   在 WebUI.Controllers.OnlineDataController.GetParamChartProperties(Int32 layoutId) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 611
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-28 15:29:30,572
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetParamChartProperties
+ 【线程ID】: 42 
+ 【日志内容】:获取模块参数失败
+ 【日记详细】：System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.ParseSingle(String value, NumberStyles options, NumberFormatInfo numfmt)
+   在 System.Single.Parse(String s)
+   在 WebUI.Controllers.OnlineDataController.GetParamChartProperties(Int32 layoutId) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 611
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-28 15:30:24,347
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetParamChartProperties
+ 【线程ID】: 42 
+ 【日志内容】:获取模块参数失败
+ 【日记详细】：System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.ParseSingle(String value, NumberStyles options, NumberFormatInfo numfmt)
+   在 System.Single.Parse(String s)
+   在 WebUI.Controllers.OnlineDataController.GetParamChartProperties(Int32 layoutId) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 611
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-28 15:32:47,555
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetParamChartProperties
+ 【线程ID】: 42 
+ 【日志内容】:获取模块参数失败
+ 【日记详细】：System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.ParseSingle(String value, NumberStyles options, NumberFormatInfo numfmt)
+   在 System.Single.Parse(String s)
+   在 WebUI.Controllers.OnlineDataController.GetParamChartProperties(Int32 layoutId) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 611
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-28 15:32:50,373
+ 【级别】:ERROR
+ 【类名】:WebUI.Models.RealTimeConnection.TCPConnection:StartConnection
+ 【线程ID】: 56 
+ 【日志内容】:连接数据服务器失败，请检查IP和端口
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.RealTimeConnection.TCPConnection.<StartConnection>b__16_0(IAsyncResult asyncResult) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Models\RealTimeConnection\TCPConnection.cs:行号 217
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-28 15:32:56,177
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetParamChartProperties
+ 【线程ID】: 42 
+ 【日志内容】:获取模块参数失败
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.GetParamChartProperties(Int32 layoutId) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 604
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-28 15:33:35,637
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetParamChartProperties
+ 【线程ID】: 42 
+ 【日志内容】:获取模块参数失败
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.GetParamChartProperties(Int32 layoutId) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 604
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-28 15:33:35,677
+ 【级别】:ERROR
+ 【类名】:WebUI.Models.RealTimeConnection.TCPConnection:StartConnection
+ 【线程ID】: 13 
+ 【日志内容】:连接数据服务器失败，请检查IP和端口
+ 【日记详细】：System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.91.100:7788
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 WebUI.Models.RealTimeConnection.TCPConnection.<StartConnection>b__16_0(IAsyncResult asyncResult) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Models\RealTimeConnection\TCPConnection.cs:行号 217
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-28 15:33:58,121
+ 【级别】:ERROR
+ 【类名】:WebUI.Models.RealTimeConnection.TCPConnection:StartConnection
+ 【线程ID】: 13 
+ 【日志内容】:连接数据服务器失败，请检查IP和端口
+ 【日记详细】：System.ArgumentException: 未从此类上对应的异步方法中返回 IAsyncResult 对象。
+参数名: asyncResult
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 WebUI.Models.RealTimeConnection.TCPConnection.<StartConnection>b__16_0(IAsyncResult asyncResult) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Models\RealTimeConnection\TCPConnection.cs:行号 217
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-28 15:34:09,932
+ 【级别】:ERROR
+ 【类名】:WebUI.Models.RealTimeConnection.TCPConnection:StartConnection
+ 【线程ID】: 18 
+ 【日志内容】:连接数据服务器失败，请检查IP和端口
+ 【日记详细】：System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.91.100:7788
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 WebUI.Models.RealTimeConnection.TCPConnection.<StartConnection>b__16_0(IAsyncResult asyncResult) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Models\RealTimeConnection\TCPConnection.cs:行号 217
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-28 15:35:06,847
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetParamChartProperties
+ 【线程ID】: 42 
+ 【日志内容】:获取模块参数失败
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.GetParamChartProperties(Int32 layoutId) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 604
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-28 15:35:28,651
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetParamChartProperties
+ 【线程ID】: 30 
+ 【日志内容】:获取模块参数失败
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.GetParamChartProperties(Int32 layoutId) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 604
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-28 15:35:44,809
+ 【级别】:ERROR
+ 【类名】:WebUI.Models.RealTimeConnection.TCPConnection:StartConnection
+ 【线程ID】: 52 
+ 【日志内容】:连接数据服务器失败，请检查IP和端口
+ 【日记详细】：System.ArgumentException: 未从此类上对应的异步方法中返回 IAsyncResult 对象。
+参数名: asyncResult
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 WebUI.Models.RealTimeConnection.TCPConnection.<StartConnection>b__16_0(IAsyncResult asyncResult) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Models\RealTimeConnection\TCPConnection.cs:行号 217
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-28 15:35:49,809
+ 【级别】:ERROR
+ 【类名】:WebUI.Models.RealTimeConnection.TCPConnection:StartConnection
+ 【线程ID】: 17 
+ 【日志内容】:连接数据服务器失败，请检查IP和端口
+ 【日记详细】：System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.91.100:7788
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 WebUI.Models.RealTimeConnection.TCPConnection.<StartConnection>b__16_0(IAsyncResult asyncResult) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Models\RealTimeConnection\TCPConnection.cs:行号 217
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-28 15:37:08,501
+ 【级别】:ERROR
+ 【类名】:WebUI.Models.RealTimeConnection.TCPConnection:StartConnection
+ 【线程ID】: 44 
+ 【日志内容】:连接数据服务器失败，请检查IP和端口
+ 【日记详细】：System.ArgumentException: 未从此类上对应的异步方法中返回 IAsyncResult 对象。
+参数名: asyncResult
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 WebUI.Models.RealTimeConnection.TCPConnection.<StartConnection>b__16_0(IAsyncResult asyncResult)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-28 15:37:08,518
+ 【级别】:ERROR
+ 【类名】:WebUI.Models.RealTimeConnection.TCPConnection:StartConnection
+ 【线程ID】: 10 
+ 【日志内容】:连接数据服务器失败，请检查IP和端口
+ 【日记详细】：System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.91.100:7788
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 WebUI.Models.RealTimeConnection.TCPConnection.<StartConnection>b__16_0(IAsyncResult asyncResult)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-28 15:37:51,072
+ 【级别】:ERROR
+ 【类名】:WebUI.Models.RealTimeConnection.TCPConnection:StartConnection
+ 【线程ID】: 25 
+ 【日志内容】:连接数据服务器失败，请检查IP和端口
+ 【日记详细】：System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.91.100:7788
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 WebUI.Models.RealTimeConnection.TCPConnection.<StartConnection>b__16_0(IAsyncResult asyncResult)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-28 15:40:23,944
+ 【级别】:ERROR
+ 【类名】:WebUI.Models.RealTimeConnection.TCPConnection:StartConnection
+ 【线程ID】: 5 
+ 【日志内容】:连接数据服务器失败，请检查IP和端口
+ 【日记详细】：System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.91.100:7788
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 WebUI.Models.RealTimeConnection.TCPConnection.<StartConnection>b__16_0(IAsyncResult asyncResult)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-28 15:53:34,901
+ 【级别】:ERROR
+ 【类名】:WebUI.Models.RealTimeConnection.TCPConnection:StartConnection
+ 【线程ID】: 6 
+ 【日志内容】:连接数据服务器失败，请检查IP和端口
+ 【日记详细】：System.ArgumentException: 未从此类上对应的异步方法中返回 IAsyncResult 对象。
+参数名: asyncResult
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 WebUI.Models.RealTimeConnection.TCPConnection.<StartConnection>b__16_0(IAsyncResult asyncResult) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Models\RealTimeConnection\TCPConnection.cs:行号 217
+ 
+---------------------------------------------------------------------------------------------------------------

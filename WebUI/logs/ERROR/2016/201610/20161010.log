@@ -1,0 +1,60 @@
+ 【时间】:2016-10-10 20:32:22,072
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSelParamIds
+ 【线程ID】: 7 
+ 【日志内容】:获取模块参数失败！
+ 【日记详细】：System.Exception: Incorrect syntax near '28'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 MesWeb.SQLServerDAL.T_SensorModule_T_ParameterCode.GetList(String strWhere) 位置 C:\Users\ychost\Desktop\MesCable\SQLServerDAL\T_SensorModule_T_ParameterCode.cs:行号 191
+   在 MesWeb.BLL.T_SensorModule_T_ParameterCode.GetModelList(String strWhere) 位置 C:\Users\ychost\Desktop\MesCable\BLL\T_SensorModule_T_ParameterCode.cs:行号 121
+   在 WebUI.Controllers.OnlineDataController.GetSelParamIds(Int32 layoutId) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 297
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-10 20:33:12,970
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSelParamIds
+ 【线程ID】: 8 
+ 【日志内容】:获取模块参数失败！
+ 【日记详细】：System.Exception: Incorrect syntax near '28'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 MesWeb.SQLServerDAL.T_SensorModule_T_ParameterCode.GetList(String strWhere) 位置 C:\Users\ychost\Desktop\MesCable\SQLServerDAL\T_SensorModule_T_ParameterCode.cs:行号 191
+   在 MesWeb.BLL.T_SensorModule_T_ParameterCode.GetModelList(String strWhere) 位置 C:\Users\ychost\Desktop\MesCable\BLL\T_SensorModule_T_ParameterCode.cs:行号 121
+   在 WebUI.Controllers.OnlineDataController.GetSelParamIds(Int32 layoutId)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-10 20:33:16,689
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSelParamIds
+ 【线程ID】: 7 
+ 【日志内容】:获取模块参数失败！
+ 【日记详细】：System.Exception: Conversion failed when converting the varchar value 'SensorModuleID' to data type int.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 MesWeb.SQLServerDAL.T_SensorModule_T_ParameterCode.GetList(String strWhere) 位置 C:\Users\ychost\Desktop\MesCable\SQLServerDAL\T_SensorModule_T_ParameterCode.cs:行号 191
+   在 MesWeb.BLL.T_SensorModule_T_ParameterCode.GetModelList(String strWhere) 位置 C:\Users\ychost\Desktop\MesCable\BLL\T_SensorModule_T_ParameterCode.cs:行号 121
+   在 WebUI.Controllers.OnlineDataController.GetSelParamIds(Int32 layoutId)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-10 20:33:51,293
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSelParamIds
+ 【线程ID】: 7 
+ 【日志内容】:获取模块参数失败！
+ 【日记详细】：System.Exception: Conversion failed when converting the varchar value 'SensorModuleID' to data type int.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 MesWeb.SQLServerDAL.T_SensorModule_T_ParameterCode.GetList(String strWhere) 位置 C:\Users\ychost\Desktop\MesCable\SQLServerDAL\T_SensorModule_T_ParameterCode.cs:行号 191
+   在 MesWeb.BLL.T_SensorModule_T_ParameterCode.GetModelList(String strWhere) 位置 C:\Users\ychost\Desktop\MesCable\BLL\T_SensorModule_T_ParameterCode.cs:行号 121
+   在 WebUI.Controllers.OnlineDataController.GetSelParamIds(Int32 layoutId)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-10-10 20:35:28,422
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSelParamIds
+ 【线程ID】: 7 
+ 【日志内容】:获取模块参数失败！
+ 【日记详细】：System.Exception: Unclosed quotation mark after the character string ''.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 MesWeb.SQLServerDAL.T_SensorModule_T_ParameterCode.GetList(String strWhere) 位置 C:\Users\ychost\Desktop\MesCable\SQLServerDAL\T_SensorModule_T_ParameterCode.cs:行号 191
+   在 MesWeb.BLL.T_SensorModule_T_ParameterCode.GetModelList(String strWhere) 位置 C:\Users\ychost\Desktop\MesCable\BLL\T_SensorModule_T_ParameterCode.cs:行号 121
+   在 WebUI.Controllers.OnlineDataController.GetSelParamIds(Int32 layoutId)
+ 
+---------------------------------------------------------------------------------------------------------------

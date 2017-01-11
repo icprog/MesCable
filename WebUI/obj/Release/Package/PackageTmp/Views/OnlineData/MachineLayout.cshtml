@@ -1,0 +1,1185 @@
+﻿@model MesWeb.ViewModel.Mes.VM_LayoutPicture
+@section Style{
+    @Styles.Render("~/Content/hotspot")
+    @Styles.Render("~/Content/context-menu")
+    @Styles.Render("~/Content/sweetalert")
+    @Styles.Render("~/Content/bootstrap-table")
+}
+@section Header{
+    <style>
+        .alarm_trend_anchor:hover {
+            cursor: pointer;
+        }
+
+        .echarts {
+            height: 300px;
+        }
+    </style>
+}
+
+<body>
+
+    @*layout picture*@
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <i class="fa fa-info-circle"></i> 机台情况
+                </div>
+                <div class="panel-body">
+                    <div id="layout_div">
+                        <img style="position: relative;" src="@Html.Raw(Model.PicUrl)" id="topview_pic" class="HotspotPlugin_Overlay">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @*relative info*@
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <i class="fa fa-info-circle"></i> 线缆信息
+                </div>
+                <div class="panel-body" id="machine_property">
+                    <div class="row gray-bg">
+                        <div class="col-sm-6">
+                            <div class="ibox float-e-margins">
+                                <div class="ibox-title">
+                                    <h5>线缆属性</h5>
+                                </div>
+                                <div class="ibox-content">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <dl class="dl-horizontal">
+                                                <dt>机台名称</dt>
+                                                <dd name="MachineName"></dd>
+                                                @*<dt>规格型号</dt>
+                                                    <dd name="SpecNum"></dd>*@
+                                                <dt>当前米数</dt>
+                                                <dd name="CurrentMeters"></dd>
+                                                @*<dt>工单号</dt>
+                                                    <dd name="JobNum"></dd>
+                                                    <dt>任务数</dt>
+                                                    <dd name="TaskNum"></dd>
+                                                    <dt>达成数</dt>
+                                                    <dd name="ReachedNum"></dd>
+                                                    <dt>批次号</dt>*@
+                                                <dd name="BatchNum"></dd>
+                                                <dt>轴号</dt>
+                                                <dd name="AxisNum"></dd>
+                                                <dt>操作手</dt>
+                                                <dd name="ManuMan"></dd>
+                                            </dl>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="ibox float-e-margins">
+                                <div class="ibox-title">
+                                    <h5>线缆参数</h5>
+                                </div>
+                                <div class="ibox-content">
+
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <dl class="dl-horizontal">
+                                                <dt>最大外径</dt>
+                                                <dd name="ODMax"></dd>
+                                                <dt>最小外径</dt>
+                                                <dd name="ODMin"></dd>
+                                                <dt>颜色</dt>
+                                                <dd name="SpecColor"></dd>
+                                                @*<dt>单价</dt>
+                                                    <dd name="UnitPrice"></dd>*@
+
+                                                <dt>物料RFID</dt>
+                                                @*<dd name="MaterialRFID"></dd>
+                                                    <dt>预计完成时间</dt>
+                                                    <dd name="EstTime"></dd>
+                                                    <dt>能耗</dt>
+                                                    <dd name="ContUnit"></dd>*@
+                                            </dl>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    @*OD 图*@
+    <div class="row" id="chart_od_module" style="margin:10px;height:300px;display:none">
+
+    </div>
+
+    @*realtime trend*@
+    <div class="row" id="chart_line_module" style="margin:10px">
+
+    </div>
+    @*realtime trend*@
+    <div class="row" id="test_chart" style="margin:10px">
+
+    </div>
+    @*参数报警*@
+    <div class="row" style="margin:10px">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>报警情况</h5>
+                <div class="ibox-tools">
+                    <a class="collapse-link">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="ibox-content">
+                <table id="alarm_table" data-show-export="true" data-export-types="['excel']"></table>
+            </div>
+        </div>
+    </div>
+
+
+    @*参数报警详情模态框*@
+    <div class="modal inmodal" id="alarm_detail_modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content animated flipInY">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">报警详情</h4>
+                </div>
+                <div class="modal-body">
+                    <table id="alarm_detail_table" data-show-export="true" data-export-types="['excel']"></table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+@section Footer{
+    <script>
+        //曲线全局保存对象
+
+        //曲线模块
+        var spotCharts = {};
+        if (typeof (RENDER_STATE) == "undefined") {
+            //参数曲线渲染状态
+            var RENDER_STATE = {
+                //正在页面上渲染
+                RENDER_ING: 0,
+                //被用户关闭
+                RENDER_CLOSED: 1,
+                //初始化
+                RENDER_INIT:2
+
+            };
+        }
+        //报警类型
+        if (typeof (ALARM_TYPE) == "undefined") {
+            //参数曲线渲染状态
+            var ALARM_TYPE = {
+                //参数超过最大值
+                PARAM_LARGE: "参数值偏大",
+                //参数小于最小值
+                PARAM_SMALLER: "参数值偏小",
+                //未正常收到参数值
+                PARAM_CRASH:"未读取到参数值"
+            };
+        }
+        if(typeof(PARAM_CODE) == "undefined"){
+
+        }
+
+    </script>
+    @Scripts.Render("~/Scripts/hotspot")
+    @Scripts.Render("~/Scripts/context-menu")
+    @Scripts.Render("~/Scripts/highstock")
+    @Scripts.Render("~/Scripts/highstock-theme-sandsignika")
+    @Scripts.Render("~/Scripts/content")
+    @Scripts.Render("~/Scripts/signalR")
+    @Scripts.Render("~/Scripts/bootstrap-table")
+    @Scripts.Render("~/Scripts/bootstrap-table-export")
+    <script src="~/signalr/hubs"></script>
+
+    <script>
+        /*-----------------全局参数定义-------------------------------*/
+        var hp;
+        var layout = @Html.Raw(Json.Encode(Model));
+        var imgEvent ;
+        var askTimer = {};
+        var isRealTime = false;
+        //未渲染曲线的缓冲大小
+        var chartCacheLength = 100;
+        var isOpenCache = false;
+        //每条曲线最多渲染500个点
+        var chartRenderLength = 100;
+        //每3个点刷新一次曲线,目前只用于刷新OD需要缓存
+        var refreshDataLength = 2;
+        var refreshIns = 0;
+        //参数的最值，键为 ParamCodeId 值为 {maxValue:xxx,minValue:yyy}
+        var paramThresholds = [];
+
+        //报警集合
+        var alarmCollection = {};
+        //报警报表
+        var $alarmTable= {};
+        //报警序号
+        var alarmIndex = 0;
+        //报警详情
+        var $alarmDetailTable = {};
+        //死机判断时间阈值
+        //2 分钟
+        var crashTimeThreshold = 2*60000;
+        //死机提示
+        var crashMessage = "无采集数据上传信息！";
+        //铜线OD要画圆
+        var odChartPie = {};
+        //特殊参数，比如OD之类的，从服务器取值
+        var specParam = {};
+
+        //颜色
+        var errorColor = "red";
+        var warningColor = "orange";
+        var normalColor = "green";
+        var crashColor = "gray";
+        //是否画OD的圆曲线
+        var canDrawODPie = false;
+ 
+        function showAlarmDetailTable(div){
+            /// <summary>
+            /// 显示报警详情列表
+            /// </summary>
+            /// <param name="div">The div.</param>
+            var alarmId = $(div).attr("alarmId");
+            if(alarmCollection[alarmId] == null){
+                //报警出错 TODO
+                return;
+            }
+            var alarDetails = alarmCollection[alarmId].AlarmDetail;
+            //设置详情报警标题
+            $("#alarm_detail_modal .modal-title").html(alarmCollection[alarmId].ParamName);
+            //清空报表数据
+            $alarmDetailTable.bootstrapTable("removeAll");
+            //添加报表数据
+            $.each(alarDetails,function(i,detail){
+                detail.MaxValue = alarmCollection[alarmId].MaxValue;
+                detail.MinValue = alarmCollection[alarmId].MinValue;
+                $alarmDetailTable.bootstrapTable("append",detail);
+            })
+            //显示模态框
+            $("#alarm_detail_modal").modal()
+        }
+
+        $(function(mcAdmin){
+            //highcharts时差问题
+            Highcharts.setOptions({ global: { useUTC: false } });
+            //chartId 由chartIdPrefix 与 paramCodeId 合成
+            var chartIdPrefix = "chart_";
+            //模块上面实时采集值的 Id 由 paramValuePrefix 与 paramCodeId 合成
+            var paramValuePrefix = "param_code_";
+            var spotIdPrefix = "_____spot_";
+            /*---------------------------OD 图---------------------------------*/
+            function initODPie () {
+                $("#chart_od_module").css("display","block")
+                var outterColor = "blue";
+                var innerColor = "#B87333";
+                var innerOD = 2.5;
+                var outterOD = 4.25;
+                var outterInnerSize = innerOD * 100 / outterOD ;
+                var innerSize = outterInnerSize * 0.95 ;
+                var innserDis = 8000 / outterInnerSize;
+                var testInnerData = [{color:innerColor,name:"内径",y:innerOD}];
+                var  testOutterData = [{color:outterColor,name:"外径",y:outterOD}];
+                odChartPie =new Highcharts.Chart({
+                    chart: {
+                        type: 'pie',
+                        renderTo:"chart_od_module"
+                    },
+                    title: {
+                        text: '铜线直径'
+                    },
+                    plotOptions: {
+                        pie: {
+                            states: {
+                                hover: {
+                                    enabled: false
+                                }
+                            },
+                            shadow: false,
+                            center: ['50%', '50%'],
+                            dataLabels: {
+                                connectorWidth: 2,
+                                crop:true
+                            },
+                            cursor: 'pointer',
+                            borderWidth:0,
+                            animation: false
+                        }
+                    },
+                    tooltip: false,
+                    animation:false,
+                    series: [{
+                        name: '内径',
+                        data: testInnerData,
+                        size: innerSize + "%",
+                        startAngle: 100,
+                        dataLabels: {
+                            formatter: function () {
+                                return  '<b>' + this.point.name + ':</b> ' + this.y + 'cm'  ;
+                            },
+                            distance:innserDis,
+                            color: innerColor,
+                            connectorColor:innerColor,
+                        },
+                    }, {
+                        name: '外径',
+                        data: testOutterData,
+                        startAngle: -100,
+                        innerSize:outterInnerSize + "%",
+                        dataLabels: {
+                            formatter: function () {
+                                return  '<b>' + this.point.name + ':</b> ' + this.y + 'cm'  ;
+                            },
+                            distance:50,
+                            connectorColor:outterColor,
+                            color:outterColor
+                        },
+                    }]
+                });
+                //  odChartPie.series[0].setData([1]);
+
+            }
+            /*--------------------------报警相关信息-----------------------------*/
+            //报警表初始化
+            (function(){
+                function autoAlarmTableIndex(value, row, index) {
+                    //保存序号值
+                    /// <summary>
+                    /// 自动生成表格序号，在initAlarmTable中调用
+                    /// </summary>
+                    alarmIndex = index;
+                    return index + 1;
+                }
+                function initAlarmTable(){
+                    /// <summary>
+                    ///初始化报警报表
+                    /// </summary>
+                    $alarmTable= $("#alarm_table");
+                    $alarmTable.bootstrapTable({
+                        columns: [{
+                            formatter:autoAlarmTableIndex,
+                            title: '序号'
+                        }, {
+                            field: 'ParamName',
+                            title: '参数'
+                        }, {
+                            field: 'AlarmCount',
+                            title: '报警次数'
+                        },
+                         {
+                             field: 'GenerateTime',
+                             title: '时间'
+                         },
+                        ],
+                        pagination:true,
+                        pageSize:5
+                    })
+                }
+                function autoAlarmDetailTableIndex(value,row,index){
+                    /// <summary>
+                    /// 自动生成表格序号，在initAlarmDetailTable中调用
+                    /// </summary>
+                    return index + 1;
+                }
+                function initAlarmDetailTable(){
+                    /// <summary>
+                    ///初始化详情报表
+                    /// </summary>
+                    $alarmDetailTable = $("#alarm_detail_table");
+                    $alarmDetailTable.bootstrapTable({
+                        columns: [{
+                            formatter:autoAlarmDetailTableIndex,
+                            title: '序号'
+                        }, {
+                            field: 'AlarmType',
+                            title: '报警类型'
+                        },  {
+                            field: 'CurMeters',
+                            title: '报警米数'
+                        },{
+                            field: 'AlarmValue',
+                            title: '报警值'
+                        },
+                         {
+                             field: 'MaxValue',
+                             title: '最大值'
+                         },
+                          {
+                              field: 'MinValue',
+                              title: '最小值'
+                          },
+                              {
+                                  field: 'GenerateTime',
+                                  title: '时间'
+                              },
+                        ],
+                        pagination:true,
+                        pageSize:5
+                    })
+
+                }
+                initAlarmTable();
+                initAlarmDetailTable();
+            }())
+
+            //报警类型定义
+            function Alarm(paramName,maxValue,minValue,alarmId){
+                /// <summary>
+                /// 报警构造函数
+                /// </summary>
+                /// <param name="paramName">参数名称</param>
+                /// <param name="maxValue">参数最大值</param>
+                /// <param name="minValue">参数最小值</param>
+                /// <param name="alarmId">alarmCollection的Id值，主要是为了传递给报警详情</param>
+                //报警详情
+                this.AlarmDetail = [];
+                //序号
+                this.Index = alarmIndex;
+                //参数名称
+                this.ParamName = paramName;
+                //报警次数
+                this.AlarmCount =0;
+                //最大值
+                this.MaxValue = maxValue;
+                //最小值
+                this.MinValue = minValue;
+                //报警时间
+                this.GenerateTime = "空";
+                //是否插入到表中
+                this.isInsertInTable = false;
+                this.Update = function(){
+                    //更新报警值
+                    this.AlarmCount =  this.AlarmDetail.length;
+                    this.GenerateTime = this.AlarmCount > 0 ? this.AlarmDetail[this.AlarmCount - 1].GenerateTime : "空";
+
+                    this.AlarmCount = '<a  href="javascript:void(0)" alarmId="'+alarmId+'" onclick="showAlarmDetailTable(this)" >'+this.AlarmCount+'</a>';
+                    //更新报警报表
+                    //首次报警则追加到表中
+                    if(this.isInsertInTable == false){
+                        $alarmTable.bootstrapTable("append",this);
+                        this.Index = alarmIndex;
+                        this.isInsertInTable = true;
+                        //多次报警则更新表中数据
+                    }else{
+                        $alarmTable.bootstrapTable('updateRow', {index: this.Index, row: this});
+                    }
+                }
+            }
+            function formatDate (date) {
+                /// <summary>
+                /// 格式化时间格式为 2016/09/01 12:20:21
+                /// </summary>
+                /// <param name="date">The date.</param>
+
+                var y = date.getFullYear();
+                var m = date.getMonth() + 1;
+                m = m < 10 ? ('0' + m) : m;
+                var d = date.getDate();
+                d = d < 10 ? ('0' + d) : d;
+                var h = date.getHours();
+                d = h < 10 ? ('0' + h) : h;
+
+                var minute = date.getMinutes();
+                var second = date.getSeconds()
+                minute = minute < 10 ? ('0' + minute) : minute;
+                return y + '/' + m + '/' + d+' '+h+':'+minute+':'+second;
+            };
+            function AlarmDetail(alarmValue,alarmType,generateTime,curMeters){
+                /// <summary>
+                /// 报警详情构造函数
+                /// </summary>
+                /// <param name="alarmValue"> 报警的值 </param>
+                /// <param name="alarmType">报警类型 ALARM_TYPE</param>
+                /// <param name="generateTime">报警时间</param>
+                /// <param name="curMeters">当前米数</param>
+
+                this.AlarmValue = alarmValue;
+                this.AlarmType = alarmType;
+                this.GenerateTime = formatDate(new Date(generateTime));
+                this.CurMeters = curMeters;
+            }
+
+            /*--------------------------初始化界面-----------------------------*/
+            (function(){
+                //获取特殊值，比如OD值
+                $.post("/OnlineData/GetSpecParam",function(SPEC_PARAM){
+                    specParam.outterOD = SPEC_PARAM.OutterOD;
+                    specParam.innerOD = SPEC_PARAM.InnerOD;
+                },"json")
+                var spotCount = 0;
+                $.each(layout.SubSpotItems,function(i,spot){
+                    spot.State = 0;
+                    spot.Message = "";
+                    spot.properties = [];
+                    $.post("/OnlineData/GetParamChartProperties/",{layoutId:spot.LayoutPictureID},function(retData){
+                        mcAdmin.dealRetData(retData,function(){
+                            //给模块绑定序列号
+                            spot.serialNum = retData.Content;
+                            //生成模块的每个参数的基本信息
+                            $.each(retData.Appendix,function(j,property ){
+                                spot.properties.push(property);
+                                //设置模块显示信息
+                                spot.Message += property.Title +": "+"<span  id='"+paramValuePrefix+property.ParamCodeId+"'></span>"+property.Symbol+"<br/>";
+                                var chartId = chartIdPrefix + property.ParamCodeId;
+                                var paramCodeId = property.ParamCodeId;
+
+                                //TODO 临时处理
+                                if(paramCodeId == 41){    
+                                    canDrawODPie = true;
+                                    initODPie();
+                                }
+
+                                //阈值缓存
+                                if(paramThresholds[paramCodeId] == null){
+                                    try{
+                                        paramThresholds[paramCodeId] = {};
+                                        paramThresholds[paramCodeId].minValue = property.MinValue;
+                                        paramThresholds[paramCodeId].maxValue  = property.MaxValue;
+                                    }catch(e){
+
+                                    }
+                                }
+                                //初始化报警
+                                if(alarmCollection[chartId] == null){
+                                    alarmCollection[chartId] = new Alarm(property.Title ,property.MaxValue,property.MinValue,chartId);
+                                }
+                            });
+                            spotCount++;
+                            console.log(layout.SubSpotItems.length );
+                            //当所有的模块都获取到数据的时候，就初始化模块
+                            if(spotCount == layout.SubSpotItems.length){
+                                //TODO 临时解决方案
+                                setTimeout(initLayout,3000);
+
+                            }
+                        });
+
+                    },"json")
+                })
+                function initLayout(){
+                    
+
+                    /// <summary>
+                    /// 初始化布局
+                    /// </summary>
+                    hp = $("#layout_div").hotspot({
+                        expandAll:true,
+                        interactivity:"hover",
+                        mode:"admin",
+                        data: {
+                            Id: layout.LayoutPictureID,
+                            Pixel: { width: $("#topview_pic").width(), height: $("#topview_pic").height() },
+                            Spots:layout.SubSpotItems
+                        },
+                        spotRightClick: function (div, spot, spotIndex, e) {
+                        },
+                        imgRightClick: function (e) {
+                            imgEvent = e;
+                        },spotLeftClickWhenHover:function (div, spot, spotIndex, e) {
+                            viewSensorChart();
+                        },
+                    });
+
+                    //点击模块信息界面
+                    $(".Hotspot_Block").on("click",function(e){
+                        viewSensorChart();
+                        return false;
+                    });
+                }
+                function viewSensorChart(){
+                    var spot = hp.getSelectSpot();
+                    if(spot.properties == null){
+                        //TODO 施工错误
+                        return;
+                    }
+                
+
+                    //类型字典，主键为drawType，值为数组存放的该drawType相同的 property
+                    var drawTypes = [];
+                    //给模块曲线分类
+                    $.each(spot.properties,function(i,p){
+                        if(p.drawType != 0){
+                            var isContained = false;
+                            for(var type in drawTypes){
+                                if(type == p.drawType){
+                                    isContained = true;
+                                    break;
+                                }
+                            }
+                            //未包含有这种图形
+                            if(!isContained){
+                                drawTypes[p.drawType] = [];
+                            }
+                            drawTypes[p.drawType].push(p);
+                        }
+                    })
+
+               
+
+                    for(var key in drawTypes){
+                        var spotId = spot.LayoutPictureID;
+                        var chartId = spotIdPrefix + spotId+"_type_"+key;
+                        var panelId = chartId + "_panel";
+                        var $panel = $("#"+panelId);
+                        //曲线存在于界面上
+                        if($panel.length>0){
+                            $panel.insertAfter($("#chart_line_module"));
+                            //曲线被用户关闭
+                        }else{
+                            console.log("ss")
+                            initMutiChart(drawTypes[key],chartId);
+                        }
+                    }
+                }
+
+                function calcChartTitle(orgTitle){
+                    if(orgTitle.indexOf("现场温度") != -1){
+                        return "现场温度"
+                    }else  if(orgTitle.indexOf("现场湿度") != -1){
+                        return "现场湿度"
+                    }
+                    else if(orgTitle.indexOf("温") != -1){
+                        return "温度";
+                    }else if(orgTitle.indexOf("速") != -1){
+                        return "速度"
+                    }else if(orgTitle.indexOf("力") != -1){
+                        return "力"
+                    }
+                    return orgTitle;
+                }
+                function initMutiChart(p,chartId){
+                    //取出图线属性
+                    var maxValue = p[0].MaxValue;
+                    var minValue = p[0].MinValue;
+                    var valueSuffix = p[0].Symbol;
+                    var title = p[0].Title;
+                    title = calcChartTitle(title);
+                    
+                    var subTitle = p[0].SubTitle;
+                    var paramCodeId = p[0].ParamCodeId;
+
+                    $.each(p,function(i,chartProperty){
+                        if(maxValue < chartProperty.maxValue){
+                            maxValue = chartProperty.MaxValue;
+                        }
+                        if(minValue > chartProperty.MinValue){
+                            minValue = chartProperty.MinValue;
+                        }
+
+                    })
+                    var showMaxValue = maxValue + 10;
+                    var showMinValue = minValue - 20;
+                    //宕机值
+                    var crashValue = showMinValue + 5;
+
+
+                    //将曲线的外围 div 置顶
+                    $chartContainer = $("#chart_line_module");
+                    var panelId = chartId+'_panel';
+                    //var chartDiv = '<div class="col-sm-12" id="'+panelId+'"> <div class="panel panel-info"> <div class="panel-heading">'+
+                    //    '<i class="fa fa-info-circle"></i> <span id="'+chartId+'_title">'+title+'</span></div><div class="panel-body">'+
+                    //    '<div class="echarts" id="'+chartId+'"></div></div></div></div>'
+                    var titleId = chartId +"_title";
+                    var chartDiv = '<div class="ibox float-e-margins" id="'+panelId+'">\
+                    <div class="ibox-title">\
+                        <h5 id="'+titleId+'">'+title+'</h5>\
+                        <div class="ibox-tools">\
+                            <a class="close-link" href="javascript:void(0)" chartId="'+chartId+'"  onclick="closeLinkClickFunc(this)">\
+                                <i class="fa fa-times"></i>\
+                            </a>\
+                        </div>\
+                    </div>\
+                    <div class="ibox-content">\
+                         <div class="echarts" id="'+chartId+'"></div>\
+                    </div>\
+                    </div>\
+                 </div>';
+                    $(chartDiv).insertAfter($chartContainer)
+                    var chartSeries = [];
+                    //曲线模块所有的参数ID
+                    var chartParamCodeIds = [];
+                    //随机生成颜色
+                    function getRandomColor()
+                    {
+                        var c = '#6699';
+                        var cArray = ['0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'];
+                        for(var i = 0; i < 2;i++)
+                        {
+                            var cIndex = Math.round(Math.random()*15);
+                            c += cArray[cIndex];
+                        }
+                        return c;
+                    }
+                    $.each(p,function(i,v){
+                        var series = {};
+                        series.name = v.Title
+                        series.paramCodeId = v.ParamCodeId;
+
+
+                        chartParamCodeIds.push(v.ParamCodeId);
+                        var crashValue = v.MinValue - 15;
+
+                        ////设置曲线颜色
+                        series.zones=[
+                             //停机值的颜色
+                            {
+                                value:crashValue + 2,
+                                color:crashColor
+                            },
+                            //低于界限值得颜色
+                            {
+                                value: v.MinValue,
+                                color: warningColor
+                                //正常颜色
+                            },{
+                                value: v.MaxValue,
+                                color:getRandomColor()
+                                //高于界限值的颜色
+                            },{
+                                color: errorColor
+                            }];
+                        //设置线条粗细
+                        series.lineWidth = 0.5;
+                        chartSeries.push(series);
+
+                    })
+
+                    //$chartContainer.prepend(chartDiv);
+
+                    // $chartContainer.html(chartDiv);
+                    //渲染曲线
+                    var chart = new Highcharts.StockChart({
+                        chart : {
+                            renderTo:chartId,
+                            type:'spline',
+                            //边框
+                            borderColor: '#EBBA95',
+                            borderWidth: 2,
+                            borderRadius: 15,
+                        },
+                        ////缩放按钮
+                        rangeSelector: {
+                            buttons: [{
+                                count: 10,
+                                type: 'second',
+                                text: '10s'
+                            }, {
+                                count: 5,
+                                type: 'minute',
+                                text: '5M'
+                            }, {
+                                type: 'all',
+                                text: 'ALL'
+                            }],
+                            inputEnabled: false,
+                            selected: 0
+                        },
+                        yAxis: {
+                            title: {
+                                text: valueSuffix
+                            },
+                            min: showMinValue,
+                            max: showMaxValue,
+                            tickInterval: 2,
+
+                            //最值曲线
+                            //plotLines: [{
+                            //    value: maxValue,
+                            //    width: 1,
+                            //    color: errorColor,
+                            //    label: {
+                            //        text: '最大值: ' +maxValue+valueSuffix,
+                            //    }
+                            //},{
+                            //    value: minValue,
+                            //    width: 1,
+                            //    color: warningColor,
+                            //    label: {
+                            //        text: '最小值: '+minValue+valueSuffix,
+                            //    }
+                            //}]
+                        },
+                        xAxis:{
+                            type: 'datetime',
+                        },
+                        //点击事件
+                        plotOptions: {
+                            series: {
+                                cursor: 'pointer',
+                            }
+                        },
+                        title : {
+                            text : title,
+                        },
+                        subTitle:{
+                            text:title,
+                        },
+                        exporting: {
+                            enabled: false
+                        },
+                        series :chartSeries
+                        ,
+                        //提示框
+                        tooltip : {
+                            formatter : function() {
+                                var content = '<span style="font-size: 10px;">' + this.x + '</span><br/>';
+                                content = '';
+                                for (var i = 0; i < this.points.length; i++) {
+                                    var maxValue = this.points[i].series.maxValue;
+                                    var minValue = this.points[i].series.minValue;
+                                    var color = "black";
+                                    if(this.points[i].y<minValue){
+                                        color = warningColor;
+                                    }else if(this.points[i].y > maxValue ){
+                                        color=errorColor;
+                                    }
+                                    //采集值
+                                    content += '<span>' + this.points[i].series.name + '</span>: <span style="color:'+color+'">' + this.points[i].y +valueSuffix +'</span><br/>';
+
+                                };
+                                var date = new Date(this.x);
+
+                                if(typeof(this.points[0].series.curMeters) != "undefined"){
+                                    content += '<br/><span>当前米数: '+this.points[0].series.curMeters+'米</span>'
+                                }
+                                content += '<br/><span>当前时间: ' + (date.getHours() ) +':' + (date.getMinutes()  ) + ':' + (date.getSeconds()  )  + '</span>'
+                                return content +"</a>";
+                            },
+
+                        }
+                    })
+                    //保存曲线
+                    spotCharts[chartId] = chart;
+                    //设置曲线状态
+                    spotCharts[chartId].isRendered = RENDER_STATE.RENDER_ING;
+                    //模块曲线的参数列表
+                    spotCharts[chartId].chartParamCodeIds = chartParamCodeIds;
+                    return spotCharts[chartId];
+                }
+
+
+            }())
+
+
+
+            /*--------------------------与服务器交互----------------------------*/
+            function interactWithServer(){
+                var machineId = layout.TableRowID;
+                var updateHub = $.connection.sensorUpdateHub;
+                //初始化函数
+                function updatHubInit(){
+                    //initAllSensors为服务器上面的函数
+                    updateHub.server.initAllSensors(machineId).done(function(sensorInfo){
+
+
+                    })
+                }
+                //初始化与服务器的连接
+                $.connection.hub.start().done(updatHubInit);
+                //服务器动态调用函数
+                updateHub.client.updateSensorData
+                    = function(
+                              //数据
+                             retData,
+                            //当前米数
+                            curMeters,
+                            //错误表
+                            moduleStateTab
+                            ){
+                        //更新错误
+                      //  updateModuleState(moduleStateTab);
+                        //参数处理
+                        var allData = retData.Appendix;
+                       
+                        $.each(allData,function(i,chartData){
+                            updateLineChart(chartData.ParamCodeId,chartData.SeriesData,curMeters);
+                            //OD 值还要特别处理，画圆
+                            if(chartData.ParamCodeId == specParam.outterOD ||
+                                chartData.ParamCodeId == specParam.innerOD){
+                                //更新OD值的圆
+                                if(canDrawODPie){
+                                    try{
+                                        updateODChartPie(chartData.SeriesData,chartData.ParamCodeId );
+                                    }catch(e){
+
+                                    }
+                                }
+                            }
+                            var paramValueId = paramValuePrefix + chartData.ParamCodeId;
+                            //实时更新模块上的参数值
+                            $("#"+paramValueId).html(chartData.SeriesData[chartData.SeriesData.length - 1].Y);
+                        })
+                    }
+
+                updateHub.client.updateMachinePty = function(pty){
+                    var propertyDD = $("#machine_property").find("dd");
+                    $.each(propertyDD,function(i,dd){
+                        var prop = $(dd).attr("name");
+                        $(dd).html(pty[prop]);
+                    })
+                }
+            }
+
+
+
+            //与服务器交互
+            interactWithServer();
+
+            function updateModuleState(moduleStateTab){
+                try{
+                    var allSpots = hp.getAllSpots();
+                }catch(e){
+                    return;
+                }
+                //遍历模块状态列表
+                for(var serialNum in moduleStateTab){
+                    for(var i=0;i<allSpots.length;++i){
+                        var spot = allSpots[i];
+
+                        //找到模块表
+                        if(spot.serialNum == ""+serialNum){
+
+                            for(var i = 0 ;i< moduleStateTab[serialNum].length;++i){
+                                var param = moduleStateTab[serialNum][i];
+                                if(param.FaultValue == "1"){
+                                    //只要有一个错误则置位红色
+                                    hp.setStateError(spot);
+                                    break;
+                                }
+                                if(i ==moduleStateTab[serialNum].length - 1 ){
+                                    //所有参数状态都正常则表示模块正常
+                                    hp.setStateNormal(spot);
+                                }
+                            }
+                            break;
+                        }
+                    }
+                }
+            }
+
+            function updateMessageParamValue(paramValueId,paramValue){
+
+            }
+
+            function updateAlarm(chartId,data,curMeters,isCrashed){
+                /// <summary>
+                /// 处理报警
+                /// </summary>
+                /// <param name="chartId">曲线Id,也是alarmCollection 的id</param>
+                /// <param name="curMeters">报警的米数</param>
+
+                //获取最值
+                var maxValue = 0;
+                var minValue = 0;
+                try{
+                    var maxValue =   alarmCollection[chartId].MaxValue;
+                    var minValue =   alarmCollection[chartId].MinValue;
+                }catch(e){
+
+                }
+                //var crashValue = alarmCollection[chartId].CrashValue;
+                ////死机报警
+                //if(isCrashed == true){
+                //    alarmDetail = new AlarmDetail("NULL",ALARM_TYPE.PARAM_CRASH,data.X,"NULL");
+                //    //追加报警详情
+                //    alarmCollection[chartId].AlarmDetail.push(alarmDetail);
+                //    //更新报警
+                //    alarmCollection[chartId].Update();
+                //    return;
+                //}
+                //参数异常报警
+                if(data.Y> maxValue || data.Y < minValue){
+                    var alarmDetail = null;
+                    //参数比较，生成报警详细
+          
+                    if(data.Y > maxValue){
+                        alarmDetail = new AlarmDetail(data.Y,ALARM_TYPE.PARAM_LARGE,data.X,curMeters);
+                    }else if(data.Y < minValue){
+                        alarmDetail = new AlarmDetail(data.Y,ALARM_TYPE.PARAM_SMALLER,data.X,curMeters);
+                    }
+                    //追加报警详情
+                    
+                    try{
+                        alarmCollection[chartId].AlarmDetail.push(alarmDetail);
+                   
+                        //更新报警
+                        alarmCollection[chartId].Update();
+                    }catch(e){
+
+                    }
+                }
+            }
+
+            function  updateODChartPie(seriesData,paramCodeId){
+                /// <summary>
+                /// 更新OD线径图
+                /// </summary>
+                /// <param name="paramCodeId">参数 ID</param>
+                /// <param name="seriesData">数据</param>
+                /// <param name="curMeters">当前米数</param>
+
+                $.each(seriesData,function(i,data){
+                    var x = data.X;
+                    var y = data.Y;
+                    var seriesIndex = 0;
+                    //外径
+                    if(paramCodeId == specParam.outterOD){
+                        seriesIndex = 1;
+                    } //内径
+                    else if(paramCodeId == specParam.innerOD){
+                        seriesIndex  = 0;
+                    }
+
+                    var innerOD = 2.5;
+                    var outterOD = 4.25;
+                    var outterInnerSize = innerOD * 100 / outterOD ;
+                    var innerSize = outterInnerSize * 0.95 ;
+                    var innserDis = 8000 / outterInnerSize;
+                    //更新线径值
+                    odChartPie.series[seriesIndex].setData([y]);
+                });
+            }
+
+
+            function updateLineChart(paramCodeId,seriesData,curMeters){
+                /// <summary>
+                /// 更新曲线
+                /// </summary>
+                /// <param name="paramCodeId">参数 ID</param>
+                /// <param name="seriesData">数据</param>
+                /// <param name="curMeters">当前米数</param>
+
+                //return;
+                ////处理最值报警
+                var chartId = chartIdPrefix + paramCodeId;
+                $.each(seriesData,function(i,data){
+                    updateAlarm(chartId,data,curMeters,false);
+                });
+                //等待更新的曲线模块
+                var updateChart;
+                var seriesIndex = 0;
+                //遍历曲线模块，找到该参数所属的曲线模块
+                for(var key in spotCharts){
+                    var chart = spotCharts[key];
+
+                    for(var i=0;i<chart.chartParamCodeIds.length;++i){
+                        if(chart.chartParamCodeIds[i] == paramCodeId){
+                            updateChart = chart;
+                            seriesIndex = i;
+                            break;
+                        }
+                    }
+                    if(updateChart != null){
+                        break;
+                    }
+                }
+                //曲线缓存里面无包含该参数的曲线
+                if(updateChart == null){
+                    return;
+                }
+
+
+                //如果曲线已经渲染，则更新其曲线
+                if(updateChart.isRendered == RENDER_STATE.RENDER_ING){
+                    $.each(seriesData,function(i,data){
+                        var x = new Date(data.X).getTime();
+                        //找到更新曲线
+                        var updateSeries = updateChart.series[seriesIndex] ;
+                        if(updateSeries == null){
+                            return;
+                        }
+                        //对曲线进行更新
+                        var y = data.Y;
+                        updateSeries.curMeters = curMeters;
+                        try{
+                            updateSeries.maxValue = paramThresholds[paramCodeId].maxValue;
+                            updateSeries.minValue = paramThresholds[paramCodeId].minValue;
+                        }catch(e){
+
+                        }
+
+                        //超过缓存大小
+                        if(updateSeries.data.length > chartRenderLength){
+                            //通过shift删除之前的数据
+                            //参数：
+                            //options：数据值（①可以是具体的一个Y轴数值，那么X轴坐标系统会随即分配一个；②可以设置一个数组，有着X和Y的数值，如：[xValue,yVlaue] 这样的形式；③可以设置一个Object(对象)，详见 setData  API;
+                            //radraw：是否设置（true/false）默认为true；
+                            //shift：默认为为false；
+                            //animation：是否动画（默认为true）；
+                            updateSeries.addPoint([x, y], false,true,false);
+
+                        }else{
+                            //不删除原始数据然后添加数据
+                            updateSeries.addPoint([x, y], false,false,false);
+                        }
+                        //因为设置了 shift 为false 所以要手动重载曲线
+                        if(paramCodeId !=  specParam.innerOD && paramCodeId !=  specParam.outterOD){
+                            updateChart.redraw();
+                            //OD值由于更新比较快，所以单独开缓存
+                        }else{
+                            if(++refreshIns >= refreshDataLength){
+                                refreshIns = 0;
+                                updateChart.redraw();
+                            }
+                        }
+
+                    })
+                }
+                    //用户如果关闭了曲线，删除曲线所依附的对象
+                    //closeLinkClickFunc 在 content.js 中处理的
+                else if(updateChart.isRendered == RENDER_STATE.RENDER_CLOSED) {
+                    //TODO 关闭逻辑
+                    delete updateChart;
+                }
+            }
+            /*--------------------------实时更新机台属性-----------------------------*/
+            (function(){
+                function updateMachinePty(){
+                    $.post("/OnlineData/GetMachinePropertyAction/"+layout.LayoutPictureID,function(retData){
+                        mcAdmin.dealRetData(retData,function(){
+                            var data = retData.Appendix;
+                            var propertyDD = $("#machine_property").find("dd");
+
+                            $.each(propertyDD,function(i,dd){
+                                var prop = $(dd).attr("name");
+                                $(dd).html(data[prop]);
+                            })
+                        });
+                    },"json")
+                }
+
+                if(isRealTime == true){
+                    updateMachinePty();
+                    askTimer["updateMachinePty"] = setInterval(updateMachinePty,20*1000);
+                }else{
+                    // updateMachinePty();
+                }
+
+            }())
+        }(window.parent.mcAdmin))
+
+    </script>
+}

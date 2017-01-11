@@ -1,0 +1,243 @@
+﻿@section Style{
+    @Styles.Render("~/Content/jsmind")
+    @Styles.Render("~/Content/bootstrap-table")
+
+
+}
+
+@section Header{
+    <style type="text/css">
+        #proc_jsmind {
+            height: 400px;
+        }
+    </style>}
+<body class="gray-bg">
+
+    <div class="row">
+
+        <div class="col-sm-12" id="qt_picture">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+
+                    <div class="row">
+                     
+                        <div class="col-sm-9">
+                            <label class="col-sm-2 control-label" style="text-align:right; padding-right:0px;margin-top:8px">轴号：</label>
+                            <div class="col-sm-7">
+                                <div class="input-group" style="margin-left:2px">
+                                    <input type="text" id="axis_input" class="form-control" >
+                                    <div class="input-group-btn">
+                                        @*<button type="button" class="btn btn-white dropdown-toggle" data-toggle="dropdown">
+                                                <span class="caret"></span>
+                                            </button>*@
+                                        <button type="button" class="btn btn-white" id="axis_btn">
+                                            <span class="fa fa-search"></span>
+                                        </button>
+                                        <ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>
+                                    </div>
+                                </div>
+                                <!-- /btn-group -->
+                            </div>
+
+                            <div class="col-sm-3">
+                                <button class="btn btn-success " type="button" id="download_btn">
+                                    <i class="fa fa-download"></i>&nbsp;&nbsp;<span class="bold">下载报告</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <div id="proc_jsmind"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row " style="background-color:white">
+            <div class="col-sm-12">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <i class="fa fa-info-circle"></i> 详情
+                    </div>
+                    <div class="panel-body" style="padding:initial">
+                        <div class="container" style="width:100%">
+                            <table id="qt_detail_table"></table>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal inmodal" id="download_report_modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content animated flipInY">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">下载报告</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row" id="ts_downloadd_panel">
+                        @*<div class="col-sm-6">
+                            <a href="#" class="btn  btn-info btn-lg"><i class="fa fa-cloud-download "></i>下载质量检验报告</a>
+                            <h5>更新日期：2016/09/01</h5>
+
+                        </div>
+                        <div class="col-sm-6" style="text-align:right">
+                            <a href="#" class="btn  btn-info btn-lg"><i class="fa fa-cloud-download "></i> 下载物料检验报告</a>
+                            <h5 style="text-align:center">更新日期：2016/09/01</h5>
+
+                        </div>*@
+                    </div>
+                    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+@section Footer{
+    @Scripts.Render("~/Scripts/bootstrap-suggest")
+    @Scripts.Render("~/Scripts/jsmind")
+    @Scripts.Render("~/Scripts/bootstrap-table")
+
+
+    <script type="text/javascript">
+        var mcAdmin = window.parent.mcAdmin;
+        function viewHisMachine(div) {
+            var machineId = $(div).attr("machineId");
+            var axisNum = $(div).attr("axisNum");
+            mcAdmin.addTab("历史数据", "/HistoryData/MachineLayout/"+machineId);
+        }
+
+        var procJsMind = {};
+
+        var $detailTable = $('#qt_detail_table');
+        ///////////////////////quality trace picture load //////////////////////
+        $("#axis_btn").on("click", function () {
+            var axisNumStr = $("#axis_input").val();
+
+            $.post("GetTraceDataAction", { axisNumStr: axisNumStr }, function (retData) {
+                if (retData.Code == RESULT_CODE.OK) {
+                    console.log(retData);
+                    var retMind = retData.Appendix;
+                    var mind = {
+                        "meta": {
+                            "name": "qualitytrace",
+                            "author": "ychost",
+                            "version": "0.2",
+                        },
+                        "format": "node_array",
+                        "data": retMind.data
+
+                    };
+                    var options = {
+                        container: 'proc_jsmind',
+                        editable: false,
+                        theme: 'primary',
+                        dblclickNode: function (selectNode) {
+                            $detailTable.bootstrapTable("removeAll");
+                            $.post("/QualityTrace/GetProcDetail", { procDetail: selectNode.data.data }, function (retData) {
+
+                                if (retData.Code == RESULT_CODE.OK) {
+                                    var tabData = retData.Appendix;
+                                    $detailTable.bootstrapTable('append', tabData);
+                                } else {
+                                    swal({
+                                        title: "抱歉！",
+                                        text: retData.Content,
+                                        type: "error",
+                                    });
+                                }
+                            }, "json")
+                        },
+                        debug: false
+                    }
+
+                    if (procJsMind.inited == true) {
+                        $("#proc_jsmind").html("");
+                    }
+                    procJsMind = jsMind.show(options, mind);
+                }
+                else {
+                    swal({
+                        title: "抱歉！",
+                        text: retData.Content,
+                        type: "error",
+                    });
+                }
+            }, "json")
+
+        })
+
+        ////////////////////////////talbe//////////////////
+
+
+
+        $detailTable.bootstrapTable({
+            columns: [{
+                field: 'Axis_No',
+                title: '轴号'
+            }, {
+                field: 'SpecName',
+                title: '规格'
+            }, {
+                field: 'SpecColor',
+                title: '颜色'
+            }, {
+                field: 'ODMax',
+                title: '线径最大值'
+            },
+             {
+                 field: 'ODMin',
+                 title: '线径最小值'
+             },
+             {
+                 field: 'MachineName',
+                 title: '机台'
+             },
+             {
+                 field: 'EmployeeName',
+                 title: '操作人员'
+             },
+             {
+                 field: 'GeneratorTime',
+                 title: '日期'
+             },
+             {
+                 field: 'Supplier',
+                 title: '供应商'
+             },
+            {
+                field: 'Comment',
+                title: '备注'
+            }, ]
+
+        })
+
+
+
+        ////////////////////////////popup download modal///////////////////////////////
+        $("#download_btn").on("click", function () {
+            $.post("getAllReportAction", function (retData) {
+                var cerFiles = retData.Appendix;
+                $("#ts_downloadd_panel").html("");
+
+                $("#download_report_modal").modal();
+
+                $.each(cerFiles, function (i, file) {
+
+                    var fileName = file.split("\\")[1];
+                    $("#ts_downloadd_panel").append('<div class="col-sm-6" style="text-align:left">\
+                            <a href="/UploadFile/Certificates' + file + '"  class="btn  btn-info btn-lg" download="w3logo" ><i class="fa fa-cloud-download "></i> ' + fileName + '</a>\
+                        </div>');
+
+                });
+            })
+        })
+    </script>
+}

@@ -1,0 +1,93 @@
+﻿@section Style{
+    @Styles.Render("~/Content/bootstrap-table")
+}
+@section Script{
+    @Scripts.Render("~/Scripts/bootstrap-table")
+
+
+}
+<body>
+    <div class="row">
+        <div class="col-sm-12">
+            <h4 class="example-title"><center>服务器日志</center></h4>
+            <div class="example">
+                <table id="log_table"  data-detail-view="true"  data-method="post" data-page-size="25" data-row-style="rowStyle" data-sort-name="ServerLogID"  data-pagination="true" data-url="/LogAdmin/GetServerLog" data-height="100%" data-mobile-responsive="true">
+                @*<table id="log_table" data-detail-view="true">*@   
+                 <thead>
+                        <tr>
+                            <th data-sortable="true" data-field="ServerLogID">ID</th>
+                            <th data-sortable="true" data-field="Level">级别</th>
+                            <th data-sortable="true" data-field="Message">信息</th>
+                            <th data-sortable="true" data-field="Thread">线程</th>
+                            <th data-sortable="true" data-field="Logger">位置</th>
+                            <th data-sortable="true" data-field="Date">时间</th>
+                            <th data-sortable="true"  data-visible="false" data-field="Exception">异常</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+@section Footer{
+
+    <script>
+
+        function rowStyle(row, index) {
+            var classes = ['active', 'success', 'info', 'warning', 'danger'];
+            switch (row.Level) {
+                case "INFO":
+                    return {
+                        classes: 'info'
+                    };
+                case "WARN":
+                    return {
+                        classes: 'warning'
+                    };
+                case "ERROR":
+                    return {
+                        classes: "danger"
+                    };
+                case "FATAL":
+                    return {
+                        classes: "active"
+                    };
+                default:
+                    return {
+                        classes: "success"
+                    };
+
+            }
+
+            return {};
+        }
+
+        $(function () {
+            var $table = $('#log_table');
+
+            $table.bootstrapTable({
+                
+               
+                onExpandRow: function (index, row, $detail) {
+                    initExpTable(index, row, $detail);
+                }
+            })
+            function initExpTable(index, row, $detail) {
+                var exData = [];
+                exData[0] = {};
+                exData[0].Exception = row.Exception;
+                var cur_table = $detail.html('<table></table>').find('table');
+                $(cur_table).bootstrapTable({
+                    data: exData,
+
+                    columns: [{
+                        field: 'Exception',
+                        title: '异常',
+                        align:"center"
+                    }],
+                });
+            };
+        })
+   
+    </script>
+}

@@ -1,0 +1,20 @@
+ 【时间】:2016-09-19 16:14:20,988
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 18 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.LayoutBaseController.GetParentLayout(Int32 Id) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\LayoutBaseController.cs:行号 45
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 98
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-19 16:17:37,875
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 42 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.LayoutBaseController.GetParentLayout(Int32 Id) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\LayoutBaseController.cs:行号 45
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 98
+ 
+---------------------------------------------------------------------------------------------------------------

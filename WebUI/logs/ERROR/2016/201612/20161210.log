@@ -1,0 +1,110 @@
+ 【时间】:2016-12-10 00:52:19,520
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.DataInputController:SearchProductByVolNumAction
+ 【线程ID】: 5 
+ 【日志内容】:System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.DataInputController.SearchProductByVolNumAction(String volNum) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\DataInputController.cs:行号 171
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-10 00:52:19,520
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.DataInputController:SearchProductByVolNumAction
+ 【线程ID】: 8 
+ 【日志内容】:System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.DataInputController.SearchProductByVolNumAction(String volNum) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\DataInputController.cs:行号 171
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-10 00:53:22,304
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.DataInputController:SearchProductByVolNumAction
+ 【线程ID】: 8 
+ 【日志内容】:System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.DataInputController.SearchProductByVolNumAction(String volNum) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\DataInputController.cs:行号 171
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-10 00:53:53,638
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.DataInputController:SearchProductByVolNumAction
+ 【线程ID】: 8 
+ 【日志内容】:System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.DataInputController.SearchProductByVolNumAction(String volNum) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\DataInputController.cs:行号 171
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-10 14:29:16,262
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.DataInputController:AddProductReportAction
+ 【线程ID】: 7 
+ 【日志内容】:System.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'VerticalDiaFooter1', table 'Mes2.dbo.T_Report_Product_Actual'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   在 MES.DBUtility.DbHelperSQL.GetSingle(String SQLString, SqlParameter[] cmdParms) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 801
+   在 MesWeb.SQLServerDAL.T_Report_Product_Actual.Add(T_Report_Product_Actual model) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\SQLServerDAL\T_Report_Product_Actual.cs:行号 87
+   在 MesWeb.BLL.T_Report_Product_Actual.Add(T_Report_Product_Actual model) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\BLL\T_Report_Product_Actual.cs:行号 42
+   在 WebUI.Controllers.DataInputController.AddProductReportAction(VM_Report_Product product) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\DataInputController.cs:行号 73
+ClientConnectionId:e047749c-f1ce-4c00-8b36-6345991dbdaa
+Error Number:515,State:2,Class:16
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-10 14:29:16,263
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.DataInputController:AddProductReportAction
+ 【线程ID】: 9 
+ 【日志内容】:System.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'VerticalDiaFooter1', table 'Mes2.dbo.T_Report_Product_Actual'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   在 MES.DBUtility.DbHelperSQL.GetSingle(String SQLString, SqlParameter[] cmdParms) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 801
+   在 MesWeb.SQLServerDAL.T_Report_Product_Actual.Add(T_Report_Product_Actual model) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\SQLServerDAL\T_Report_Product_Actual.cs:行号 87
+   在 MesWeb.BLL.T_Report_Product_Actual.Add(T_Report_Product_Actual model) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\BLL\T_Report_Product_Actual.cs:行号 42
+   在 WebUI.Controllers.DataInputController.AddProductReportAction(VM_Report_Product product) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\DataInputController.cs:行号 73
+ClientConnectionId:e047749c-f1ce-4c00-8b36-6345991dbdaa
+Error Number:515,State:2,Class:16
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-10 14:29:16,262
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.DataInputController:AddProductReportAction
+ 【线程ID】: 14 
+ 【日志内容】:System.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'VerticalDiaFooter1', table 'Mes2.dbo.T_Report_Product_Actual'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   在 MES.DBUtility.DbHelperSQL.GetSingle(String SQLString, SqlParameter[] cmdParms) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 801
+   在 MesWeb.SQLServerDAL.T_Report_Product_Actual.Add(T_Report_Product_Actual model) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\SQLServerDAL\T_Report_Product_Actual.cs:行号 87
+   在 MesWeb.BLL.T_Report_Product_Actual.Add(T_Report_Product_Actual model) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\BLL\T_Report_Product_Actual.cs:行号 42
+   在 WebUI.Controllers.DataInputController.AddProductReportAction(VM_Report_Product product) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\DataInputController.cs:行号 73
+ClientConnectionId:e047749c-f1ce-4c00-8b36-6345991dbdaa
+Error Number:515,State:2,Class:16
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-10 14:29:23,992
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.DataInputController:AddProductReportAction
+ 【线程ID】: 7 
+ 【日志内容】:System.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'VerticalDiaFooter1', table 'Mes2.dbo.T_Report_Product_Actual'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   在 MES.DBUtility.DbHelperSQL.GetSingle(String SQLString, SqlParameter[] cmdParms) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 801
+   在 MesWeb.SQLServerDAL.T_Report_Product_Actual.Add(T_Report_Product_Actual model) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\SQLServerDAL\T_Report_Product_Actual.cs:行号 87
+   在 MesWeb.BLL.T_Report_Product_Actual.Add(T_Report_Product_Actual model) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\BLL\T_Report_Product_Actual.cs:行号 42
+   在 WebUI.Controllers.DataInputController.AddProductReportAction(VM_Report_Product product) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\DataInputController.cs:行号 73
+ClientConnectionId:e047749c-f1ce-4c00-8b36-6345991dbdaa
+Error Number:515,State:2,Class:16
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-12-10 14:32:58,727
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.DataInputController:AddProductReportAction
+ 【线程ID】: 7 
+ 【日志内容】:System.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'VerticalDiaFooter1', table 'Mes2.dbo.T_Report_Product_Actual'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   在 MES.DBUtility.DbHelperSQL.GetSingle(String SQLString, SqlParameter[] cmdParms) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\DbHelperSQL.cs:行号 801
+   在 MesWeb.SQLServerDAL.T_Report_Product_Actual.Add(T_Report_Product_Actual model) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\SQLServerDAL\T_Report_Product_Actual.cs:行号 87
+   在 MesWeb.BLL.T_Report_Product_Actual.Add(T_Report_Product_Actual model) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\BLL\T_Report_Product_Actual.cs:行号 42
+   在 WebUI.Controllers.DataInputController.AddProductReportAction(VM_Report_Product product) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\DataInputController.cs:行号 73
+ClientConnectionId:e047749c-f1ce-4c00-8b36-6345991dbdaa
+Error Number:515,State:2,Class:16
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------

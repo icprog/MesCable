@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B0706FA2-977C-4523-B093-F57804756498}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>MesWeb.IDAL</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>CodematicDemo.IDAL</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Name>Model</Name>
+      <Project>{53995DBB-9836-4647-AD22-865884FDEB9E}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ISysManage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ISys_App.cs" />
+    <Compile Include="ISys_Menu.cs" />
+    <Compile Include="IT_Application.cs" />
+    <Compile Include="IT_ApplicationItem.cs" />
+    <Compile Include="IT_Authentic.cs" />
+    <Compile Include="IT_Axis.cs" />
+    <Compile Include="IT_AxisTask.cs" />
+    <Compile Include="IT_CheckParsRef.cs" />
+    <Compile Include="IT_CheckSheet.cs" />
+    <Compile Include="IT_CheckType.cs" />
+    <Compile Include="IT_Code.cs" />
+    <Compile Include="IT_CodeRule.cs" />
+    <Compile Include="IT_CodeType.cs" />
+    <Compile Include="IT_CodeUsed.cs" />
+    <Compile Include="IT_CodeUsing.cs" />
+    <Compile Include="IT_CollectedDataParameters.cs" />
+    <Compile Include="IT_CollectedParameter.cs" />
+    <Compile Include="IT_Company.cs" />
+    <Compile Include="IT_CurrentData.cs" />
+    <Compile Include="IT_Department.cs" />
+    <Compile Include="IT_Dumpling.cs" />
+    <Compile Include="IT_DumplingType.cs" />
+    <Compile Include="IT_DumplingZone.cs" />
+    <Compile Include="IT_Duty.cs" />
+    <Compile Include="IT_ElectricityPrice.cs" />
+    <Compile Include="IT_Employee.cs" />
+    <Compile Include="IT_EmployeeArrangement.cs" />
+    <Compile Include="IT_EmployeeState.cs" />
+    <Compile Include="IT_Employee_DeleteBak.cs" />
+    <Compile Include="IT_Fault.cs" />
+    <Compile Include="IT_FaultModule.cs" />
+    <Compile Include="IT_Flow.cs" />
+    <Compile Include="IT_Flow_Info.cs" />
+    <Compile Include="IT_FlowRelation.cs" />
+    <Compile Include="IT_Half_Product.cs" />
+    <Compile Include="IT_Half_ProductZone.cs" />
+    <Compile Include="IT_HistoryInfo.cs" />
+    <Compile Include="IT_HumanEfficience.cs" />
+    <Compile Include="IT_JobSheet.cs" />
+    <Compile Include="IT_JobSheetItem.cs" />
+    <Compile Include="IT_JobSheetItemDetail.cs" />
+    <Compile Include="IT_LayoutPicture.cs" />
+    <Compile Include="IT_LayoutType.cs" />
+    <Compile Include="IT_LeaveApplication.cs" />
+    <Compile Include="IT_LeaveApplicationType.cs" />
+    <Compile Include="IT_Log.cs" />
+    <Compile Include="IT_LogDetail.cs" />
+    <Compile Include="IT_LogType.cs" />
+    <Compile Include="IT_Machine.cs" />
+    <Compile Include="IT_MachineAblity.cs" />
+    <Compile Include="IT_MachineEfficience.cs" />
+    <Compile Include="IT_MachineMaintain.cs" />
+    <Compile Include="IT_MachineMaintainPlan.cs" />
+    <Compile Include="IT_MachineParameter.cs" />
+    <Compile Include="IT_MachineState.cs" />
+    <Compile Include="IT_MachineStateType.cs" />
+    <Compile Include="IT_MachineType.cs" />
+    <Compile Include="IT_MachineZone.cs" />
+    <Compile Include="IT_MapMachineAddress.cs" />
+    <Compile Include="IT_Material.cs" />
+    <Compile Include="IT_MaterialConsumption.cs" />
+    <Compile Include="IT_MaterialOutput.cs" />
+    <Compile Include="IT_MaterialType.cs" />
+    <Compile Include="IT_MaterialUsed.cs" />
+    <Compile Include="IT_MaterialZone.cs" />
+    <Compile Include="IT_Menu.cs" />
+    <Compile Include="IT_MergeAxis.cs" />
+    <Compile Include="IT_MergeJobSheet.cs" />
+    <Compile Include="IT_MergeJobSheetStatistic.cs" />
+    <Compile Include="IT_ModelMaintain.cs" />
+    <Compile Include="IT_Mould.cs" />
+    <Compile Include="IT_MouldReturn.cs" />
+    <Compile Include="IT_MouldType.cs" />
+    <Compile Include="IT_MouldUsed.cs" />
+    <Compile Include="IT_MouldZone.cs" />
+    <Compile Include="IT_OEE.cs" />
+    <Compile Include="IT_OpenMachineCondition.cs" />
+    <Compile Include="IT_ParameterCode.cs" />
+    <Compile Include="IT_ParametersCol.cs" />
+    <Compile Include="IT_ParametersRef.cs" />
+    <Compile Include="IT_ParameterUnit.cs" />
+    <Compile Include="IT_PARCODE.cs" />
+    <Compile Include="IT_Port.cs" />
+    <Compile Include="IT_ProdictAblity.cs" />
+    <Compile Include="IT_ProdictMachine.cs" />
+    <Compile Include="IT_Product.cs" />
+    <Compile Include="IT_ProductZone.cs" />
+    <Compile Include="IT_Protocol.cs" />
+    <Compile Include="IT_QRCode.cs" />
+    <Compile Include="IT_ReDoReson.cs" />
+    <Compile Include="IT_ReDoSheet.cs" />
+    <Compile Include="IT_Report_Footer.cs" />
+    <Compile Include="IT_Report_Header.cs" />
+    <Compile Include="IT_Report_Plastic.cs" />
+    <Compile Include="IT_Report_Product.cs" />
+    <Compile Include="IT_Report_Product_Actual.cs" />
+    <Compile Include="IT_Report_Product_Standard.cs" />
+    <Compile Include="IT_Report_Value.cs" />
+    <Compile Include="IT_Right.cs" />
+    <Compile Include="IT_Salary.cs" />
+    <Compile Include="IT_SensorModule.cs" />
+    <Compile Include="IT_SensorModule_T_ParameterCode.cs" />
+    <Compile Include="IT_ServerLog.cs" />
+    <Compile Include="IT_Specification.cs" />
+    <Compile Include="IT_SpecificationType.cs" />
+    <Compile Include="IT_SpotDist.cs" />
+    <Compile Include="IT_SpotDistType.cs" />
+    <Compile Include="IT_SpotDist_SpotInfo.cs" />
+    <Compile Include="IT_SpotInfo.cs" />
+    <Compile Include="IT_Statistic.cs" />
+    <Compile Include="IT_Task.cs" />
+    <Compile Include="IT_TaskFinished.cs" />
+    <Compile Include="IT_TCP.cs" />
+    <Compile Include="IT_Technique.cs" />
+    <Compile Include="IT_User.cs" />
+    <Compile Include="IT_HistoyData.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

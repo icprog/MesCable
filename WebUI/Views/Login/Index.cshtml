@@ -1,0 +1,97 @@
+﻿@section Style{
+    @Styles.Render("~/Content/login")
+}
+@section Header{
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;ie.html" />
+    <![endif]-->
+    <script>
+        if (window.top !== window.self) {
+            window.top.location = window.location;
+        }
+    </script>
+}
+
+<body class="signin">
+    <div class="signinpanel">
+        <div class="row">
+            <div class="col-sm-7">
+                <div class="signin-info">
+                    <img src="~/img/loginLogo.png" style="width:200px;margin-top:20px;margin-left:150px" />
+                </div>
+            </div>
+            <div class="col-sm-5">
+                <form id="login_form">
+                    <h4 class="no-margins">登录：</h4>
+                    <input type="text" class="form-control uname" name="UserName" placeholder="用户名" id="login_user_name" />
+                    <input type="password" class="form-control pword m-b" name="Password" placeholder="密码" id="login_user_pwd" />
+
+                    <button type="button" id="login_btn" class="btn btn-success btn-block">登录</button>
+                </form>
+            </div>
+        </div>
+        <div class="signup-footer">
+            <div class="pull-left">
+                &copy; 2016 芯联电科
+            </div>
+        </div>
+    </div>
+</body>
+
+@section Footer{
+    @Scripts.Render("~/Scripts/jquery-md5")
+    @Scripts.Render("~/Scripts/jquery-cookie")
+
+
+    <script>
+        var cookieKey = {};
+        cookieKey.loginUserName = "loginUserName";
+        cookieKey.loginUserPwd = "loginUserPwd";
+        $(function () {
+
+            (function readCookies() {
+
+                $("#login_user_name").val($.cookie(cookieKey.loginUserName));
+                $("#login_user_pwd").val($.cookie(cookieKey.loginUserPwd));
+
+            }())
+
+            function login() {
+     
+     
+                var user = $("#login_form").serializeForm();
+ 
+                var plainPwd = user.Password;
+                user.Password = $.md5(user.Password);
+                $.post("/Login/Lgoin", { user: user }, function (retData) {
+                    if (retData.Code == RESULT_CODE.OK) {
+                        //保存cookies
+                        $.cookie(cookieKey.loginUserName, user.UserName, { expires: 365 });
+                        $.cookie(cookieKey.loginUserPwd, plainPwd, { expires: 365 });
+                        window.location.href = "/Admin/Index";
+                    } else {
+                        swal({
+                            title: "登录失败！",
+                            text: retData.Content,
+                            type: "error",
+                        });
+                    }
+                });
+            }
+
+
+            //回车键登录
+            $(document).keypress(function (e) {
+                if (e.which == 13) {
+                    login();
+                }
+            })
+
+
+            $("#login_btn").on("click", function () {
+                login();
+            })
+
+        })
+    </script>
+}

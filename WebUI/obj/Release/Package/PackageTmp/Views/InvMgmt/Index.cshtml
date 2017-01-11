@@ -1,0 +1,89 @@
+﻿@model MesWeb.ViewModel.Promise.VM_Result_Data
+@section Style{
+    @Styles.Render("~/Content/hotspot")
+    @Styles.Render("~/Content/context-menu")
+
+
+}
+
+<body>
+    <div class="col-sm-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>总体分布情况 </h5>
+
+                <div class="ibox-tools">
+                    <a class="collapse-link">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="calendar.html#">
+                        <i class="fa fa-wrench"></i>
+                    </a>
+                    <a class="close-link">
+                        <i class="fa fa-times"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="ibox-content" id="topview_div">
+                <img src="@Html.Raw(Model.Appendix.PicUrl)" id="topview_pic" class="img-responsive center-block HotspotPlugin_Overlay">
+            </div>
+        </div>
+    </div>
+</body>
+@section Footer{
+    @Scripts.Render("~/Scripts/hotspot")
+    @Scripts.Render("~/Scripts/context-menu")
+    <script>
+        var hp;
+        var topLayout = @Html.Raw(Json.Encode(Model.Appendix));
+
+
+        (function($,mcAdmin){
+
+
+            hp = $("#topview_div").hotspot({
+                expandAll:true,
+                mode:"admin",
+                data: {
+                    Id: topLayout.LayoutPictureID,
+                    Pixel: { width: topLayout.PicWidth, height: topLayout.PicHeight },
+                    Spots:topLayout.SubSpotItems
+                },
+                spotRightClick: function (div, spot, spotIndex, e) {
+
+
+                },
+                imgRightClick: function (e) {
+
+                }
+            });
+
+            $.contextMenu({
+                selector: '.HotspotPlugin_Hotspot',
+                callback: function(key, options) {
+                    switch (key) {
+                        case "view":
+                            console.log(hp.getSelectSpot())
+                            mcAdmin.addTab(hp.getSelectSpot().Title+"区域分布","/InvMgmt/WorkShopView/"+hp.getSelectSpot().LayoutPictureID);
+                            break;
+                        case "property":
+                            break;
+
+                        default:
+                            break;
+                    }
+
+                },
+                items: {
+                    "view": {name: "查看", icon: "fa-eye"},
+                    "edit": {name: "编辑", icon: "fa-edit"},
+
+                    "property": {name: "属性", icon: "fa-info"},
+                    "quit": {name: "离开", icon:"fa-sign-out" }
+                }
+            });
+
+
+        }($,window.parent.mcAdmin))
+    </script>
+}

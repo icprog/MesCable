@@ -1,0 +1,184 @@
+﻿@model MesWeb.ViewModel.System.VM_Menu_Conf
+@section Style{
+    @Styles.Render("~/Content/jsTree")
+    @Styles.Render("~/Content/sweetalert")
+
+
+}
+@section Header{
+    <style>
+        .cascading-dropdown-loading {
+            cursor: wait;
+            background: url('/img/ajax-loader.gif') 85% center no-repeat transparent;
+        }
+    </style>
+}
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content  animated fadeInRight">
+
+
+        <div class="row">
+
+            <div class="col-sm-6">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>菜单配置</h5>
+                        <div class="ibox-tools">
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+                            <a class="close-link">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+
+                        <div id="menu_div"></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    @*create new menu dialog*@
+    <div class="modal inmodal" id="menu_modal_create" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content animated flipInY">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">添加菜单</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal m-t" id="menu_create_form">
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">名称：</label>
+                            <div class="col-sm-4">
+                                <input style="text-align:left" name="MenuName" type="text" class="form-control">
+                            </div>
+                            <label class="col-sm-2 control-label">Url：</label>
+                            <div class="col-sm-4">
+                                <input name="MenuUrl" type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">图标：</label>
+                            <div class="col-sm-4">
+                                <input style="text-align:left" name="MenuICON" type="text" class="form-control">
+                            </div>
+                            <label class="col-sm-2 control-label">备注：</label>
+                            <div class="col-sm-4">
+                                <input name="MenuRemark" type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div id="menu_create_dropdown" class="form-group">
+                            <label class="col-sm-2 control-label">父菜单：</label>
+                            <div class="col-sm-4">
+                                <select class="step1 form-control" name="MenuParentID">
+                                    <option value="">请选择...</option>
+
+                                </select>
+                            </div>
+                            <label class="col-sm-2 control-label">序号：</label>
+                            <div class="col-sm-4">
+                                <select class="step2 form-control" name="MenuSeq">
+                                    <option value="">请选择...</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" id="menu_create_submit">提交</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @*edit  menu dialog*@
+    <div class="modal inmodal" id="menu_modal_edit" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content animated flipInY">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">编辑菜单</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal m-t" id="menu_edit_form">
+                        <div class="form-group" style="display:none">
+                            <label class="col-sm-2 control-label">ID：</label>
+                            <div class="col-sm-4">
+                                <input style="text-align:left" name="MenuID" type="text" class="form-control">
+                            </div>
+                            <label class="col-sm-2 control-label">Level：</label>
+                            <div class="col-sm-4">
+                                <input style="text-align:left" name="MenuLevel" type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">名称：</label>
+                            <div class="col-sm-4">
+                                <input style="text-align:left" name="MenuName" type="text" class="form-control">
+                            </div>
+                            <label class="col-sm-2 control-label">Url：</label>
+                            <div class="col-sm-4">
+                                <input name="MenuUrl" type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">图标：</label>
+                            <div class="col-sm-4">
+                                <input style="text-align:left" name="MenuICON" type="text" class="form-control">
+                            </div>
+                            <label class="col-sm-2 control-label">备注：</label>
+                            <div class="col-sm-4">
+                                <input name="MenuRemark" type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div id="menu_edit_dropdown" class="form-group">
+                            <label class="col-sm-2 control-label">父菜单：</label>
+                            <div class="col-sm-4">
+                                <select class="step1 form-control" name="MenuParentID">
+                                    <option value="">请选择...</option>
+
+                                </select>
+                            </div>
+                            <label class="col-sm-2 control-label">序号：</label>
+                            <div class="col-sm-4">
+                                <select class="step2 form-control" name="MenuSeq">
+                                    <option value="">请选择...</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" id="menu_edit_submit">提交</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+@section Footer{
+    <script>
+        (function (mcAdmin) {
+            mcAdmin.jsTreeData =  @Html.Raw(Json.Encode(Model));
+        }(window.parent.mcAdmin))
+    </script>
+    @Scripts.Render("~/Scripts/jsTree")
+    @Scripts.Render("~/Scripts/cascadingdropdown")
+    @Scripts.Render("~/Scripts/sweetalert")
+    @Scripts.Render("~/Scripts/system/menuConf")
+
+}

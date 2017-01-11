@@ -1,0 +1,386 @@
+ 【时间】:2016-09-18 13:34:17,006
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 9 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.Exception: Invalid column name 'SensorModuleID'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\MesCable\DBUtility\DbHelperSQL.cs:行号 517
+   在 MesWeb.SQLServerDAL.T_CollectedDataParameters.GetList(String strWhere) 位置 C:\Users\ychost\Desktop\MesCable\SQLServerDAL\T_CollectedDataParameters.cs:行号 223
+   在 MesWeb.BLL.T_CollectedDataParameters.GetModelList(String strWhere) 位置 C:\Users\ychost\Desktop\MesCable\BLL\T_CollectedDataParameters.cs:行号 121
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 105
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-18 13:34:20,479
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 7 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.Exception: Invalid column name 'SensorModuleID'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\MesCable\DBUtility\DbHelperSQL.cs:行号 517
+   在 MesWeb.SQLServerDAL.T_CollectedDataParameters.GetList(String strWhere) 位置 C:\Users\ychost\Desktop\MesCable\SQLServerDAL\T_CollectedDataParameters.cs:行号 223
+   在 MesWeb.BLL.T_CollectedDataParameters.GetModelList(String strWhere) 位置 C:\Users\ychost\Desktop\MesCable\BLL\T_CollectedDataParameters.cs:行号 121
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 105
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-18 13:34:23,224
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 7 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.Exception: Invalid column name 'SensorModuleID'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\MesCable\DBUtility\DbHelperSQL.cs:行号 517
+   在 MesWeb.SQLServerDAL.T_CollectedDataParameters.GetList(String strWhere) 位置 C:\Users\ychost\Desktop\MesCable\SQLServerDAL\T_CollectedDataParameters.cs:行号 223
+   在 MesWeb.BLL.T_CollectedDataParameters.GetModelList(String strWhere) 位置 C:\Users\ychost\Desktop\MesCable\BLL\T_CollectedDataParameters.cs:行号 121
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 105
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-18 13:34:25,220
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 7 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.Exception: Invalid column name 'SensorModuleID'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\MesCable\DBUtility\DbHelperSQL.cs:行号 517
+   在 MesWeb.SQLServerDAL.T_CollectedDataParameters.GetList(String strWhere) 位置 C:\Users\ychost\Desktop\MesCable\SQLServerDAL\T_CollectedDataParameters.cs:行号 223
+   在 MesWeb.BLL.T_CollectedDataParameters.GetModelList(String strWhere) 位置 C:\Users\ychost\Desktop\MesCable\BLL\T_CollectedDataParameters.cs:行号 121
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 105
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-18 13:34:32,882
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 8 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.Exception: Invalid column name 'SensorModuleID'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\MesCable\DBUtility\DbHelperSQL.cs:行号 517
+   在 MesWeb.SQLServerDAL.T_CollectedDataParameters.GetList(String strWhere) 位置 C:\Users\ychost\Desktop\MesCable\SQLServerDAL\T_CollectedDataParameters.cs:行号 223
+   在 MesWeb.BLL.T_CollectedDataParameters.GetModelList(String strWhere) 位置 C:\Users\ychost\Desktop\MesCable\BLL\T_CollectedDataParameters.cs:行号 121
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 105
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-18 13:36:01,521
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 7 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.Exception: Invalid column name 'SensorModuleID'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\MesCable\DBUtility\DbHelperSQL.cs:行号 517
+   在 MesWeb.SQLServerDAL.T_CollectedDataParameters.GetList(String strWhere) 位置 C:\Users\ychost\Desktop\MesCable\SQLServerDAL\T_CollectedDataParameters.cs:行号 223
+   在 MesWeb.BLL.T_CollectedDataParameters.GetModelList(String strWhere) 位置 C:\Users\ychost\Desktop\MesCable\BLL\T_CollectedDataParameters.cs:行号 121
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 105
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-18 14:27:16,447
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 8 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 141
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-18 15:09:08,985
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 12 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 141
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-18 15:55:21,159
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 9 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 141
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-18 15:55:22,135
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 7 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 141
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-18 15:55:26,247
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 7 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 141
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-18 15:56:43,927
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 7 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 141
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-18 15:57:06,520
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 8 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 141
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-18 15:58:25,642
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 7 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'AxisNo'.
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 Microsoft.Practices.EnterpriseLibrary.Data.Database.DoLoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   在 Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   在 Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String tableName)
+   在 Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteDataSet(DbCommand command)
+   在 Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteDataSet(CommandType commandType, String commandText)
+   在 MesWeb.SQLServerDAL.T_ParametersCol.GetList(String strWhere) 位置 C:\Users\ychost\Desktop\MesCable\SQLServerDAL\T_ParametersCol.cs:行号 216
+   在 MesWeb.BLL.T_ParametersCol.GetModelList(String strWhere) 位置 C:\Users\ychost\Desktop\MesCable\BLL\T_ParametersCol.cs:行号 120
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 114
+ClientConnectionId:afd3f35d-8c49-42b9-bfa2-da1400fe163d
+Error Number:207,State:1,Class:16
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-18 15:59:00,637
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 7 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'AxisNo'.
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 Microsoft.Practices.EnterpriseLibrary.Data.Database.DoLoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   在 Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   在 Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String tableName)
+   在 Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteDataSet(DbCommand command)
+   在 Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteDataSet(CommandType commandType, String commandText)
+   在 MesWeb.SQLServerDAL.T_ParametersCol.GetList(String strWhere) 位置 C:\Users\ychost\Desktop\MesCable\SQLServerDAL\T_ParametersCol.cs:行号 216
+   在 MesWeb.BLL.T_ParametersCol.GetModelList(String strWhere) 位置 C:\Users\ychost\Desktop\MesCable\BLL\T_ParametersCol.cs:行号 120
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 114
+ClientConnectionId:afd3f35d-8c49-42b9-bfa2-da1400fe163d
+Error Number:207,State:1,Class:16
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-18 15:59:59,464
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 7 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'AxisNo'.
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 Microsoft.Practices.EnterpriseLibrary.Data.Database.DoLoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   在 Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   在 Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String tableName)
+   在 Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteDataSet(DbCommand command)
+   在 Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteDataSet(CommandType commandType, String commandText)
+   在 MesWeb.SQLServerDAL.T_ParametersCol.GetList(String strWhere) 位置 C:\Users\ychost\Desktop\MesCable\SQLServerDAL\T_ParametersCol.cs:行号 216
+   在 MesWeb.BLL.T_ParametersCol.GetModelList(String strWhere) 位置 C:\Users\ychost\Desktop\MesCable\BLL\T_ParametersCol.cs:行号 120
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 114
+ClientConnectionId:afd3f35d-8c49-42b9-bfa2-da1400fe163d
+Error Number:207,State:1,Class:16
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-18 16:11:17,247
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 8 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'AxisNo'.
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 Microsoft.Practices.EnterpriseLibrary.Data.Database.DoLoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   在 Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   在 Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String tableName)
+   在 Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteDataSet(DbCommand command)
+   在 Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteDataSet(CommandType commandType, String commandText)
+   在 MesWeb.SQLServerDAL.T_ParametersCol.GetList(String strWhere) 位置 C:\Users\ychost\Desktop\MesCable\SQLServerDAL\T_ParametersCol.cs:行号 216
+   在 MesWeb.BLL.T_ParametersCol.GetModelList(String strWhere) 位置 C:\Users\ychost\Desktop\MesCable\BLL\T_ParametersCol.cs:行号 120
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 114
+ClientConnectionId:be1340a8-3fa2-4398-94ad-009652771fed
+Error Number:207,State:1,Class:16
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-18 19:07:39,887
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 11 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 115
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-18 19:13:03,848
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 12 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 115
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-18 19:14:32,713
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 12 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 115
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-18 19:15:03,206
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 12 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 115
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-18 19:15:42,420
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 15 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 115
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-18 19:42:16,829
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 7 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.LayoutBaseController.GetParentLayout(Int32 Id) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\LayoutBaseController.cs:行号 37
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 98
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-18 19:43:38,973
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 7 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.LayoutBaseController.GetParentLayout(Int32 Id) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\LayoutBaseController.cs:行号 37
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 98
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-18 19:43:39,940
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 29 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.LayoutBaseController.GetParentLayout(Int32 Id) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\LayoutBaseController.cs:行号 37
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 98
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-18 19:43:40,448
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 9 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.LayoutBaseController.GetParentLayout(Int32 Id) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\LayoutBaseController.cs:行号 37
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 98
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-18 19:43:40,941
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 8 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.LayoutBaseController.GetParentLayout(Int32 Id) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\LayoutBaseController.cs:行号 37
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 98
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-18 19:43:41,444
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:GetSensorDataAction
+ 【线程ID】: 30 
+ 【日志内容】:查找传感器数据失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.LayoutBaseController.GetParentLayout(Int32 Id) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\LayoutBaseController.cs:行号 37
+   在 WebUI.Controllers.OnlineDataController.GetSensorDataAction(Int32 Id) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\OnlineDataController.cs:行号 98
+ 
+---------------------------------------------------------------------------------------------------------------

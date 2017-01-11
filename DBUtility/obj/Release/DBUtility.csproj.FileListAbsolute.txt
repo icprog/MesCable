@@ -1,0 +1,14 @@
+D:\MES\MesCable\DBUtility\bin\Release\MesWeb.DBUtility.dll
+D:\MES\MesCable\DBUtility\bin\Release\MySql.Data.dll
+D:\MES\MesCable\DBUtility\bin\Release\System.Data.SQLite.DLL
+D:\MES\MesCable\DBUtility\obj\Release\MesWeb.DBUtility.dll
+C:\Users\ychost\Desktop\MesCable\DBUtility\bin\Release\MesWeb.DBUtility.dll
+C:\Users\ychost\Desktop\MesCable\DBUtility\bin\Release\MySql.Data.dll
+C:\Users\ychost\Desktop\MesCable\DBUtility\bin\Release\System.Data.SQLite.DLL
+C:\Users\ychost\Desktop\MesCable\DBUtility\obj\Release\DBUtility.csprojResolveAssemblyReference.cache
+C:\Users\ychost\Desktop\MesCable\DBUtility\obj\Release\MesWeb.DBUtility.dll
+C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\bin\Release\MesWeb.DBUtility.dll
+C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\bin\Release\MySql.Data.dll
+C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\bin\Release\System.Data.SQLite.DLL
+C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\obj\Release\DBUtility.csprojResolveAssemblyReference.cache
+C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\DBUtility\obj\Release\MesWeb.DBUtility.dll

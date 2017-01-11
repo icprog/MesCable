@@ -1,0 +1,307 @@
+ 【时间】:2016-09-21 20:37:09,674
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 7 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetailTable hisData) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 110
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-21 20:38:00,287
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 9 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetailTable hisData) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 110
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-21 20:38:01,218
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 8 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetailTable hisData) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 110
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-21 20:38:44,996
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 7 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetailTable hisData)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-21 20:38:54,264
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 7 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetailTable hisData)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-21 20:38:55,236
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 8 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetailTable hisData)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-21 20:38:55,966
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 7 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetailTable hisData)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-21 20:39:22,254
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 22 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetailTable hisData)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-21 20:39:24,180
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 7 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetailTable hisData)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-21 20:39:24,950
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 21 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetailTable hisData)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-21 20:39:25,465
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 8 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetailTable hisData)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-21 20:42:43,524
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 32 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetailTable hisData)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-21 20:44:15,197
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 32 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetailTable hisData)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-21 20:44:18,382
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 7 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetailTable hisData)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-21 20:44:30,118
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 7 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetailTable hisData)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-21 20:47:15,289
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 8 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetailTable hisData) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 110
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-21 20:47:17,188
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 8 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetailTable hisData) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 110
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-21 20:47:17,984
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 8 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetailTable hisData) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 110
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-21 20:47:29,921
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 9 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetailTable hisData) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 110
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-21 20:47:33,448
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 8 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetailTable hisData) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 110
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-21 20:47:35,121
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 8 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetailTable hisData) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 110
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-21 20:50:02,700
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 8 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetailTable hisData) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 110
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-21 20:50:04,316
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 8 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetailTable hisData) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 110
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-21 20:50:05,865
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 8 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetailTable hisData) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 110
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-21 22:29:46,332
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.ProjectAdminController:AreaDetailAdmin
+ 【线程ID】: 5 
+ 【日志内容】:未指定该标记的类别
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-21 22:30:02,815
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:AreaDetail
+ 【线程ID】: 5 
+ 【日志内容】:未指定该标记的类别
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-21 22:30:45,164
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:AreaDetail
+ 【线程ID】: 6 
+ 【日志内容】:未指定该标记的类别
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-21 22:32:12,454
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.OnlineDataController:AreaDetail
+ 【线程ID】: 6 
+ 【日志内容】:未指定该标记的类别
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-21 22:37:08,187
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 8 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetailTable hisData) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 110
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-21 22:37:09,653
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 7 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetailTable hisData) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 110
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-21 22:37:11,166
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 7 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetailTable hisData) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 110
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-21 22:38:40,727
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 14 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetailTable hisData) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 110
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-21 22:38:42,641
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 11 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetailTable hisData) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 110
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-21 22:38:44,221
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 8 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetailTable hisData) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 110
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-21 22:52:14,175
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 10 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetailTable hisData) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 113
+ 
+---------------------------------------------------------------------------------------------------------------

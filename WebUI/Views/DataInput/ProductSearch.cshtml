@@ -1,0 +1,272 @@
+﻿@section Style{
+    @Styles.Render("~/Content/bootstrap-datepicker")
+    @Styles.Render("~/Content/bootstrap-switch")
+    @Styles.Render("~/Content/bootstrap-table")
+}
+
+@section Header{
+    <style>
+        .cascading-dropdown-loading {
+            cursor: wait;
+            background: url('/img/ajax-loader.gif') 85% center no-repeat transparent;
+        }
+
+        .center {
+            width: auto;
+            display: table;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .no-border-left {
+            border-left: 0px !important;
+        }
+
+        .no-border-right {
+            border-right: 0px !important;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        /*td,th{
+            text-align: center;
+            padding: 2px !important;
+            border: 1px solid !important;
+        }*/
+
+        .no-border {
+            border: 0px !important;
+        }
+
+        .header-table td {
+            border: 0px !important;
+        }
+
+        .large-input {
+            height: 77px;
+        }
+
+        input {
+            font-size: 10px !important;
+        }
+
+        #product input {
+            /*outline: none !important;
+            border-left: 0px !important;
+            border-top: 0px !important;
+            border-right: 0px !important;
+            border-bottom: 1px !important;*/
+        }
+    </style>
+}
+
+<body>
+    <div class="col-sm-12" id="qt_picture">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+              
+                <div class="row">
+
+                    <div class="col-sm-12">
+
+                        <div class="col-sm-12">
+
+                            <form role="form" class="form-inline" id="ps_cond">
+                                <div class="form-group">
+                                    <label>开始时间：</label>
+                                    <div class="input-group date" style="z-index:9999">
+                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                        <input value="2016-12-21" name="startDate" type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>结束时间：</label>
+                                    <div class="input-group date" style="z-index:9999">
+                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                        <input value="2016-12-22" name="endDate" type="text" class="form-control">
+                                    </div>
+                                </div>
+                                @*<div class="form-group">
+                                        <label>供应商：</label>
+                                        <input name="supplier" type="text" class="form-control" />
+                                    </div>*@
+                                <div class="form-group">
+                                    <label>规格型号：</label>
+                                    <input name="specNum" type="text" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label>批次号：</label>
+                                    <input name="batchNum" type="text" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label>供应商：</label>
+                                    <input name="supplier" type="text" class="form-control" />
+                                </div>
+
+
+                                <button type="button" class="btn btn-white" id="ps_search_btn">
+                                    <span class="fa fa-search"></span>
+                                </button>
+                            </form>
+
+                            @*<div class="input-group" style="margin-left:2px">
+                                    <input type="text" id="ps_volnum_input" value="A1501" class="form-control">
+                                    <div class="input-group-btn">
+
+                                        <button type="button" class="btn btn-white" id="ps_search_btn">
+                                            <span class="fa fa-search"></span>
+                                        </button>
+
+                                    </div>
+                                </div>*@
+                            <!-- /btn-group -->
+                        </div>
+                        @*<div class="col-sm-2" style="text-align:left">
+                                <div class="input-group">
+                                    <label class="form-control" style="text-align:right;border:0px!important">编辑</label>
+                                    <div class="input-group-btn">
+
+                                        <div class="switch">
+                                            <input id="ps_enable_edit_btn" type="checkbox" />
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>*@
+                        <div class="ibox-content">
+                            <div class="row">
+                                <table id="ps_table"></table>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+@section Footer{
+    @Scripts.Render("~/Scripts/bootstrap-switch")
+    @Scripts.Render("~/Scripts/cascadingdropdown")
+    @Scripts.Render("~/Scripts/bootstrap-datepicker")
+    @Scripts.Render("~/Scripts/bootstrap-table")
+
+    <script>
+
+        function showRPDetail(id) {
+            var mcAdmin = window.parent.mcAdmin;
+            mcAdmin.addTab("成品详情", "/DataInput/ProductDetail/" + id);
+
+            console.log(id);
+        }
+
+        $(function (mcAdmin) {
+            var $product = $("#product");
+            var $psTable = $("#ps_table");
+
+            function autoTableIndex(value, row, index) {
+                return index + 1;
+            }
+
+            function initPsTable() {
+                $psTable.bootstrapTable({
+                    columns: [{
+                        formatter: autoTableIndex,
+                        title: '序号'
+                    }, {
+                        field: "InputDate",
+                        title: "录入时间"
+                    }, {
+                        field: "VolNum",
+                        title: "成品盘号"
+                    },  {
+                        field: "Supplier",
+                        title: "供应商"
+                    }, {
+                        field: "Detail",
+                        title: "详细"
+                    }]
+                });
+            }
+            initPsTable();
+
+            
+
+            $('.input-group.date').datepicker({
+                todayBtn: "linked",
+                keyboardNavigation: false,
+                forceParse: false,
+                calendarWeeks: true,
+                autoclose: true
+            });
+
+
+            //导出xls
+            $("#ps_export_btn").on("click", function () {
+                console.log("in")
+                var ret = $("#pd_table").tableExport({ type: "PNG", escape: "false" })
+                console.log(ret);
+            })
+            //检索结果
+            $("#ps_search_btn").on("click", function () {
+
+                var cond = $("#ps_cond").serializeForm();
+                console.log(JSON.stringify(cond));
+                $.post("/DataInput/SearchProduct", { cond: cond }, function (retData) {
+                    mcAdmin.dealRetData(retData, function () {
+                        console.log(retData)
+                        $psTable.bootstrapTable('load', retData.Appendix);
+                    })
+                });
+                //var volNum = $("#ps_volnum_input").val();
+                //if (volNum + "" == "") {
+                //    swal({
+                //        title: "错误！",
+                //        text: "请输入盘号",
+                //        type: "error",
+                //    }, function () {
+
+                //    })
+                //    return;
+                //}
+                //$.post("/DataInput/SearchProductByVolNumAction", { volNum: volNum }, function (retData) {
+                //    mcAdmin.dealRetData(retData, function () {
+                //        console.log(retData);
+                //        deserailzeTable("product", retData.Appendix);
+                //        $product.css("display", "inline");
+
+                //    })
+                //})
+            })
+          
+            function deserailzeTable(table, data) {
+                if (table.indexOf("#") == -1) {
+                    table = "#" + table;
+                }
+                $(table).find("input,textarea").each(function (i, v) {
+                    var value = data[$(v).attr("name")];
+                    if ($(v).attr("name") == "InputDate") {
+
+                        var re = /-?\d+/;
+                        var m = re.exec(value);
+                        var d = new Date(parseInt(m[0]));
+                        $(v).val(d.getFullYear() + '-' + (d.getMonth() + 1) + "-" + d.getDate())
+                        return;
+                    }
+
+                    if ($(v).attr("type") == "radio") {
+                        return;
+                    }
+
+                    $(v).val(value);
+                });
+            }
+
+            
+
+        }(window.parent.mcAdmin))
+    </script>
+}

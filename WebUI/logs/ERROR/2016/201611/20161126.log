@@ -1,0 +1,1079 @@
+ 【时间】:2016-11-26 12:49:16,498
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 8 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 116
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 14:14:58,643
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:MachineLayout
+ 【线程ID】: 17 
+ 【日志内容】:车间未施工,请联系施工人员
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 14:21:37,776
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:MachineLayout
+ 【线程ID】: 7 
+ 【日志内容】:车间未施工,请联系施工人员
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 15:34:17,960
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 57
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 15:34:31,950
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 10 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 57
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,366
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,404
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,413
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,420
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,429
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,438
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,446
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,453
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,461
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,468
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,476
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,483
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,491
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,498
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,505
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,512
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,519
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,526
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,533
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,557
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,563
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,571
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,578
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,584
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,592
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,598
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,607
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,614
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,621
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,628
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,635
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,645
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,652
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,675
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,682
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,690
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,696
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,705
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,712
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,719
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,726
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,733
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,741
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,747
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,754
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,762
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,768
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,775
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,782
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,789
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,796
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,803
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,810
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,816
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,824
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,830
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,837
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,845
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,882
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,891
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,898
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,906
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,913
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,921
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,928
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,935
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,943
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,950
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,958
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,965
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,971
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,978
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:16,998
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,006
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,014
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,038
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,046
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,052
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,059
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,066
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,075
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,082
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,090
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,096
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,103
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,110
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,116
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,124
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,132
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,140
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,147
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,154
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,161
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,169
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,176
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,183
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,191
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,198
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,207
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,214
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,222
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,231
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,239
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,246
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,253
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,261
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,268
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,276
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,282
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,289
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,297
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,304
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,311
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,318
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,326
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,332
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,340
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,347
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,368
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,377
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,384
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,393
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,399
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,408
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,415
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,422
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,429
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,436
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,445
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-11-26 16:13:17,452
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.HistoryDataController:GetHistoryData
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.HistoryDataController.GetHistoryData(String axisNumStr) 位置 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\WebUI\Controllers\HistoryDataController.cs:行号 73
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------

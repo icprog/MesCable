@@ -1,0 +1,254 @@
+﻿@model  IEnumerable<MesWeb.ViewModel.Ocx.VM_JSTree>
+
+@section Style{
+    @Styles.Render("~/Content/jsTree")
+}
+
+<body>
+    <div id="param_unit_tree">
+
+    </div>
+
+    @*add param unit dialog*@
+    <div class="modal inmodal" id="modal_add_unit" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content animated flipInY">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">添加</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal m-t" id="form_add_unit">
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">名称：</label>
+                            <div class="col-sm-8">
+                                <input name="ParameterUnitName" required type="text" class="form-control">
+                            </div>
+                        </div>
+
+                       
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">符号：</label>
+                            <div class="col-sm-8">
+                                <input name="ParameterUnitSymbol" required type="text" class="form-control">
+                            </div>
+                        </div>
+                      
+                    </form>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" id="sbt_add_unit">提交</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    @*edit param unit dialog*@
+    <div class="modal inmodal" id="modal_edit_unit" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content animated flipInY">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">编辑</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal m-t" id="form_edit_unit" >
+                        <div class="form-group" style="display:none">
+                            <label class="col-sm-3 control-label">ID：</label>
+                            <div class="col-sm-8">
+                                <input name="ParameterUnitID" required type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">名称：</label>
+                            <div class="col-sm-8">
+                                <input name="ParameterUnitName" required type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">符号：</label>
+                            <div class="col-sm-8">
+                                <input name="ParameterUnitSymbol" required type="text" class="form-control">
+                            </div>
+                        </div>
+
+                    </form>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" id="sbt_edit_unit">提交</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+@section Footer{
+@Scripts.Render("~/Scripts/jsTree")
+
+
+    <script>
+        $(function(mcAdmin){
+
+
+
+
+            ///////////////////init js tree//////////////////////
+            var jsTreeData = @Html.Raw(Json.Encode(Model));
+
+            $('#param_unit_tree').jstree({
+                'core': {
+                    'check_callback': true,
+                    'data':jsTreeData
+                },
+                'plugins': ['dnd', 'contextmenu'],
+                "contextmenu": {
+                    "items": {
+                        "create": null,
+                        "rename": null,
+                        "remove": null,
+                        "ccp": null,
+                        "editParamUnit": {
+                            "label": "编辑单位",
+                            "action": function (data) {
+                                var inst = jQuery.jstree.reference(data.reference);
+                                var  node = inst.get_node(data.reference);
+                                preEditParamUnit(node.id);
+                            }
+                        },
+                        "addParamUnit": {
+                            "label": "添加单位",
+                            "action": function (data) {
+                                resetForm("form_add_unit");                            
+                                $("#modal_add_unit").modal();
+                            }
+                        },
+                        "deleteParamUnit":{
+                            "label":"删除单位",
+                            "action":function(data){
+                                var inst = jQuery.jstree.reference(data.reference);
+                                var  node = inst.get_node(data.reference);
+                        
+                            }
+                        }
+
+                    }
+                }
+            });
+
+            function preEditParamUnit(Id){
+                resetForm("form_edit_unit");
+                $.post("/BasicData/GetParamUnitInfoAction",{Id:Id},function(retData){
+                    mcAdmin.dealRetData(retData,function(){
+                        var paramUnitList = retData.Appendix;                 
+                        initFormInput("form_edit_unit",paramUnitList);
+                        $("#modal_edit_unit").modal();
+                    })
+                },"json")
+            }
+
+            $("#sbt_add_unit").on("click",function(){
+                var unit = serialForm("form_add_unit");
+             
+                $.post("/BasicData/AddParamUnitAction",{unit:unit},function(retData){
+                    mcAdmin.dealRetData(retData,function(){
+                        swal({
+                            title: "恭喜！",
+                            text: retData.Content,
+                            type: "success"
+                        }, function () {
+                            mcAdmin.reloadCurrentTab();
+                        });
+                    })
+                },"json")
+            })
+
+
+            $("#sbt_edit_unit").on("click",function(){
+                var unit = serialForm("form_edit_unit");
+                console.log(unit)
+                $.post("/BasicData/EditParamUnitAction",{unit:unit},function(retData){
+                    mcAdmin.dealRetData(retData,function(){
+                        swal({
+                            title: "恭喜！",
+                            text: retData.Content,
+                            type: "success"
+                        }, function () {
+                            mcAdmin.reloadCurrentTab();
+                        });
+                    })
+                },"json")
+            })
+
+            function serialForm(form) {
+
+                /// <summary>
+                /// Serials the form data
+                /// </summary>
+                /// <param name="form">the form controller</param>
+                if (form.indexOf("#") < 0) {
+                    form = "#" + form;
+                }
+                var jsonObj = {};
+                $(form + "  input").each(function (i, v) {
+                    jsonObj[$(v).attr("name")] = $(v).val();
+                })
+                $(form + "  select").each(function (i, v) {
+                    jsonObj[$(v).attr("name")] = $(v).find("option:selected").val();
+                })
+                return jsonObj;
+
+            }
+            function resetForm(form) {
+                /// <summary>
+                /// Resets the form.
+                /// </summary>
+                /// <param name="form">The form.</param>
+                /// <param name="dropdown">The dropdown.</param>
+                if(form.indexOf("#" != 0)){
+                    form  = "#" + form;
+                }               
+                $(form + "  input").each(function (i, v) {
+                    $(v).val("");
+                });
+                $(form + "  select").each(function (i, v) {
+                    $(v).html("");
+                });
+                try {
+                    if(arguments.length > 1){
+                        for (var i = 1; i < arguments.length; i++) {
+                            var dp = arguments[i];
+                            if(arguments[i].indexOf("#") != 0){
+                                dp = "#" + dp;
+                            }                          
+                            $(dp).cascadingDropdown('destroy');
+
+                        }
+                    }
+               
+                  
+                } catch (e) {
+                    console.log(e)
+                }
+            }
+
+            function initFormInput(form, data) {
+                if(form.indexOf("#" != 0)){
+                    form  = "#" + form;
+                }
+                deserialize(form, data);
+            }
+
+        }(window.parent.mcAdmin))
+
+  
+    </script>
+}

@@ -1,0 +1,542 @@
+﻿@model MesWeb.ViewModel.Mes.VM_LayoutPicture
+@section Style{
+    @Styles.Render("~/Content/hotspot")
+    @Styles.Render("~/Content/context-menu")
+    @Styles.Render("~/Content/sweetalert")
+
+}
+@section Header{
+    <style>
+        .alarm_trend_anchor:hover {
+            cursor: pointer;
+        }
+
+        .echarts {
+            height: 300px;
+        }
+    </style>
+}
+
+<body>
+
+    @*layout picture*@
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <i class="fa fa-info-circle"></i> 机台情况
+                </div>
+                <div class="panel-body">
+                    <div id="layout_div">
+                        <img style="position: relative;" src="@Html.Raw(Model.PicUrl)" id="topview_pic" class="HotspotPlugin_Overlay">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @*relative info*@
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <i class="fa fa-info-circle"></i> 线缆信息
+                </div>
+                <div class="panel-body" id="machine_property">
+                    <div class="row gray-bg">
+                        <div class="col-sm-6">
+                            <div class="ibox float-e-margins">
+                                <div class="ibox-title">
+                                    <h5>线缆属性</h5>
+                                </div>
+                                <div class="ibox-content">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <dl class="dl-horizontal">
+                                                <dt>机台名称</dt>
+                                                <dd name="MachineName"></dd>
+                                                <dt>规格型号</dt>
+                                                <dd name="SpecNum"></dd>
+                                                <dt>当前米数</dt>
+                                                <dd name="CurrentMeters"></dd>
+                                                <dt>工单号</dt>
+                                                <dd name="JobNum"></dd>
+                                                <dt>任务数</dt>
+                                                <dd name="TaskNum"></dd>
+                                                <dt>达成数</dt>
+                                                <dd name="ReachedNum"></dd>
+                                                <dt>批次号</dt>
+                                                <dd name="BatchNum"></dd>
+                                                <dt>轴号</dt>
+                                                <dd name="AxisNum"></dd>
+                                            </dl>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="ibox float-e-margins">
+                                <div class="ibox-title">
+                                    <h5>线缆参数</h5>
+                                </div>
+                                <div class="ibox-content">
+
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <dl class="dl-horizontal">
+                                                <dt>最大外径</dt>
+                                                <dd name="ODMax"></dd>
+                                                <dt>最小外径</dt>
+                                                <dd name="ODMin"></dd>
+                                                <dt>颜色</dt>
+                                                <dd name="SpecColor"></dd>
+                                                <dt>单价</dt>
+                                                <dd name="UnitPrice"></dd>
+                                                <dt>操作手</dt>
+                                                <dd name="ManuMan"></dd>
+                                                <dt>物料RFID</dt>
+                                                <dd name="MaterialRFID"></dd>
+                                                <dt>预计完成时间</dt>
+                                                <dd name="EstTime"></dd>
+                                                <dt>能耗</dt>
+                                                <dd name="ContUnit"></dd>
+                                            </dl>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    @*CPK Chart*@
+    <div id="chart_msLine_module" style="display:none">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <i class="fa fa-info-circle"></i> <span id="chart_od_title">线径</span>
+                    </div>
+                    <div class="panel-body">
+                        <div class="echarts" id="chart_od"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <i class="fa fa-info-circle"></i> <span id="chart_tesion_title">张力</span>
+                    </div>
+                    <div class="panel-body">
+                        <div class="echarts" id="chart_tension"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <i class="fa fa-info-circle"></i> <span id="chart_rpm_title">OD值</span>
+                    </div>
+                    <div class="panel-body">
+                        <div class="echarts" id="chart_rpm"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    @*realtime trend*@
+    <div class="row" id="chart_line_module">
+
+    </div>
+
+
+
+
+</body>
+
+@section Footer{
+    @Scripts.Render("~/Scripts/hotspot")
+    @Scripts.Render("~/Scripts/context-menu")
+    @Scripts.Render("~/Scripts/sweetalert")
+    @Scripts.Render("~/Scripts/fusioncharts")
+    @Scripts.Render("~/Scripts/fusioncharts-theme-fint")
+    @Scripts.Render("~/Scripts/signalR")
+    <script src="~/signalr/hubs"></script>
+
+    <script>
+        var hp;
+        var layout = @Html.Raw(Json.Encode(Model));
+        var imgEvent ;
+        var fusionCharts;
+        var msLineCharts = {};
+        var lineCharts = {};
+        var lineChartsData = {};
+
+        var askTimer = {};
+        var isRealTime = false;
+
+        if (typeof (RESULT_CHART_TYPE) == "undefined") {
+            var RESULT_CHART_TYPE = {
+                LINE : 1,
+                MSLINE : 2,
+                LINE_MSLINE : 3
+            };
+        }
+
+        (function($,mcAdmin){
+
+
+            ///////////////////////////SignalR to update chart////////////////////////////
+            var updateHub = $.connection.sensorUpdateHub;
+            function updatHubInit(){
+                updateHub.server.initAllSensors(16).done(function(sensorInfo){
+                    ////console.log(sensorInfo);
+                })
+            }
+            $.connection.hub.start().done(updatHubInit);
+            updateHub.client.updateSensorData = function(data){
+                var fusionData = data.Appendix;
+
+                $.each(fusionData,function(i,fusion){
+
+                    setLineChartDataByTCP(fusion);
+                });
+            }
+
+            function viewSensorChart(){
+                var selectedId = hp.getSelectSpot().LayoutPictureID;
+                var chartId ="chart_" +  selectedId;
+                if(lineCharts[chartId] != null || msLineCharts[chartId] != null){
+                    return;
+                }
+                $.post("/OnlineData/GetSelParamIds/",{layoutId:selectedId},function(retData){
+                    if(retData.Code == RESULT_CODE.OK){
+                        var paramCodeIds = retData.Appendix;
+                        initLineChart(chartId,paramCodeIds,true);
+
+                    }else{
+                        swal({
+                            title: "传感器施工错误",
+                            text: "请联系管理员！",
+                            type: "error",
+                        });
+                    }
+                })
+
+            }
+
+            function initLineChart(chartId,paramCodeIds,isRedraw) {
+                if(isRedraw == null){
+                    isRedraw = false;
+                }
+                var $sensorModule = $("#chart_line_module");
+                if(lineCharts[chartId] != null ){
+                    if(isRedraw == true){
+                        delete FusionCharts.items["fc_"+chartId]
+                        if(isRealTime == true){
+                            try{
+                                clearInterval(askTimer[chartId]);
+                            }catch(e){
+
+                            }
+                        }
+                        $("#"+chartId+"_panel").remove();
+                    }else{
+                        return lineCharts[chartId];
+                    }
+                }
+                var chartDiv = '<div class="col-sm-12" id="'+chartId+'_panel"> <div class="panel panel-info"> <div class="panel-heading">'+
+                    '<i class="fa fa-info-circle"></i> <span id="'+chartId+'_title"></span></div><div class="panel-body">'+
+                    '<div class="echarts" id="'+chartId+'"></div></div></div></div>'
+                $sensorModule.prepend(chartDiv);
+
+                var fcChartInst = new FusionCharts({
+                    id:"fc_"+chartId,
+                    renderAt:chartId,
+                    type:"spline",
+                    dataFormat: 'json',
+                    dataSource: "",
+                    width:"100%",
+
+                })
+                ////console.log(paramCodeIds)
+                FusionCharts.items["fc_"+chartId].paramCodeIds = paramCodeIds;
+                FusionCharts.items["fc_"+chartId].chartId = chartId;
+                lineChartsData[chartId] = [];
+
+                lineCharts[chartId] = FusionCharts.items["fc_"+chartId];
+
+                fcChartInst.render();
+                return lineCharts[chartId];
+            }
+
+
+            function setLineChartData(fusion,chartsObj,titleId){
+                var chart = fusion.chart;
+                var data = fusion.data;
+                if(chart.caption != null && typeof titleId != "undefined"){
+                    $("#" + titleId+"_title").html(chart.caption)
+                }
+
+                var trendlines = fusion.trendlines;
+                var fcChart = {
+                    "caption":chart.title,
+                    "xAxisName": chart.xAxisName,
+                    "yAxisName": chart.yAxisName,
+                    "plotFillAlpha": "80",
+                    "theme": "fint",
+                    "rotateValues": "0",
+                    "numberSuffix": chart.numberSuffix,
+                    "showValues": "0",
+                    "showPlotBorder": "0",
+                    "showLabels":"0",
+                    showLabels:0,
+                    anchorBgAlpha:0,
+                    anchorBorderThickness:0,
+                    yAxisMinValue:175,
+                    yAxisMaxValue:190
+                };
+                var fcData  = [];
+                //console.log(data);
+                $.each(data,function(i,v){
+
+                    var time = v.label.split(" ")[1];
+                    fcData.push({"value":v.value,"label":time})
+                })
+
+                var fcDataSource = {
+                    "chart":fcChart,
+                    "data":fcData,
+                    trendlines:trendlines
+                }
+                chartsObj.setJSONData(fcDataSource);
+            }
+
+            function setLineChartDataByTCP(fusion){
+
+                $.each(lineCharts,function(i,chart){
+                    console.log(i)
+                    //if(chart.paramCodeId == fusion.paramCodeId){
+                    lineChartsData[chart.chartId].push(fusion.data[0]);
+
+                    fusion.data = lineChartsData[chart.chartId];
+
+                    setLineChartData(fusion,chart,chart.chartId);
+
+                    // return;
+                    //}
+                })
+            }
+
+            ////////////////////////////////////////////////////////////////////////////
+
+
+            function updateMachinePty(){
+                $.post("/OnlineData/GetMachinePropertyAction/"+layout.LayoutPictureID,function(retData){
+                    mcAdmin.dealRetData(retData,function(){
+                        var data = retData.Appendix;
+                        var propertyDD = $("#machine_property").find("dd");
+                        $.each(propertyDD,function(i,dd){
+                            var prop = $(dd).attr("name");
+                            $(dd).html(data[prop]);
+
+                        })
+                    });
+                },"json")
+            }
+
+            if(isRealTime == true){
+                updateMachinePty();
+                askTimer["updateMachinePty"] = setInterval(updateMachinePty,20*1000);
+            }else{
+                updateMachinePty();
+            }
+
+            //////////////////////////////////////////////////////////////////////////////////////////////////
+            function updateChart(postUrl,chartId,isRedraw){
+                if(isRedraw == null){
+                    isRedraw = false;
+                }
+                $.post(postUrl,function(retData){
+                    mcAdmin.dealRetData(retData,function(){
+                        switch(retData.Content){
+                            case RESULT_CHART_TYPE.LINE:
+                                var chartList = retData.Appendix[0];
+                                $.each(chartList,function(i,chartData){
+                                    chartId = chartId +"_"+ i;
+                                    var chartObj = initLineChart(chartId,isRedraw);
+                                    setLineChartData(chartData,chartObj,chartId);
+                                })
+
+                                break;
+                            case RESULT_CHART_TYPE.MSLINE:
+                                var chartList = retData.Appendix[0];
+
+                                $.each(chartList,function(i,chartData){
+                                    chartId = chartId +"_"+ i;
+                                    var chartObj = initMSLineChart(chartId,isRedraw);
+                                    setMsLineChartData(chartData,chartObj,chartId);
+                                })
+                                break;
+                            case RESULT_CHART_TYPE.LINE_MSLINE:
+                                break;
+                        }
+                        //setLineChartData(retData.Appendix[0],fusionCharts,"chart_sensor_title");
+                    },function(){
+                        if(isRealTime == true){
+                            try{
+                                clearInterval(askTimer[chartId]);
+                            }catch(e){
+
+                            }
+                        }
+                    })
+                },"json");
+            }
+
+
+
+            function initSensorChart(){
+                var fcChartInst = new FusionCharts({
+                    id:"fc_sensor",
+                    renderAt:"chart_sensor",
+                    type:"line",
+                    dataFormat: 'json',
+                    dataSource: "",
+                    width:"100%",
+
+                })
+                fusionCharts = FusionCharts.items["fc_sensor"];
+            }
+
+            function initMSLineChart(chartId,isRedraw) {
+                var $msLineModule = $("#chart_line_module");
+                if(msLineCharts[chartId] != null){
+                    if(isRedraw == true){
+                        delete FusionCharts.items["fc_"+chartId]
+                        if(isRealTime == true){
+                            try{
+                                clearInterval(askTimer[chartId]);
+                            }catch(e){
+
+                            }
+                        }
+                        $("#"+chartId+"_panel").remove();
+                    }else{
+                        ////console.log(FusionCharts.items);
+
+                        return msLineCharts[chartId];
+                    }
+                }
+                var chartDiv = '<div class="col-sm-12" id="'+chartId+'_panel"> <div class="panel panel-info"> <div class="panel-heading">'+
+                   '<i class="fa fa-info-circle"></i> <span id="'+chartId+'_title"></span></div><div class="panel-body">'+
+                   '<div class="echarts" id="'+chartId+'"></div></div></div></div>'
+                $msLineModule.prepend(chartDiv);
+                var fcChartInst = new FusionCharts({
+                    id:"fc_"+chartId,
+                    renderAt:chartId,
+                    type:"msspline",
+                    dataFormat: 'json',
+                    dataSource:"",
+                    width:"100%",
+                })
+                msLineCharts[chartId] = FusionCharts.items["fc_"+chartId];
+                fcChartInst.render();
+                return msLineCharts[chartId];
+            }
+
+
+
+
+
+            ///////////////////////////////////////////////////////////////////////////////////////////////
+            // init layout view
+            hp = $("#layout_div").hotspot({
+                expandAll:true,
+                interactivity:"hover",
+                mode:"admin",
+                data: {
+                    Id: layout.LayoutPictureID,
+                    Pixel: { width: $("#topview_pic").width(), height: $("#topview_pic").height() },
+                    Spots:layout.SubSpotItems
+                },
+                spotRightClick: function (div, spot, spotIndex, e) {
+
+
+                },
+                imgRightClick: function (e) {
+                    imgEvent = e;
+                },spotLeftClickWhenHover:function (div, spot, spotIndex, e) {
+                    // viewSubLayout();
+                    viewSensorChart();
+                },
+            });
+
+
+            $(".Hotspot_Block").on("click",function(e){
+                // viewSubLayout();
+                viewSensorChart();
+                return false;
+            });
+
+
+            function viewSubLayout() {
+                var selectedId = hp.getSelectSpot().LayoutPictureID;
+
+                $("#chart_line_module").css("display","block");
+                var postUrl = "/OnlineData/GetSensorChartAction/"+selectedId;
+                updateChart(postUrl,"chart_"+selectedId,true);
+                if(isRealTime == true){
+                    askTimer["chart_"+selectedId] = setInterval(function(){
+                        updateChart(postUrl,"chart_"+selectedId,false);
+                    },2000);
+                }
+            }
+
+            function setMsLineChartData(fcDataSource,chartsObj,titleId) {
+                $("#"+titleId+"_title").html(fcDataSource.dataset[0].seriesname);
+                fcDataSource.chart.showValues = 0;
+                fcDataSource.chart.showLabels = 0;
+                fcDataSource.chart.theme="fint";
+                fcDataSource.chart.anchorBgAlpha=0;
+                fcDataSource.chart.anchorBorderThickness = 0;
+
+
+                $.each(fcDataSource.trendlines[0].line,function(i,line){
+                    if(i==0 || i==1){
+                        line.color="#ff8000";
+                    }else{
+                        line.color="#ff0080"
+                    }
+                    line.thickness = 3
+                })
+                //删除 chart 属性中的空值，不然会引起 theme 不能使用的 BUG
+                mcAdmin.deleteNullFeature(fcDataSource.chart);
+                chartsObj.setJSONData(fcDataSource);
+                //chartsObj.render();
+            }
+
+
+
+
+        }($,window.parent.mcAdmin))
+
+
+
+    </script>
+}

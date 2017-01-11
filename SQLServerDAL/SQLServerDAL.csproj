@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AB835BA2-FFD6-49CD-87B0-E216255BB32E}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>MesWeb.SQLServerDAL</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>MesWeb.SQLServerDAL</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MesWeb.SQLServerDAL, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MesWeb.SQLServerDAL.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder, Version=1.0.51206.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Microsoft.Practices.ObjectBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Name>System.Web.Services</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{E3D8759A-C5EB-402D-9F10-F5C6029A8D1A}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DBUtility\DBUtility.csproj">
+      <Project>{0988C62E-247F-471F-A183-DB509C7A3839}</Project>
+      <Name>DBUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IDAL\IDAL.csproj">
+      <Project>{B0706FA2-977C-4523-B093-F57804756498}</Project>
+      <Name>IDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Name>Model</Name>
+      <Project>{53995DBB-9836-4647-AD22-865884FDEB9E}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PubConstant.cs" />
+    <Compile Include="SysManage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SysManage1.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sys_App.cs" />
+    <Compile Include="Sys_Menu.cs" />
+    <Compile Include="T_Application.cs" />
+    <Compile Include="T_ApplicationItem.cs" />
+    <Compile Include="T_Authentic.cs" />
+    <Compile Include="T_Axis.cs" />
+    <Compile Include="T_AxisTask.cs" />
+    <Compile Include="T_CheckParsRef.cs" />
+    <Compile Include="T_CheckSheet.cs" />
+    <Compile Include="T_CheckType.cs" />
+    <Compile Include="T_Code.cs" />
+    <Compile Include="T_CodeRule.cs" />
+    <Compile Include="T_CodeType.cs" />
+    <Compile Include="T_CodeUsed.cs" />
+    <Compile Include="T_CodeUsing.cs" />
+    <Compile Include="T_CollectedDataParameters.cs" />
+    <Compile Include="T_CollectedParameter.cs" />
+    <Compile Include="T_Company.cs" />
+    <Compile Include="T_CurrentData.cs" />
+    <Compile Include="T_Department.cs" />
+    <Compile Include="T_Dumpling.cs" />
+    <Compile Include="T_DumplingType.cs" />
+    <Compile Include="T_DumplingZone.cs" />
+    <Compile Include="T_Duty.cs" />
+    <Compile Include="T_ElectricityPrice.cs" />
+    <Compile Include="T_Employee.cs" />
+    <Compile Include="T_EmployeeArrangement.cs" />
+    <Compile Include="T_EmployeeState.cs" />
+    <Compile Include="T_Employee_DeleteBak.cs" />
+    <Compile Include="T_Fault.cs" />
+    <Compile Include="T_FaultModule.cs" />
+    <Compile Include="T_Flow.cs" />
+    <Compile Include="T_Flow_Info.cs" />
+    <Compile Include="T_FlowRelation.cs" />
+    <Compile Include="T_Half_Product.cs" />
+    <Compile Include="T_Half_ProductZone.cs" />
+    <Compile Include="T_HistoryData.cs" />
+    <Compile Include="T_HistoryInfo.cs" />
+    <Compile Include="T_HumanEfficience.cs" />
+    <Compile Include="T_JobSheet.cs" />
+    <Compile Include="T_JobSheetItem.cs" />
+    <Compile Include="T_JobSheetItemDetail.cs" />
+    <Compile Include="T_LayoutPicture.cs" />
+    <Compile Include="T_LayoutType.cs" />
+    <Compile Include="T_LeaveApplication.cs" />
+    <Compile Include="T_LeaveApplicationType.cs" />
+    <Compile Include="T_Log.cs" />
+    <Compile Include="T_LogDetail.cs" />
+    <Compile Include="T_LogType.cs" />
+    <Compile Include="T_Machine.cs" />
+    <Compile Include="T_MachineAblity.cs" />
+    <Compile Include="T_MachineEfficience.cs" />
+    <Compile Include="T_MachineMaintain.cs" />
+    <Compile Include="T_MachineMaintainPlan.cs" />
+    <Compile Include="T_MachineParameter.cs" />
+    <Compile Include="T_MachineState.cs" />
+    <Compile Include="T_MachineStateType.cs" />
+    <Compile Include="T_MachineType.cs" />
+    <Compile Include="T_MachineZone.cs" />
+    <Compile Include="T_MapMachineAddress.cs" />
+    <Compile Include="T_Material.cs" />
+    <Compile Include="T_MaterialConsumption.cs" />
+    <Compile Include="T_MaterialOutput.cs" />
+    <Compile Include="T_MaterialType.cs" />
+    <Compile Include="T_MaterialUsed.cs" />
+    <Compile Include="T_MaterialZone.cs" />
+    <Compile Include="T_Menu.cs" />
+    <Compile Include="T_MergeAxis.cs" />
+    <Compile Include="T_MergeJobSheet.cs" />
+    <Compile Include="T_MergeJobSheetStatistic.cs" />
+    <Compile Include="T_ModelMaintain.cs" />
+    <Compile Include="T_Mould.cs" />
+    <Compile Include="T_MouldReturn.cs" />
+    <Compile Include="T_MouldType.cs" />
+    <Compile Include="T_MouldUsed.cs" />
+    <Compile Include="T_MouldZone.cs" />
+    <Compile Include="T_OEE.cs" />
+    <Compile Include="T_OpenMachineCondition.cs" />
+    <Compile Include="T_ParameterCode.cs" />
+    <Compile Include="T_ParametersCol.cs" />
+    <Compile Include="T_ParametersRef.cs" />
+    <Compile Include="T_ParameterUnit.cs" />
+    <Compile Include="T_PARCODE.cs" />
+    <Compile Include="T_Port.cs" />
+    <Compile Include="T_ProdictAblity.cs" />
+    <Compile Include="T_ProdictMachine.cs" />
+    <Compile Include="T_Product.cs" />
+    <Compile Include="T_ProductZone.cs" />
+    <Compile Include="T_Protocol.cs" />
+    <Compile Include="T_QRCode.cs" />
+    <Compile Include="T_ReDoReson.cs" />
+    <Compile Include="T_ReDoSheet.cs" />
+    <Compile Include="T_Report_Footer.cs" />
+    <Compile Include="T_Report_Header.cs" />
+    <Compile Include="T_Report_Plastic.cs" />
+    <Compile Include="T_Report_Product.cs" />
+    <Compile Include="T_Report_Product_Actual.cs" />
+    <Compile Include="T_Report_Product_Standard.cs" />
+    <Compile Include="T_Report_Value.cs" />
+    <Compile Include="T_Right.cs" />
+    <Compile Include="T_Salary.cs" />
+    <Compile Include="T_SensorModule.cs" />
+    <Compile Include="T_SensorModule_T_ParameterCode.cs" />
+    <Compile Include="T_ServerLog.cs" />
+    <Compile Include="T_Specification.cs" />
+    <Compile Include="T_SpecificationType.cs" />
+    <Compile Include="T_SpotDist.cs" />
+    <Compile Include="T_SpotDistType.cs" />
+    <Compile Include="T_SpotDist_SpotInfo.cs" />
+    <Compile Include="T_SpotInfo.cs" />
+    <Compile Include="T_Statistic.cs" />
+    <Compile Include="T_Task.cs" />
+    <Compile Include="T_TaskFinished.cs" />
+    <Compile Include="T_TCP.cs" />
+    <Compile Include="T_Technique.cs" />
+    <Compile Include="T_User.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+    <Content Include="Microsoft.Practices.EnterpriseLibrary.Data.dll" />
+    <Content Include="Microsoft.Practices.ObjectBuilder.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

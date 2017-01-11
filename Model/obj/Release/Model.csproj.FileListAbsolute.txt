@@ -1,0 +1,2 @@
+D:\MES\MesCable\Model\bin\Release\MesWeb.Model.dll
+D:\MES\MesCable\Model\obj\Release\MesWeb.Model.dll

@@ -1,0 +1,142 @@
+﻿@model  IEnumerable<MesWeb.ViewModel.Ocx.VM_JSTree>
+
+@section Style{
+    @Styles.Render("~/Content/jsTree")
+}
+
+
+<body>
+    <div id="machine_tree" ></div>
+    @*设置参数最值*@
+    <div class="modal inmodal" id="modal_set_param" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content animated flipInY">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">设置</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal m-t" id="form_set_param">
+                        <div class="form-group" style="display:none">
+                            <label class="col-sm-3 control-label">ParametersColID：</label>
+                            <div class="col-sm-8">
+                                <input name="ParametersColID" required type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group" style="display:none">
+                            <label class="col-sm-3 control-label">ParamCodeID：</label>
+                            <div class="col-sm-8">
+                                <input name="ParameterCodeID" required type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group" style="display:none">
+                            <label class="col-sm-3 control-label">MachineID：</label>
+                            <div class="col-sm-8">
+                                <input name="MachineID" required type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">最大值：</label>
+                            <div class="col-sm-8">
+                                <input name="ParametersColMaxiumValue" required type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">最小值：</label>
+                            <div class="col-sm-8">
+                                <input name="ParametersColMiniumValue" required type="text" class="form-control">
+                            </div>
+                        </div>
+
+                    </form>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" id="sbt_set_param">提交</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
+@section Footer{
+    @Scripts.Render("~/Scripts/jsTree")
+
+    <script>
+        $(function (mcAdmin) {
+            var jsTreeData = @Html.Raw(Json.Encode(Model));
+            $('#machine_tree').jstree({
+                'core': {
+                    'check_callback': false,
+                    'data':jsTreeData
+                },
+                'plugins': [ 'contextmenu'],
+                "contextmenu": {
+                    "items": {       
+                        "create": null,
+                        "rename": null,
+                        "remove": null,
+                        "ccp": null,
+                        "editParamCode": {
+                            "label": "设置",
+                            "action": function (data) {
+                                var  inst = jQuery.jstree.reference(data.reference);
+                                var  node = inst.get_node(data.reference);
+                                var idArr= node.id.split('_');     
+                                console.log(idArr)
+                                if(idArr[2] == "param"){
+                                    
+                                    //设置参数最值
+                                    var machineId = node.parent.split('_')[1];
+                                    var paramCodeId = idArr[3];
+                                    getParamCodeSetting(machineId,paramCodeId);
+
+                                }
+                            }
+                        }
+
+                    }
+                }
+            });
+
+            function getParamCodeSetting(machineId,paramCodeId){
+             
+                //清空参数设定值表单
+                $("#form_set_param").resetFrom();
+                $.post("/BasicData/GetParamSetting/",{machineId:machineId,paramCodeId:paramCodeId},function(retData){
+                    console.log(retData);
+                    if(retData.Code == RESULT_CODE.OK){
+                        //填充参数设定值表单
+                        $("#form_set_param").deserializeForm(retData.Appendix);
+                
+                    }
+                    
+                    $("#modal_set_param").modal();
+                });
+
+            }
+
+            $("#sbt_set_param").on("click",function(){
+                //获取参数值
+                var paramSet = $("#form_set_param").serializeForm();
+                $.post("/BasicData/SaveParamSetting/",{paramSet:paramSet},function(retData){
+                    mcAdmin.dealRetData(retData,function(){
+                        swal({
+                            title: "恭喜！",
+                            text: retData.Content,
+                            type: "success",
+                        }, function () {
+                            $("#modal_set_param").modal("hide");
+                        })
+                    });
+                })
+            })
+        }(window.parent.mcAdmin))
+    </script>
+}

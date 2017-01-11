@@ -1,0 +1,8 @@
+D:\MES\MesCable\BLL\bin\Release\MesWeb.BLL.dll
+D:\MES\MesCable\BLL\bin\Release\MesWeb.Common.dll
+D:\MES\MesCable\BLL\bin\Release\MesWeb.DALFactory.dll
+D:\MES\MesCable\BLL\bin\Release\MesWeb.IDAL.dll
+D:\MES\MesCable\BLL\bin\Release\MesWeb.Model.dll
+D:\MES\MesCable\BLL\bin\Release\OpenSmtp.dll
+D:\MES\MesCable\BLL\obj\Release\BLL.csprojResolveAssemblyReference.cache
+D:\MES\MesCable\BLL\obj\Release\MesWeb.BLL.dll

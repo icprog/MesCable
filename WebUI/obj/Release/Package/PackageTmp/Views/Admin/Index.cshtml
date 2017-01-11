@@ -1,0 +1,143 @@
+﻿@model MesWeb.ViewModel.System.VM_Menu
+
+@section Style{
+    @Styles.Render("~/Content/clock")
+
+}
+@section Header{
+    <style>
+        a {
+            text-decoration: none;
+        }
+    </style>}
+
+<body class="fixed-sidebar full-height-layout gray-bg" style="overflow:hidden">
+    <div id="wrapper">
+        <!--左侧导航开始-->
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="nav-close">
+                <i class="fa fa-times-circle"></i>
+            </div>
+            <div class="sidebar-collapse">
+                <ul class="nav" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element">
+                            <span><img alt="image" class="img-circle" style="width:64px;height:64px" src="/img/profile_small.jpg" /></span>
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <span class="clear">
+                                    <span class="block m-t-xs"><strong class="font-bold" id="user_name"></strong></span>
+                                    <span class="text-muted text-xs block">管理员<b class="caret"></b></span>
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li>
+                                    <a class="J_menuItem" href="form_avatar.html">修改头像</a>
+                                </li>
+                                <li>
+                                    <a class="J_menuItem" href="profile.html">个人资料</a>
+                                </li>
+                                <li>
+                                    <a class="J_menuItem" href="contacts.html">联系我们</a>
+                                </li>
+                                <li>
+                                    <a class="J_menuItem" href="mailbox.html">信箱</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a onclick="logout()">安全退出</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="logo-element">
+                            <i class="fa fa-home"></i>
+                        </div>
+                    </li>
+
+
+                </ul>
+            </div>
+        </nav>
+        <!--左侧导航结束-->
+        <!--右侧部分开始-->
+        <div id="page-wrapper" class="gray-bg dashbard-1">
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                        <a style="min-height:initial;min-height:initial" class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right" style="padding:initial">
+                        <li>
+                            <a style="padding:initial;padding-top:19px" class="navbtn-home" href="#"><i class="fa fa-home fa-2x"></i> </a>
+                        </li>
+                        <li style="zoom:0.6 !important;margin-bottom:5px">
+                            <div id="clock" class="light" style="position:initial;background-color:initial;margin:initial;padding:initial;width:initial;box-shadow:initial">
+
+                                <div class="digits"></div>
+
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="row content-tabs">
+                <button class="roll-nav roll-left J_tabLeft">
+                    <i class="fa fa-backward"></i>
+                </button>
+                <nav class="page-tabs J_menuTabs">
+                    <div class="page-tabs-content">
+                        <a href="javascript:;" class="active J_menuTab" data-id="@Model.MenuUrl">@Model.MenuName</a>
+                    </div>
+                </nav>
+
+
+                <a onclick="logout()" class="roll-nav roll-right J_tabExit"><i class="fa fa fa-sign-out"></i> 退出</a>
+            </div>
+            <div class="row J_mainContent" id="content-main">
+                <iframe id="J_defaultPage" class="J_iframe" name="iframe0" width="100%" height="100%" src="@Model.MenuUrl" frameborder="0" data-id="@Model.MenuUrl" seamless></iframe>
+            </div>
+            <div class="footer">
+                <div class="pull-right">
+                    &copy; 2016-2016 @*<a href="http://www.cniots.com/" target="_blank">智联电科</a>*@
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+@section Footer{
+    @Scripts.Render("~/Scripts/admin/index")
+    @Scripts.Render("~/Scripts/clock")
+    <script>
+
+        var user;
+       
+        function logout(){          
+            $.post("/Login/LogoutAction",function(retData){
+                window.location.href = "/Login";
+            });
+        }
+        (function(mcAdmin){
+            $.post("/Admin/GetUserInfoAction",function(retData){
+                mcAdmin.dealRetData(retData,function(){
+                    user = retData.Appendix;
+                    $("#user_name").html(user.UserName);
+                })
+            },"json");
+
+            rootMenu = @Html.Raw(Json.Encode(Model));
+            mcAdmin.genMenuList("side-menu",rootMenu)
+            $(".navbtn-home").click(function () {
+                mcAdmin.addTab("主页", "/Admin/Home");
+            })
+
+        }(mcAdmin))
+    </script>
+    @Scripts.Render("~/Scripts/metisMenu")
+    @Scripts.Render("~/Scripts/slimscroll")
+    @Scripts.Render("~/Scripts/layer")
+    @Scripts.Render("~/Scripts/hplus")
+    @Scripts.Render("~/Scripts/contabs")
+    @Scripts.Render("~/Scripts/pace")
+}

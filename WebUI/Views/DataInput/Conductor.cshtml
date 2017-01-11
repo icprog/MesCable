@@ -1,0 +1,221 @@
+﻿@section Style{
+    @Styles.Render("~/Content/icheck-square-green")
+}
+@section Header{
+    <style>
+        .center {
+            width: auto;
+            display: table;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        td {
+            text-align: center;
+            padding: 2px !important;
+            border: 1px solid !important;
+        }
+
+        input {
+            outline: none !important;
+            /*border-left:0px !important;border-top:0px !important;border-right:0px !important;border-bottom:1px !important;*/
+        }
+    </style>
+}
+
+<body>
+    <div class="row center" style="margin-top:30px">
+        <table align="center" class="table table-bordered center-block" style="width:60%">
+            <tr>
+                <td colspan="8" style="text-align:left;border-right:0px">
+                    <span style="font-size:30px;padding-left:50%!important;">导体检验报告</span>
+
+                <td colspan="1">编号</td>
+                <td colspan="1"><input class="form-control" name="Code" /></td>
+            </tr>
+            <tr>
+                <td colspan="1" style="width:10%">规格型号</td>
+                <td colspan="2"><input class="form-control" name="SpecNum" /></td>
+                <td colspan="1">供应商</td>
+                <td colspan="6"><input class="form-control" name="Supplier" size="10" /></td>
+            </tr>
+            <tr>
+                <td colspan="1">样品颜色</td>
+                <td colspan="2"><input class="form-control" name="SampleColor" /></td>
+                <td colspan="1">批号</td>
+                <td colspan="6"><input class="form-control" name="BatchNum" size="10" /></td>
+            </tr>
+            <tr>
+                <td colspan="1">来料数量</td>
+                <td colspan="2"><input class="form-control" name="IncomingQty" /></td>
+                <td colspan="1">是否有出厂报告</td>
+                <td colspan="6"><input class="form-control" name="IsOutFactoryReport" size="10" /></td>
+            </tr>
+            <tr>
+                <td colspan="1">抽样数量</td>
+                <td colspan="2"><input class="form-control" name="SampleNum" /></td>
+                <td>检验日期</td>
+                <td colspan="6"><input class="form-control" name="CheckDate" size="10" /></td>
+            </tr>
+            <tr>
+                <td colspan="2">检验项目</td>
+                <td colspan="1">单位</td>
+                <td colspan="1">标准</td>
+                <td colspan="5">实测</td>
+                <td colspan="1">结果判定</td>
+            </tr>
+            <tr>
+                <td colspan="1">规格尺寸</td>
+                <td colspan="1">导体直径</td>
+                <td colspan="1">mm</td>
+                <td colspan="1"><input class="form-control" size="6" name="Dia" /></td>
+                <td colspan="1"><input class="form-control" size="6" name="DiaActual1" /></td>
+                <td colspan="1"><input class="form-control" size="6" name="DiaActual2" /></td>
+                <td colspan="1"><input class="form-control" size="6" name="DiaActual3" /></td>
+                <td colspan="1"><input class="form-control" size="6" name="DiaActual4" /></td>
+                <td colspan="1"><input class="form-control" size="6" name="DiaActual5" /></td>
+                <td colspan="1"><input class="form-control" size="6" name="DiaResult" /></td>
+            </tr>
+            <tr>
+                <td rowspan="5">电性能试验</td>
+            </tr>
+            <tr>
+                <td>伸长率 </td>
+                <td> %</td>
+                <td colspan="1"><input class="form-control" size="6" name="Elong" /></td>
+                <td colspan="1"><input class="form-control" size="6" name="ElongActual1" /></td>
+                <td colspan="1"><input class="form-control" size="6" name="ElongActual2" /></td>
+                <td colspan="1"><input class="form-control" size="6" name="ElongActual3" /></td>
+                <td colspan="1"><input class="form-control" size="6" name="ElongActual4" /></td>
+                <td colspan="1"><input class="form-control" size="6" name="ElongActual5" /></td>
+                <td colspan="1"><input class="form-control" size="6" name="ElongResult" /></td>
+            </tr>
+            <tr>
+                <td>电阻率 </td>
+                <td>&#937;mm<sup>2</sup>/m </td>
+                <td colspan="1"><input class="form-control" size="6" name="Elec" /></td>
+                <td colspan="1"><input class="form-control" size="6" name="ElecActual1" /></td>
+                <td colspan="1"><input class="form-control" size="6" name="ElecActual2" /></td>
+                <td colspan="1"><input class="form-control" size="6" name="ElecActual3" /></td>
+                <td colspan="1"><input class="form-control" size="6" name="ElecActual4" /></td>
+                <td colspan="1"><input class="form-control" size="6" name="ElecActual5" /></td>
+                <td colspan="1"><input class="form-control" size="6" name="ElecResult" /></td>
+            </tr>
+            <tr>
+                <td>抗拉强度 </td>
+                <td>Mpa</td>
+                <td colspan="1"><input class="form-control" size="6" name="Uts" /></td>
+                <td colspan="1"><input class="form-control" size="6" name="UtsActual1" /></td>
+                <td colspan="1"><input class="form-control" size="6" name="UtsActual2" /></td>
+                <td colspan="1"><input class="form-control" size="6" name="UtsActual3" /></td>
+                <td colspan="1"><input class="form-control" size="6" name="UtsActual4" /></td>
+                <td colspan="1"><input class="form-control" size="6" name="UtsActual5" /></td>
+                <td colspan="1"><input class="form-control" size="6" name="UtsResult" /></td>
+            </tr>
+            <tr>
+                <td>密度 </td>
+                <td>g/cm<sup>2</sup></td>
+                <td colspan="1"><input class="form-control" size="6" name="Dens" /></td>
+                <td colspan="1"><input class="form-control" size="6" name="DensActual1" /></td>
+                <td colspan="1"><input class="form-control" size="6" name="DensActual2" /></td>
+                <td colspan="1"><input class="form-control" size="6" name="DensActual3" /></td>
+                <td colspan="1"><input class="form-control" size="6" name="DensActual4" /></td>
+                <td colspan="1"><input class="form-control" size="6" name="DensActual5" /></td>
+                <td colspan="1"><input class="form-control" size="6" name="DensResult" /></td>
+            </tr>
+            <tr>
+                <td colspan="1">重量</td>
+                <td colspan="1">单重</td>
+                <td colspan="1">KG/PCS</td>
+                <td colspan="1"><input class="form-control" size="6" name="Weight" /></td>
+                <td colspan="1"><input class="form-control" size="6" name="WeightActual1" /></td>
+                <td colspan="1"><input class="form-control" size="6" name="WeightActual2" /></td>
+                <td colspan="1"><input class="form-control" size="6" name="WeightActual3" /></td>
+                <td colspan="1"><input class="form-control" size="6" name="WeightActual4" /></td>
+                <td colspan="1"><input class="form-control" size="6" name="WeightActual5" /></td>
+                <td colspan="1"><input class="form-control" size="6" name="WeightResult" /></td>
+            </tr>
+            <tr>
+                <td colspan="1">外观质量</td>
+                <td colspan="3">导体表面应光滑光泽、无氧化、无锈<br />痕、无撞伤、无脏污、排线整齐</td>
+                <td colspan="5"><input class="form-control" size="70" name="SurfaceQuality" /></td>
+                <td colspan="1"><input class="form-control" size="6" name="SurfaceQualityResult" /></td>
+            </tr>
+            <tr>
+                <td colspan="1">包装与标示</td>
+                <td colspan="3">符合《原辅材料检验规范》标准要求</td>
+                <td colspan="1"><input class="form-control" size="6" /></td>
+                <td colspan="1"><input class="form-control" size="6" /></td>
+                <td colspan="1"><input class="form-control" size="6" /></td>
+                <td colspan="1"><input class="form-control" size="6" /></td>
+                <td colspan="1"><input class="form-control" size="6" /></td>
+                <td colspan="1"><input class="form-control" size="6" /></td>
+            </tr>
+            <tr>
+                <td>环保检验</td>
+                <td colspan="5">
+                    是否有ICP报告
+                    <input class="form-control" type="checkbox" /> 有&nbsp;
+                    <input class="form-control" type="checkbox" /> 无
+
+                </td>
+                <td colspan="4">
+                    中德环保测试结果
+                    <input class="form-control" type="checkbox" /> 合格&nbsp;
+                    <input class="form-control" type="checkbox" /> 不合格
+                </td>
+            <tr>
+                <td colspan="1">合格数量</td>
+                <td colspan="1"><input class="form-control" /></td>
+                <td colspan="1">不良率%:</td>
+                <td colspan="1"><input class="form-control" /></td>
+                <td colspan="5">不合格品处理单编号:</td>
+                <td colspan="1"><input class="form-control" size="6" /></td>
+            </tr>
+            <tr>
+                <td colspan="1">检验结果</td>
+                <td colspan="1"><input class="form-control" type="checkbox" />&nbsp;允许</td>
+                <td colspan="1"><input class="form-control" type="checkbox" />&nbsp;退货</td>
+                <td colspan="2"><input class="form-control" type="checkbox" />&nbsp;特采</td>
+                <td colspan="4"><input class="form-control" type="checkbox" />&nbsp;挑选退货</td>
+                <td colspan="1"><input class="form-control" type="checkbox" />&nbsp;返工</td>
+            </tr>
+            <tr>
+
+                <td colspan="2">检验员</td>
+                <td colspan="2"><input class="form-control" /></td>
+                <td colspan="1">审核</td>
+                <td colspan="2"><input class="form-control" /></td>
+                <td colspan="1">批准</td>
+                <td colspan="2"><input class="form-control" /></td>
+            </tr>
+            <tr style="border:0px !important">
+                <td colspan="10" style="text-align:right">
+                    <button class="btn btn-primary dim" type="button">
+                        提交
+                    </button>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+</body>
+
+@section Footer{
+    @Scripts.Render("~/Scripts/icheck")
+    <script>
+        $(function (mcAdmin) {
+            $('input').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+                increaseArea: '20%' // optional
+            });
+        }(window.parent.mcAdmin))
+    </script>
+
+}
