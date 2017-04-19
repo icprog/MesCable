@@ -1,0 +1,215 @@
+﻿@model MesWeb.ViewModel.Mes.VM_LayoutPicture
+@section Style{
+    @Styles.Render("~/Content/hotspot")
+    @Styles.Render("~/Content/context-menu")
+
+    @Styles.Render("~/Content/bootstrap-datepicker")
+}
+
+<body>
+    <div class="col-sm-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>车间区域分布情况 </h5>
+                <div class="ibox-tools">
+                    <a class="collapse-link">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="calendar.html#">
+                        <i class="fa fa-wrench"></i>
+                    </a>
+                    <a class="close-link">
+                        <i class="fa fa-times"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="ibox-content">
+                <div id="topview_div">
+                    <img src="@Html.Raw(Model.PicUrl)" id="topview_pic" class="img-responsive center-block HotspotPlugin_Overlay">
+                </div>
+                <div style="display:none" class="col-sm-5 col-sm-offset-7">
+                    <div id="gantt_proce">正在加载请稍候</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+</body>
+@section Footer{
+    @Scripts.Render("~/Scripts/hotspot")
+    @Scripts.Render("~/Scripts/context-menu")
+    @Scripts.Render("~/Scripts/sweetalert")
+    @Scripts.Render("~/Scripts/bootstrap-datepicker")
+    @Scripts.Render("~/Scripts/fusioncharts")
+    @Scripts.Render("~/Scripts/fusioncharts-theme-fint")
+
+
+    <script>
+        FusionCharts.ready(function(){
+            var fusioncharts = new FusionCharts({
+                type: 'gantt',
+                renderAt: 'gantt_proce',
+                width: '750',
+                height: '500',
+                dataFormat: 'json',
+                dataSource: {
+                    "chart": {
+                        "dateformat": "mm/dd/yyyy",
+                        "caption": "机台工作情况",
+                        "theme": "fint",
+                        "canvasBorderAlpha": "40"
+                    },
+                    "categories": [{
+                        "category": [{
+                            "start": "08/01/2014",
+                            "end": "08/31/2014",
+                            "label": "Aug '14"
+                        }, {
+                            "start": "09/01/2014",
+                            "end": "09/30/2014",
+                            "label": "Sep '14"
+                        }, {
+                            "start": "10/01/2014",
+                            "end": "10/31/2014",
+                            "label": "Oct '14"
+                        }, {
+                            "start": "11/01/2014",
+                            "end": "11/30/2014",
+                            "label": "Nov '14"
+                        }, {
+                            "start": "12/01/2014",
+                            "end": "12/31/2014",
+                            "label": "Dec '14"
+                        }, {
+                            "start": "01/01/2015",
+                            "end": "01/31/2015",
+                            "label": "Jan '15"
+                        }]
+                    }],
+                    "processes": {
+                        "fontsize": "12",
+                        "isbold": "1",
+                        "align": "right",
+                        "process": [{
+                            "label": "机台1"
+                        }, {
+                            "label": "机台2"
+                        }, {
+                            "label": "机台3"
+                        }, {
+                            "label": "机台4"
+                        }, {
+                            "label": "机台5"
+                        }, {
+                            "label": "机台6"
+                        }, {
+                            "label": "机台7"
+                        }, {
+                            "label": "机台8"
+                        }, {
+                            "label": "机台9"
+                        }, {
+                            "label": "机台10"
+                        }]
+                    },
+                    "tasks": {
+                        "task": [{
+                            "start": "08/04/2014",
+                            "end": "08/10/2014"
+                        }, {
+                            "start": "08/08/2014",
+                            "end": "08/19/2014"
+                        }, {
+                            "start": "08/19/2014",
+                            "end": "09/02/2014"
+                        }, {
+                            "start": "08/24/2014",
+                            "end": "09/02/2014"
+                        }, {
+                            "start": "09/02/2014",
+                            "end": "09/21/2014"
+                        }, {
+                            "start": "09/21/2014",
+                            "end": "10/06/2014"
+                        }, {
+                            "start": "10/06/2014",
+                            "end": "01/21/2015"
+                        }, {
+                            "start": "01/21/2015",
+                            "end": "02/19/2015"
+                        }, {
+                            "start": "01/28/2015",
+                            "end": "02/24/2015"
+                        }, {
+                            "start": "02/24/2015",
+                            "end": "03/27/2015"
+                        }]
+                    }
+
+                }
+            }
+        );
+          //  fusioncharts.render();
+        });
+
+
+        var hp;
+        var wsLayout = @Html.Raw(Json.Encode(Model));
+        var imgEvent;
+
+        (function($,mcAdmin){
+            hp = $("#topview_div").hotspot({
+                expandAll:true,
+                interactivity:"hover",
+                mode:"admin",
+                data: {
+                    Id: wsLayout.LayoutPictureID,
+                    Pixel: { width: $("#topview_pic").width(), height: $("#topview_pic").height() },
+                    Spots:wsLayout.SubSpotItems
+                },
+                spotRightClick: function (div, spot, spotIndex, e) {
+
+
+                },
+                imgRightClick: function (e) {
+                    imgEvent = e;
+                },spotLeftClickWhenHover:function (div, spot, spotIndex, e) {
+                    viewSubLayout();
+
+                },
+            });
+
+            $.contextMenu({
+                selector: '.HotspotPlugin_Hotspot',
+                callback: function(key, options) {
+                    switch (key) {
+                        case "view":
+                            viewSubLayout();
+                            break;
+                        default:
+                            break;
+                    }
+                },
+                items: {
+                    "view": {name: "查看", icon: "fa-eye"},
+                }
+            });
+
+            function viewSubLayout() {
+                mcAdmin.addTab(hp.getSelectSpot().Title+"机台","/OnlineData/MachineLayout/"+hp.getSelectSpot().LayoutPictureID);
+
+            }
+
+
+            $(".Hotspot_Block").on("click",function(e){
+                viewSubLayout();
+                return false;
+            });
+
+
+        }($,window.parent.mcAdmin))
+    </script>
+}

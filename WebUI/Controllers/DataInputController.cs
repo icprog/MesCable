@@ -107,6 +107,11 @@ namespace WebUI.Controllers {
             return View(detail);
         }
 
+        public ActionResult PlasticDetail(int id) {
+            var rp = getPlasticReportById(id);
+            return View(rp);
+        }
+
         /// <summary>
         /// 保存更新成品报表
         /// </summary>
@@ -118,7 +123,7 @@ namespace WebUI.Controllers {
             var bllPd = new MesWeb.BLL.T_Report_Product();
             var bllRpStd = new MesWeb.BLL.T_Report_Product_Standard();
             var bllRpActual = new MesWeb.BLL.T_Report_Product_Actual();
-            var oldPd = bllPd.GetModelList("Code = '" + product.Code + "'").First();
+            var oldPd = bllPd.GetModel(product.Id);
             if(oldPd != null) {
                 try {
                     //更新主表
@@ -182,118 +187,118 @@ namespace WebUI.Controllers {
             var bllFooter = new MesWeb.BLL.T_Report_Footer();
             var bllValue = new MesWeb.BLL.T_Report_Value();
             try {
-                var oldHeader = bllHeader.GetModelList("SpecNum = '" + plastic.Header_SpecNum + "'").First();
-                if(oldHeader != null) {
-                    var oldPls = bllPls.GetModelList("ReportHeaderId = '" + oldHeader.Id + "'").First();
-                    if(oldPls != null) {
-                        //更新header
-                        var newHeader = plastic.toReportHeader();
-                        newHeader.Id = oldHeader.Id;
-                        bllHeader.Update(newHeader);
-                        //更新footer
-                        var oldFooter = bllFooter.GetModel(oldPls.ReportFooterId.Value);
-                        var newFooter = plastic.toReportFooter();
-                        newFooter.Id = oldFooter.Id;
-                        bllFooter.Update(newFooter);
-                        //更新plastic
-                        oldPls.Code = plastic.Code;
-                        bllPls.Update(oldPls);
-                        //更新具体值
-                        var oldElecRate = bllValue.GetModel(oldPls.ElecRateId.Value);
-                        var newElecRate = plastic.toElecRateValue();
-                        newElecRate.Id = oldElecRate.Id;
-                        bllValue.Update(newElecRate);
+                var oldPls = bllPls.GetModel(plastic.Id);
 
-                        var oldElecStrength = bllValue.GetModel(oldPls.ElecStrengthId.Value);
-                        var newElecStrength = plastic.toElecStrengthValue();
-                        newElecStrength.Id = oldElecStrength.Id;
-                        bllValue.Update(newElecStrength);
+                if(oldPls != null) {
+                    //更新header
+                    var oldHeader = bllHeader.GetModel(oldPls.ReportHeaderId.Value);
+                    var newHeader = plastic.toReportHeader();
+                    newHeader.Id = oldHeader.Id;
+                    bllHeader.Update(newHeader);
+                    //更新footer
+                    var oldFooter = bllFooter.GetModel(oldPls.ReportFooterId.Value);
+                    var newFooter = plastic.toReportFooter();
+                    newFooter.Id = oldFooter.Id;
+                    bllFooter.Update(newFooter);
+                    //更新plastic
+                    oldPls.Code = plastic.Code;
+                    bllPls.Update(oldPls);
+                    //更新具体值
+                    var oldElecRate = bllValue.GetModel(oldPls.ElecRateId.Value);
+                    var newElecRate = plastic.toElecRateValue();
+                    newElecRate.Id = oldElecRate.Id;
+                    bllValue.Update(newElecRate);
 
-                        var oldMpaBefore = bllValue.GetModel(oldPls.MpaBeforeId.Value);
-                        var newMpaBefore = plastic.toMpaBeforeValue();
-                        newMpaBefore.Id = oldMpaBefore.Id;
-                        bllValue.Update(newMpaBefore);
+                    var oldElecStrength = bllValue.GetModel(oldPls.ElecStrengthId.Value);
+                    var newElecStrength = plastic.toElecStrengthValue();
+                    newElecStrength.Id = oldElecStrength.Id;
+                    bllValue.Update(newElecStrength);
 
-                        var oldElongBefore = bllValue.GetModel(oldPls.ElongBeforeId.Value);
-                        var newElongBefore = plastic.toElongBeforeValue();
-                        newElongBefore.Id = oldElongBefore.Id;
-                        bllValue.Update(newElongBefore);
+                    var oldMpaBefore = bllValue.GetModel(oldPls.MpaBeforeId.Value);
+                    var newMpaBefore = plastic.toMpaBeforeValue();
+                    newMpaBefore.Id = oldMpaBefore.Id;
+                    bllValue.Update(newMpaBefore);
 
-                        var oldAgingCondition = bllValue.GetModel(oldPls.AgingConditionId.Value);
-                        var newAgingCondition = plastic.toAgingConditionValue();
-                        newAgingCondition.Id = oldAgingCondition.Id;
-                        bllValue.Update(newAgingCondition);
+                    var oldElongBefore = bllValue.GetModel(oldPls.ElongBeforeId.Value);
+                    var newElongBefore = plastic.toElongBeforeValue();
+                    newElongBefore.Id = oldElongBefore.Id;
+                    bllValue.Update(newElongBefore);
 
-                        var oldMpaAfter = bllValue.GetModel(oldPls.MpaAfterId.Value);
-                        var newMpaAfter = plastic.toMpaAfterValue();
-                        newMpaAfter.Id = oldMpaAfter.Id;
-                        bllValue.Update(newMpaAfter);
+                    var oldAgingCondition = bllValue.GetModel(oldPls.AgingConditionId.Value);
+                    var newAgingCondition = plastic.toAgingConditionValue();
+                    newAgingCondition.Id = oldAgingCondition.Id;
+                    bllValue.Update(newAgingCondition);
 
-                        var oldElongAfter = bllValue.GetModel(oldPls.ElongAfterId.Value);
-                        var newElongAfter = plastic.toElongAfterValue();
-                        newElongAfter.Id = oldElongAfter.Id;
-                        bllValue.Update(newElongAfter);
+                    var oldMpaAfter = bllValue.GetModel(oldPls.MpaAfterId.Value);
+                    var newMpaAfter = plastic.toMpaAfterValue();
+                    newMpaAfter.Id = oldMpaAfter.Id;
+                    bllValue.Update(newMpaAfter);
 
-                        var oldMpaRateMax = bllValue.GetModel(oldPls.MpaRateMaxId.Value);
-                        var newMpaRateMax = plastic.toMpaRateMaxValue();
-                        newMpaRateMax.Id = oldMpaRateMax.Id;
-                        bllValue.Update(newMpaRateMax);
+                    var oldElongAfter = bllValue.GetModel(oldPls.ElongAfterId.Value);
+                    var newElongAfter = plastic.toElongAfterValue();
+                    newElongAfter.Id = oldElongAfter.Id;
+                    bllValue.Update(newElongAfter);
 
-                        var oldElongRateMax = bllValue.GetModel(oldPls.ElongRateMaxId.Value);
-                        var newElongRateMax = plastic.toElongRateMaxValue();
-                        newElongRateMax.Id = oldElongRateMax.Id;
-                        bllValue.Update(newElongRateMax);
+                    var oldMpaRateMax = bllValue.GetModel(oldPls.MpaRateMaxId.Value);
+                    var newMpaRateMax = plastic.toMpaRateMaxValue();
+                    newMpaRateMax.Id = oldMpaRateMax.Id;
+                    bllValue.Update(newMpaRateMax);
 
-                        var oldAgingQualityLoss = bllValue.GetModel(oldPls.AgingQualityLossId.Value);
-                        var newAgingQualityLoss = plastic.toAgingQualityLossValue();
-                        newAgingQualityLoss.Id = oldAgingQualityLoss.Id;
-                        bllValue.Update(newAgingQualityLoss);
+                    var oldElongRateMax = bllValue.GetModel(oldPls.ElongRateMaxId.Value);
+                    var newElongRateMax = plastic.toElongRateMaxValue();
+                    newElongRateMax.Id = oldElongRateMax.Id;
+                    bllValue.Update(newElongRateMax);
 
-                        var oldThermalStablityTime = bllValue.GetModel(oldPls.ThermalStablityTimeId.Value);
-                        var newThermalStablityTime = plastic.toThermalStablityTimeValue();
-                        newThermalStablityTime.Id = oldThermalStablityTime.Id;
-                        bllValue.Update(newThermalStablityTime);
+                    var oldAgingQualityLoss = bllValue.GetModel(oldPls.AgingQualityLossId.Value);
+                    var newAgingQualityLoss = plastic.toAgingQualityLossValue();
+                    newAgingQualityLoss.Id = oldAgingQualityLoss.Id;
+                    bllValue.Update(newAgingQualityLoss);
 
-                        var oldBittleImpactTest = bllValue.GetModel(oldPls.BittleImpactTestId.Value);
-                        var newBittleImpactTest = plastic.toBittleImpactTestValue();
-                        newBittleImpactTest.Id = oldBittleImpactTest.Id;
-                        bllValue.Update(newBittleImpactTest);
+                    var oldThermalStablityTime = bllValue.GetModel(oldPls.ThermalStablityTimeId.Value);
+                    var newThermalStablityTime = plastic.toThermalStablityTimeValue();
+                    newThermalStablityTime.Id = oldThermalStablityTime.Id;
+                    bllValue.Update(newThermalStablityTime);
 
-                        var oldThermalDeformation = bllValue.GetModel(oldPls.ThermalDeformationId.Value);
-                        var newThermalDeformation = plastic.toThermalDeformationValue();
-                        newThermalDeformation.Id = oldThermalDeformation.Id;
-                        bllValue.Update(newThermalDeformation);
+                    var oldBittleImpactTest = bllValue.GetModel(oldPls.BittleImpactTestId.Value);
+                    var newBittleImpactTest = plastic.toBittleImpactTestValue();
+                    newBittleImpactTest.Id = oldBittleImpactTest.Id;
+                    bllValue.Update(newBittleImpactTest);
 
-                        var oldOxyIndex = bllValue.GetModel(oldPls.OxyIndexId.Value);
-                        var newOxyIndex = plastic.toOxyIndexValue();
-                        newOxyIndex.Id = oldOxyIndex.Id;
-                        bllValue.Update(newOxyIndex);
+                    var oldThermalDeformation = bllValue.GetModel(oldPls.ThermalDeformationId.Value);
+                    var newThermalDeformation = plastic.toThermalDeformationValue();
+                    newThermalDeformation.Id = oldThermalDeformation.Id;
+                    bllValue.Update(newThermalDeformation);
 
-                        var oldSpecGravity = bllValue.GetModel(oldPls.SpecGravityId.Value);
-                        var newSpecGravity = plastic.toSpecGravityValue();
-                        newSpecGravity.Id = oldSpecGravity.Id;
-                        bllValue.Update(newSpecGravity);
+                    var oldOxyIndex = bllValue.GetModel(oldPls.OxyIndexId.Value);
+                    var newOxyIndex = plastic.toOxyIndexValue();
+                    newOxyIndex.Id = oldOxyIndex.Id;
+                    bllValue.Update(newOxyIndex);
 
-                        var oldShoreHBTest = bllValue.GetModel(oldPls.ShoreHBTestId.Value);
-                        var newShoreHBTest = plastic.toShoreHBTestValue();
-                        newShoreHBTest.Id = oldShoreHBTest.Id;
-                        bllValue.Update(newShoreHBTest);
+                    var oldSpecGravity = bllValue.GetModel(oldPls.SpecGravityId.Value);
+                    var newSpecGravity = plastic.toSpecGravityValue();
+                    newSpecGravity.Id = oldSpecGravity.Id;
+                    bllValue.Update(newSpecGravity);
 
-                        var oldApperanceQuality = bllValue.GetModel(oldPls.ApperanceQualityId.Value);
-                        var newApperanceQuality = plastic.toApperanceQualityValue();
-                        newApperanceQuality.Id = oldApperanceQuality.Id;
-                        bllValue.Update(newApperanceQuality);
+                    var oldShoreHBTest = bllValue.GetModel(oldPls.ShoreHBTestId.Value);
+                    var newShoreHBTest = plastic.toShoreHBTestValue();
+                    newShoreHBTest.Id = oldShoreHBTest.Id;
+                    bllValue.Update(newShoreHBTest);
 
-                        var oldPkgAndLabel = bllValue.GetModel(oldPls.PkgAndLabelId.Value);
-                        var newPkgAndLabel = plastic.toPkgAndLabelValue();
-                        newPkgAndLabel.Id = oldPkgAndLabel.Id;
-                        bllValue.Update(newPkgAndLabel);
+                    var oldApperanceQuality = bllValue.GetModel(oldPls.ApperanceQualityId.Value);
+                    var newApperanceQuality = plastic.toApperanceQualityValue();
+                    newApperanceQuality.Id = oldApperanceQuality.Id;
+                    bllValue.Update(newApperanceQuality);
 
-                        retData.Code = RESULT_CODE.OK;
-                        retData.Content = "更新塑料表成功";
+                    var oldPkgAndLabel = bllValue.GetModel(oldPls.PkgAndLabelId.Value);
+                    var newPkgAndLabel = plastic.toPkgAndLabelValue();
+                    newPkgAndLabel.Id = oldPkgAndLabel.Id;
+                    bllValue.Update(newPkgAndLabel);
 
-                    }
+                    retData.Code = RESULT_CODE.OK;
+                    retData.Content = "更新塑料表成功";
+
                 }
+
             } catch(Exception e) {
                 log = LogFactory.GetLogger(MethodBase.GetCurrentMethod().DeclaringType.FullName + ":" + MethodBase.GetCurrentMethod().Name);
                 log.Error(e);
@@ -310,58 +315,64 @@ namespace WebUI.Controllers {
         /// <param name="cond">查询条件</param>
         /// <returns></returns>
         [HttpPost]
-        public JsonResult SearchProduct(VM_Repoprt_Product_Cond cond) {
+        public JsonResult SearchProduct(VM_Repoprt_Plastic_Cond cond) {
             var retData = new VM_Result_Data();
             retData.Content = "查询失败";
             var bllPd = new MesWeb.BLL.T_Report_Product();
             List<T_Report_Product> pdList = new List<T_Report_Product>();
             bool isFirstSearch = true;
-
-            //录入时间
-            if(cond.startDate.HasValue && cond.endDate.HasValue) {
-                isFirstSearch = false;
-                pdList = bllPd.GetModelList("InputDate >=　'" + cond.startDate + "' and InputDate <= '" + cond.endDate + "'");
-            }
-
-            //规格型号
-            if(!string.IsNullOrEmpty(cond.specNum)) {
-                if(isFirstSearch) {
-                    isFirstSearch = false;
-                    pdList = bllPd.GetModelList("SpecNum = '" + cond.specNum + "'");                  
-                } else {
-                    pdList = (from p in pdList where p.SpecNum == cond.specNum select p).ToList();
-                }
-            }
-
-            //批次号(表单编号)
-            if(!string.IsNullOrEmpty(cond.batchNum)) {
-                if(isFirstSearch) {
-                    isFirstSearch = false;
-                    pdList = bllPd.GetModelList("Code = '" + cond.batchNum + "'");
-                } else {
-                    pdList = (from p in pdList where p.Code == cond.batchNum select p).ToList();
-                }
-            }
-
-            //供应商
-            if(!string.IsNullOrEmpty(cond.supplier)) {
-                if(isFirstSearch) {
-                    pdList = bllPd.GetModelList("Supplier = '" + cond.supplier + "'");
-                }else {
-                    pdList = (from p in pdList where p.Supplier == cond.supplier select p).ToList();
-                }
-            }
-
             //列表信息
             var pdBrefList = new List<VM_Report_Product_Bref>();
-            foreach(var pd in pdList) {
-                pdBrefList.Add(new VM_Report_Product_Bref {
-                    VolNum = pd.VolNum,
-                    InputDate = pd.InputDate.Value.ToString("yyyy-MM-dd"),
-                    Supplier = pd.Supplier,
-                    Detail = "<a  onclick='showRPDetail("+pd.Id+")'>报表详情</a>"
-                });
-              
+            try {
+                //录入时间
+                if(cond.startDate.HasValue && cond.endDate.HasValue) {
+                    isFirstSearch = false;
+                    pdList = bllPd.GetModelList("InputDate >=　'" + cond.startDate + "' and InputDate <= '" + cond.endDate + "'");
+                }
+
+                //规格型号
+                if(!string.IsNullOrEmpty(cond.specNum)) {
+                    if(isFirstSearch) {
+                        isFirstSearch = false;
+                        pdList = bllPd.GetModelList("SpecNum = '" + cond.specNum + "'");
+                    } else {
+                        pdList = (from p in pdList where p.SpecNum == cond.specNum select p).ToList();
+                    }
+                }
+
+                //批次号(表单编号)
+                if(!string.IsNullOrEmpty(cond.batchNum)) {
+                    if(isFirstSearch) {
+                        isFirstSearch = false;
+                        pdList = bllPd.GetModelList("Code = '" + cond.batchNum + "'");
+                    } else {
+                        pdList = (from p in pdList where p.Code == cond.batchNum select p).ToList();
+                    }
+                }
+
+                //供应商
+                if(!string.IsNullOrEmpty(cond.supplier)) {
+                    if(isFirstSearch) {
+                        pdList = bllPd.GetModelList("Supplier = '" + cond.supplier + "'");
+                    } else {
+                        pdList = (from p in pdList where p.Supplier == cond.supplier select p).ToList();
+                    }
+                }
+
+               
+                foreach(var pd in pdList) {
+                    pdBrefList.Add(new VM_Report_Product_Bref {
+                        VolNum = pd.VolNum,
+                        InputDate =pd.InputDate.HasValue? pd.InputDate.Value.ToString("yyyy-MM-dd"):"",
+                    
+                        Supplier = pd.Supplier,
+                        Detail = "<a  onclick='showRPDetail(" + pd.Id + ")'>报表详情</a>"
+                    });
+
+                }
+            }catch(Exception e) {
+                log = LogFactory.GetLogger(MethodBase.GetCurrentMethod().DeclaringType.FullName + ":" + MethodBase.GetCurrentMethod().Name);
+                log.Error(e);
             }
 
             if(pdBrefList.Count > 0) {
@@ -372,6 +383,86 @@ namespace WebUI.Controllers {
             }
             return Json(retData);
         }
+
+        [HttpPost]
+        public JsonResult SerachPlasticAction(VM_Repoprt_Plastic_Cond cond) {
+            var retData = new VM_Result_Data();
+            retData.Content = "查询失败";
+            var bllPs = new MesWeb.BLL.T_Report_Header();
+            var bllRs = new MesWeb.BLL.T_Report_Plastic();
+
+            List<T_Report_Header> pdList = new List<T_Report_Header>();
+            bool isFirstSearch = true;
+            //列表信息
+            var pdBrefList = new List<VM_Report_Plastic_Bref>();
+            try {
+                //录入时间
+                if(cond.startDate.HasValue && cond.endDate.HasValue) {
+                    isFirstSearch = false;
+                    pdList = bllPs.GetModelList("InputDate >=　'" + cond.startDate + "' and InputDate <= '" + cond.endDate + "'");
+                }
+
+                //规格型号
+                if(!string.IsNullOrEmpty(cond.specNum)) {
+                    if(isFirstSearch) {
+                        isFirstSearch = false;
+                        pdList = bllPs.GetModelList("SpecNum = '" + cond.specNum + "'");
+                    } else {
+                        pdList = (from p in pdList where p.SpecNum == cond.specNum select p).ToList();
+                    }
+                }
+
+                //批次号(表单编号)
+                if(!string.IsNullOrEmpty(cond.batchNum)) {
+                    if(isFirstSearch) {
+                        isFirstSearch = false;
+                        pdList = bllPs.GetModelList("BatchNum = '" + cond.batchNum + "'");
+                    } else {
+                        pdList = (from p in pdList where p.BatchNum == cond.batchNum select p).ToList();
+                    }
+                }
+
+                //供应商
+                if(!string.IsNullOrEmpty(cond.supplier)) {
+                    if(isFirstSearch) {
+                        pdList = bllPs.GetModelList("Supplier = '" + cond.supplier + "'");
+                    } else {
+                        pdList = (from p in pdList where p.Supplier == cond.supplier select p).ToList();
+                    }
+                }
+
+              
+                foreach(var pd in pdList) {
+
+                    var rs = bllRs.GetModelList("ReportHeaderId = " + pd.Id).FirstOrDefault();
+                    var id = 0;
+                    if(rs != null) {
+                        id = rs.Id;
+                    }
+
+                    pdBrefList.Add(new VM_Report_Plastic_Bref {
+                        SpecNum = pd.SpecNum,
+                        InputDate = pd.InputDate.HasValue ? pd.InputDate.Value.ToString("yyyy-MM-dd") :"",
+                        Supplier = pd.Supplier,
+                        Detail = "<a  onclick='showRPDetail(" + id + ")'>报表详情</a>"
+                    });
+
+                }
+            }catch(Exception e){
+                log = LogFactory.GetLogger(MethodBase.GetCurrentMethod().DeclaringType.FullName + ":" + MethodBase.GetCurrentMethod().Name);
+                log.Error(e);
+            }
+
+            if(pdBrefList.Count > 0) {
+                retData.Code = RESULT_CODE.OK;
+                retData.Appendix = pdBrefList;
+                retData.Content = "查询成功";
+
+            }
+            return Json(retData);
+
+        }
+
 
 
 
@@ -402,7 +493,7 @@ namespace WebUI.Controllers {
                 } catch(Exception e) {
                     log = LogFactory.GetLogger(MethodBase.GetCurrentMethod().DeclaringType.FullName + ":" + MethodBase.GetCurrentMethod().Name);
                     log.Error(e);
-                }            
+                }
             }
             return vmPd;
         }
@@ -447,11 +538,38 @@ namespace WebUI.Controllers {
             return Json(retData);
         }
 
+
+        private VM_Report_Plastic getPlasticReportById(int id) {
+            var retData = new VM_Result_Data();
+            var vmPls = new VM_Report_Plastic();
+
+            retData.Content = "搜索塑料表失败";
+            var bllPls = new MesWeb.BLL.T_Report_Plastic();
+            var bllHeader = new MesWeb.BLL.T_Report_Header();
+            var bllFooter = new MesWeb.BLL.T_Report_Footer();
+            var pls = bllPls.GetModel(id);
+            if(pls == null) {
+                return null;
+            }
+            var header = bllHeader.GetModel(pls.ReportHeaderId.Value);
+            if(header != null) {
+                try {
+                    var footer = bllFooter.GetModel(pls.ReportFooterId.Value);
+                    ReportPlasticUpdate(out vmPls,pls,header,footer);
+                } catch(Exception e) {
+                    log = LogFactory.GetLogger(MethodBase.GetCurrentMethod().DeclaringType.FullName + ":" + MethodBase.GetCurrentMethod().Name);
+                    log.Error(e);
+                }
+            }
+            return vmPls;
+        }
+
         /// <summary>
         /// 搜索塑料表
         /// </summary>
         /// <param name="specNum"></param>
         /// <returns></returns>
+        [Obsolete]
         public JsonResult SearchPlastictBySpecNumAction(string specNum) {
             var retData = new VM_Result_Data();
             retData.Content = "搜索塑料表失败";

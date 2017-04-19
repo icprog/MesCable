@@ -40,7 +40,7 @@ namespace WebUI.Controllers {
             //外径OD，线径OD
             OUTTER_OD = 2,
             //内径OD，铜线OD
-            INNER_OD = 41,
+            INNER_OD = 42,
             TESSION = 8,
             RPM = 34,
             METERS_COUNT = 5

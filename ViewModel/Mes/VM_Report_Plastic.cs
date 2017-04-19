@@ -7,7 +7,22 @@ using System.Threading.Tasks;
 
 namespace MesWeb.ViewModel.Mes {
 
+    public class VM_Report_Plastic_Bref {
+        public string InputDate { get; set; }
+        public string SpecNum { get; set; }
+        public string Detail { get; set; }
+        public string Supplier { get; set; }
+    }
+
+    public class VM_Repoprt_Plastic_Cond {
+        public DateTime? startDate { get; set; }
+        public DateTime? endDate { get; set; }
+        public string supplier { get; set; }
+        public string specNum { get; set; }
+        public string batchNum { get; set; }
+    }
     public class VM_Report_Plastic {
+        public  int Id { get; set; }
         public string Code { get; set; }
         public string Header_SpecNum { get; set; }
         public string Header_Supplier { get; set; }
@@ -389,6 +404,7 @@ namespace MesWeb.ViewModel.Mes {
 
         public void updateReportPlastic(T_Report_Plastic rp) {
             this.Code = rp.Code;
+            this.Id = rp.Id;
         }
 
         public T_Report_Plastic toReportPlastic() {

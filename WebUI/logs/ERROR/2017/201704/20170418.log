@@ -1,0 +1,10 @@
+ 【时间】:2017-04-18 16:46:22,180
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:TraceDetail
+ 【线程ID】: 5 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 437
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 451
+   在 WebUI.Controllers.QualityTraceController.TraceDetail(String Id) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 85
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------

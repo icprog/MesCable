@@ -1,0 +1,104 @@
+ 【时间】:2016-09-17 20:56:55,696
+ 【级别】:FATAL
+ 【类名】:WebUI.Controllers.ProjectAdminController:DeleteSensorLayoutAction
+ 【线程ID】: 7 
+ 【日志内容】:系统错误
+ 【日记详细】：System.Exception: Incorrect syntax near '='.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\MesCable\DBUtility\DbHelperSQL.cs:行号 517
+   在 MesWeb.SQLServerDAL.T_SensorModule_T_ParameterCode.GetList(String strWhere) 位置 C:\Users\ychost\Desktop\MesCable\SQLServerDAL\T_SensorModule_T_ParameterCode.cs:行号 191
+   在 MesWeb.BLL.T_SensorModule_T_ParameterCode.GetModelList(String strWhere) 位置 C:\Users\ychost\Desktop\MesCable\BLL\T_SensorModule_T_ParameterCode.cs:行号 121
+   在 WebUI.Controllers.ProjectAdminController.DeleteSensorLayoutAction(T_LayoutPicture layout) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\ProjectAdminController.cs:行号 540
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-17 20:57:57,649
+ 【级别】:FATAL
+ 【类名】:WebUI.Controllers.ProjectAdminController:DeleteSensorLayoutAction
+ 【线程ID】: 7 
+ 【日志内容】:系统错误
+ 【日记详细】：System.Exception: Incorrect syntax near '='.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\MesCable\DBUtility\DbHelperSQL.cs:行号 517
+   在 MesWeb.SQLServerDAL.T_SensorModule_T_ParameterCode.GetList(String strWhere) 位置 C:\Users\ychost\Desktop\MesCable\SQLServerDAL\T_SensorModule_T_ParameterCode.cs:行号 191
+   在 MesWeb.BLL.T_SensorModule_T_ParameterCode.GetModelList(String strWhere) 位置 C:\Users\ychost\Desktop\MesCable\BLL\T_SensorModule_T_ParameterCode.cs:行号 121
+   在 WebUI.Controllers.ProjectAdminController.DeleteSensorLayoutAction(T_LayoutPicture layout) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\ProjectAdminController.cs:行号 540
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-17 21:04:47,536
+ 【级别】:FATAL
+ 【类名】:WebUI.Controllers.ProjectAdminController:DeleteSensorLayoutAction
+ 【线程ID】: 5 
+ 【日志内容】:系统错误
+ 【日记详细】：System.Exception: Incorrect syntax near '='.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\MesCable\DBUtility\DbHelperSQL.cs:行号 517
+   在 MesWeb.SQLServerDAL.T_SensorModule_T_ParameterCode.GetList(String strWhere) 位置 C:\Users\ychost\Desktop\MesCable\SQLServerDAL\T_SensorModule_T_ParameterCode.cs:行号 191
+   在 MesWeb.BLL.T_SensorModule_T_ParameterCode.GetModelList(String strWhere) 位置 C:\Users\ychost\Desktop\MesCable\BLL\T_SensorModule_T_ParameterCode.cs:行号 121
+   在 WebUI.Controllers.ProjectAdminController.DeleteSensorLayoutAction(T_LayoutPicture layout) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\ProjectAdminController.cs:行号 540
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-17 21:07:53,552
+ 【级别】:FATAL
+ 【类名】:WebUI.Controllers.ProjectAdminController:DeleteSensorLayoutAction
+ 【线程ID】: 6 
+ 【日志内容】:系统错误
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.ProjectAdminController.deleteLayout(T_LayoutPicture layout)
+   在 WebUI.Controllers.ProjectAdminController.DeleteSensorLayoutAction(T_LayoutPicture layout)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-17 21:08:12,965
+ 【级别】:FATAL
+ 【类名】:WebUI.Controllers.ProjectAdminController:DeleteSensorLayoutAction
+ 【线程ID】: 5 
+ 【日志内容】:系统错误
+ 【日记详细】：System.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near ')'.
+   在 MES.DBUtility.DbHelperSQL.ExecuteSql(String SQLString) 位置 C:\Users\ychost\Desktop\MesCable\DBUtility\DbHelperSQL.cs:行号 147
+   在 MesWeb.SQLServerDAL.T_SensorModule_T_ParameterCode.DeleteList(String SensorModule_PARCODEIDlist) 位置 C:\Users\ychost\Desktop\MesCable\SQLServerDAL\T_SensorModule_T_ParameterCode.cs:行号 121
+   在 MesWeb.BLL.T_SensorModule_T_ParameterCode.DeleteList(String SensorModule_PARCODEIDlist) 位置 C:\Users\ychost\Desktop\MesCable\BLL\T_SensorModule_T_ParameterCode.cs:行号 66
+   在 WebUI.Controllers.ProjectAdminController.DeleteSensorLayoutAction(T_LayoutPicture layout)
+ClientConnectionId:dba91b4b-1344-4084-b9b0-4ebe78f1c913
+Error Number:102,State:1,Class:15
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-17 21:10:14,428
+ 【级别】:FATAL
+ 【类名】:WebUI.Controllers.ProjectAdminController:DeleteSensorLayoutAction
+ 【线程ID】: 5 
+ 【日志内容】:系统错误
+ 【日记详细】：System.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near ')'.
+   在 MES.DBUtility.DbHelperSQL.ExecuteSql(String SQLString) 位置 C:\Users\ychost\Desktop\MesCable\DBUtility\DbHelperSQL.cs:行号 147
+   在 MesWeb.SQLServerDAL.T_SensorModule_T_ParameterCode.DeleteList(String SensorModule_PARCODEIDlist) 位置 C:\Users\ychost\Desktop\MesCable\SQLServerDAL\T_SensorModule_T_ParameterCode.cs:行号 121
+   在 MesWeb.BLL.T_SensorModule_T_ParameterCode.DeleteList(String SensorModule_PARCODEIDlist) 位置 C:\Users\ychost\Desktop\MesCable\BLL\T_SensorModule_T_ParameterCode.cs:行号 66
+   在 WebUI.Controllers.ProjectAdminController.DeleteSensorLayoutAction(T_LayoutPicture layout)
+ClientConnectionId:a8beb5a1-20d6-4168-b5c4-566a214609ec
+Error Number:102,State:1,Class:15
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-17 21:11:28,121
+ 【级别】:FATAL
+ 【类名】:WebUI.Controllers.ProjectAdminController:DeleteSensorLayoutAction
+ 【线程ID】: 5 
+ 【日志内容】:系统错误
+ 【日记详细】：System.Data.SqlClient.SqlException (0x80131904): The multi-part identifier "MesWeb.Model.T_SensorModule_T_ParameterCode" could not be bound.
+The multi-part identifier "MesWeb.Model.T_SensorModule_T_ParameterCode" could not be bound.
+   在 MES.DBUtility.DbHelperSQL.ExecuteSql(String SQLString) 位置 C:\Users\ychost\Desktop\MesCable\DBUtility\DbHelperSQL.cs:行号 147
+   在 MesWeb.SQLServerDAL.T_SensorModule_T_ParameterCode.DeleteList(String SensorModule_PARCODEIDlist) 位置 C:\Users\ychost\Desktop\MesCable\SQLServerDAL\T_SensorModule_T_ParameterCode.cs:行号 121
+   在 MesWeb.BLL.T_SensorModule_T_ParameterCode.DeleteList(String SensorModule_PARCODEIDlist) 位置 C:\Users\ychost\Desktop\MesCable\BLL\T_SensorModule_T_ParameterCode.cs:行号 66
+   在 WebUI.Controllers.ProjectAdminController.DeleteSensorLayoutAction(T_LayoutPicture layout)
+ClientConnectionId:a8beb5a1-20d6-4168-b5c4-566a214609ec
+Error Number:4104,State:1,Class:16
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-17 21:13:39,825
+ 【级别】:FATAL
+ 【类名】:WebUI.Controllers.ProjectAdminController:DeleteSensorLayoutAction
+ 【线程ID】: 6 
+ 【日志内容】:系统错误
+ 【日记详细】：System.Data.SqlClient.SqlException (0x80131904): The multi-part identifier "MesWeb.Model.T_SensorModule_T_ParameterCode" could not be bound.
+The multi-part identifier "MesWeb.Model.T_SensorModule_T_ParameterCode" could not be bound.
+   在 MES.DBUtility.DbHelperSQL.ExecuteSql(String SQLString) 位置 C:\Users\ychost\Desktop\MesCable\DBUtility\DbHelperSQL.cs:行号 147
+   在 MesWeb.SQLServerDAL.T_SensorModule_T_ParameterCode.DeleteList(String SensorModule_PARCODEIDlist) 位置 C:\Users\ychost\Desktop\MesCable\SQLServerDAL\T_SensorModule_T_ParameterCode.cs:行号 121
+   在 MesWeb.BLL.T_SensorModule_T_ParameterCode.DeleteList(String SensorModule_PARCODEIDlist) 位置 C:\Users\ychost\Desktop\MesCable\BLL\T_SensorModule_T_ParameterCode.cs:行号 66
+   在 WebUI.Controllers.ProjectAdminController.DeleteSensorLayoutAction(T_LayoutPicture layout)
+ClientConnectionId:a8beb5a1-20d6-4168-b5c4-566a214609ec
+Error Number:4104,State:1,Class:16
+ 
+---------------------------------------------------------------------------------------------------------------

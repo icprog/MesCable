@@ -1,0 +1,46 @@
+﻿
+.Task 
+{
+    width: 165px;
+    height: 110px;
+    margin: 20px;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #ccc;
+}
+.Task i {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    display: block;
+    width: 12px;
+    height: 12px;
+    /*background: url(./images/dispose.png) repeat-x;*/
+}
+.Task .centre {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    margin-bottom: 5px;
+}
+.Task .Number {
+    position: absolute;
+    top: -3px;
+    left: 56px;
+    margin-bottom: 5px;
+    color: #fff;
+    font-size: 50px;
+    font-family: Microsoft Yahei;
+    width: 85px;
+    text-align: center;
+}
+.Task .text {
+    position: absolute;
+    top: 87px;
+    left: 18px;
+    color: #fff;
+}

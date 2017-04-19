@@ -8,7 +8,6 @@ C:\Users\ychost\Desktop\WorkSpace\MesCable\Model\obj\Debug\MesWeb.Model.dll
 C:\Users\ychost\Desktop\WorkSpace\MesCable\Model\obj\Debug\MesWeb.Model.pdb
 C:\Users\ychost\Desktop\MesCable\Model\bin\Debug\MesWeb.Model.dll
 C:\Users\ychost\Desktop\MesCable\Model\bin\Debug\MesWeb.Model.pdb
-C:\Users\ychost\Desktop\MesCable\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
 C:\Users\ychost\Desktop\MesCable\Model\obj\Debug\MesWeb.Model.dll
 C:\Users\ychost\Desktop\MesCable\Model\obj\Debug\MesWeb.Model.pdb
 C:\Users\ychost\Desktop\ZhongDe\MesCable\MesCable\Model\bin\Debug\MesWeb.Model.dll
@@ -25,3 +24,7 @@ E:\ZhongDe\MesCable\MesCable\Model\bin\Debug\MesWeb.Model.dll
 E:\ZhongDe\MesCable\MesCable\Model\bin\Debug\MesWeb.Model.pdb
 E:\ZhongDe\MesCable\MesCable\Model\obj\Debug\MesWeb.Model.dll
 E:\ZhongDe\MesCable\MesCable\Model\obj\Debug\MesWeb.Model.pdb
+C:\Users\ychost\Desktop\MesCable\MesCable\Model\bin\Debug\MesWeb.Model.dll
+C:\Users\ychost\Desktop\MesCable\MesCable\Model\bin\Debug\MesWeb.Model.pdb
+C:\Users\ychost\Desktop\MesCable\MesCable\Model\obj\Debug\MesWeb.Model.dll
+C:\Users\ychost\Desktop\MesCable\MesCable\Model\obj\Debug\MesWeb.Model.pdb

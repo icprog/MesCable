@@ -1407,5 +1407,16 @@ namespace MesWeb.DALFactory
             return (MesWeb.IDAL.IT_Report_Value)objType;
         }
 
+        /// <summary>
+        /// 创建T_AllReport数据层接口。
+        /// </summary>
+        public static MesWeb.IDAL.IT_AllReport CreateT_AllReport() {
+
+            string ClassNamespace = AssemblyPath + ".T_AllReport";
+            object objType = CreateObject(AssemblyPath,ClassNamespace);
+            return (MesWeb.IDAL.IT_AllReport)objType;
+        }
+
+
     }
 }

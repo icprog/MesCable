@@ -33,7 +33,7 @@ namespace MesWeb.SQLServerDAL {
         public MesWeb.Model.T_HisMain GetModel(int CurrentDataID) {
 
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("select  top 1 CurrentDataID,TaskID,SpecificationID,MachineID,MachineTypeID,EmployeeID_Main,EmployeeID_Assistant,Start_Axis_No,Axis_No,Printcode from "+ TabName);
+            strSql.Append("select  top 1 CurrentDataID,TaskID,SpecificationID,MachineID,MachineTypeID,EmployeeID_Main,EmployeeID_Assistant,Start_Axis_No,Axis_No,Printcode,MaterialRFID from "+ TabName);
             strSql.Append(" where CurrentDataID=@CurrentDataID");
             SqlParameter[] parameters = {
                     new SqlParameter("@CurrentDataID", SqlDbType.Int,4)
@@ -55,7 +55,7 @@ namespace MesWeb.SQLServerDAL {
         /// </summary>
         public DataSet GetList(string strWhere) {
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("select CurrentDataID,TaskID,SpecificationID,MachineID,MachineTypeID,EmployeeID_Main,EmployeeID_Assistant,Start_Axis_No,Axis_No,Printcode ");
+            strSql.Append("select * ");
             strSql.Append(" FROM  "+TabName);
             if(strWhere.Trim() != "") {
                 strSql.Append(" where " + strWhere);
@@ -98,6 +98,13 @@ namespace MesWeb.SQLServerDAL {
                 }
                 if(row["Printcode"] != null) {
                     model.Printcode = row["Printcode"].ToString();
+                }
+                try {
+                    if(row["MaterialRFID"] != null) {
+                        model.MaterialRFID = row["MaterialRFID"].ToString();
+                    }
+                } catch {
+
                 }
             }
             return model;

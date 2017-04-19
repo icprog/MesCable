@@ -1,0 +1,332 @@
+﻿@section Style{
+    @Styles.Render("~/Content/jsmind")
+    @Styles.Render("~/Content/bootstrap-table")
+
+
+}
+
+@section Header{
+    <style type="text/css">
+        #jsmind_container {
+            height: 400px;
+        }
+    </style>}
+<body class="gray-bg">
+
+    <div class="row">
+
+        <div class="col-sm-12" id="qt_picture">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="center-block" style="text-align:center"><h4>轴号：20160906-05-906-A</h4></div>
+                        </div>
+                        <div class="col-sm-9">
+                            <label class="col-sm-2 control-label" style="text-align:right; padding-right:0px;margin-top:8px">请输入查询轴号：</label>
+                            <div class="col-sm-7">
+                                <div class="input-group" style="margin-left:2px">
+                                    <input type="text" class="form-control" id="test_data">
+                                    <div class="input-group-btn">
+                                        <button type="button" class="btn btn-white dropdown-toggle" data-toggle="dropdown">
+                                            <span class="caret"></span>
+                                        </button>
+                                        <button type="button" class="btn btn-white">
+                                            <span class="fa fa-search"></span>
+                                        </button>
+                                        <ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>
+                                    </div>
+                                </div>
+                                <!-- /btn-group -->
+                            </div>
+
+                            <div class="col-sm-3" style="text-align:center">
+                                <button class="btn btn-success " type="button" id="download_btn">
+                                    <i class="fa fa-download"></i>&nbsp;&nbsp;<span class="bold">下载报告</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <div id="jsmind_container"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row " style="background-color:white">
+            <div class="col-sm-12">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <i class="fa fa-info-circle"></i> 详情
+                    </div>
+                    <div class="panel-body" style="padding:initial">
+                        <div class="container" style="width:100%">
+                            <table id="qt_detail_table"
+                                   data-detail-view="true"
+                                   data-toggle="table">
+                                <thead>
+                                    <tr>
+                                        <th data-field="SeqNum">序号</th>
+                                        <th data-field="AlexNum">轴号</th>
+                                        <th data-field="SpecCode">规格</th>
+                                        <th data-field="Color">颜色</th>
+                                        <th data-field="ODMax">线径最大值</th>
+                                        <th data-field="ODMin">线径最小值</th>
+                                        <th data-field="DIA">芯线直径</th>
+                                        <th data-field="MachineName">机台</th>
+                                        <th data-field="Operator">操作人员</th>
+                                        <th data-field="Time">日期</th>
+                                        <th data-field="Supplier">供应商</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>20160906-05-906-A</td>
+                                        <td>SPEC-05</td>
+                                        <td>黑色</td>
+                                        <td>5</td>
+                                        <td>3.9</td>
+                                        <td>4</td>
+                                        <td>ST-SF-MC09</td>
+                                        <td>张三</td>
+                                        <td>2016-08-02</td>
+                                        <td>线缆公司</td>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal inmodal" id="download_report_modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content animated flipInY">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">下载报告</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <a href="#" class="btn  btn-info btn-lg"><i class="fa fa-cloud-download "></i>下载质量检验报告</a>
+                            <h5 >更新日期：2016/09/01</h5>
+
+                        </div>
+                        <div class="col-sm-6" style="text-align:right">
+                            <a href="#" class="btn  btn-info btn-lg"><i class="fa fa-cloud-download "></i> 下载物料检验报告</a>
+                            <h5 style="text-align:center">更新日期：2016/09/01</h5>
+
+                         </div>
+                    </div>
+                    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+@section Footer{
+    @Scripts.Render("~/Scripts/bootstrap-suggest")
+    @Scripts.Render("~/Scripts/jsmind")
+    @Scripts.Render("~/Scripts/bootstrap-table")
+
+
+    <script type="text/javascript">
+
+        ///////////////////////quality trace picture load //////////////////////
+        function load_jsmind() {
+
+            var mind = {
+                "meta": {
+                    "name": "qualitytrace",
+                    "author": "ychost",
+                    "version": "0.2",
+                },
+                "format": "node_array",
+                "data": [
+                    { "id": "root", "isroot": true, "topic": "挤护套925" },
+
+                    { "id": "sub1", "parentid": "root", "topic": "编织810", },
+                    { "id": "sub2", "parentid": "sub1", "topic": "成缆702" },
+
+
+                    { "id": "sub21", "parentid": "sub2", "topic": "挤绝缘603" },
+                    { "id": "sub22", "parentid": "sub2", "topic": "挤绝缘604" },
+                    { "id": "sub23", "parentid": "sub2", "topic": "挤绝缘605", },
+
+                    { "id": "sub24", "parentid": "sub2", "topic": "挤绝缘606" },
+                ]
+            };
+            var options = {
+                container: 'jsmind_container',
+                editable: false,
+                theme: 'primary',
+                dblclickNode: function (selectNode) {
+                    console.log(selectNode);
+                },
+                debug: false
+            }
+            var jm = jsMind.show(options, mind);
+            // jm.select_node("sub21");
+        }
+
+        load_jsmind();
+        $("#qt_picture").css("padding", "initial")
+
+
+
+        /////////////////suggest input ///////////////////////////////////////////
+        var dataList = { value: [] }, i = 9;
+        while (i--) {
+            dataList.value.push({
+                id: i,
+                //word: Math.random() * 100000,
+                description: "20160903QT-00" + i
+            });
+        }
+
+        $("#test_data").bsSuggest({
+            indexId: 2,  //data.value 的第几个数据，作为input输入框的内容
+            indexKey: 1, //data.value 的第几个数据，作为input输入框的内容
+            data: dataList
+        }).on('onDataRequestSuccess', function (e, result) {
+            console.log('从 json.data 参数中获取，不会触发 onDataRequestSuccess 事件', result);
+        }).on('onSetSelectValue', function (e, keyword, data) {
+            console.log('onSetSelectValue: ', keyword, data);
+        }).on('onUnsetSelectValue', function () {
+            console.log("onUnsetSelectValue");
+        });
+
+
+        /////////////////sub table detail//////////////////////////////////////////////////
+        var $table = $('#qt_detail_table');
+
+        $table.bootstrapTable({
+            onExpandRow: function (index, row, $detail) {
+                initSecTable(index, row, $detail);
+            }
+        })
+
+        function initSecTable(index, row, $detail) {
+            var batchCode = row.BatchCode;
+            var cur_table = $detail.html('<table></table>').find('table');
+            $(cur_table).bootstrapTable({
+                url: '/QualityTrace/GetBatchDetail',
+                method: 'get',
+                queryParams: { BatchCode: batchCode },
+                ajaxOptions: { BatchCode: batchCode },
+                detailView: true,//父子表
+                pageSize: 10,
+                pageList: [10, 25],
+                columns: [{
+                    field: 'BatchNum',
+                    title: '批次'
+                }, {
+                    field: 'Number',
+                    title: '数量'
+                }, {
+                    field: 'TimeSpan',
+                    title: '时间跨度'
+                }],
+                data: [{
+                    BatchNum: "GCMP-008",
+                    Number: "2",
+                    TimeSpan: "2016/08/02---2016/08/05",
+                }],
+                onExpandRow: function (index, row, $detail) {
+                    initThirdTable(index, row, $detail);
+                }
+
+            });
+        };
+        function initThirdTable(index, row, $detail) {
+            var batchCode = row.BatchCode;
+            var cur_table = $detail.html('<table></table>').find('table');
+            $(cur_table).bootstrapTable({
+                url: '/QualityTrace/GetBatchDetail',
+                method: 'get',
+                queryParams: { BatchCode: batchCode },
+                ajaxOptions: { BatchCode: batchCode },
+                detailView: false,//父子表
+                pageSize: 10,
+                pageList: [10, 25],
+                columns: [{
+                    field: 'SeqNum',
+                    title: '序号'
+                }, {
+                    field: 'AlexNum',
+                    title: '轴号'
+                }, {
+                    field: 'SpecCode',
+                    title: '规格'
+                }, {
+                    field: 'Color',
+                    title: '颜色'
+                }, {
+                    field: 'ODMax',
+                    title: '线径最大值'
+                }, {
+                    field: 'ODMin',
+                    title: '线径最小值'
+                }, {
+                    field: 'DIA',
+                    title: '芯线直径'
+                }, {
+                    field: 'MachineName',
+                    title: '机台'
+                }, {
+                    field: 'Operator',
+                    title: '操作人员'
+                }, {
+                    field: 'Time',
+                    title: '日期'
+                }, {
+                    field: 'Supplier',
+                    title: '供应商'
+                }],
+                data: [{
+                    SeqNum: "1",
+                    AlexNum: "20160906-05-906-A",
+                    SpecCode: "SPEC-05",
+                    Color: "黑色",
+                    ODMax: "5",
+                    ODMin: "3.9",
+                    DIA: "4",
+                    MachineName: "ST-SF-MC09",
+                    Operator: "张三",
+                    Time: "2016-08-02",
+                    Supplier: "线缆公司"
+                }, {
+                    SeqNum: "1",
+                    AlexNum: "20160906-05-906-B",
+                    SpecCode: "SPEC-03",
+                    Color: "黑色",
+                    ODMax: "5.5",
+                    ODMin: "3.9",
+                    DIA: "4.7",
+                    MachineName: "ST-SF-MC10",
+                    Operator: "李四",
+                    Time: "2016-08-03",
+                    Supplier: "线缆公司"
+                }]
+
+            });
+        };
+
+        ////////////////////////////popup download modal///////////////////////////////
+        $("#download_btn").on("click", function () {
+            $("#download_report_modal").modal();
+        })
+    </script>
+}

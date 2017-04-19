@@ -1,0 +1,193 @@
+﻿@model MesWeb.ViewModel.Mes.VM_IUploadFile
+@section Style{
+
+    @Styles.Render("~/Content/sweetalert")
+}
+
+@section Header{
+
+    <style>
+        #img_picker input {
+            display: none !important;
+        }
+    </style>
+}
+
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>@Model.Title</h5>
+
+                    </div>
+                    <div class="ibox-content" style="text-align:center">
+                        <div style="height:500px;" id="img_preview">
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 pull-right" style="text-align:left">
+                <button type="button" class="btn btn-info" id="img_picker">选择图片</button>
+
+            </div>
+            <div class="col-sm-8 pull-right" style="text-align:right">
+                <button type="button" class="btn btn-primary" id="img_uploader">开始上传</button>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+
+
+@section Footer{
+    @Scripts.Render("~/Scripts/webuploader")
+    @Scripts.Render("~/Scripts/sweetalert")
+
+
+    <script>
+        $(function (mcAdmin) {
+
+
+            var location = (window.location + '').split('/');
+            var BASE_URL = location[0] + '//' + location[2] + '/' + location[3];
+
+            var $ = jQuery,
+                $list = $('#img_preview'),
+
+                state = 'pending',
+
+                //优化retina, 在retina下这个值是2
+                ratio = window.devicePixelRatio || 1,
+
+                //缩略图大小
+                thumbnailWidth = 640,
+                thumbnailHeight = 480,
+                // Web Uploader实例
+                uploader;
+            uploader = WebUploader.create
+            ({
+                // swf文件路径
+                swf: '/Scripts/lib/plugins/webuploader/Uploader.swf',
+
+                // 文件接收服务端。
+                server: '/FileUpload/UploadImage',
+
+                // 选择文件的按钮。可选。
+                // 内部根据当前运行是创建，可能是input元素，也可能是flash.
+                pick: '#img_picker',
+
+                //上传图片大小限制5M
+                fileSizeLimit: 1024 * 1024 * 3,
+                // 只允许选择图片，可选。
+                accept: {
+                    title: 'Images',
+                    extensions: 'gif,jpg,jpeg,bmp,png',
+                    mimeTypes: 'image/*'
+                },
+                auto: false,
+                compress: false
+            });
+            var oldFile;
+
+            //当有文件添加进来的时候
+            uploader.on('fileQueued', function (file) {
+
+                var $li = $(
+                        '<div id="' + file.id + '" >' +
+                            '<img>' +
+                        '</div>'
+                        ),
+                    $img = $li.find('img');
+                $("#fileTitle").text("图片预览")
+
+                // $list为容器jQuery实例
+                $list.html($li);
+
+                // 创建缩略图
+                // 如果为非图片文件，可以不用调用此方法。
+                // thumbnailWidth x thumbnailHeight 为 100 x 100
+                uploader.makeThumb(file, function (error, src) {
+                    if (error) {
+                        $img.replaceWith('<span>不能预览</span>');
+                        return;
+                    }
+                    $img.attr('src', src);
+                }, thumbnailWidth, thumbnailHeight);
+                if (oldFile != null)
+                    uploader.removeFile(oldFile);
+                oldFile = file;
+            });
+
+            // 文件上传成功，给item添加成功class, 用样式标记上传成功。
+            uploader.on('uploadSuccess', function (file, retData) {
+                if (retData.Code == RESULT_CODE.OK) {
+                    var data = retData.Appendix;
+                    console.log(data);
+                    $.ajax({
+                        url: "@Model.SendFileUrl",
+                        data: { PicUrl: data.Url },
+                        dataType: "json",
+                        success: function (retData) {
+                            if (retData.Code == RESULT_CODE.OK) {
+                                swal({
+                                    title: "上传成功！",
+                                    text: retData.Content,
+                                    type: "success",
+                                }, function () {
+                                    mcAdmin.closeCurrentTab();
+                                    mcAdmin.addTab("@Model.SuccessActionName", "@Model.SuccessActionUrl");
+                                });
+
+                            } else {
+                                swal({
+                                    title: "上传失败！",
+                                    text: retData.Content,
+                                    type: "error",
+                                });
+                            }
+
+                        }
+                    });
+
+                } else {
+                    swal({
+                        title: "上传失败！",
+                        text: "请检查上传文件",
+                        type: "error",
+                    });
+                }
+
+            });
+
+            // 文件上传失败，现实上传出错。
+            uploader.on('uploadError', function (file) {
+                swal({
+                    title: "上传失败！",
+                    text: "请检查网络是否连接，或者联系管理员",
+                    type: "error",
+                });
+
+            });
+
+            // 完成上传完了，成功或者失败，先删除进度条。
+            uploader.on('uploadComplete', function (file) {
+
+            });
+
+            $("#img_picker").button('primary');
+
+            $("#img_uploader").on("click", function () {
+                uploader.upload();
+            })
+
+        }(window.parent.mcAdmin));
+    </script>
+}

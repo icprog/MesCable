@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Mes\VM_AllRport.cs" />
     <Compile Include="Mes\VM_HistoryMachine.cs" />
     <Compile Include="Mes\VM_MachineStats.cs" />
     <Compile Include="Mes\VM_AddMachineAdmin.cs" />
@@ -60,6 +61,7 @@
     <Compile Include="Mes\VM_MaterialOutputDetail.cs" />
     <Compile Include="Mes\VM_ParamCodeInfo.cs" />
     <Compile Include="Mes\VM_ProcDetailTable.cs" />
+    <Compile Include="Mes\VM_Quality_Trace.cs" />
     <Compile Include="Mes\VM_Report_Product.cs" />
     <Compile Include="Mes\VM_Report_Plastic.cs" />
     <Compile Include="Mes\VM_Search_Employee.cs" />

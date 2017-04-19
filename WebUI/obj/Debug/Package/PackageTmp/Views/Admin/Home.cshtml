@@ -1,0 +1,253 @@
+﻿@section Style{
+    @Styles.Render("~/Content/admin/home")
+    @Styles.Render("~/Content/bootstrap-table")
+    @Styles.Render("~/Content/learunui-accordion")
+}
+
+@section Script{
+    @Scripts.Render("~/Scripts/bootstrap-table")
+    @Scripts.Render("~/Scripts/highstock")
+ 
+}
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-sm-12">
+                <table style="width: 100%">
+                    <tr>
+                        <td>
+                            <div class="Task" style="background-color: green" id="task_complete">
+                                <i></i>
+                                <div class="centre">
+                                    <div class="icon">
+                                        <img src="/Content/css/plugins/learunui/images/task-1.png" />
+                                    </div>
+                                    <div class="Number">10</div>
+                                </div>
+                                <div class="text">
+                                    已完成任务
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="Task" style="background-color: #EEAE44">
+                                <i></i>
+                                <div class="centre">
+                                    <div class="icon">
+                                        <img src="/Content/css/plugins/learunui/images/task-2.png" />
+                                    </div>
+                                    <div class="Number">11</div>
+                                </div>
+                                <div class="text">
+                                    待处理任务
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="Task" style="background-color: #28B779">
+                                <i></i>
+                                <div class="centre">
+                                    <div class="icon">
+                                        <img src="/Content/css/plugins/learunui/images/task-3.png" />
+                                    </div>
+                                    <div class="Number">20</div>
+                                </div>
+                                <div class="text">
+                                    对私待处理任务
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="Task" style="background-color: #2BA9E3">
+                                <i></i>
+                                <div class="centre">
+                                    <div class="icon">
+                                        <img src="/Content/css/plugins/learunui/images/task-4.png" />
+                                    </div>
+                                    <div class="Number">78</div>
+                                </div>
+                                <div class="text">
+                                    订单变更待处理任务
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="Task" style="background-color: #C07FE7">
+                                <div class="centre">
+                                    <div class="icon">
+                                        <img src="/Content/css/plugins/learunui/images/task-5.png" />
+                                    </div>
+                                    <div class="Number">18</div>
+                                </div>
+                                <div class="text">
+                                    返工任务
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins" style="margin-bottom:55px;margin-right:16px">
+                    <div class="info-top" id="info_top">
+                        <ul>
+                            <li class="icon yellow">总机台数：130个 </li>
+                            <li class="icon green">开机数：118个 </li>
+                            <li class="icon red">故障数：2个 </li>
+                            <li class="icon black">停机数：10个 </li>
+                            <li style="display:none"><a href="#" class="btn btn-primary" role="button" id="test_btn">TestButton</a> </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>价格趋势</h5>
+                        <div class="ibox-tools">
+                            <div class="form-inline" role="form" style="float:left;margin-top:-10px">
+                                <div class="form-group">
+                                    <label class="form-label">规格：</label>
+                                    <select class="combobox form-control" name="horizontal" required="required">
+                                        <option value="" selected="selected">选择规格</option>
+                                        <option value="AL">GG-1</option>
+                                        <option value="AK">GG-2</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <a class="close-link ">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="echarts" id="echarts-line-chart"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>任务达成量</h5>
+                        <div class="ibox-tools">
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="graph_flot.html#">
+                                <i class="fa fa-wrench"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-user">
+                                <li>
+                                    <a href="graph_flot.html#">选项1</a>
+                                </li>
+                                <li>
+                                    <a href="graph_flot.html#">选项2</a>
+                                </li>
+                            </ul>
+                            <a class="close-link">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        
+                        <div class="echarts" id="hcs-task-complete"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>物料余量</h5>
+                        <div class="ibox-tools">
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="graph_flot.html#">
+                                <i class="fa fa-wrench"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-user">
+                                <li>
+                                    <a href="graph_flot.html#">选项1</a>
+                                </li>
+                                <li>
+                                    <a href="graph_flot.html#">选项2</a>
+                                </li>
+                            </ul>
+                            <a class="close-link">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <table data-height="240" data-pagination="true" data-url="/Scripts/lib/demo/SotckTabData.json" data-toggle="table" data-mobile-responsive="true" data-sort-name="stock" data-sort-order="desc">
+                            <thead>
+                                <tr>
+                                    <th data-field="cat" data-sortable="true">物料类别</th>
+                                    <th data-field="stock" data-sortable="true">剩余量</th>
+                                    <th data-field="amount" data-sortable="true">总量</th>
+                                    <th data-field="unit" data-sortable="true">单位</th>
+                                    <th data-field="model" data-sortable="true">型号</th>
+
+                                </tr>
+
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>机台效率图</h5>
+                        <div class="ibox-tools">
+                            <div class="form-inline" role="form" style="float:left;margin-top:-10px">
+                                <div class="form-group">
+                                    <label class="form-label">规格：</label>
+                                    <select class="combobox form-control" name="horizontal" required="required">
+                                        <option value="" selected="selected">选择规格</option>
+                                        <option value="AL">GG-1</option>
+                                        <option value="AK">GG-2</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <a class="close-link">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="echarts" id="echart-eff-bar"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</body>
+
+@section Footer{
+    @Scripts.Render("~/Scripts/echarts")
+    @Scripts.Render("~/Scripts/content")
+    @Scripts.Render("~/Scripts/echarts-demo")
+    @Scripts.Render("~/Scripts/highcharts-demo")
+    <script>
+        (function ($, mcAdmin) {
+            $("#test_btn").on("click", function () {
+                mcAdmin.reloadCurrentTab();
+            })
+
+            $("#task_complete").on("click", function () {
+                mcAdmin.addTab("已完成任务", "/Task/TaskComplete")
+            })
+        }($, window.parent.mcAdmin))
+    </script>
+}

@@ -1,0 +1,228 @@
+﻿
+@section Style{
+    @Styles.Render("~/Content/icheck-square-green")
+    @Styles.Render("~/Content/bootstrap-datepicker")
+    @Styles.Render("~/Content/material-table")
+}
+<body>
+    <div id="report_plastic" class="row center" style="margin-top:30px">
+
+        <table id="report_table" align="center" class="table center-block">
+            <tr>
+                <td colspan="8" style="text-align:center;" class="no-border">
+                    <span style="font-size:30px;">广东中德电缆有限公司<br /><span style="font-size:20px">胶料来料检验报告</span></span>
+                </td>
+
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align:left" class="no-border">
+                    <b>单据编号：</b>  <input class="input-underline" />
+                </td>
+                <td colspan="8" style="text-align:right" class="no-border">
+                    表格编号：11-QR-062 A.0
+                </td>
+            </tr>
+            <tr>
+                <td>供应商</td>
+                <td colspan="3"><input class="form-control" /></td>
+                <td>型号规格</td>
+                <td colspan="3"><input class="form-control" /></td>
+            </tr>
+            <tr>
+                <td>批号</td>
+                <td colspan="3"><input class="form-control" /></td>
+                <td>颜色/色标</td>
+                <td colspan="3"><input class="form-control" /></td>
+            </tr>
+            <tr>
+                <td>来料数量</td>
+                <td colspan="3"><input class="form-control" /></td>
+                <td>抽样数量</td>
+                <td colspan="3"><input class="form-control" /></td>
+            </tr>
+            <tr>
+                <td>性能测试</td>
+                <td colspan="2" class="no-border-right">
+                    <input type="checkbox" name="performanceTest" class="checkedByIcheck" />&nbsp;抽检
+                </td>
+                <td class="no-border-left">
+                    <input type="checkbox" name="performanceTest" />&nbsp;全检
+                </td>
+
+                <td>出厂检验报告</td>
+                <td colspan="2" class="no-border-right">
+                    <input type="radio" name="hasFactoryReport" class="checkedByIcheck" />&nbsp;有
+                </td>
+                <td class="no-border-left">
+                    <input type="radio" name="hasFactoryReport" />&nbsp;无
+                </td>
+            </tr>
+            <tr>
+                <td>检验项目</td>
+                <td colspan="3">标准</td>
+                <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;结果判定&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td colspan="2">备注</td>
+            </tr>
+            <tr>
+                <td>色差</td>
+                <td colspan="3"><input class="form-control" /></td>
+                <td class="no-border-right"><input class="checkedByIcheck" type="radio" name="colorDiffResult" />&nbsp;合格</td>
+                <td class="no-border-left"> <input type="radio" name="colorDiffResult" />&nbsp;不合格</td>
+                <td colspan="2"><input class="form-control" /></td>
+            </tr>
+            <tr>
+                <td>外观质量</td>
+                <td colspan="3">胶粒应剪切均匀、无粘连；外观应色<br />泽均匀、塑化良好、不应有肉眼可见杂质</td>
+                <td class="no-border-right"><input class="checkedByIcheck" type="radio" name="apperanceResult" />&nbsp;合格</td>
+                <td class="no-border-left"> <input type="radio" name="apperanceResult" />&nbsp;不合格</td>
+
+                <td colspan="2"><input class="form-control" /></td>
+            </tr>
+            <tr>
+                <td>包装与标识</td>
+                <td colspan="3">符合《原辅材料检验规范》标准要求</td>
+                <td class="no-border-right"><input class="checkedByIcheck" type="radio" name="wrapResult" />&nbsp;合格</td>
+                <td class="no-border-left"> <input type="radio" name="wrapResult" />&nbsp;不合格</td>
+
+                <td colspan="2"><input class="form-control" /></td>
+            </tr>
+            <tr>
+                <td>环保检验</td>
+                <td colspan="3">符合《原辅材料检验规范》标准要求</td>
+                <td class="no-border-right"><input class="checkedByIcheck" type="radio" name="envProtectedResult" />&nbsp;合格</td>
+                <td class="no-border-left"> <input type="radio" name="envProtectedResult" />&nbsp;不合格</td>
+
+                <td colspan="2"><input class="form-control" /></td>
+            </tr>
+            <tr>
+                <td>合格数量</td>
+                <td><input class="form-control" /></td>
+                <td>不良率</td>
+                <td><input class="form-control" /></td>
+                <td>不合格处理<br />单编号</td>
+                <td><input class="form-control" /></td>
+                <td>检验日期</td>
+                <td><input class="form-control" /></td>
+            </tr>
+            <tr>
+                <td>检验结果</td>
+                <td colspan="7">
+                    <input type="checkbox" class="checkedByIcheck" name="PassNum" />&nbsp;允收&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" name="PassNum" />&nbsp;退货&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" name="PassNum" />&nbsp;特采&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" name="PassNum" />&nbsp;挑选退货&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" name="PassNum" />&nbsp;返工&nbsp;&nbsp;&nbsp;&nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td colspan="8" style="text-align:left">
+                    注：性能测试结果见胶料批次性测试计划与统计表格
+                </td>
+            </tr>
+            <tr>
+                <td>检验员：</td>
+                <td colspan="4"><input class="form-control" /></td>
+                <td>审核：</td>
+                <td colspan="2"><input class="form-control" /></td>
+            </tr>
+
+            <tr>
+                <td colspan="8" style="text-align:right" class="no-border">
+                    <button class="btn btn-primary dim" type="button" id="submit_btn">
+                        提交
+                    </button>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+</body>
+
+@section Footer{
+    @Scripts.Render("~/Scripts/icheck")
+    @Scripts.Render("~/Scripts/bootstrap-datepicker")
+
+    <script>
+        var isCheckedFlag = 1;
+        var notCheckedFlag = 0;
+        $(function (mcAdmin) {
+            $('input').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+                increaseArea: '20%' // optional
+            });
+
+            $(".checkedByIcheck").iCheck('check');
+            var $table = $("#report_table");
+            $("#submit_btn").on("click", function () {
+                var data = getReportData();
+                console.log("data", data);
+
+                //单据编号和批号不能为空
+                if (mcAdmin.isNullOrEmpty(data[3]) || mcAdmin.isNullOrEmpty(data[0])) {
+                    swal({
+                        title: "错误",
+                        title: "请输入单据编号或者批号",
+                        type: "error"
+                    });
+                    return;
+                }
+                $.post("/Material/AddReportAction", { data: data, index: [0, 1, 2, 3], type: "gum" }, function (retData) {
+                    mcAdmin.dealRetData(retData);
+                })
+            })
+
+            function getReportData() {
+                var radioName = "";
+                var data = [];
+                //普通的值,string类型
+                $table.find("input").each(function (i, v) {
+                    if ($(v).attr("type") == "radio" || $(v).attr("type")=="checkbox") {
+                        return;
+                    }
+                    data.push($(v).val() + "");
+
+                });
+
+                //单选框的值，数值型也为string
+                $table.find("input").each(function (i, v) {
+                    var name = $(v).attr("name");
+                    //查询选择框
+                    if ($(v).attr("type") == "radio" ||$(v).attr("type")== "checkbox") {
+                        var checked = isChecked($(v));
+
+                        data.push(checked);
+                    }
+
+                })
+                return data;
+            }
+
+            //查找某input是否选中
+            function isChecked($input) {
+
+                if ($input.parent().hasClass("checked")) {
+                    return isCheckedFlag;
+                }
+                return notCheckedFlag;
+
+            }
+
+            //找到选中的序号
+            function findInputChecked($tr) {
+
+                var checkResult = $tr.find("div").map(function (i) {
+                    if ($(this).hasClass("checked")) {
+
+                        return i
+                    }
+                }).get(0);
+                if (checkResult == null) {
+                    checkResult = -1;
+                }
+                return checkResult;
+            }
+
+        }(window.parent.mcAdmin));
+    </script>
+}

@@ -1,4 +1,19 @@
-﻿
+﻿/**  版本信息模板在安装目录下，可自行修改。
+* T_MaterialOutput.cs
+*
+* 功 能： N/A
+* 类 名： T_MaterialOutput
+*
+* Ver    变更日期             负责人  变更内容
+* ───────────────────────────────────
+* V0.01  2017/4/18 17:36:51   N/A    初版
+*
+* Copyright (c) 2012 MES Corporation. All rights reserved.
+*┌──────────────────────────────────┐
+*│　此技术信息为本公司机密信息，未经本公司书面同意禁止向第三方披露．　│
+*│　版权所有：动软卓越（北京）科技有限公司　　　　　　　　　　　　　　│
+*└──────────────────────────────────┘
+*/
 using System;
 using System.Data;
 using System.Text;
@@ -16,29 +31,6 @@ namespace MesWeb.SQLServerDAL
 		{}
 		#region  BasicMethod
 
-		/// <summary>
-		/// 得到最大ID
-		/// </summary>
-		public int GetMaxId()
-		{
-		return DbHelperSQL.GetMaxID("MaterialOutputID", "T_MaterialOutput"); 
-		}
-
-		/// <summary>
-		/// 是否存在该记录
-		/// </summary>
-		public bool Exists(int MaterialOutputID)
-		{
-			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select count(1) from T_MaterialOutput");
-			strSql.Append(" where MaterialOutputID=@MaterialOutputID");
-			SqlParameter[] parameters = {
-					new SqlParameter("@MaterialOutputID", SqlDbType.Int,4)
-			};
-			parameters[0].Value = MaterialOutputID;
-
-			return DbHelperSQL.Exists(strSql.ToString(),parameters);
-		}
 
 
 		/// <summary>
@@ -48,25 +40,33 @@ namespace MesWeb.SQLServerDAL
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("insert into T_MaterialOutput(");
-			strSql.Append("MaterialID,MaterialNum,GnerateTime,EmployeeID,Weight,Color,Certificate)");
+			strSql.Append("MaterialRFID,MaterialType,GnerateTime,MaterialName,Weight,Color,Certificate,ContractNo,BatchNo,SupplyCompany,workshift)");
 			strSql.Append(" values (");
-			strSql.Append("@MaterialID,@MaterialNum,@GnerateTime,@EmployeeID,@Weight,@Color,@Certificate)");
+			strSql.Append("SQL2012MaterialRFID,SQL2012MaterialType,SQL2012GnerateTime,SQL2012MaterialName,SQL2012Weight,SQL2012Color,SQL2012Certificate,SQL2012ContractNo,SQL2012BatchNo,SQL2012SupplyCompany,SQL2012workshift)");
 			strSql.Append(";select @@IDENTITY");
 			SqlParameter[] parameters = {
-					new SqlParameter("@MaterialID", SqlDbType.Int,4),
-					new SqlParameter("@MaterialNum", SqlDbType.NVarChar,50),
-					new SqlParameter("@GnerateTime", SqlDbType.DateTime),
-					new SqlParameter("@EmployeeID", SqlDbType.Int,4),
-					new SqlParameter("@Weight", SqlDbType.NVarChar,50),
-					new SqlParameter("@Color", SqlDbType.NVarChar,50),
-					new SqlParameter("@Certificate", SqlDbType.NVarChar,50)};
-			parameters[0].Value = model.MaterialID;
-			parameters[1].Value = model.MaterialNum;
+					new SqlParameter("SQL2012MaterialRFID", SqlDbType.NVarChar,50),
+					new SqlParameter("SQL2012MaterialType", SqlDbType.NVarChar,50),
+					new SqlParameter("SQL2012GnerateTime", SqlDbType.DateTime),
+					new SqlParameter("SQL2012MaterialName", SqlDbType.NVarChar,50),
+					new SqlParameter("SQL2012Weight", SqlDbType.NVarChar,50),
+					new SqlParameter("SQL2012Color", SqlDbType.NVarChar,50),
+					new SqlParameter("SQL2012Certificate", SqlDbType.NVarChar,50),
+					new SqlParameter("SQL2012ContractNo", SqlDbType.NVarChar,50),
+					new SqlParameter("SQL2012BatchNo", SqlDbType.NVarChar,50),
+					new SqlParameter("SQL2012SupplyCompany", SqlDbType.NVarChar,50),
+					new SqlParameter("SQL2012workshift", SqlDbType.NVarChar,50)};
+			parameters[0].Value = model.MaterialRFID;
+			parameters[1].Value = model.MaterialType;
 			parameters[2].Value = model.GnerateTime;
-			parameters[3].Value = model.EmployeeID;
+			parameters[3].Value = model.MaterialName;
 			parameters[4].Value = model.Weight;
 			parameters[5].Value = model.Color;
 			parameters[6].Value = model.Certificate;
+			parameters[7].Value = model.ContractNo;
+			parameters[8].Value = model.BatchNo;
+			parameters[9].Value = model.SupplyCompany;
+			parameters[10].Value = model.workshift;
 
 			object obj = DbHelperSQL.GetSingle(strSql.ToString(),parameters);
 			if (obj == null)
@@ -85,31 +85,43 @@ namespace MesWeb.SQLServerDAL
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("update T_MaterialOutput set ");
-			strSql.Append("MaterialID=@MaterialID,");
-			strSql.Append("MaterialNum=@MaterialNum,");
-			strSql.Append("GnerateTime=@GnerateTime,");
-			strSql.Append("EmployeeID=@EmployeeID,");
-			strSql.Append("Weight=@Weight,");
-			strSql.Append("Color=@Color,");
-			strSql.Append("Certificate=@Certificate");
-			strSql.Append(" where MaterialOutputID=@MaterialOutputID");
+			strSql.Append("MaterialRFID=SQL2012MaterialRFID,");
+			strSql.Append("MaterialType=SQL2012MaterialType,");
+			strSql.Append("GnerateTime=SQL2012GnerateTime,");
+			strSql.Append("MaterialName=SQL2012MaterialName,");
+			strSql.Append("Weight=SQL2012Weight,");
+			strSql.Append("Color=SQL2012Color,");
+			strSql.Append("Certificate=SQL2012Certificate,");
+			strSql.Append("ContractNo=SQL2012ContractNo,");
+			strSql.Append("BatchNo=SQL2012BatchNo,");
+			strSql.Append("SupplyCompany=SQL2012SupplyCompany,");
+			strSql.Append("workshift=SQL2012workshift");
+			strSql.Append(" where MaterialOutputID=SQL2012MaterialOutputID");
 			SqlParameter[] parameters = {
-					new SqlParameter("@MaterialID", SqlDbType.Int,4),
-					new SqlParameter("@MaterialNum", SqlDbType.NVarChar,50),
-					new SqlParameter("@GnerateTime", SqlDbType.DateTime),
-					new SqlParameter("@EmployeeID", SqlDbType.Int,4),
-					new SqlParameter("@Weight", SqlDbType.NVarChar,50),
-					new SqlParameter("@Color", SqlDbType.NVarChar,50),
-					new SqlParameter("@Certificate", SqlDbType.NVarChar,50),
-					new SqlParameter("@MaterialOutputID", SqlDbType.Int,4)};
-			parameters[0].Value = model.MaterialID;
-			parameters[1].Value = model.MaterialNum;
+					new SqlParameter("SQL2012MaterialRFID", SqlDbType.NVarChar,50),
+					new SqlParameter("SQL2012MaterialType", SqlDbType.NVarChar,50),
+					new SqlParameter("SQL2012GnerateTime", SqlDbType.DateTime),
+					new SqlParameter("SQL2012MaterialName", SqlDbType.NVarChar,50),
+					new SqlParameter("SQL2012Weight", SqlDbType.NVarChar,50),
+					new SqlParameter("SQL2012Color", SqlDbType.NVarChar,50),
+					new SqlParameter("SQL2012Certificate", SqlDbType.NVarChar,50),
+					new SqlParameter("SQL2012ContractNo", SqlDbType.NVarChar,50),
+					new SqlParameter("SQL2012BatchNo", SqlDbType.NVarChar,50),
+					new SqlParameter("SQL2012SupplyCompany", SqlDbType.NVarChar,50),
+					new SqlParameter("SQL2012workshift", SqlDbType.NVarChar,50),
+					new SqlParameter("SQL2012MaterialOutputID", SqlDbType.Int,4)};
+			parameters[0].Value = model.MaterialRFID;
+			parameters[1].Value = model.MaterialType;
 			parameters[2].Value = model.GnerateTime;
-			parameters[3].Value = model.EmployeeID;
+			parameters[3].Value = model.MaterialName;
 			parameters[4].Value = model.Weight;
 			parameters[5].Value = model.Color;
 			parameters[6].Value = model.Certificate;
-			parameters[7].Value = model.MaterialOutputID;
+			parameters[7].Value = model.ContractNo;
+			parameters[8].Value = model.BatchNo;
+			parameters[9].Value = model.SupplyCompany;
+			parameters[10].Value = model.workshift;
+			parameters[11].Value = model.MaterialOutputID;
 
 			int rows=DbHelperSQL.ExecuteSql(strSql.ToString(),parameters);
 			if (rows > 0)
@@ -130,9 +142,9 @@ namespace MesWeb.SQLServerDAL
 			
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("delete from T_MaterialOutput ");
-			strSql.Append(" where MaterialOutputID=@MaterialOutputID");
+			strSql.Append(" where MaterialOutputID=SQL2012MaterialOutputID");
 			SqlParameter[] parameters = {
-					new SqlParameter("@MaterialOutputID", SqlDbType.Int,4)
+					new SqlParameter("SQL2012MaterialOutputID", SqlDbType.Int,4)
 			};
 			parameters[0].Value = MaterialOutputID;
 
@@ -173,10 +185,10 @@ namespace MesWeb.SQLServerDAL
 		{
 			
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select  top 1 MaterialOutputID,MaterialID,MaterialNum,GnerateTime,EmployeeID,Weight,Color,Certificate from T_MaterialOutput ");
-			strSql.Append(" where MaterialOutputID=@MaterialOutputID");
+			strSql.Append("select  top 1 MaterialOutputID,MaterialRFID,MaterialType,GnerateTime,MaterialName,Weight,Color,Certificate,ContractNo,BatchNo,SupplyCompany,workshift from T_MaterialOutput ");
+			strSql.Append(" where MaterialOutputID=SQL2012MaterialOutputID");
 			SqlParameter[] parameters = {
-					new SqlParameter("@MaterialOutputID", SqlDbType.Int,4)
+					new SqlParameter("SQL2012MaterialOutputID", SqlDbType.Int,4)
 			};
 			parameters[0].Value = MaterialOutputID;
 
@@ -205,21 +217,21 @@ namespace MesWeb.SQLServerDAL
 				{
 					model.MaterialOutputID=int.Parse(row["MaterialOutputID"].ToString());
 				}
-				if(row["MaterialID"]!=null && row["MaterialID"].ToString()!="")
+				if(row["MaterialRFID"]!=null)
 				{
-					model.MaterialID=int.Parse(row["MaterialID"].ToString());
+					model.MaterialRFID=row["MaterialRFID"].ToString();
 				}
-				if(row["MaterialNum"]!=null)
+				if(row["MaterialType"]!=null)
 				{
-					model.MaterialNum=row["MaterialNum"].ToString();
+					model.MaterialType=row["MaterialType"].ToString();
 				}
 				if(row["GnerateTime"]!=null && row["GnerateTime"].ToString()!="")
 				{
 					model.GnerateTime=DateTime.Parse(row["GnerateTime"].ToString());
 				}
-				if(row["EmployeeID"]!=null && row["EmployeeID"].ToString()!="")
+				if(row["MaterialName"]!=null)
 				{
-					model.EmployeeID=int.Parse(row["EmployeeID"].ToString());
+					model.MaterialName=row["MaterialName"].ToString();
 				}
 				if(row["Weight"]!=null)
 				{
@@ -233,6 +245,22 @@ namespace MesWeb.SQLServerDAL
 				{
 					model.Certificate=row["Certificate"].ToString();
 				}
+				if(row["ContractNo"]!=null)
+				{
+					model.ContractNo=row["ContractNo"].ToString();
+				}
+				if(row["BatchNo"]!=null)
+				{
+					model.BatchNo=row["BatchNo"].ToString();
+				}
+				if(row["SupplyCompany"]!=null)
+				{
+					model.SupplyCompany=row["SupplyCompany"].ToString();
+				}
+				if(row["workshift"]!=null)
+				{
+					model.workshift=row["workshift"].ToString();
+				}
 			}
 			return model;
 		}
@@ -243,7 +271,7 @@ namespace MesWeb.SQLServerDAL
 		public DataSet GetList(string strWhere)
 		{
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select MaterialOutputID,MaterialID,MaterialNum,GnerateTime,EmployeeID,Weight,Color,Certificate ");
+			strSql.Append("select MaterialOutputID,MaterialRFID,MaterialType,GnerateTime,MaterialName,Weight,Color,Certificate,ContractNo,BatchNo,SupplyCompany,workshift ");
 			strSql.Append(" FROM T_MaterialOutput ");
 			if(strWhere.Trim()!="")
 			{
@@ -263,7 +291,7 @@ namespace MesWeb.SQLServerDAL
 			{
 				strSql.Append(" top "+Top.ToString());
 			}
-			strSql.Append(" MaterialOutputID,MaterialID,MaterialNum,GnerateTime,EmployeeID,Weight,Color,Certificate ");
+			strSql.Append(" MaterialOutputID,MaterialRFID,MaterialType,GnerateTime,MaterialName,Weight,Color,Certificate,ContractNo,BatchNo,SupplyCompany,workshift ");
 			strSql.Append(" FROM T_MaterialOutput ");
 			if(strWhere.Trim()!="")
 			{
@@ -327,13 +355,13 @@ namespace MesWeb.SQLServerDAL
 		public DataSet GetList(int PageSize,int PageIndex,string strWhere)
 		{
 			SqlParameter[] parameters = {
-					new SqlParameter("@tblName", SqlDbType.VarChar, 255),
-					new SqlParameter("@fldName", SqlDbType.VarChar, 255),
-					new SqlParameter("@PageSize", SqlDbType.Int),
-					new SqlParameter("@PageIndex", SqlDbType.Int),
-					new SqlParameter("@IsReCount", SqlDbType.Bit),
-					new SqlParameter("@OrderType", SqlDbType.Bit),
-					new SqlParameter("@strWhere", SqlDbType.VarChar,1000),
+					new SqlParameter("SQL2012tblName", SqlDbType.VarChar, 255),
+					new SqlParameter("SQL2012fldName", SqlDbType.VarChar, 255),
+					new SqlParameter("SQL2012PageSize", SqlDbType.Int),
+					new SqlParameter("SQL2012PageIndex", SqlDbType.Int),
+					new SqlParameter("SQL2012IsReCount", SqlDbType.Bit),
+					new SqlParameter("SQL2012OrderType", SqlDbType.Bit),
+					new SqlParameter("SQL2012strWhere", SqlDbType.VarChar,1000),
 					};
 			parameters[0].Value = "T_MaterialOutput";
 			parameters[1].Value = "MaterialOutputID";

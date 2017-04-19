@@ -1,0 +1,507 @@
+ 【时间】:2017-02-20 12:12:31,115
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 9 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.GetHisDataTableName(String year, String month, String machineTypeId) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 68
+   在 WebUI.Models.HisData.GetHisDataTableName() 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 54
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 28
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 363
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-20 12:12:36,657
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 7 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.GetHisDataTableName(String year, String month, String machineTypeId) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 68
+   在 WebUI.Models.HisData.GetHisDataTableName() 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 54
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 28
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 363
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-20 12:12:38,751
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 7 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.GetHisDataTableName(String year, String month, String machineTypeId) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 68
+   在 WebUI.Models.HisData.GetHisDataTableName() 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 54
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 28
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 363
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-20 12:12:40,388
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 7 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.GetHisDataTableName(String year, String month, String machineTypeId) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 68
+   在 WebUI.Models.HisData.GetHisDataTableName() 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 54
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 28
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 363
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-20 12:12:49,098
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 10 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.GetHisDataTableName(String year, String month, String machineTypeId) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 68
+   在 WebUI.Models.HisData.GetHisDataTableName() 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 54
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 28
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 363
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-20 12:13:43,730
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 9 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.GetHisDataTableName(String year, String month, String machineTypeId) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 68
+   在 WebUI.Models.HisData.GetHisDataTableName() 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 54
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 28
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 363
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-20 12:13:46,111
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 8 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.GetHisDataTableName(String year, String month, String machineTypeId) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 68
+   在 WebUI.Models.HisData.GetHisDataTableName() 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 54
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 28
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 363
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-20 12:13:48,391
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 10 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.GetHisDataTableName(String year, String month, String machineTypeId) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 68
+   在 WebUI.Models.HisData.GetHisDataTableName() 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 54
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 28
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 363
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-20 12:13:50,732
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 9 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.GetHisDataTableName(String year, String month, String machineTypeId) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 68
+   在 WebUI.Models.HisData.GetHisDataTableName() 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 54
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 28
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 363
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-20 12:13:53,625
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 8 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.GetHisDataTableName(String year, String month, String machineTypeId) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 68
+   在 WebUI.Models.HisData.GetHisDataTableName() 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 54
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 28
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 363
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-20 12:16:40,388
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:TraceDetail
+ 【线程ID】: 8 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 430
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 439
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 439
+   在 WebUI.Controllers.QualityTraceController.TraceDetail(String Id) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 84
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-20 12:16:42,609
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:TraceDetail
+ 【线程ID】: 8 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 430
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 439
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 439
+   在 WebUI.Controllers.QualityTraceController.TraceDetail(String Id) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 84
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-20 12:16:43,703
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:TraceDetail
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 430
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 439
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 439
+   在 WebUI.Controllers.QualityTraceController.TraceDetail(String Id) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 84
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-20 12:17:02,345
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:TraceDetail
+ 【线程ID】: 8 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 430
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 439
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 439
+   在 WebUI.Controllers.QualityTraceController.TraceDetail(String Id) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 84
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-20 12:17:03,311
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:TraceDetail
+ 【线程ID】: 30 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 430
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 439
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 439
+   在 WebUI.Controllers.QualityTraceController.TraceDetail(String Id) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 84
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-20 12:17:04,956
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:TraceDetail
+ 【线程ID】: 8 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 430
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 439
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 439
+   在 WebUI.Controllers.QualityTraceController.TraceDetail(String Id) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 84
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-20 12:17:27,017
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:TraceDetail
+ 【线程ID】: 8 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 430
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 439
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 439
+   在 WebUI.Controllers.QualityTraceController.TraceDetail(String Id) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 84
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-20 12:17:28,080
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 8 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.GetHisDataTableName(String year, String month, String machineTypeId) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 68
+   在 WebUI.Models.HisData.GetHisDataTableName() 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 54
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 28
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 363
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-20 12:18:03,938
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:TraceDetail
+ 【线程ID】: 8 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 430
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 439
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 439
+   在 WebUI.Controllers.QualityTraceController.TraceDetail(String Id) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 84
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-20 12:18:05,812
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:TraceDetail
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 430
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 439
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 439
+   在 WebUI.Controllers.QualityTraceController.TraceDetail(String Id) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 84
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-20 12:18:06,566
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:TraceDetail
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 430
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 439
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 439
+   在 WebUI.Controllers.QualityTraceController.TraceDetail(String Id) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 84
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-20 12:18:07,360
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:TraceDetail
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 430
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 439
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 439
+   在 WebUI.Controllers.QualityTraceController.TraceDetail(String Id) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 84
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-20 12:18:53,376
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:TraceDetail
+ 【线程ID】: 9 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 430
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 439
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 439
+   在 WebUI.Controllers.QualityTraceController.TraceDetail(String Id) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 84
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-20 12:21:52,838
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:TraceDetail
+ 【线程ID】: 25 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 430
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 439
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 439
+   在 WebUI.Controllers.QualityTraceController.TraceDetail(String Id) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 84
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-20 12:49:39,719
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:TraceDetail
+ 【线程ID】: 102 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 430
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 439
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 439
+   在 WebUI.Controllers.QualityTraceController.TraceDetail(String Id) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 84
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-20 12:53:40,081
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:TraceDetail
+ 【线程ID】: 103 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 430
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 439
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 439
+   在 WebUI.Controllers.QualityTraceController.TraceDetail(String Id) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 84
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-20 12:54:31,902
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:TraceDetail
+ 【线程ID】: 93 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 430
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 439
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 439
+   在 WebUI.Controllers.QualityTraceController.TraceDetail(String Id) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 84
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-20 12:55:23,087
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:TraceDetail
+ 【线程ID】: 93 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 430
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 439
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 439
+   在 WebUI.Controllers.QualityTraceController.TraceDetail(String Id) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 84
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-20 12:56:23,507
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:TraceDetail
+ 【线程ID】: 93 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 430
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 439
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 439
+   在 WebUI.Controllers.QualityTraceController.TraceDetail(String Id) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 84
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-20 12:57:40,156
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:TraceDetail
+ 【线程ID】: 93 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 430
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 439
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 439
+   在 WebUI.Controllers.QualityTraceController.TraceDetail(String Id) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 84
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-20 13:01:35,772
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:TraceDetail
+ 【线程ID】: 10 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 430
+   在 WebUI.Controllers.QualityTraceController.TraceDetail(String Id) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 84
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-20 13:01:55,858
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:TraceDetail
+ 【线程ID】: 8 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 430
+   在 WebUI.Controllers.QualityTraceController.TraceDetail(String Id) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 84
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-20 13:01:56,871
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:TraceDetail
+ 【线程ID】: 7 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 430
+   在 WebUI.Controllers.QualityTraceController.TraceDetail(String Id) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 84
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-20 13:07:13,547
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:TraceDetail
+ 【线程ID】: 7 
+ 【日志内容】:System.ArgumentOutOfRangeException: 索引和长度必须引用该字符串内的位置。
+参数名: length
+   在 WebUI.Controllers.HisMain.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 548
+   在 WebUI.Controllers.HisMain..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 421
+   在 WebUI.Controllers.QualityTraceController.TraceDetail(String Id) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 84
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-20 13:08:36,285
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:SearchTraceBrefAction
+ 【线程ID】: 7 
+ 【日志内容】:System.ArgumentOutOfRangeException: 索引和长度必须引用该字符串内的位置。
+参数名: length
+   在 WebUI.Controllers.HisMain.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 548
+   在 WebUI.Controllers.HisMain..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.<>c__DisplayClass7_2.<SearchTraceBrefAction>b__2(T_HisMain h) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 192
+   在 System.Collections.Generic.List`1.ForEach(Action`1 action)
+   在 WebUI.Controllers.QualityTraceController.SearchTraceBrefAction(VM_Trace_Search_Cond cond) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 182
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-20 13:08:40,515
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:SearchTraceBrefAction
+ 【线程ID】: 7 
+ 【日志内容】:System.ArgumentOutOfRangeException: 索引和长度必须引用该字符串内的位置。
+参数名: length
+   在 WebUI.Controllers.HisMain.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 548
+   在 WebUI.Controllers.HisMain..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.<>c__DisplayClass7_2.<SearchTraceBrefAction>b__2(T_HisMain h) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 192
+   在 System.Collections.Generic.List`1.ForEach(Action`1 action)
+   在 WebUI.Controllers.QualityTraceController.SearchTraceBrefAction(VM_Trace_Search_Cond cond) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 182
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-20 13:08:56,621
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:SearchTraceBrefAction
+ 【线程ID】: 9 
+ 【日志内容】:System.ArgumentOutOfRangeException: 索引和长度必须引用该字符串内的位置。
+参数名: length
+   在 WebUI.Controllers.HisMain.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 548
+   在 WebUI.Controllers.HisMain..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.<>c__DisplayClass7_2.<SearchTraceBrefAction>b__2(T_HisMain h) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 192
+   在 System.Collections.Generic.List`1.ForEach(Action`1 action)
+   在 WebUI.Controllers.QualityTraceController.SearchTraceBrefAction(VM_Trace_Search_Cond cond) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 182
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-20 13:09:00,975
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:SearchTraceBrefAction
+ 【线程ID】: 8 
+ 【日志内容】:System.ArgumentOutOfRangeException: 索引和长度必须引用该字符串内的位置。
+参数名: length
+   在 WebUI.Controllers.HisMain.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 548
+   在 WebUI.Controllers.HisMain..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.<>c__DisplayClass7_2.<SearchTraceBrefAction>b__2(T_HisMain h) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 192
+   在 System.Collections.Generic.List`1.ForEach(Action`1 action)
+   在 WebUI.Controllers.QualityTraceController.SearchTraceBrefAction(VM_Trace_Search_Cond cond) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 182
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-20 13:10:27,430
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:SearchTraceBrefAction
+ 【线程ID】: 7 
+ 【日志内容】:System.ArgumentOutOfRangeException: 索引和长度必须引用该字符串内的位置。
+参数名: length
+   在 WebUI.Controllers.HisMain.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 548
+   在 WebUI.Controllers.HisMain..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.<>c__DisplayClass7_2.<SearchTraceBrefAction>b__2(T_HisMain h) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 192
+   在 System.Collections.Generic.List`1.ForEach(Action`1 action)
+   在 WebUI.Controllers.QualityTraceController.SearchTraceBrefAction(VM_Trace_Search_Cond cond) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 182
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-20 13:11:00,099
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:SearchTraceBrefAction
+ 【线程ID】: 7 
+ 【日志内容】:System.ArgumentOutOfRangeException: 索引和长度必须引用该字符串内的位置。
+参数名: length
+   在 WebUI.Controllers.HisMain.init(String axisNumStr) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 548
+   在 WebUI.Controllers.HisMain..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 518
+   在 WebUI.Controllers.QualityTraceController.<>c__DisplayClass7_2.<SearchTraceBrefAction>b__2(T_HisMain h) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 192
+   在 System.Collections.Generic.List`1.ForEach(Action`1 action)
+   在 WebUI.Controllers.QualityTraceController.SearchTraceBrefAction(VM_Trace_Search_Cond cond) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 182
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-20 13:12:25,097
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:TraceDetail
+ 【线程ID】: 7 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot)
+   在 WebUI.Controllers.QualityTraceController.TraceDetail(String Id)
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-20 13:12:26,735
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:TraceDetail
+ 【线程ID】: 7 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot)
+   在 WebUI.Controllers.QualityTraceController.TraceDetail(String Id)
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-20 13:15:00,996
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:TraceDetail
+ 【线程ID】: 8 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot)
+   在 WebUI.Controllers.QualityTraceController.TraceDetail(String Id)
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-20 13:15:10,373
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:TraceDetail
+ 【线程ID】: 8 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot)
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot)
+   在 WebUI.Controllers.QualityTraceController.TraceDetail(String Id)
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-20 13:15:12,696
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 8 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.GetHisDataTableName(String year, String month, String machineTypeId)
+   在 WebUI.Models.HisData.GetHisDataTableName()
+   在 WebUI.Models.HisData..ctor(String axisNumStr)
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail)
+ 
+---------------------------------------------------------------------------------------------------------------

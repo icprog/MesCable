@@ -1,0 +1,17 @@
+2016-09-12 23:40:33,108 [27464] ERROR WebUI.Controllers.AdminController:Index [(null)] - hello world
+ 【时间】:2016-09-12 23:41:26,389
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.AdminController:Index
+ 【线程ID】: 33096 
+ 【文件地址】:C:\Users\ychost\Desktop\MesCable\WebUI\Utils\LogHelper.cs 第56行
+ 【日志内容】:hello world
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-12 23:55:51,820
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.AdminController:Index
+ 【线程ID】: 29868 
+ 【文件地址】:C:\Users\ychost\Desktop\MesCable\WebUI\Utils\LogHelper.cs 第56行
+ 【日志内容】:hello world
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------

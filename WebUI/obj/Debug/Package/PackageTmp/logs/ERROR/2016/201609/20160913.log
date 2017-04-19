@@ -1,0 +1,107 @@
+ 【时间】:2016-09-13 22:22:37,292
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.FileUploadController:UploadImg
+ 【线程ID】: 8 
+ 【日志内容】:上图片传过程中发生意外错误
+ 【日记详细】：System.IO.DirectoryNotFoundException: 未能找到路径“C:\Users\ychost\Desktop\MesCable\WebUI\UploadFile\Image\20160913222237.jpg”的一部分。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)
+   在 System.IO.FileStream..ctor(String path, FileMode mode)
+   在 System.Web.HttpPostedFile.SaveAs(String filename)
+   在 System.Web.HttpPostedFileWrapper.SaveAs(String filename)
+   在 WebUI.Controllers.FileUploadController.UploadImg(HttpPostedFileBase file) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\FileUploadController.cs:行号 36
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-13 22:25:31,119
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.FileUploadController:UploadImg
+ 【线程ID】: 7 
+ 【日志内容】:上图片传过程中发生意外错误
+ 【日记详细】：System.IO.DirectoryNotFoundException: 未能找到路径“C:\Users\ychost\Desktop\MesCable\WebUI\UploadFile\Image\20160913222531.jpg”的一部分。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)
+   在 System.IO.FileStream..ctor(String path, FileMode mode)
+   在 System.Web.HttpPostedFile.SaveAs(String filename)
+   在 System.Web.HttpPostedFileWrapper.SaveAs(String filename)
+   在 WebUI.Controllers.FileUploadController.UploadImg(HttpPostedFileBase file) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\FileUploadController.cs:行号 36
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-13 22:31:16,386
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.AdminController:Index
+ 【线程ID】: 7 
+ 【日志内容】:测试
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-13 22:37:21,514
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.AdminController:Index
+ 【线程ID】: 8 
+ 【日志内容】:测试
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-13 22:37:41,480
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.AdminController:Index
+ 【线程ID】: 7 
+ 【日志内容】:测试
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-13 22:37:46,430
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.AdminController:Index
+ 【线程ID】: 7 
+ 【日志内容】:测试
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-13 22:38:32,648
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.AdminController:Index
+ 【线程ID】: 13 
+ 【日志内容】:测试
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-13 22:38:59,987
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.AdminController:Index
+ 【线程ID】: 7 
+ 【日志内容】:测试
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-13 22:39:11,047
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.AdminController:Index
+ 【线程ID】: 7 
+ 【日志内容】:测试
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-13 22:39:16,036
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.AdminController:Index
+ 【线程ID】: 7 
+ 【日志内容】:测试
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-13 22:39:36,887
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.AdminController:Index
+ 【线程ID】: 7 
+ 【日志内容】:测试
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-13 22:41:24,987
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.AdminController:Index
+ 【线程ID】: 7 
+ 【日志内容】:测试
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-13 22:42:07,755
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.AdminController:Index
+ 【线程ID】: 8 
+ 【日志内容】:测试
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,110 @@
+ 【时间】:2016-09-15 01:03:19,854
+ 【级别】:FATAL
+ 【类名】:WebUI.Controllers.ProjectAdminController:StoreLayoutAdmin
+ 【线程ID】: 9 
+ 【日志内容】:数据库或者路由错误！
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-15 01:03:47,936
+ 【级别】:FATAL
+ 【类名】:WebUI.Controllers.ProjectAdminController:StoreLayoutAdmin
+ 【线程ID】: 9 
+ 【日志内容】:数据库或者路由错误！
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-15 14:51:26,679
+ 【级别】:FATAL
+ 【类名】:WebUI.Controllers.ProjectAdminController:AddSensorAction
+ 【线程ID】: 5 
+ 【日志内容】:往数据库写入数据失败
+ 【日记详细】：System.InvalidCastException: 指定的转换无效。
+   在 MesWeb.SQLServerDAL.T_Machine.ReaderBind(IDataReader dataReader) 位置 C:\Users\ychost\Desktop\MesCable\SQLServerDAL\T_Machine.cs:行号 352
+   在 MesWeb.SQLServerDAL.T_Machine.GetModel(Int32 MachineID) 位置 C:\Users\ychost\Desktop\MesCable\SQLServerDAL\T_Machine.cs:行号 150
+   在 MesWeb.BLL.T_Machine.GetModel(Int32 MachineID) 位置 C:\Users\ychost\Desktop\MesCable\BLL\T_Machine.cs:行号 74
+   在 WebUI.Controllers.ProjectAdminController.AddSensorAction(VM_AddSensorAdmin sensorAdmin) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\ProjectAdminController.cs:行号 492
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-15 14:52:50,288
+ 【级别】:FATAL
+ 【类名】:WebUI.Controllers.ProjectAdminController:AddSensorAction
+ 【线程ID】: 5 
+ 【日志内容】:往数据库写入数据失败
+ 【日记详细】：System.InvalidCastException: 指定的转换无效。
+   在 MesWeb.SQLServerDAL.T_Machine.ReaderBind(IDataReader dataReader) 位置 C:\Users\ychost\Desktop\MesCable\SQLServerDAL\T_Machine.cs:行号 352
+   在 MesWeb.SQLServerDAL.T_Machine.GetModel(Int32 MachineID) 位置 C:\Users\ychost\Desktop\MesCable\SQLServerDAL\T_Machine.cs:行号 150
+   在 MesWeb.BLL.T_Machine.GetModel(Int32 MachineID) 位置 C:\Users\ychost\Desktop\MesCable\BLL\T_Machine.cs:行号 74
+   在 WebUI.Controllers.ProjectAdminController.AddSensorAction(VM_AddSensorAdmin sensorAdmin) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\ProjectAdminController.cs:行号 492
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-15 14:57:59,147
+ 【级别】:FATAL
+ 【类名】:WebUI.Controllers.ProjectAdminController:AddSensorAction
+ 【线程ID】: 7 
+ 【日志内容】:往数据库写入数据失败
+ 【日记详细】：System.InvalidCastException: 指定的转换无效。
+   在 MesWeb.SQLServerDAL.T_Machine.ReaderBind(IDataReader dataReader) 位置 C:\Users\ychost\Desktop\MesCable\SQLServerDAL\T_Machine.cs:行号 352
+   在 MesWeb.SQLServerDAL.T_Machine.GetModel(Int32 MachineID) 位置 C:\Users\ychost\Desktop\MesCable\SQLServerDAL\T_Machine.cs:行号 150
+   在 MesWeb.BLL.T_Machine.GetModel(Int32 MachineID) 位置 C:\Users\ychost\Desktop\MesCable\BLL\T_Machine.cs:行号 74
+   在 WebUI.Controllers.ProjectAdminController.AddSensorAction(VM_AddSensorAdmin sensorAdmin) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\ProjectAdminController.cs:行号 492
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-15 14:58:36,135
+ 【级别】:FATAL
+ 【类名】:WebUI.Controllers.ProjectAdminController:AddSensorAction
+ 【线程ID】: 10 
+ 【日志内容】:往数据库写入数据失败
+ 【日记详细】：System.InvalidCastException: 指定的转换无效。
+   在 MesWeb.SQLServerDAL.T_Machine.ReaderBind(IDataReader dataReader) 位置 C:\Users\ychost\Desktop\MesCable\SQLServerDAL\T_Machine.cs:行号 352
+   在 MesWeb.SQLServerDAL.T_Machine.GetModel(Int32 MachineID) 位置 C:\Users\ychost\Desktop\MesCable\SQLServerDAL\T_Machine.cs:行号 150
+   在 MesWeb.BLL.T_Machine.GetModel(Int32 MachineID) 位置 C:\Users\ychost\Desktop\MesCable\BLL\T_Machine.cs:行号 74
+   在 WebUI.Controllers.ProjectAdminController.AddSensorAction(VM_AddSensorAdmin sensorAdmin) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\ProjectAdminController.cs:行号 492
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-15 15:12:53,765
+ 【级别】:FATAL
+ 【类名】:WebUI.Controllers.ProjectAdminController:AddSensorAction
+ 【线程ID】: 7 
+ 【日志内容】:往数据库写入数据失败
+ 【日记详细】：System.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_T_CollectedParameter_T_SensorModule". The conflict occurred in database "Mes", table "dbo.T_CollectedParameter", column 'CollectedParameterID'.
+The statement has been terminated.
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 MES.DBUtility.DbHelperSQL.RunProcedure(String storedProcName, IDataParameter[] parameters, Int32& rowsAffected) 位置 C:\Users\ychost\Desktop\MesCable\DBUtility\DbHelperSQL.cs:行号 989
+   在 MesWeb.SQLServerDAL.T_SensorModule.Add(T_SensorModule model) 位置 C:\Users\ychost\Desktop\MesCable\SQLServerDAL\T_SensorModule.cs:行号 73
+   在 MesWeb.BLL.T_SensorModule.Add(T_SensorModule model) 位置 C:\Users\ychost\Desktop\MesCable\BLL\T_SensorModule.cs:行号 42
+   在 WebUI.Controllers.ProjectAdminController.AddSensorAction(VM_AddSensorAdmin sensorAdmin) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\ProjectAdminController.cs:行号 494
+ClientConnectionId:8e6b25ea-e999-4362-b3b5-463cb25da938
+Error Number:547,State:0,Class:16
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2016-09-15 15:15:08,845
+ 【级别】:FATAL
+ 【类名】:WebUI.Controllers.ProjectAdminController:AddSensorAction
+ 【线程ID】: 8 
+ 【日志内容】:往数据库写入数据失败
+ 【日记详细】：System.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_T_CollectedParameter_T_SensorModule". The conflict occurred in database "Mes", table "dbo.T_CollectedParameter", column 'CollectedParameterID'.
+The statement has been terminated.
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 MES.DBUtility.DbHelperSQL.RunProcedure(String storedProcName, IDataParameter[] parameters, Int32& rowsAffected) 位置 C:\Users\ychost\Desktop\MesCable\DBUtility\DbHelperSQL.cs:行号 989
+   在 MesWeb.SQLServerDAL.T_SensorModule.Add(T_SensorModule model) 位置 C:\Users\ychost\Desktop\MesCable\SQLServerDAL\T_SensorModule.cs:行号 73
+   在 MesWeb.BLL.T_SensorModule.Add(T_SensorModule model) 位置 C:\Users\ychost\Desktop\MesCable\BLL\T_SensorModule.cs:行号 42
+   在 WebUI.Controllers.ProjectAdminController.AddSensorAction(VM_AddSensorAdmin sensorAdmin) 位置 C:\Users\ychost\Desktop\MesCable\WebUI\Controllers\ProjectAdminController.cs:行号 494
+ClientConnectionId:8e6b25ea-e999-4362-b3b5-463cb25da938
+Error Number:547,State:0,Class:16
+ 
+---------------------------------------------------------------------------------------------------------------

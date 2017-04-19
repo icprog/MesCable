@@ -1,0 +1,118 @@
+﻿@model int
+@section Style{
+    @Styles.Render("~/Content/icheck-square-green")
+    @Styles.Render("~/Content/bootstrap-datepicker")
+    @Styles.Render("~/Content/material-table")
+}
+<body>
+    <div class="row center" id="product">
+
+        <table style="display:none" id="prodcut_table" cellspacing=0 cellpadding=0 id="pd_table" align="center" class="table table-bordered center-block">
+            <tr>
+                <td class="no-border" colspan="103"><span class="title-font">广东中德电缆有限公司</span><br /><span class="sub-title-font">成品检验质量记录表</span></td>
+            </tr>
+            <tr>
+                <td class="no-border" colspan="103" style="text-align:right">表格编号：11-QR-055 A.1&nbsp;&nbsp;&nbsp;&nbsp; </td>
+            </tr>
+            <tr>
+                <td colspan="10">盘号</td>
+                <td colspan="30">线材编码/<br />型号规格</td>
+                <td colspan="5">数量m</td>
+                <td colspan="5">检验数据</td>
+                <td colspan="5">护套最小<br />厚度mm</td>
+                <td colspan="5">护套平均<br />厚度mm</td>
+                <td colspan="5">电缆直径<br />mm</td>
+                <td colspan="35">护套厚度<br />mm</td>
+                <td colspan="7">芯线颜色<br />（按排列)</td>
+                <td colspan="5">20℃导体<br />直流电阻<br />Ω/km</td>
+                <td colspan="5">耐压测试<br />kv/min</td>
+
+                <td colspan="3">印字</td>
+                <td colspan="1">外观</td>
+                <td colspan="2">结果判定</td>
+                <td colspan="5">备注</td>
+
+            </tr>
+            <tr>
+                <td rowspan="2" colspan="10">
+                    <textarea cols="10" rows="2"></textarea>
+                </td>
+                <td rowspan="2" colspan="30">
+                    <textarea cols="30" rows="2"></textarea>
+                </td>
+                <td rowspan="2" colspan="5">
+                    <textarea cols="5" rows="2"></textarea>
+                </td>
+                <td colspan="5">标准</td>
+                <td colspan="5"><textarea rows="1" cols="5"></textarea></td>
+                <td colspan="5"><textarea rows="1" cols="5"></textarea></td>
+                <td colspan="5"><textarea rows="1" cols="5"></textarea></td>
+
+                <td colspan="5">头</td>
+                <td colspan="5"><textarea rows="1" cols="5"></textarea></td>
+                <td colspan="5"><textarea rows="1" cols="5"></textarea></td>
+                <td colspan="5"><textarea rows="1" cols="5"></textarea></td>
+                <td colspan="5"><textarea rows="1" cols="5"></textarea></td>
+                <td colspan="5"><textarea rows="1" cols="5"></textarea></td>
+                <td colspan="5"><textarea rows="1" cols="5"></textarea></td>
+
+
+                <td rowspan="2" colspan="7"><textarea rows="2" cols="7"></textarea></td>
+                <td rowspan="2" colspan="5"><textarea rows="2" cols="5"></textarea></td>
+                <td rowspan="2" colspan="5"><textarea rows="1" cols="5"></textarea></td>
+
+                <td rowspan="2" colspan="3"><textarea rows="2" cols="5"></textarea></td>
+                <td rowspan="2" colspan="1"><textarea rows="2" cols="1"></textarea></td>
+                <td rowspan="2" colspan="2"><textarea rows="2" cols="2"></textarea></td>
+                <td rowspan="2" colspan="5"><textarea rows="2" cols="5"> </textarea></td>
+
+            </tr>
+            <tr>
+                <td colspan="5">实测</td>
+
+                <td colspan="5"><textarea rows="1" cols="5"></textarea></td>
+                <td colspan="5"><textarea rows="1" cols="5"></textarea></td>
+                <td colspan="5"><textarea rows="1" cols="5"></textarea></td>
+                <td colspan="5">尾</td>
+                <td colspan="5"><textarea rows="1" cols="5"></textarea></td>
+                <td colspan="5"><textarea rows="1" cols="5"></textarea></td>
+                <td colspan="5"><textarea rows="1" cols="5"></textarea></td>
+                <td colspan="5"><textarea rows="1" cols="5"></textarea></td>
+                <td colspan="5"><textarea rows="1" cols="5"></textarea></td>
+                <td colspan="5"><textarea rows="1" cols="5"></textarea></td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+@section Footer{
+    @Scripts.Render("~/Scripts/icheck")
+    @Scripts.Render("~/Scripts/bootstrap-datepicker")
+
+    <script>
+        $(function (mcAdmin) {
+
+            var $table = $("#prodcut_table");
+            var id = @Model;
+            $.post("/Material/GetReportDetailAction/",{Id:id},function(retData){
+                
+                if(retData.Code == RESULT_CODE.OK){
+                    var remark = retData.Appendix.remark;
+                    var report = retData.Appendix.report;
+               
+                    $table.find("textarea").each(function (i, txt) {
+                        $(txt).val(report[i]);
+                    })
+                    $table.css("display","inline");
+
+                }else{
+                    swal({
+                        title: "错误",
+                        text: "导航失败",
+                        type: "error"
+                    });
+                }
+            })
+        }(window.parent.mcAdmin));
+    </script>
+}

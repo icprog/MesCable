@@ -1,4 +1,19 @@
-﻿
+﻿/**  版本信息模板在安装目录下，可自行修改。
+* T_MaterialOutput.cs
+*
+* 功 能： N/A
+* 类 名： T_MaterialOutput
+*
+* Ver    变更日期             负责人  变更内容
+* ───────────────────────────────────
+* V0.01  2017/4/18 17:36:51   N/A    初版
+*
+* Copyright (c) 2012 Maticsoft Corporation. All rights reserved.
+*┌──────────────────────────────────┐
+*│　此技术信息为本公司机密信息，未经本公司书面同意禁止向第三方披露．　│
+*│　版权所有：动软卓越（北京）科技有限公司　　　　　　　　　　　　　　│
+*└──────────────────────────────────┘
+*/
 using System;
 namespace MesWeb.Model
 {
@@ -12,13 +27,17 @@ namespace MesWeb.Model
 		{}
 		#region Model
 		private int _materialoutputid;
-		private int? _materialid;
-		private string _materialnum;
+		private string _materialrfid;
+		private string _materialtype;
 		private DateTime? _gneratetime;
-		private int? _employeeid;
+		private string _materialname;
 		private string _weight;
 		private string _color;
 		private string _certificate;
+		private string _contractno;
+		private string _batchno;
+		private string _supplycompany;
+		private string _workshift;
 		/// <summary>
 		/// 
 		/// </summary>
@@ -30,18 +49,18 @@ namespace MesWeb.Model
 		/// <summary>
 		/// 
 		/// </summary>
-		public int? MaterialID
+		public string MaterialRFID
 		{
-			set{ _materialid=value;}
-			get{return _materialid;}
+			set{ _materialrfid=value;}
+			get{return _materialrfid;}
 		}
 		/// <summary>
 		/// 
 		/// </summary>
-		public string MaterialNum
+		public string MaterialType
 		{
-			set{ _materialnum=value;}
-			get{return _materialnum;}
+			set{ _materialtype=value;}
+			get{return _materialtype;}
 		}
 		/// <summary>
 		/// 
@@ -54,10 +73,10 @@ namespace MesWeb.Model
 		/// <summary>
 		/// 
 		/// </summary>
-		public int? EmployeeID
+		public string MaterialName
 		{
-			set{ _employeeid=value;}
-			get{return _employeeid;}
+			set{ _materialname=value;}
+			get{return _materialname;}
 		}
 		/// <summary>
 		/// 
@@ -82,6 +101,38 @@ namespace MesWeb.Model
 		{
 			set{ _certificate=value;}
 			get{return _certificate;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string ContractNo
+		{
+			set{ _contractno=value;}
+			get{return _contractno;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string BatchNo
+		{
+			set{ _batchno=value;}
+			get{return _batchno;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string SupplyCompany
+		{
+			set{ _supplycompany=value;}
+			get{return _supplycompany;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string workshift
+		{
+			set{ _workshift=value;}
+			get{return _workshift;}
 		}
 		#endregion Model
 

@@ -17,7 +17,7 @@ namespace MesWeb.ViewModel.Mes {
             get { return materialOutput.MaterialOutputID.ToString(); }
         }
         public string MaterialNum {
-            get { return materialOutput.MaterialNum.ToString(); }
+            get { return "不存在"; }
         }
         public string GenerateTime {
             get { return materialOutput.GnerateTime.ToString(); }

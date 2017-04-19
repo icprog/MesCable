@@ -1,0 +1,168 @@
+﻿@section Style{
+    @Styles.Render("~/Content/bootstrap-table")
+}
+<body>
+    <div class="col-sm-12" id="qt_picture">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+
+                <div class="row">
+
+                    <div class="col-sm-12">
+
+                        <div class="col-sm-12">
+
+                            <form role="form" class="form-inline" id="condition">
+                                <div class="form-group">
+                                    <label for="specNum">盘号：</label>
+                                    <input id="specNum" name="specNum" type="text" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="batchNum">规格型号：</label>
+                                    <input id="batchNum" name="batchNum" type="text" class="form-control" />
+                                </div>
+
+                                <button type="button" class="btn btn-white" id="search_btn">
+                                    <span class="fa fa-search"></span>
+                                </button>
+                            </form>
+
+
+                        </div>
+
+                        <div class="ibox-content">
+                            <div class="row">
+                                <table id="bs_table"></table>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+@section Footer{
+    @Scripts.Render("~/Scripts/bootstrap-table")
+    <script>
+        function navToProductDetail(a) {
+            var id = $(a).attr("reportId");
+            var mcAdmin = window.parent.mcAdmin;
+            console.log(id);
+            mcAdmin.addTab("成品详情", "/Material/ProductReportDetail/" + id);
+        }
+
+        $(function (mcAdmin) {
+            var $bsTable = $("#bs_table");
+            function autoTableIndex(value, row, index) {
+                return index + 1;
+            }
+            function initBsTable() {
+                $bsTable.bootstrapTable({
+                    columns: [{
+                        formatter: autoTableIndex,
+                        title: '序号'
+                    }, {
+                        field: "VolNum",
+                        title: "盘号"
+                    }, {
+                        field: "SpecNum",
+                        title: "规格型号"
+                    }, {
+                        field: "Detail",
+                        title: "详细"
+                    }, {
+                        field: "InputDate",
+                        title: "录入时间"
+                    }]
+                });
+            }
+            initBsTable();
+            $("#search_btn").on("click", function () {
+                var cond = getCondition();
+                if (cond == null) {
+                    return;
+                }
+
+                $.post("/Material/SearchReportAction", { cond: cond, type: "product" }, function (retData) {
+                    console.log("retData", retData);
+                    if (retData.Code == RESULT_CODE.OK) {
+                        var results = retData.Content;
+              
+                        var bsData = [];
+                        results.forEach(res=> {
+                            console.log(res);
+                            var remark = res.Remark;
+                            var report = res.Report;
+                            var inputDate = res.InputDate;
+                            var data = {
+                                VolNum: report[0],
+                                SpecNum: report[1],
+                                Detail:"<a onclick='navToProductDetail(this)' reportId='"+res.Id+"'>详情</a>",
+                                InputDate:inputDate
+                            }
+                            bsData.push(data);
+                        })
+                        $bsTable.bootstrapTable("load", bsData);
+
+
+                    } else {
+                        $bsTable.bootstrapTable("removeAll");
+                        swal({
+                            title: "错误",
+                            text: "查询失败",
+                            type: "error"
+                        });
+                    }
+                })
+
+            })
+
+            function getCondition() {
+                var cond = [];
+                $("#condition").find("input").each(function (i, v) {
+                    var val = $(v).val() + "";
+                    //盘号
+                    //i为查询的脚标，2为表格的序号
+                    if (i == 0) {
+                        cond[0] = val;
+                        //规格型号
+                    } else if (i == 1) {
+                        cond[1] = val;
+
+                    }
+
+                })
+
+                if (!arrayContainValidValue(cond)) {
+                    swal({
+                        title: "错误",
+                        text: "请输入查询条件",
+                        type: "error"
+                    });
+                    return null;
+                }
+                return cond;
+            }
+
+
+            function arrayContainValidValue(array) {
+                var isValid = false;
+                try {
+                    array.forEach(function (arr) {
+                        arr += "";
+                        if (!mcAdmin.isNullOrEmpty(arr)) {
+                            isValid = true;
+                        }
+                    })
+                } catch (e) {
+                    valid = false;
+                }
+
+                return isValid;
+            }
+
+        }(window.parent.mcAdmin));
+    </script>
+}

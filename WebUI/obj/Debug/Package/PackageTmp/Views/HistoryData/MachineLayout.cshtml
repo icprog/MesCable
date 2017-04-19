@@ -1,0 +1,593 @@
+﻿@model MesWeb.ViewModel.Mes.VM_LayoutPicture
+@section Style{
+    @Styles.Render("~/Content/hotspot")
+    @Styles.Render("~/Content/context-menu")
+    @Styles.Render("~/Content/sweetalert")
+    @Styles.Render("~/Content/bootstrap-table")
+}
+@section Header{
+    <style>
+        .alarm_trend_anchor:hover {
+            cursor: pointer;
+        }
+
+        .echarts {
+            height: 300px;
+        }
+    </style>
+}
+
+<body>
+
+    @*layout picture*@
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <i class="fa fa-info-circle"></i> 机台情况
+                </div>
+                <div class="panel-body">
+                    <div id="layout_div">
+                        <img style="position: relative;" src="@Html.Raw(Model.PicUrl)" id="topview_pic" class="HotspotPlugin_Overlay">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @*relative info*@
+    <div class="row" style="display:none">
+        <div class="col-sm-12">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <i class="fa fa-info-circle"></i> 线缆信息
+                </div>
+                <div class="panel-body" id="machine_property">
+                    <div class="row gray-bg">
+                        <div class="col-sm-6">
+                            <div class="ibox float-e-margins">
+                                <div class="ibox-title">
+                                    <h5>线缆属性</h5>
+                                </div>
+                                <div class="ibox-content">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <dl class="dl-horizontal">
+                                                <dt>机台名称</dt>
+                                                <dd name="MachineName"></dd>
+                                                @*<dt>规格型号</dt>
+                                                    <dd name="SpecNum"></dd>*@
+                                                <dt>当前米数</dt>
+                                                <dd name="CurrentMeters"></dd>
+                                                @*<dt>工单号</dt>
+                                                    <dd name="JobNum"></dd>
+                                                    <dt>任务数</dt>
+                                                    <dd name="TaskNum"></dd>
+                                                    <dt>达成数</dt>
+                                                    <dd name="ReachedNum"></dd>
+                                                    <dt>批次号</dt>*@
+                                                <dd name="BatchNum"></dd>
+                                                <dt>轴号</dt>
+                                                <dd name="AxisNum"></dd>
+                                                <dt>操作手</dt>
+                                                <dd name="ManuMan"></dd>
+                                            </dl>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="ibox float-e-margins">
+                                <div class="ibox-title">
+                                    <h5>线缆参数</h5>
+                                </div>
+                                <div class="ibox-content">
+
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <dl class="dl-horizontal">
+                                                <dt>最大外径</dt>
+                                                <dd name="ODMax"></dd>
+                                                <dt>最小外径</dt>
+                                                <dd name="ODMin"></dd>
+                                                <dt>颜色</dt>
+                                                <dd name="SpecColor"></dd>
+                                                @*<dt>单价</dt>
+                                                    <dd name="UnitPrice"></dd>*@
+
+                                                <dt>物料RFID</dt>
+                                                @*<dd name="MaterialRFID"></dd>
+                                                    <dt>预计完成时间</dt>
+                                                    <dd name="EstTime"></dd>
+                                                    <dt>能耗</dt>
+                                                    <dd name="ContUnit"></dd>*@
+                                            </dl>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    @*realtime trend*@
+    <div class="row" id="chart_line_module" style="margin:10px">
+
+    </div>
+    @*realtime trend*@
+    <div class="row" id="test_chart" style="margin:10px">
+
+    </div>
+
+
+
+
+</body>
+
+@section Footer{
+    <script>
+        //曲线全局保存对象
+
+        //曲线模块
+        var spotCharts = {};
+        if (typeof (RENDER_STATE) == "undefined") {
+            //参数曲线渲染状态
+            var RENDER_STATE = {
+                //正在页面上渲染
+                RENDER_ING: 0,
+                //被用户关闭
+                RENDER_CLOSED: 1,
+                //初始化
+                RENDER_INIT:2
+
+            };
+        }
+
+        if(typeof(PARAM_CODE) == "undefined"){
+
+        }
+
+    </script>
+    @Scripts.Render("~/Scripts/hotspot")
+    @Scripts.Render("~/Scripts/context-menu")
+    @Scripts.Render("~/Scripts/highstock")
+    @Scripts.Render("~/Scripts/highstock-theme-sandsignika")
+    @Scripts.Render("~/Scripts/content")
+    @Scripts.Render("~/Scripts/signalR")
+    @Scripts.Render("~/Scripts/bootstrap-table")
+    @Scripts.Render("~/Scripts/bootstrap-table-export")
+    <script src="~/signalr/hubs"></script>
+
+    <script>
+        /*-----------------全局参数定义-------------------------------*/
+        var hp;
+        var layout = @Html.Raw(Json.Encode(Model));
+        var axisNum = layout.Remark;
+        var imgEvent ;
+        var askTimer = {};
+        var isRealTime = false;
+        //未渲染曲线的缓冲大小
+        var chartCacheLength = 100;
+        var isOpenCache = false;
+        //每条曲线最多渲染500个点
+        var chartRenderLength = 100;
+        //每3个点刷新一次曲线,目前只用于刷新OD需要缓存
+        var refreshDataLength = 2;
+        var refreshIns = 0;
+        //参数的最值，键为 ParamCodeId 值为 {maxValue:xxx,minValue:yyy}
+        var paramThresholds = [];
+
+
+        //死机判断时间阈值
+        //2 分钟
+        var crashTimeThreshold = 2*60000;
+        //死机提示
+        var crashMessage = "无采集数据上传信息！";
+        //铜线OD要画圆
+        var odChartPie = {};
+        //特殊参数，比如OD之类的，从服务器取值
+        var specParam = {};
+
+        //颜色
+        var errorColor = "red";
+        var warningColor = "orange";
+        var normalColor = "green";
+        var crashColor = "gray";
+        //是否画OD的圆曲线
+        var canDrawODPie = false;
+
+
+
+        $(function(mcAdmin){
+            //highcharts时差问题
+            Highcharts.setOptions({ global: { useUTC: false } });
+            //chartId 由chartIdPrefix 与 paramCodeId 合成
+            var chartIdPrefix = "chart_";
+            //模块上面实时采集值的 Id 由 paramValuePrefix 与 paramCodeId 合成
+            var paramValuePrefix = "param_code_";
+            var spotIdPrefix = "_____spot_";
+
+
+            /*--------------------------初始化界面-----------------------------*/
+            (function(){
+                //获取特殊值，比如OD值
+                $.post("/OnlineData/GetSpecParam",function(SPEC_PARAM){
+                    specParam.outterOD = SPEC_PARAM.OutterOD;
+                    specParam.innerOD = SPEC_PARAM.InnerOD;
+                },"json")
+                var spotCount = 0;
+                $.each(layout.SubSpotItems,function(i,spot){
+                    spot.State = 0;
+                    spot.Message = "";
+                    spot.properties = [];
+                    $.post("/OnlineData/GetParamChartProperties/",{layoutId:spot.LayoutPictureID},function(retData){
+                        mcAdmin.dealRetData(retData,function(){
+                            //给模块绑定序列号
+                            spot.serialNum = retData.Content;
+                            //生成模块的每个参数的基本信息
+                            $.each(retData.Appendix,function(j,property ){
+                                spot.properties.push(property);
+                                //设置模块显示信息
+                                spot.Message += property.Title +": "+"<span  id='"+paramValuePrefix+property.ParamCodeId+"'></span>"+property.Symbol+"<br/>";
+                                var chartId = chartIdPrefix + property.ParamCodeId;
+                                var paramCodeId = property.ParamCodeId;
+
+                                //TODO 临时处理
+                                if(paramCodeId == 41){
+                                    canDrawODPie = true;
+
+                                }
+
+                                //阈值缓存
+                                if(paramThresholds[paramCodeId] == null){
+                                    try{
+                                        paramThresholds[paramCodeId] = {};
+                                        paramThresholds[paramCodeId].minValue = property.MinValue;
+                                        paramThresholds[paramCodeId].maxValue  = property.MaxValue;
+                                    }catch(e){
+
+                                    }
+                                }
+
+                            });
+                            spotCount++;
+                            //当所有的模块都获取到数据的时候，就初始化模块
+                            if(spotCount == layout.SubSpotItems.length - 1){
+                                //TODO 临时解决方案
+                                setTimeout(initLayout,3000);
+
+                            }
+                        });
+
+                    },"json")
+                })
+                function initLayout(){
+
+
+                    /// <summary>
+                    /// 初始化布局
+                    /// </summary>
+                    hp = $("#layout_div").hotspot({
+                        expandAll:true,
+                        interactivity:"hover",
+                        mode:"admin",
+                        data: {
+                            Id: layout.LayoutPictureID,
+                            Pixel: { width: $("#topview_pic").width(), height: $("#topview_pic").height() },
+                            Spots:layout.SubSpotItems
+                        },
+                        spotRightClick: function (div, spot, spotIndex, e) {
+                        },
+                        imgRightClick: function (e) {
+                            imgEvent = e;
+                        },spotLeftClickWhenHover:function (div, spot, spotIndex, e) {
+                            viewSensorChart();
+                        },
+                    });
+
+                    //点击模块信息界面
+                    $(".Hotspot_Block").on("click",function(e){
+                        viewSensorChart();
+                        return false;
+                    });
+                }
+                function viewSensorChart(){
+                    var spot = hp.getSelectSpot();
+                    if(spot.properties == null){
+                        //TODO 施工错误
+                        return;
+                    }
+
+                    //类型字典，主键为drawType，值为数组存放的该drawType相同的 property
+                    var drawTypes = [];
+                    //给模块曲线分类
+                    $.each(spot.properties,function(i,p){
+                        var isContained = false;
+                        for(var type in drawTypes){
+                            if(type == p.drawType){
+                                isContained = true;
+                                break;
+                            }
+                        }
+                        //未包含有这种图形
+                        if(!isContained){
+                            drawTypes[p.drawType] = [];
+                        }
+                        drawTypes[p.drawType].push(p);
+                    })
+
+                    for(var key in drawTypes){
+                        var spotId = spot.LayoutPictureID;
+                        var chartId = spotIdPrefix + spotId+"_type_"+key;
+                        var panelId = chartId + "_panel";
+                        var $panel = $("#"+panelId);
+                        //曲线存在于界面上
+                        if($panel.length>0){
+                            $panel.insertAfter($("#chart_line_module"));
+                            //曲线被用户关闭
+                        }else{
+                            $.post("/HistoryData/GetHistoryData/",{axisNumStr:axisNum},function(retData){
+                                mcAdmin.dealRetData(retData,function(){
+                                    var  hisData = retData.Appendix;
+                                    initMutiChart(drawTypes[key],chartId,hisData);
+                                });
+                            });
+                        }
+                    }
+                }
+
+                function calcChartTitle(orgTitle){
+
+                    if(orgTitle.indexOf("温") != -1){
+                        return "温度";
+                    }else if(orgTitle.indexOf("速") != -1){
+                        return "速度"
+                    }else if(orgTitle.indexOf("力") != -1){
+                        return "力"
+                    }
+                    return orgTitle;
+                }
+                function initMutiChart(p,chartId,hisData){
+    
+
+
+                    //取出图线属性
+                    var maxValue = p[0].MaxValue;
+                    var minValue = p[0].MinValue;
+                    var valueSuffix = p[0].Symbol;
+                    var title = p[0].Title;
+                    title = calcChartTitle(title);
+
+                    var subTitle = p[0].SubTitle;
+                    var paramCodeId = p[0].ParamCodeId;
+
+                    $.each(p,function(i,chartProperty){
+                        if(maxValue < chartProperty.maxValue){
+                            maxValue = chartProperty.MaxValue;
+                        }
+                        if(minValue > chartProperty.MinValue){
+                            minValue = chartProperty.MinValue;
+                        }
+
+                    })
+                    var showMaxValue = maxValue + 10;
+                    var showMinValue = minValue - 20;
+                    //宕机值
+                    var crashValue = showMinValue + 5;
+
+
+                    //将曲线的外围 div 置顶
+                    $chartContainer = $("#chart_line_module");
+                    var panelId = chartId+'_panel';
+                    //var chartDiv = '<div class="col-sm-12" id="'+panelId+'"> <div class="panel panel-info"> <div class="panel-heading">'+
+                    //    '<i class="fa fa-info-circle"></i> <span id="'+chartId+'_title">'+title+'</span></div><div class="panel-body">'+
+                    //    '<div class="echarts" id="'+chartId+'"></div></div></div></div>'
+                    var titleId = chartId +"_title";
+                    var chartDiv = '<div class="ibox float-e-margins" id="'+panelId+'">\
+                    <div class="ibox-title">\
+                        <h5 id="'+titleId+'">'+title+'</h5>\
+                        <div class="ibox-tools">\
+                            <a class="close-link" href="javascript:void(0)" chartId="'+chartId+'"  onclick="closeLinkClickFunc(this)">\
+                                <i class="fa fa-times"></i>\
+                            </a>\
+                        </div>\
+                    </div>\
+                    <div class="ibox-content">\
+                         <div class="echarts" id="'+chartId+'"></div>\
+                    </div>\
+                    </div>\
+                 </div>';
+                    $(chartDiv).insertAfter($chartContainer)
+                    var chartSeries = [];
+                    //曲线模块所有的参数ID
+                    var chartParamCodeIds = [];
+                    //随机生成颜色
+                    function getRandomColor()
+                    {
+                        var c = '#6699';
+                        var cArray = ['0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'];
+                        for(var i = 0; i < 2;i++)
+                        {
+                            var cIndex = Math.round(Math.random()*15);
+                            c += cArray[cIndex];
+                        }
+                        return c;
+                    }
+                    $.each(p,function(i,v){
+                        var series = {};
+                        series.name = v.Title
+                        series.paramCodeId = v.ParamCodeId;
+
+
+                        chartParamCodeIds.push(v.ParamCodeId);
+                        var crashValue = v.MinValue - 15;
+
+                        ////设置曲线颜色
+                        series.zones=[
+                             //停机值的颜色
+                            {
+                                value:crashValue + 2,
+                                color:crashColor
+                            },
+                            //低于界限值得颜色
+                            {
+                                value: v.MinValue,
+                                color: warningColor
+                                //正常颜色
+                            },{
+                                value: v.MaxValue,
+                                color:getRandomColor()
+                                //高于界限值的颜色
+                            },{
+                                color: errorColor
+                            }];
+                        //设置线条粗细
+                        series.lineWidth = 0.5;
+                        series.data=[];
+                        $.each(hisData,function(j,data){
+                           
+                            if(data.ParamCodeId == v.ParamCodeId){
+                                $.each(data.SeriesData.reverse(),function(k,s){
+                                    var x = new Date(s.X).getTime();
+                                    var y = s.Y;                                  
+                                    series.data.push([x,y])
+                                })
+                            }
+                        })
+                        chartSeries.push(series);
+
+                    })
+
+                    //$chartContainer.prepend(chartDiv);
+
+                    // $chartContainer.html(chartDiv);
+                    //渲染曲线
+                    var chart = new Highcharts.StockChart({
+                        chart : {
+                            renderTo:chartId,
+                            type:'spline',
+                            //边框
+                            borderColor: '#EBBA95',
+                            borderWidth: 2,
+                            borderRadius: 15,
+                        },
+                        ////缩放按钮
+                        rangeSelector: {
+                            buttons: [{
+                                count: 10,
+                                type: 'second',
+                                text: '10s'
+                            }, {
+                                count: 5,
+                                type: 'minute',
+                                text: '5M'
+                            }, {
+                                type: 'all',
+                                text: 'ALL'
+                            }],
+                            inputEnabled: false,
+                            selected: 0
+                        },
+                        yAxis: {
+                            title: {
+                                text: valueSuffix
+                            },
+                            min: showMinValue,
+                            max: showMaxValue,
+                            tickInterval: 2,
+
+                            //最值曲线
+                            //plotLines: [{
+                            //    value: maxValue,
+                            //    width: 1,
+                            //    color: errorColor,
+                            //    label: {
+                            //        text: '最大值: ' +maxValue+valueSuffix,
+                            //    }
+                            //},{
+                            //    value: minValue,
+                            //    width: 1,
+                            //    color: warningColor,
+                            //    label: {
+                            //        text: '最小值: '+minValue+valueSuffix,
+                            //    }
+                            //}]
+                        },
+                        xAxis:{
+                            type: 'datetime',
+                        },
+                        //点击事件
+                        plotOptions: {
+                            series: {
+                                cursor: 'pointer',
+                            }
+                        },
+                        title : {
+                            text : title,
+                        },
+                        subTitle:{
+                            text:title,
+                        },
+                        exporting: {
+                            enabled: false
+                        },
+                        series :chartSeries
+                        ,
+                        //提示框
+                        tooltip : {
+                            formatter : function() {
+                                var content = '<span style="font-size: 10px;">' + this.x + '</span><br/>';
+                                content = '';
+                                for (var i = 0; i < this.points.length; i++) {
+                                    var maxValue = this.points[i].series.maxValue;
+                                    var minValue = this.points[i].series.minValue;
+                                    var color = "black";
+                                    if(this.points[i].y<minValue){
+                                        color = warningColor;
+                                    }else if(this.points[i].y > maxValue ){
+                                        color=errorColor;
+                                    }
+                                    //采集值
+                                    content += '<span>' + this.points[i].series.name + '</span>: <span style="color:'+color+'">' + this.points[i].y +valueSuffix +'</span><br/>';
+
+                                };
+                                var date = new Date(this.x);
+
+                                if(typeof(this.points[0].series.curMeters) != "undefined"){
+                                    content += '<br/><span>当前米数: '+this.points[0].series.curMeters+'米</span>'
+                                }
+                                content += '<br/><span>当前时间: ' + (date.getHours() ) +':' + (date.getMinutes()  ) + ':' + (date.getSeconds()  )  + '</span>'
+                                return content +"</a>";
+                            },
+
+                        }
+                    })
+                    //保存曲线
+                    spotCharts[chartId] = chart;
+                    //设置曲线状态
+                    spotCharts[chartId].isRendered = RENDER_STATE.RENDER_ING;
+                    //模块曲线的参数列表
+                    spotCharts[chartId].chartParamCodeIds = chartParamCodeIds;
+                    return spotCharts[chartId];
+                }
+
+
+            }())
+
+
+
+         
+
+       
+        }(window.parent.mcAdmin))
+
+    </script>
+}

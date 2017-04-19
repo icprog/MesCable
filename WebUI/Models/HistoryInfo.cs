@@ -23,6 +23,9 @@ namespace WebUI.Models {
         }
 
         public HisData(string axisNumStr) {
+            if(axisNumStr.EndsWith(",")) {
+                axisNumStr = axisNumStr.Replace(",","");
+            }
             this.AxisNumStr = axisNumStr;
             init(axisNumStr);
             this.TableName = GetHisDataTableName();
@@ -32,7 +35,7 @@ namespace WebUI.Models {
 
         private void init(string axisNumStr) {
             axisNumStr = axisNumStr.Trim();
-            if(!axisNumStr.StartsWith("CP") || axisNumStr.Length != 18) {
+            if(!axisNumStr.StartsWith("CP")) {
                 return;
             }
             try {
@@ -43,8 +46,13 @@ namespace WebUI.Models {
                 if(MachineTypeId.StartsWith("0")) {
                     MachineTypeId = MachineTypeId.Substring(1);
                 }
-                MachineId = axisNumStr.Substring(12,2);
-                LSH = axisNumStr.Substring(14,4);
+                if(axisNumStr.Length == 18) {
+                    MachineId = axisNumStr.Substring(12,2);
+                    LSH = axisNumStr.Substring(14,4);
+                } else {
+                    MachineId = axisNumStr.Substring(12,3);
+                    LSH = axisNumStr.Substring(15,4);
+                }
             } catch(Exception e) {
                 throw e;
             }

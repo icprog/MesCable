@@ -38,3 +38,17 @@ E:\ZhongDe\MesCable\MesCable\DBUtility\bin\Debug\MySql.Data.dll
 E:\ZhongDe\MesCable\MesCable\DBUtility\bin\Debug\System.Data.SQLite.DLL
 E:\ZhongDe\MesCable\MesCable\DBUtility\obj\Debug\MesWeb.DBUtility.dll
 E:\ZhongDe\MesCable\MesCable\DBUtility\obj\Debug\MesWeb.DBUtility.pdb
+E:\MesCable\DBUtility\bin\Debug\MesWeb.DBUtility.dll
+E:\MesCable\DBUtility\bin\Debug\MesWeb.DBUtility.pdb
+E:\MesCable\DBUtility\bin\Debug\MySql.Data.dll
+E:\MesCable\DBUtility\bin\Debug\System.Data.SQLite.DLL
+E:\MesCable\DBUtility\obj\Debug\DBUtility.csprojResolveAssemblyReference.cache
+E:\MesCable\DBUtility\obj\Debug\MesWeb.DBUtility.dll
+E:\MesCable\DBUtility\obj\Debug\MesWeb.DBUtility.pdb
+C:\Users\ychost\Desktop\MesCable\MesCable\DBUtility\bin\Debug\MesWeb.DBUtility.dll
+C:\Users\ychost\Desktop\MesCable\MesCable\DBUtility\bin\Debug\MesWeb.DBUtility.pdb
+C:\Users\ychost\Desktop\MesCable\MesCable\DBUtility\bin\Debug\MySql.Data.dll
+C:\Users\ychost\Desktop\MesCable\MesCable\DBUtility\bin\Debug\System.Data.SQLite.DLL
+C:\Users\ychost\Desktop\MesCable\MesCable\DBUtility\obj\Debug\DBUtility.csprojResolveAssemblyReference.cache
+C:\Users\ychost\Desktop\MesCable\MesCable\DBUtility\obj\Debug\MesWeb.DBUtility.dll
+C:\Users\ychost\Desktop\MesCable\MesCable\DBUtility\obj\Debug\MesWeb.DBUtility.pdb

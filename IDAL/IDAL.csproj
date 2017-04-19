@@ -125,6 +125,7 @@
     </Compile>
     <Compile Include="ISys_App.cs" />
     <Compile Include="ISys_Menu.cs" />
+    <Compile Include="IT_AllReport.cs" />
     <Compile Include="IT_Application.cs" />
     <Compile Include="IT_ApplicationItem.cs" />
     <Compile Include="IT_Authentic.cs" />

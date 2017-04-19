@@ -1,10 +1,26 @@
-﻿
+﻿/**  版本信息模板在安装目录下，可自行修改。
+* T_CurrentData.cs
+*
+* 功 能： N/A
+* 类 名： T_CurrentData
+*
+* Ver    变更日期             负责人  变更内容
+* ───────────────────────────────────
+* V0.01  2017/4/18 17:22:00   N/A    初版
+*
+* Copyright (c) 2012 Maticsoft Corporation. All rights reserved.
+*┌──────────────────────────────────┐
+*│　此技术信息为本公司机密信息，未经本公司书面同意禁止向第三方披露．　│
+*│　版权所有：动软卓越（北京）科技有限公司　　　　　　　　　　　　　　│
+*└──────────────────────────────────┘
+*/
 using System;
 using System.Data;
 using System.Text;
 using System.Data.SqlClient;
 using MesWeb.IDAL;
-using MES.DBUtility;//Please add references
+using MES.DBUtility;
+
 namespace MesWeb.SQLServerDAL
 {
 	/// <summary>
@@ -16,29 +32,6 @@ namespace MesWeb.SQLServerDAL
 		{}
 		#region  BasicMethod
 
-		/// <summary>
-		/// 得到最大ID
-		/// </summary>
-		public int GetMaxId()
-		{
-		return DbHelperSQL.GetMaxID("CurrentDataID", "T_CurrentData"); 
-		}
-
-		/// <summary>
-		/// 是否存在该记录
-		/// </summary>
-		public bool Exists(int CurrentDataID)
-		{
-			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select count(1) from T_CurrentData");
-			strSql.Append(" where CurrentDataID=@CurrentDataID");
-			SqlParameter[] parameters = {
-					new SqlParameter("@CurrentDataID", SqlDbType.Int,4)
-			};
-			parameters[0].Value = CurrentDataID;
-
-			return DbHelperSQL.Exists(strSql.ToString(),parameters);
-		}
 
 
 		/// <summary>
@@ -48,20 +41,21 @@ namespace MesWeb.SQLServerDAL
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("insert into T_CurrentData(");
-			strSql.Append("TaskID,SpecificationID,MachineID,MachineTypeID,EmployeeID_Main,EmployeeID_Assistant,Start_Axis_No,Axis_No,Printcode)");
+			strSql.Append("TaskID,SpecificationID,MachineID,MachineTypeID,EmployeeID_Main,EmployeeID_Assistant,Start_Axis_No,Axis_No,Printcode,MaterialRFID)");
 			strSql.Append(" values (");
-			strSql.Append("@TaskID,@SpecificationID,@MachineID,@MachineTypeID,@EmployeeID_Main,@EmployeeID_Assistant,@Start_Axis_No,@Axis_No,@Printcode)");
+			strSql.Append("SQL2012TaskID,SQL2012SpecificationID,SQL2012MachineID,SQL2012MachineTypeID,SQL2012EmployeeID_Main,SQL2012EmployeeID_Assistant,SQL2012Start_Axis_No,SQL2012Axis_No,SQL2012Printcode,SQL2012MaterialRFID)");
 			strSql.Append(";select @@IDENTITY");
 			SqlParameter[] parameters = {
-					new SqlParameter("@TaskID", SqlDbType.Int,4),
-					new SqlParameter("@SpecificationID", SqlDbType.Int,4),
-					new SqlParameter("@MachineID", SqlDbType.Int,4),
-					new SqlParameter("@MachineTypeID", SqlDbType.Int,4),
-					new SqlParameter("@EmployeeID_Main", SqlDbType.NVarChar,-1),
-					new SqlParameter("@EmployeeID_Assistant", SqlDbType.NVarChar,-1),
-					new SqlParameter("@Start_Axis_No", SqlDbType.NVarChar,-1),
-					new SqlParameter("@Axis_No", SqlDbType.NVarChar,50),
-					new SqlParameter("@Printcode", SqlDbType.NVarChar,50)};
+					new SqlParameter("SQL2012TaskID", SqlDbType.Int,4),
+					new SqlParameter("SQL2012SpecificationID", SqlDbType.Int,4),
+					new SqlParameter("SQL2012MachineID", SqlDbType.Int,4),
+					new SqlParameter("SQL2012MachineTypeID", SqlDbType.Int,4),
+					new SqlParameter("SQL2012EmployeeID_Main", SqlDbType.NVarChar,-1),
+					new SqlParameter("SQL2012EmployeeID_Assistant", SqlDbType.NVarChar,-1),
+					new SqlParameter("SQL2012Start_Axis_No", SqlDbType.NVarChar,-1),
+					new SqlParameter("SQL2012Axis_No", SqlDbType.NVarChar,50),
+					new SqlParameter("SQL2012Printcode", SqlDbType.NVarChar,50),
+					new SqlParameter("SQL2012MaterialRFID", SqlDbType.NVarChar,50)};
 			parameters[0].Value = model.TaskID;
 			parameters[1].Value = model.SpecificationID;
 			parameters[2].Value = model.MachineID;
@@ -71,6 +65,7 @@ namespace MesWeb.SQLServerDAL
 			parameters[6].Value = model.Start_Axis_No;
 			parameters[7].Value = model.Axis_No;
 			parameters[8].Value = model.Printcode;
+			parameters[9].Value = model.MaterialRFID;
 
 			object obj = DbHelperSQL.GetSingle(strSql.ToString(),parameters);
 			if (obj == null)
@@ -89,27 +84,29 @@ namespace MesWeb.SQLServerDAL
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("update T_CurrentData set ");
-			strSql.Append("TaskID=@TaskID,");
-			strSql.Append("SpecificationID=@SpecificationID,");
-			strSql.Append("MachineID=@MachineID,");
-			strSql.Append("MachineTypeID=@MachineTypeID,");
-			strSql.Append("EmployeeID_Main=@EmployeeID_Main,");
-			strSql.Append("EmployeeID_Assistant=@EmployeeID_Assistant,");
-			strSql.Append("Start_Axis_No=@Start_Axis_No,");
-			strSql.Append("Axis_No=@Axis_No,");
-			strSql.Append("Printcode=@Printcode");
-			strSql.Append(" where CurrentDataID=@CurrentDataID");
+			strSql.Append("TaskID=SQL2012TaskID,");
+			strSql.Append("SpecificationID=SQL2012SpecificationID,");
+			strSql.Append("MachineID=SQL2012MachineID,");
+			strSql.Append("MachineTypeID=SQL2012MachineTypeID,");
+			strSql.Append("EmployeeID_Main=SQL2012EmployeeID_Main,");
+			strSql.Append("EmployeeID_Assistant=SQL2012EmployeeID_Assistant,");
+			strSql.Append("Start_Axis_No=SQL2012Start_Axis_No,");
+			strSql.Append("Axis_No=SQL2012Axis_No,");
+			strSql.Append("Printcode=SQL2012Printcode,");
+			strSql.Append("MaterialRFID=SQL2012MaterialRFID");
+			strSql.Append(" where CurrentDataID=SQL2012CurrentDataID");
 			SqlParameter[] parameters = {
-					new SqlParameter("@TaskID", SqlDbType.Int,4),
-					new SqlParameter("@SpecificationID", SqlDbType.Int,4),
-					new SqlParameter("@MachineID", SqlDbType.Int,4),
-					new SqlParameter("@MachineTypeID", SqlDbType.Int,4),
-					new SqlParameter("@EmployeeID_Main", SqlDbType.NVarChar,-1),
-					new SqlParameter("@EmployeeID_Assistant", SqlDbType.NVarChar,-1),
-					new SqlParameter("@Start_Axis_No", SqlDbType.NVarChar,-1),
-					new SqlParameter("@Axis_No", SqlDbType.NVarChar,50),
-					new SqlParameter("@Printcode", SqlDbType.NVarChar,50),
-					new SqlParameter("@CurrentDataID", SqlDbType.Int,4)};
+					new SqlParameter("SQL2012TaskID", SqlDbType.Int,4),
+					new SqlParameter("SQL2012SpecificationID", SqlDbType.Int,4),
+					new SqlParameter("SQL2012MachineID", SqlDbType.Int,4),
+					new SqlParameter("SQL2012MachineTypeID", SqlDbType.Int,4),
+					new SqlParameter("SQL2012EmployeeID_Main", SqlDbType.NVarChar,-1),
+					new SqlParameter("SQL2012EmployeeID_Assistant", SqlDbType.NVarChar,-1),
+					new SqlParameter("SQL2012Start_Axis_No", SqlDbType.NVarChar,-1),
+					new SqlParameter("SQL2012Axis_No", SqlDbType.NVarChar,50),
+					new SqlParameter("SQL2012Printcode", SqlDbType.NVarChar,50),
+					new SqlParameter("SQL2012MaterialRFID", SqlDbType.NVarChar,50),
+					new SqlParameter("SQL2012CurrentDataID", SqlDbType.Int,4)};
 			parameters[0].Value = model.TaskID;
 			parameters[1].Value = model.SpecificationID;
 			parameters[2].Value = model.MachineID;
@@ -119,7 +116,8 @@ namespace MesWeb.SQLServerDAL
 			parameters[6].Value = model.Start_Axis_No;
 			parameters[7].Value = model.Axis_No;
 			parameters[8].Value = model.Printcode;
-			parameters[9].Value = model.CurrentDataID;
+			parameters[9].Value = model.MaterialRFID;
+			parameters[10].Value = model.CurrentDataID;
 
 			int rows=DbHelperSQL.ExecuteSql(strSql.ToString(),parameters);
 			if (rows > 0)
@@ -140,9 +138,9 @@ namespace MesWeb.SQLServerDAL
 			
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("delete from T_CurrentData ");
-			strSql.Append(" where CurrentDataID=@CurrentDataID");
+			strSql.Append(" where CurrentDataID=SQL2012CurrentDataID");
 			SqlParameter[] parameters = {
-					new SqlParameter("@CurrentDataID", SqlDbType.Int,4)
+					new SqlParameter("SQL2012CurrentDataID", SqlDbType.Int,4)
 			};
 			parameters[0].Value = CurrentDataID;
 
@@ -183,10 +181,10 @@ namespace MesWeb.SQLServerDAL
 		{
 			
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select  top 1 CurrentDataID,TaskID,SpecificationID,MachineID,MachineTypeID,EmployeeID_Main,EmployeeID_Assistant,Start_Axis_No,Axis_No,Printcode from T_CurrentData ");
-			strSql.Append(" where CurrentDataID=@CurrentDataID");
+			strSql.Append("select  top 1 CurrentDataID,TaskID,SpecificationID,MachineID,MachineTypeID,EmployeeID_Main,EmployeeID_Assistant,Start_Axis_No,Axis_No,Printcode,MaterialRFID from T_CurrentData ");
+			strSql.Append(" where CurrentDataID=SQL2012CurrentDataID");
 			SqlParameter[] parameters = {
-					new SqlParameter("@CurrentDataID", SqlDbType.Int,4)
+					new SqlParameter("SQL2012CurrentDataID", SqlDbType.Int,4)
 			};
 			parameters[0].Value = CurrentDataID;
 
@@ -251,6 +249,10 @@ namespace MesWeb.SQLServerDAL
 				{
 					model.Printcode=row["Printcode"].ToString();
 				}
+				if(row["MaterialRFID"]!=null)
+				{
+					model.MaterialRFID=row["MaterialRFID"].ToString();
+				}
 			}
 			return model;
 		}
@@ -261,7 +263,7 @@ namespace MesWeb.SQLServerDAL
 		public DataSet GetList(string strWhere)
 		{
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select CurrentDataID,TaskID,SpecificationID,MachineID,MachineTypeID,EmployeeID_Main,EmployeeID_Assistant,Start_Axis_No,Axis_No,Printcode ");
+			strSql.Append("select CurrentDataID,TaskID,SpecificationID,MachineID,MachineTypeID,EmployeeID_Main,EmployeeID_Assistant,Start_Axis_No,Axis_No,Printcode,MaterialRFID ");
 			strSql.Append(" FROM T_CurrentData ");
 			if(strWhere.Trim()!="")
 			{
@@ -281,7 +283,7 @@ namespace MesWeb.SQLServerDAL
 			{
 				strSql.Append(" top "+Top.ToString());
 			}
-			strSql.Append(" CurrentDataID,TaskID,SpecificationID,MachineID,MachineTypeID,EmployeeID_Main,EmployeeID_Assistant,Start_Axis_No,Axis_No,Printcode ");
+			strSql.Append(" CurrentDataID,TaskID,SpecificationID,MachineID,MachineTypeID,EmployeeID_Main,EmployeeID_Assistant,Start_Axis_No,Axis_No,Printcode,MaterialRFID ");
 			strSql.Append(" FROM T_CurrentData ");
 			if(strWhere.Trim()!="")
 			{
@@ -345,13 +347,13 @@ namespace MesWeb.SQLServerDAL
 		public DataSet GetList(int PageSize,int PageIndex,string strWhere)
 		{
 			SqlParameter[] parameters = {
-					new SqlParameter("@tblName", SqlDbType.VarChar, 255),
-					new SqlParameter("@fldName", SqlDbType.VarChar, 255),
-					new SqlParameter("@PageSize", SqlDbType.Int),
-					new SqlParameter("@PageIndex", SqlDbType.Int),
-					new SqlParameter("@IsReCount", SqlDbType.Bit),
-					new SqlParameter("@OrderType", SqlDbType.Bit),
-					new SqlParameter("@strWhere", SqlDbType.VarChar,1000),
+					new SqlParameter("SQL2012tblName", SqlDbType.VarChar, 255),
+					new SqlParameter("SQL2012fldName", SqlDbType.VarChar, 255),
+					new SqlParameter("SQL2012PageSize", SqlDbType.Int),
+					new SqlParameter("SQL2012PageIndex", SqlDbType.Int),
+					new SqlParameter("SQL2012IsReCount", SqlDbType.Bit),
+					new SqlParameter("SQL2012OrderType", SqlDbType.Bit),
+					new SqlParameter("SQL2012strWhere", SqlDbType.VarChar,1000),
 					};
 			parameters[0].Value = "T_CurrentData";
 			parameters[1].Value = "CurrentDataID";

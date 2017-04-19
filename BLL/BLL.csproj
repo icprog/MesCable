@@ -125,6 +125,7 @@
     </Compile>
     <Compile Include="Sys_App.cs" />
     <Compile Include="Sys_Menu.cs" />
+    <Compile Include="T_AllReport.cs" />
     <Compile Include="T_Application.cs" />
     <Compile Include="T_ApplicationItem.cs" />
     <Compile Include="T_Authentic.cs" />

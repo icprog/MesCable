@@ -1,0 +1,449 @@
+﻿@model  IEnumerable<MesWeb.ViewModel.Ocx.VM_JSTree>
+
+@section Style{
+    @Styles.Render("~/Content/jsTree")
+}
+
+<body>
+    <div id="login_user_tree">
+
+    </div>
+    @*login user  dialog*@
+    <div class="modal inmodal" id="login_user_modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content animated flipInY">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">登录设置</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal m-t" id="login_user_form">
+                        <div class="form-group" style="display:none">
+                            <label class="col-sm-3 control-label">UserID：</label>
+                            <div class="col-sm-8">
+                                <input name="UserID" required type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group" style="display:none">
+                            <label class="col-sm-3 control-label">EmployeeID：</label>
+                            <div class="col-sm-8">
+                                <input name="EmployeeID" required type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">账号：</label>
+                            <div class="col-sm-8">
+                                <input name="UserName" disabled="disabled" type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">密码：</label>
+                            <div class="col-sm-8">
+                                <input name="Password" required type="password" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">重复密码：</label>
+                            <div class="col-sm-8">
+                                <input name="RePassword" id="re_pwd" required type="password" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">允许登录：</label>
+                            <div class="col-sm-8" id="login_user_valid">
+                                <select required class="step1 form-control" name="IsValidate"></select>
+                            </div>
+                        </div>
+                    </form>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" id="sbt_login_user">提交</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    @*add user  dialog*@
+    <div class="modal inmodal" id="add_user_modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content animated flipInY">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">添加用户</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal m-t" id="add_user_form">
+                        <div class="form-group" style="display:none">
+                            <label class="col-sm-3 control-label">ID：</label>
+                            <div class="col-sm-8">
+                                <input name="UserID" required type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">登录帐号：</label>
+                            <div class="col-sm-8">
+                                <input name="UserName" required type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">员工：</label>
+                            <div class="col-sm-8" id="add_sel_emp">
+                                <select required class="step1 form-control" name="EmployeeID"></select>
+                            </div>
+                        </div>
+
+                    </form>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" id="add_user_sbt">提交</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    @*edit user  dialog*@
+    <div class="modal inmodal" id="edit_user_modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content animated flipInY">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">编辑用户</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal m-t" id="edit_user_form">
+                        <div class="form-group" style="display:none">
+                            <label class="col-sm-3 control-label">UserID：</label>
+                            <div class="col-sm-8">
+                                <input name="UserID" required type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">名称：</label>
+                            <div class="col-sm-8">
+                                <input name="UserName" required type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">员工：</label>
+                            <div class="col-sm-8" id="edit_sel_emp">
+                                <select required class="step1 form-control" name="EmployeeID"></select>
+                            </div>
+                        </div>
+
+                    </form>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" id="edit_user_sbt">提交</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+@section Footer{
+    @Scripts.Render("~/Scripts/jquery-md5")
+    @Scripts.Render("~/Scripts/jsTree")
+    @Scripts.Render("~/Scripts/cascadingdropdown")
+
+
+    <script>
+        $(function (mcAdmin){
+            var jsTreeData = @Html.Raw(Json.Encode(Model));
+            $('#login_user_tree').jstree({
+                'core': {
+                    'check_callback': true,
+                    'data':jsTreeData
+                },
+                'plugins': ['dnd', 'contextmenu'],
+                "contextmenu": {
+                    "items": {
+                        "create": null,
+                        "rename": null,
+                        "remove": null,
+                        "ccp": null,
+                        "editUser": {
+                            "label": "编辑用户",
+                            "action": function (data) {
+                                var inst = jQuery.jstree.reference(data.reference);
+                                var  node = inst.get_node(data.reference);
+                                if(node.id.indexOf("user") != -1){
+                                    var userId = node.id.split("_")[1];
+                                    editUser(node);
+                                }
+                            }
+                        },
+                        "addUser": {
+                            "label": "添加用户",
+                            "action": function (data) {
+                                var inst = jQuery.jstree.reference(data.reference);
+                                var  node = inst.get_node(data.reference);
+                                addUser(node);
+                            }
+                        },
+                        "deleteUser":{
+                            "label":"删除用户",
+                            "action":function(data){
+                                var inst = jQuery.jstree.reference(data.reference);
+                                var  node = inst.get_node(data.reference);
+                                if(node.id.indexOf("user") != -1){
+                                    deleteUser(node);
+                                }
+                            }
+                        },
+                        "changeLogin":{
+                            "label":"登录设置",
+                            "action":function(data){
+                                var inst = jQuery.jstree.reference(data.reference);
+                                var  node = inst.get_node(data.reference);
+                                if(node.id.indexOf("user") != -1){
+                                    loginUser(node);
+                                }
+                            }
+                        }
+
+
+                    }
+                }
+            });
+
+            $("#sbt_login_user").on("click",function(){
+                var user = serialForm("#login_user_form");
+                if(user.IsValidate == "1"){
+                    user.IsValidate = true;
+                }
+                if(user.Password.length > 15){
+                    swal({
+                        title: "抱歉！",
+                        text: "密码长度不能超过15位",
+                        type: "error",
+                    })
+                    return;
+                }
+                if(user.Password != user.RePassword){
+                    swal({
+                        title: "抱歉！",
+                        text: "密码不一致",
+                        type: "error",
+                    })
+                    return;
+                }
+
+                //对用户密码进行MD5加密
+                if(user.Password+"" != ""){
+                    user.Password = $.md5(user.Password);
+                }
+                $.post("/System/UpdateUserAction",{user:user},function(retData){
+                    mcAdmin.dealRetData(retData);
+                })
+            })
+
+            $("#add_user_sbt").on("click",function(){
+                var user = serialForm("#add_user_form");
+
+                if(user.UserName != null){
+                    $.post("/System/AddUserAction",{user:user},function(retData){
+                        mcAdmin.dealRetData(retData);
+                    })
+                }
+            })
+
+            $("#edit_user_sbt").on("click",function(){
+                var user = serialForm("#edit_user_form");
+                //console.log(user);
+                if(user.UserName != null){
+                    $.post("/System/UpdateUserAction",{user:user},function(retData){
+                        mcAdmin.dealRetData(retData);
+                    })
+                }
+            })
+            function loginUser(node){
+                var userId = node.id.split("_")[1];
+                resetForm("login_user_form","login_user_valid");
+                initValidCsd("login_user_valid",userId);
+
+                var userId = node.id.split("_")[1];
+                $.post("/System/GetUserPasswdAction/",{userId:userId},function(retData){
+                    mcAdmin.dealRetData(retData,function(){
+                        var user = retData.Appendix;
+                        $("#login_user_form").deserializeForm(user);
+                        $("#re_pwd").val(user.Password);
+                    })
+                })
+                $("#login_user_modal").modal();
+            }
+
+            function addUser(node){
+                resetForm("add_user_form","add_sel_emp");
+                initEmpCsd("add_sel_emp");
+                $("#add_user_modal").modal();
+            }
+
+            function editUser(node){
+                var userId = node.id.split("_")[1];
+                resetForm("edit_user_form","edit_sel_emp");
+                initEmpCsd("edit_sel_emp",userId);
+                // $("#edit_user_modal").modal();
+                $.post("/System/GetUserInfoAction",{userId:userId},function(retData){
+                    mcAdmin.dealRetData(retData,function(){
+                        var user = retData.Appendix;
+                        $("#edit_user_form").deserializeForm(user);
+                        $("#edit_user_modal").modal();
+                    })
+                },"json")
+            }
+
+            function deleteUser(node){
+                var userId = node.id.split("_")[1];
+                console.log(userId);
+                swal({
+                    title: "您确定要删除此用户吗",
+                    text: "删除后将无法恢复，请谨慎操作！",
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "删除",
+                    cancelButtonText: "取消",
+                    closeOnConfirm: false
+                }, function () {
+                    $.post("/System/DeleteUser",{userId,userId},function(retData){
+                        mcAdmin.dealRetData(retData);
+                    })
+                    })
+            }
+
+            function initEmpCsd(cscDiv,userId){
+                if(cscDiv.indexOf("#") != 0){
+                    cscDiv = "#"+cscDiv;
+                }
+
+                if(userId == null){
+                    $(cscDiv).cascadingDropdown({
+                        selectBoxes: [
+                            {
+                                selector: '.step1',
+                                source: "/System/GetEmployeeAction/",
+                                usePost: true,
+                                useJson: true
+                            }
+                        ],
+                        onChange: function (event, allValues) {
+
+                        }
+                    });
+                }else{
+                    $(cscDiv).cascadingDropdown({
+                        selectBoxes: [
+                            {
+                                selector: '.step1',
+                                source: "/System/GetSelEmployeeAction/"+userId,
+                                usePost: true,
+                                useJson: true
+                            }
+                        ],
+                        onChange: function (event, allValues) {
+
+                        }
+                    });
+                }
+
+            }
+
+            function initValidCsd(csdDiv,userId){
+                console.log("In")
+                if(csdDiv.indexOf("#") != 0){
+                    csdDiv = "#"+csdDiv;
+                }
+
+                if(userId == null){
+                    $(csdDiv).cascadingDropdown({
+                        selectBoxes: [
+                            {
+                                selector: '.step1',
+                                source: "/System/GetUserValidAction/",
+                                usePost: true,
+                                useJson: true
+                            }
+                        ],
+                    });
+                }else{
+                    $(csdDiv).cascadingDropdown({
+                        selectBoxes: [
+                            {
+                                selector: '.step1',
+                                source: "/System/GetSelUserValidAction/"+userId,
+                                usePost: true,
+                                useJson: true
+                            }
+                        ],
+
+                    })
+
+                }
+            }
+
+
+
+
+
+            function serialForm(form) {
+
+                /// <summary>
+                /// Serials the form data
+                /// </summary>
+                /// <param name="form">the form controller</param>
+                if (form.indexOf("#") < 0) {
+                    form = "#" + form;
+                }
+                var jsonObj = {};
+                $(form + "  input").each(function (i, v) {
+                    jsonObj[$(v).attr("name")] = $(v).val();
+                })
+                $(form + "  select").each(function (i, v) {
+                    jsonObj[$(v).attr("name")] = $(v).find("option:selected").val();
+                })
+                return jsonObj;
+
+            }
+
+            function resetForm(form) {
+                if(form.indexOf("#" != 0)){
+                    form  = "#" + form;
+                }
+                $(form + "  input").each(function (i, v) {
+                    $(v).val("");
+                });
+                $(form + "  select").each(function (i, v) {
+                    $(v).html("");
+                });
+                try {
+                    if(arguments.length > 1){
+                        for (var i = 1; i < arguments.length; i++) {
+                            var dp = arguments[i];
+                            if(arguments[i].indexOf("#") != 0){
+                                dp = "#" + dp;
+                            }
+                            $(dp).cascadingDropdown('destroy');
+                        }
+                    }
+                } catch (e) {
+                    console.log(e)
+                }
+            }
+
+
+        }(window.parent.mcAdmin))
+    </script>
+}

@@ -1,0 +1,30 @@
+﻿@model MesWeb.ViewModel.Promise.VM_Error_Info
+<body class="gray-bg">
+
+
+    <div class="middle-box text-center animated fadeInDown">
+        <h1>Sorry</h1>
+        <h3 class="font-bold">@Html.Raw(Model.ErrorMessage)</h3>
+
+        <div class="error-desc">
+           
+            <br />您可以返回@(Model.ReturnName)看看
+            <br /><button type="button" class="btn btn-primary" id="home_btn">主页</button>
+        </div>
+    </div>
+
+
+</body>
+
+@section Footer{
+  <script>
+      $(function (mcAdmin) {
+          mcAdmin.changeCurrentTab("@Model.Title");
+          $("#home_btn").on("click", function () {
+              mcAdmin.closeCurrentTab();
+
+              mcAdmin.addTab("@Model.ReturnName", "@Model.ReturnUrl");
+          })
+      }(window.parent.mcAdmin))
+    </script>
+    }

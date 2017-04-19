@@ -22,7 +22,7 @@ namespace MesWeb.ViewModel.Ocx {
         public string parentid { get; set; }
         public string topic { get; set; }
         public string direction { get; set; }
-        public JSMind_Data(string id,string parentid,string topic,object data,bool isroot = false,string direction = "left") {
+        public JSMind_Data(string id,string parentid,string topic,object data,bool isroot = false,string direction = "right") {
             this.id = id;
             this.parentid = parentid;
             this.topic = topic;
@@ -31,7 +31,7 @@ namespace MesWeb.ViewModel.Ocx {
             this.direction = direction;
         }
         public JSMind_Data() {
-
+            this.direction = "left";
         }
     }
 }

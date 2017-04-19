@@ -138,6 +138,7 @@ namespace MesWeb.ViewModel.Mes {
             rps.SheathMin = this.Std_SheathMin;
             rps.VerticalDia = this.Std_VerticalDia;
             rps.VoltageTest = this.Std_VoltageTest;
+           
             return rps;
         }
 
@@ -153,6 +154,7 @@ namespace MesWeb.ViewModel.Mes {
             this.CheckResult = rp.CheckResult;
             this.InputDate = rp.InputDate;
             this.Supplier = rp.Supplier;
+            this.Id = rp.Id;
         }
 
         public void updateReportStd(T_Report_Product_Standard psd) {

@@ -1,0 +1,443 @@
+ 【时间】:2017-02-21 10:40:51,914
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:TraceDetail
+ 【线程ID】: 6 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 435
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 444
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 444
+   在 WebUI.Controllers.QualityTraceController.TraceDetail(String Id) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 84
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-21 10:41:29,608
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:TraceDetail
+ 【线程ID】: 6 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 435
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 444
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 444
+   在 WebUI.Controllers.QualityTraceController.TraceDetail(String Id) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 84
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-21 10:41:32,127
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:TraceDetail
+ 【线程ID】: 7 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 435
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 444
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 444
+   在 WebUI.Controllers.QualityTraceController.TraceDetail(String Id) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 84
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-21 10:41:33,409
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:TraceDetail
+ 【线程ID】: 6 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 435
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 444
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 444
+   在 WebUI.Controllers.QualityTraceController.TraceDetail(String Id) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 84
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-21 10:42:20,554
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:TraceDetail
+ 【线程ID】: 7 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 435
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 444
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 444
+   在 WebUI.Controllers.QualityTraceController.TraceDetail(String Id) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 84
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-21 10:46:37,990
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 10 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.GetHisDataTableName(String year, String month, String machineTypeId) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 68
+   在 WebUI.Models.HisData.GetHisDataTableName() 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 54
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 28
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 363
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-21 10:49:38,753
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 26 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.GetHisDataTableName(String year, String month, String machineTypeId) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 68
+   在 WebUI.Models.HisData.GetHisDataTableName() 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 54
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 28
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 363
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-21 10:49:40,468
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 22 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.GetHisDataTableName(String year, String month, String machineTypeId) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 68
+   在 WebUI.Models.HisData.GetHisDataTableName() 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 54
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 28
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 363
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-21 10:49:45,280
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 20 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.GetHisDataTableName(String year, String month, String machineTypeId) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 68
+   在 WebUI.Models.HisData.GetHisDataTableName() 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 54
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 28
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 363
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-21 10:49:46,785
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 14 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.GetHisDataTableName(String year, String month, String machineTypeId) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 68
+   在 WebUI.Models.HisData.GetHisDataTableName() 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 54
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 28
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 363
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-21 10:51:34,438
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 26 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.GetHisDataTableName(String year, String month, String machineTypeId) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 68
+   在 WebUI.Models.HisData.GetHisDataTableName() 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 54
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 28
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 363
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-21 10:52:21,665
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:TraceDetail
+ 【线程ID】: 28 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 430
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 444
+   在 WebUI.Controllers.QualityTraceController.TraceDetail(String Id) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 84
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-21 10:52:22,856
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 20 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.GetHisDataTableName(String year, String month, String machineTypeId) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 68
+   在 WebUI.Models.HisData.GetHisDataTableName() 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 54
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 28
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 363
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-21 10:53:56,864
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:TraceDetail
+ 【线程ID】: 29 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 430
+   在 WebUI.Controllers.QualityTraceController.genMindStruct(String axisNumStr, String id, VM_JSMind& mind, String parentId, Boolean isRoot) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 444
+   在 WebUI.Controllers.QualityTraceController.TraceDetail(String Id) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 84
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-21 10:54:44,378
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 33 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.GetHisDataTableName(String year, String month, String machineTypeId) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 68
+   在 WebUI.Models.HisData.GetHisDataTableName() 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 54
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 28
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 363
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-21 10:54:47,348
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 32 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.GetHisDataTableName(String year, String month, String machineTypeId) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 68
+   在 WebUI.Models.HisData.GetHisDataTableName() 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 54
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 28
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 363
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-21 10:54:57,695
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 21 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.GetHisDataTableName(String year, String month, String machineTypeId) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 68
+   在 WebUI.Models.HisData.GetHisDataTableName() 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 54
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 28
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 363
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-21 10:54:58,779
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 33 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.GetHisDataTableName(String year, String month, String machineTypeId) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 68
+   在 WebUI.Models.HisData.GetHisDataTableName() 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 54
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 28
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 363
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-21 10:55:07,306
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 32 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.GetHisDataTableName(String year, String month, String machineTypeId) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 68
+   在 WebUI.Models.HisData.GetHisDataTableName() 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 54
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 28
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 363
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-21 10:55:10,035
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 33 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.GetHisDataTableName(String year, String month, String machineTypeId) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 68
+   在 WebUI.Models.HisData.GetHisDataTableName() 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 54
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 28
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 363
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-21 20:26:41,953
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 7 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.GetHisDataTableName(String year, String month, String machineTypeId) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 68
+   在 WebUI.Models.HisData.GetHisDataTableName() 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 54
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 28
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 363
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-21 20:33:14,025
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:TraceDetail
+ 【线程ID】: 7 
+ 【日志内容】:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Controllers.QualityTraceController.TraceDetail(String Id) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 84
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-21 20:33:20,927
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 7 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Incorrect syntax near '%'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 MesWeb.SQLServerDAL.T_AllReport.GetList(String strWhere) 位置 C:\Users\ychost\Desktop\MesCable\SQLServerDAL\T_AllReport.cs:行号 234
+   在 MesWeb.BLL.T_AllReport.GetModelList(String strWhere) 位置 C:\Users\ychost\Desktop\MesCable\BLL\T_AllReport.cs:行号 121
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 332
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-21 20:33:23,924
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 9 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Incorrect syntax near '%'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 MesWeb.SQLServerDAL.T_AllReport.GetList(String strWhere) 位置 C:\Users\ychost\Desktop\MesCable\SQLServerDAL\T_AllReport.cs:行号 234
+   在 MesWeb.BLL.T_AllReport.GetModelList(String strWhere) 位置 C:\Users\ychost\Desktop\MesCable\BLL\T_AllReport.cs:行号 121
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 332
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-21 20:34:15,887
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 7 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Incorrect syntax near '%'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 MesWeb.SQLServerDAL.T_AllReport.GetList(String strWhere) 位置 C:\Users\ychost\Desktop\MesCable\SQLServerDAL\T_AllReport.cs:行号 234
+   在 MesWeb.BLL.T_AllReport.GetModelList(String strWhere) 位置 C:\Users\ychost\Desktop\MesCable\BLL\T_AllReport.cs:行号 121
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-21 20:35:00,762
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 7 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.Exception: Incorrect syntax near '%'.
+   在 MES.DBUtility.DbHelperSQL.Query(String SQLString) 位置 C:\Users\ychost\Desktop\MesCable\DBUtility\DbHelperSQL.cs:行号 518
+   在 MesWeb.SQLServerDAL.T_AllReport.GetList(String strWhere) 位置 C:\Users\ychost\Desktop\MesCable\SQLServerDAL\T_AllReport.cs:行号 234
+   在 MesWeb.BLL.T_AllReport.GetModelList(String strWhere) 位置 C:\Users\ychost\Desktop\MesCable\BLL\T_AllReport.cs:行号 121
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-21 20:35:08,377
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 7 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.GetHisDataTableName(String year, String month, String machineTypeId)
+   在 WebUI.Models.HisData.GetHisDataTableName()
+   在 WebUI.Models.HisData..ctor(String axisNumStr)
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-21 20:35:19,969
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 7 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.GetHisDataTableName(String year, String month, String machineTypeId)
+   在 WebUI.Models.HisData.GetHisDataTableName()
+   在 WebUI.Models.HisData..ctor(String axisNumStr)
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-21 20:36:07,604
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 7 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.GetHisDataTableName(String year, String month, String machineTypeId)
+   在 WebUI.Models.HisData.GetHisDataTableName()
+   在 WebUI.Models.HisData..ctor(String axisNumStr)
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail)
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-21 20:44:08,761
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 11 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.GetHisDataTableName(String year, String month, String machineTypeId) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 68
+   在 WebUI.Models.HisData.GetHisDataTableName() 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 54
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 28
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 373
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-21 20:44:13,047
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 13 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.GetHisDataTableName(String year, String month, String machineTypeId) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 68
+   在 WebUI.Models.HisData.GetHisDataTableName() 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 54
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 28
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 373
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-21 20:44:28,082
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 10 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.GetHisDataTableName(String year, String month, String machineTypeId) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 68
+   在 WebUI.Models.HisData.GetHisDataTableName() 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 54
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 28
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 373
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-21 20:45:28,618
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 10 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.GetHisDataTableName(String year, String month, String machineTypeId) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 68
+   在 WebUI.Models.HisData.GetHisDataTableName() 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 54
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 28
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 373
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-21 20:55:37,660
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 9 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.GetHisDataTableName(String year, String month, String machineTypeId) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 68
+   在 WebUI.Models.HisData.GetHisDataTableName() 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 54
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 28
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 373
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-21 21:24:55,151
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 7 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.GetHisDataTableName(String year, String month, String machineTypeId) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 68
+   在 WebUI.Models.HisData.GetHisDataTableName() 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 54
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 28
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 373
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-21 21:25:40,109
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 19 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.GetHisDataTableName(String year, String month, String machineTypeId) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 68
+   在 WebUI.Models.HisData.GetHisDataTableName() 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 54
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 28
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 373
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-21 21:25:49,102
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 9 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.GetHisDataTableName(String year, String month, String machineTypeId) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 68
+   在 WebUI.Models.HisData.GetHisDataTableName() 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 54
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 28
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 373
+ 
+---------------------------------------------------------------------------------------------------------------
+ 【时间】:2017-02-21 21:25:50,362
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:GetProcDetail
+ 【线程ID】: 10 
+ 【日志内容】:查询轴号信息失败
+ 【日记详细】：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebUI.Models.HisData.GetHisDataTableName(String year, String month, String machineTypeId) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 68
+   在 WebUI.Models.HisData.GetHisDataTableName() 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 54
+   在 WebUI.Models.HisData..ctor(String axisNumStr) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Models\HistoryInfo.cs:行号 28
+   在 WebUI.Controllers.QualityTraceController.GetProcDetail(VM_ProcDetail procDetail) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 373
+ 
+---------------------------------------------------------------------------------------------------------------

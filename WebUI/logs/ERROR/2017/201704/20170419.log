@@ -1,0 +1,13 @@
+ 【时间】:2017-04-19 10:12:40,580
+ 【级别】:ERROR
+ 【类名】:WebUI.Controllers.QualityTraceController:SearchTraceBrefAction
+ 【线程ID】: 8 
+ 【日志内容】:System.ArgumentException: 列“MaterialRFID”不属于表 ds。
+   在 System.Data.DataRow.GetDataColumn(String columnName)
+   在 System.Data.DataRow.get_Item(String columnName)
+   在 MesWeb.SQLServerDAL.T_HistoryData.DataRowToModel(DataRow row) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\SQLServerDAL\T_HistoryData.cs:行号 102
+   在 MesWeb.BLL.T_HisMain.DataTableToList(DataTable dt) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\BLL\T_HistoryData.cs:行号 63
+   在 MesWeb.BLL.T_HisMain.GetModelList(String strWhere) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\BLL\T_HistoryData.cs:行号 51
+   在 WebUI.Controllers.QualityTraceController.SearchTraceBrefAction(VM_Trace_Search_Cond cond) 位置 C:\Users\ychost\Desktop\MesCable\MesCable\WebUI\Controllers\QualityTraceController.cs:行号 207
+ 【日记详细】： 
+---------------------------------------------------------------------------------------------------------------

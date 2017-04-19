@@ -40,3 +40,17 @@ E:\ZhongDe\MesCable\MesCable\IDAL\bin\Debug\MesWeb.Model.pdb
 E:\ZhongDe\MesCable\MesCable\IDAL\obj\Debug\IDAL.csprojResolveAssemblyReference.cache
 E:\ZhongDe\MesCable\MesCable\IDAL\obj\Debug\MesWeb.IDAL.dll
 E:\ZhongDe\MesCable\MesCable\IDAL\obj\Debug\MesWeb.IDAL.pdb
+E:\MesCable\IDAL\bin\Debug\MesWeb.IDAL.dll
+E:\MesCable\IDAL\bin\Debug\MesWeb.IDAL.pdb
+E:\MesCable\IDAL\bin\Debug\MesWeb.Model.dll
+E:\MesCable\IDAL\bin\Debug\MesWeb.Model.pdb
+E:\MesCable\IDAL\obj\Debug\IDAL.csprojResolveAssemblyReference.cache
+E:\MesCable\IDAL\obj\Debug\MesWeb.IDAL.dll
+E:\MesCable\IDAL\obj\Debug\MesWeb.IDAL.pdb
+C:\Users\ychost\Desktop\MesCable\MesCable\IDAL\bin\Debug\MesWeb.IDAL.dll
+C:\Users\ychost\Desktop\MesCable\MesCable\IDAL\bin\Debug\MesWeb.IDAL.pdb
+C:\Users\ychost\Desktop\MesCable\MesCable\IDAL\bin\Debug\MesWeb.Model.dll
+C:\Users\ychost\Desktop\MesCable\MesCable\IDAL\bin\Debug\MesWeb.Model.pdb
+C:\Users\ychost\Desktop\MesCable\MesCable\IDAL\obj\Debug\IDAL.csprojResolveAssemblyReference.cache
+C:\Users\ychost\Desktop\MesCable\MesCable\IDAL\obj\Debug\MesWeb.IDAL.dll
+C:\Users\ychost\Desktop\MesCable\MesCable\IDAL\obj\Debug\MesWeb.IDAL.pdb

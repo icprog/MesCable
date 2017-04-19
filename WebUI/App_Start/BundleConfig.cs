@@ -109,7 +109,7 @@ namespace WebUI.App_Start {
             bundles.Add(new StyleBundle(stylePreFix + "bootstrap-datepicker").Include(styleCssPath + "plugins/datapicker/datepicker3.css"));
             bundles.Add(new StyleBundle(stylePreFix + "icheck-square-green").Include(styleCssPath + "plugins/iCheck/skins/square/green.css"));
             bundles.Add(new StyleBundle(stylePreFix + "bootstrap-switch").Include(styleCssPath + "plugins/bootstrap-switch/bootstrap-switch.min.css"));
-
+            bundles.Add(new StyleBundle(stylePreFix + "material-table").Include("~/Content/material/material-table.css"));
 
 
 

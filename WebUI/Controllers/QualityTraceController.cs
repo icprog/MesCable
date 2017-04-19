@@ -26,6 +26,7 @@ using System.Web.Mvc;
 using WebUI.Models;
 using WebUI.Utils;
 using static WebUI.Controllers.LayoutBaseController;
+using System.Data;
 
 namespace WebUI.Controllers {
     /// <summary>
@@ -46,7 +47,6 @@ namespace WebUI.Controllers {
         public ActionResult Index() {
             return View();
         }
-
 
 
         public ActionResult TraceSearch() {
@@ -77,13 +77,58 @@ namespace WebUI.Controllers {
             return View();
         }
 
+        public ActionResult TraceDetail(string Id) {
+            var axisNumStr = Id;
+            VM_JSMind vmJsMind = new VM_JSMind();
+            try {
+                genMindStruct(axisNumStr.Trim(),"root",ref vmJsMind,isRoot: true);
+            } catch(Exception e) {
+            }
+
+            return View(vmJsMind);
+        }
+
+
+        public ActionResult MachineHistory(string id) {
+            var data = id.Split(new string[] { spliter },StringSplitOptions.None).ToList();
+            if(data.Count >= 2) {
+                var machineId = data[1];
+                var axisNum = data[0];
+            } else {
+
+            }
+            return View(data);
+        }
+
+        [HttpPost]
+        public JsonResult GetMahineHistoryDataAction(MesWeb.ViewModel.Mes.MahineHistoryQueryCond cond) {
+            var retData = new MesWeb.ViewModel.Promise.VM_Result_Data();
+            retData.Content = "获取机台历史数据失败，请联系管理员";
+
+            try {
+                var hisData = new HisData(cond.axisNum);
+                var bllHisData = new MesWeb.BLL.T_HisData(hisData.TableName);
+                //string querySql = "select * From  "+hisData.TableName + " where Axis_No = '" + cond.axisNum + " order by 'CollectedTime'";
+                var allData = bllHisData.GetModelList("Axis_No = '" + cond.axisNum + "' ORDER BY  'CollectedTime'");
+                retData.Appendix = allData;
+                var innerOdList = allData.Where(data => { return data.ParameterCodeID == (int)SPEC_PARAM_CODE.INNER_OD; }).ToList();
+
+                retData.Content = "加载成功";
+                retData.Code = RESULT_CODE.OK;
+
+
+            } catch(Exception e) {
+                retData.Content = e;
+            }
+
+            return new ConfigurableJsonResult { Data = retData,JsonRequestBehavior = JsonRequestBehavior.AllowGet };
+        }
+
         public static string SERACH_ASIX = "AXISNUM";
 
         [HttpPost]
         public JsonResult GetTraceDataAction(string axisNumStr) {
             var retData = new VM_Result_Data();
-            log = LogFactory.GetLogger(MethodBase.GetCurrentMethod().DeclaringType.FullName + ":" + MethodBase.GetCurrentMethod().Name);
-
             var vmJSMind = new VM_JSMind();
             var bllCodeUsed = new MesWeb.BLL.T_CodeUsed();
             var bllMachine = new MesWeb.BLL.T_Machine();
@@ -101,6 +146,144 @@ namespace WebUI.Controllers {
             return Json(retData);
         }
 
+
+        public ActionResult HalfProduct() {
+            return View();
+        }
+
+        //获取同一年的轴号数据集合
+        private List<List<MesWeb.Model.T_HisMain>> getSameYearData(DateTime? startTime,DateTime? endTime) {
+            var bllCodeUsed = new MesWeb.BLL.T_CodeUsed();
+            var usedCodeList = new List<MesWeb.Model.T_CodeUsed>();
+            var bllSpec = new MesWeb.BLL.T_Specification();
+            List<MesWeb.Model.T_HisMain> hisMainList = new List<MesWeb.Model.T_HisMain>();
+            var startMonth = startTime.Value.Month;
+            var endMonth = endTime.Value.Month;
+            List<List<MesWeb.Model.T_HisMain>> hisMainListArray = new List<List<MesWeb.Model.T_HisMain>>();
+            for(var i = startMonth;i <= endMonth;++i) {
+                var tableName = "HISMAIN" + startTime.Value.Year + i.ToString("00") + "5";
+                var bllHisMain = new MesWeb.BLL.T_HisMain(tableName);
+
+                var days = "";
+                //同一月
+                if(startMonth == endMonth) {
+                    for(var j = startTime.Value.Day;j <= endTime.Value.Day;++j) {
+                        days += j.ToString("00") + ",";
+                    }
+                    //不是同一月
+                } else {
+                    //起始月
+                    if(i == startMonth) {
+                        //遍历起始月
+                        for(var j = startTime.Value.Day;j <= 31;++j) {
+                            days += j.ToString("00") + ",";
+                        }
+                        //遍历终止月
+                    } else if(i == endMonth) {
+                        for(var j = 1;j <= endTime.Value.Day;++j) {
+                            days += j.ToString("00") + ",";
+                        }
+                        //遍历其它月
+                    } else {
+                        for(var j = 1;j <= 31;++j) {
+                            days += j.ToString("00") + ",";
+                        }
+                    }
+                }
+                days = "[" + days + "]";
+                //CP05 2017 04 14
+                hisMainList = bllHisMain.GetModelList("Axis_No like 'CP05" + startTime.Value.Year + i.ToString("00") + days + "%" + "'");
+                hisMainListArray.Add(hisMainList);
+            }
+            return hisMainListArray;
+        }
+
+        [HttpPost]
+        public JsonResult SearchTraceBrefAction(VM_Trace_Search_Cond cond) {
+            var retData = new VM_Result_Data();
+            retData.Content = "查询失败";
+            var brefList = new List<VM_Trace_Bref>();
+            try {
+
+                List<List<MesWeb.Model.T_HisMain>> hisMainListArray = new List<List<MesWeb.Model.T_HisMain>>();
+                var bllSpec = new MesWeb.BLL.T_Specification();
+               
+                if(cond.StartTime.HasValue && cond.EndTime.HasValue && cond.StartTime < cond.EndTime) {
+                    //同一年
+                    if(cond.StartTime.Value.Year == cond.EndTime.Value.Year) {
+                        var listArray = getSameYearData(cond.StartTime,cond.EndTime);
+                        hisMainListArray.AddRange(listArray);
+                        //不是同一年
+                    } else {
+                        for(var y = cond.StartTime.Value.Year;y <= cond.EndTime.Value.Year;++y) {
+                            List<List<MesWeb.Model.T_HisMain>> listArray = null;
+                            if(y == cond.StartTime.Value.Year) {
+                                listArray = getSameYearData(cond.StartTime,new DateTime(y,12,31));
+                            } else if(y == cond.EndTime.Value.Year) {
+                                listArray = getSameYearData(new DateTime(y,1,1),cond.EndTime);
+                            } else {
+                                listArray = getSameYearData(new DateTime(y,1,1),new DateTime(y,12,31));
+                            }
+
+                            hisMainListArray.AddRange(listArray);
+                        }
+                    }
+                }else if(!string.IsNullOrEmpty(cond.AxisNum)) {
+                    var axisNum = new HisMain(cond.AxisNum);
+                    var hisTabName = "HISMAIN" + axisNum.Year + axisNum.Month + axisNum.MachineTypeID.Trim();
+                    var bllHisMain = new MesWeb.BLL.T_HisMain(hisTabName);
+                    var hisMainList = bllHisMain.GetModelList("Axis_No like '%" + cond.AxisNum + "%'");
+                    hisMainListArray.Add(hisMainList);
+                }
+
+
+                hisMainListArray.ForEach(hlist => {
+                    //生成结果
+                    hlist.ForEach(h => {
+                        var bref = new VM_Trace_Bref();
+                        bref.SpecNum = "未录入";
+                        if(h.SpecificationID.HasValue) {
+                            var spec = bllSpec.GetModel(h.SpecificationID.Value);
+                            if(spec != null) {
+                                bref.SpecNum = spec.SpecificationName;
+                            }
+                        }
+                        bref.Axis_No = h.Axis_No.Replace(",","");
+                        var axisNum = new HisMain(h.Axis_No);
+                        bref.Date = axisNum.Year + "-" + axisNum.Month + "-" + axisNum.Day;
+
+                        bref.PrintCode = string.IsNullOrEmpty(h.Printcode) ? "未录入" : h.Printcode;
+                        bref.Detail = "<a  tabId=" + h.CurrentDataID + "  tabName = '" + axisNum.GetHisDataTableName() + "' axisNum='" + axisNum.AxisNumStr + "' onclick='showTraceDetail(this)'>详情</a>";
+
+                        brefList.Add(bref);
+                    });
+                });
+
+
+
+                if(brefList.Count > 0) {
+                    retData.Code = RESULT_CODE.OK;
+                    retData.Appendix = brefList;
+                    retData.Content = "查询成功";
+                }
+
+
+            } catch(Exception e) {
+                Console.WriteLine(e.ToString());
+            }
+            return Json(retData);
+        }
+
+
+        static class PrintCode {
+            public static string ParseToDate(string printCode) {
+
+                if(!printCode.ToUpper().StartsWith("ZD")) {
+                    return null;
+                }
+                return "20" + printCode.Substring(2,4);
+            }
+        }
 
         [HttpPost]
         public JsonResult GetTraceDataActionTest(string volNum) {
@@ -159,7 +342,7 @@ namespace WebUI.Controllers {
                     EmployeeName = "李云",
                     GeneratorTime = "2016-11-06",
                     Supplier = "中德电缆公司",
-                   
+
                 };
 
                 vmJsMind.data = new List<JSMind_Data> {
@@ -177,9 +360,11 @@ namespace WebUI.Controllers {
 
         [HttpPost]
         public JsonResult GetProcDetail(VM_ProcDetail procDetail) {
-            log = LogFactory.GetLogger(MethodBase.GetCurrentMethod().DeclaringType.FullName + ":" + MethodBase.GetCurrentMethod().Name);
             var retData = new VM_Result_Data();
-            procDetail.CertProduct = "<a href='javascript:void(0)' onclick='showCertProduct()'>成品证书</a> <a href='javascript:void(0)' onclick='showCertPlastic()'>塑料证书</a>";
+            if(procDetail == null) {
+                procDetail = new VM_ProcDetail();
+            }
+            //procDetail.CertProduct = "<a href='javascript:void(0)' onclick='showCertProduct()'>成品证书</a> <a href='javascript:void(0)' onclick='showCertPlastic()'>塑料证书</a>";
 
             var procDetailList = new List<VM_ProcDetail>();
             var bllMachine = new MesWeb.BLL.T_Machine();
@@ -188,24 +373,33 @@ namespace WebUI.Controllers {
             var bllCodeUsed = new MesWeb.BLL.T_CodeUsed();
             var bllAxis = new MesWeb.BLL.T_Axis();
             try {
-                var specID = procDetail.SpecificationID;
+                if(!string.IsNullOrEmpty(procDetail.Printcode)) {
+                    //var bllPd = new MesWeb.BLL.T_Report_Product();
+                    //var pd = bllPd.GetModelList("VolNum = '" + procDetail.Printcode + "'").FirstOrDefault();
+                    //if(pd != null) {
+                    //    procDetail.CertProduct += "<a id=" + pd.Id + " onclick='showRportProduct(this)'>成品表 , </a>";
+                    //} else {
+                    //    procDetail.CertProduct += "<a style='text-decoration:line-through'>未录入 , </a>";
 
-                //TODO 模拟数据
-                //specID = 1;
-                //  var spec = bllSpec.GetModel((int)specID);
-                //规格信息
-                var spec = new MesWeb.Model.T_Specification { SpecificationName = "规格",SpecificationColor = "黑色" };
+                    //}
+                    var bllAllReport = new MesWeb.BLL.T_AllReport();
+                    var productRp = bllAllReport.GetModelList("IndexValue like '" + procDetail.Printcode + "%'").FirstOrDefault();
+                    if(productRp != null) {
+                        procDetail.CertProduct += "<a id=" + productRp.Id + " onclick='showRportProduct(this)'>成品表 , </a>";
+                    }
 
-                procDetail.SpecName = spec.SpecificationName;
-                procDetail.SpecColor = spec.SpecificationColor;
-                //找到历史数据表
-                HisData hisData = new HisData(procDetail.Axis_No);
-                //查询OD的最值
-                var hisDs = DbHelperSQL.Query("SELECT MAX(CollectedValue) AS Max,MIN(CollectedValue) AS Min" +
-                            " FROM  " + hisData.TableName +
-                            " WHERE(ParameterCodeID = " + (int)SPEC_PARAM_CODE.OUTTER_OD + ") AND(Axis_No = '" + procDetail.Axis_No + "')" +
-                            " GROUP BY Axis_No");
+                }
+
+
                 try {
+                    //找到历史数据表
+                    HisData hisData = new HisData(procDetail.Axis_No);
+                    //查询OD的最值
+                    var hisDs = DbHelperSQL.Query("SELECT MAX(CollectedValue) AS Max,MIN(CollectedValue) AS Min" +
+                                " FROM  " + hisData.TableName +
+                                " WHERE(ParameterCodeID = " + (int)SPEC_PARAM_CODE.OUTTER_OD + ") AND(Axis_No = '" + procDetail.Axis_No + "')" +
+                                " GROUP BY Axis_No");
+
                     var hisRow = hisDs.Tables[0].Rows[0];
                     var odMax = hisRow["max"].ToString();
                     var odMin = hisRow["min"].ToString();
@@ -214,7 +408,7 @@ namespace WebUI.Controllers {
                 } catch {
 
                 }
-                procDetail.EmployeeName = procDetail.EmployeeID_Main;
+
                 //获取回溯信息
                 var axisInfo = bllAxis.GetModelList("Axis_No = '" + procDetail.Axis_No + "'").FirstOrDefault();
                 if(axisInfo != null) {
@@ -233,8 +427,19 @@ namespace WebUI.Controllers {
                 retData.Code = RESULT_CODE.OK;
                 TempData[SERACH_ASIX] = procDetail.Axis_No;
 
+                //规格
+                var specID = procDetail.SpecificationID;
+                if(specID.HasValue) {
+                    var certPls = "<a style='text-decoration:line-through'> 未录入</a>";
+                    procDetail.CertProduct += certPls;
+                    var spec = bllSpec.GetModel((int)specID);
+                    if(spec != null) {
+                        procDetail.SpecName = spec.SpecificationName;
+                        procDetail.SpecColor = spec.SpecificationColor;
+                    }
+                }
+
             } catch(Exception e) {
-                log.Error("查询轴号信息失败",e);
                 retData.Content = "查询失败，请联系管理员";
                 retData.Code = RESULT_CODE.OK;
                 retData.Appendix = procDetail;
@@ -245,12 +450,16 @@ namespace WebUI.Controllers {
             return Json(retData);
         }
 
+
+
         public VM_JSMind genMindStruct(string axisNumStr,string id,ref VM_JSMind mind,string parentId = "",bool isRoot = false) {
             if(string.IsNullOrEmpty(axisNumStr) || !HisMain.IsAxisNum(axisNumStr)) {
                 return null;
             }
             var bllMachine = new MesWeb.BLL.T_Machine();
             var bllMachineType = new MesWeb.BLL.T_MachineType();
+            var bllEmployee = new MesWeb.BLL.T_Employee();
+            var bllMaterial = new MesWeb.BLL.T_MaterialOutput();
 
 
             var axisNum = new HisMain(axisNumStr);
@@ -258,7 +467,23 @@ namespace WebUI.Controllers {
             var bllHisMain = new MesWeb.BLL.T_HisMain(hisTabName);
             var hisMain = bllHisMain.GetModelList("Axis_No = '" + axisNumStr + "'").FirstOrDefault();
             var machineType = bllMachineType.GetModel(int.Parse(axisNum.MachineTypeID));
-            var machine = bllMachine.GetModel(int.Parse(axisNum.MachineID));
+            var material = bllMaterial.GetModelList("MaterialRFID = '" + hisMain.MaterialRFID + "'").FirstOrDefault();
+
+            if(material != null) {
+                hisMain.SpecColor = material.Color;
+                hisMain.SpecName = material.MaterialType;
+                hisMain.Supplier = material.SupplyCompany;
+            }
+
+
+            var employeeCode = hisMain.EmployeeID_Main;
+            var employee = bllEmployee.GetModelList("EmployeeCode = '" + employeeCode + "'").FirstOrDefault();
+            if(employee != null) {
+                hisMain.EmployeeID_Main = employee.EmployeeName;
+
+            }
+            var machine = bllMachine.GetModel(hisMain.MachineID.Value);
+
             var node = new JSMind_Data();
 
 
@@ -332,6 +557,7 @@ namespace WebUI.Controllers {
         public string Day { get; set; }
         public string MachineID { get; set; }
         public string AxisNumStr { get; set; }
+
         /// <summary>
         /// 流水号
         /// </summary>
@@ -361,10 +587,14 @@ namespace WebUI.Controllers {
 
         private void init(string axisNumStr) {
             axisNumStr = axisNumStr.Trim();
-            if(!axisNumStr.StartsWith("CP") || axisNumStr.Length != 18) {
+            if(!axisNumStr.StartsWith("CP")) {
                 return;
             }
             try {
+                var machineIdStart = 12;
+                if(axisNumStr.Length == 19) {
+                    ++machineIdStart;
+                }
                 MachineTypeID = axisNumStr.Substring(2,2);
                 Year = axisNumStr.Substring(4,4);
                 Month = axisNumStr.Substring(8,2);
@@ -373,15 +603,15 @@ namespace WebUI.Controllers {
                     MachineTypeID = MachineTypeID.Substring(1);
                 }
 
-                MachineID = axisNumStr.Substring(12,2);
-                LSH = axisNumStr.Substring(14,4);
+                MachineID = axisNumStr.Substring(machineIdStart,3);
+                LSH = axisNumStr.Substring(machineIdStart + 3);
             } catch(Exception e) {
                 throw e;
             }
         }
 
         public static bool IsAxisNum(string axisNumStr) {
-            if(!axisNumStr.StartsWith("CP") || axisNumStr.Length != 18) {
+            if(!axisNumStr.StartsWith("CP")) {
                 return false;
             }
             return true;

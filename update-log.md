@@ -1,7 +1,13 @@
 ## <center>   更新日志  </center>
 
+#### 2017-04-18
+
+1. 修复质量回溯的查询条件以及人员信息
+
+   ​
 
 #### 2016-11-28
+
 1.修改数据库 T_Employee 添加字段 isDeleted [bool]
 
 2.添加表 T_Employee_DeleteBak 和 T_Employee 的结构是一样的
@@ -18,7 +24,7 @@
 1.基本完成用户系统
 
 #### 2016-11-06
-1. 完成了纠结好多天的部署问题
+1.  完成了纠结好多天的部署问题
     1. 安装 .net 4.5
     2. 注册 .net 到 IIS
        >   C:\Windows\Microsoft.NET\Framework<font color="red">64</font>\v4.0.30319 执行 aspnet_iis -i
@@ -29,7 +35,7 @@
    <system.webServer> 
         <modules runAllManagedModulesForAllRequests="true" /> 
   </system.webServer>
-``` 
+```
 
 
 #### 2016-10-29
@@ -61,7 +67,7 @@
 
 3. 设置曲线添加曲线的时候不删除原先的数据
 
-	> 还以为会画很长时间解决，原来设置addPoint(point,false)，false 为 shift 所赋值的对象，然后 chart.reDraw 就行
+   > 还以为会画很长时间解决，原来设置addPoint(point,false)，false 为 shift 所赋值的对象，然后 chart.reDraw 就行
 
 4. 移除曲线初始化的时候添加的随机数
 
@@ -71,7 +77,7 @@
 
 7. 重拟服务器推送的关系
 
-	> Web 1:------>N: MachineID 即使从原来的 Dictionary< string,int> ---> Dictionary< int,List< string>>极大地降低了内存开销和运算量
+   > Web 1:------>N: MachineID 即使从原来的 Dictionary< string,int> ---> Dictionary< int,List< string>>极大地降低了内存开销和运算量
 
 8. 设置曲线 X 轴的精度为 500ms
 
@@ -157,32 +163,32 @@
 
 2. 添加表 T_SensorModule
 
-2. 将 T_LayoutPicture 与 T_Machine 和 T_SensorModule 等表单联系起来了
+3. 将 T_LayoutPicture 与 T_Machine 和 T_SensorModule 等表单联系起来了
 
 4. 修复 HOME 键的功能
 
 #### 2016-09-14
 
-1. 完成项目施工
+1.  完成项目施工
 
     > 修改标志简介的css样式
 
     > 添加标志样式按键置顶效果
 
-2. 修复日志数据只写 TXT 而不写 SQL 的 BUG
+2.  修复日志数据只写 TXT 而不写 SQL 的 BUG
 
 #### 2016-09-12
 
-1. 添加 Log4net 日志插件
+1.  添加 Log4net 日志插件
 
     > 同时具备输出到文件和数据库的能力
 
 #### 2016-09-11
 
-1. 完成菜单管理界面 V1.0
+1.  完成菜单管理界面 V1.0
 
     > 有时间推出 2.0 弃用 MenuLevel 字段，自适应分组，可以拖动排序等等功能
-    
+
     > 修改菜单顺序还有 <font color="red">BUG</font>
 
 #### 2016-09-10
@@ -204,13 +210,13 @@
 
 #### 2016-09-02
 
-1. 修复 `LayoutPicture` 的点在点击的时候会出现全选状态
+1.  修复 `LayoutPicture` 的点在点击的时候会出现全选状态
 
     > 添加了 CSS 属性 `user-select: none`
 
-2. 添加 `mcAdmin.addTab(tabName,tabUrl)` API
+2.  添加 `mcAdmin.addTab(tabName,tabUrl)` API
 
-3. 修复 `hotspotOfflineClass` 判别问题
+3.  修复 `hotspotOfflineClass` 判别问题
 
 #### 2016-09-01
 
@@ -300,11 +306,11 @@
 
 1. 数据库调试通过
 
-1. 三层架构调试通过
+2. 三层架构调试通过
 
-2. 菜单项架构成功
+3. 菜单项架构成功
 
-3. 实现利用 `JRaw` 传递在 JSON 中传递函数
+4. 实现利用 `JRaw` 传递在 JSON 中传递函数
 
 
 #### 2016-08-17

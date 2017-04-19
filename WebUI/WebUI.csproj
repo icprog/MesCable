@@ -312,6 +312,7 @@
     <Content Include="Content\css\style.css" />
     <Content Include="Content\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\material\material-table.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -937,6 +938,7 @@
     <Content Include="Scripts\lib\plugins\webuploader\webuploader.withoutimage.js" />
     <Content Include="Scripts\lib\plugins\webuploader\webuploader.withoutimage.min.js" />
     <Content Include="Scripts\lib\welcome.js" />
+    <Content Include="Scripts\material\material-table.js" />
     <Content Include="Scripts\system\menuConf.js" />
     <Content Include="UploadFile\Images\20160928164552.jpg" />
     <Content Include="UploadFile\Images\20160928165128.jpg" />
@@ -968,6 +970,7 @@
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\BasicDataController.cs" />
+    <Compile Include="Controllers\config.cs" />
     <Compile Include="Controllers\DataInputController.cs" />
     <Compile Include="Controllers\DataSearchController.cs" />
     <Compile Include="Controllers\ErrorHandlerController.cs" />
@@ -979,6 +982,7 @@
     <Compile Include="Controllers\LayoutBaseController.cs" />
     <Compile Include="Controllers\LogAdminController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\MaterialController.cs" />
     <Compile Include="Controllers\OnlineDataController.cs" />
     <Compile Include="Controllers\ProjectAdminController.cs" />
     <Compile Include="Controllers\QualityCheckAdminController.cs" />
@@ -1109,6 +1113,14 @@
     <Content Include="Views\DataInput\ProductTest.cshtml" />
     <Content Include="Views\DataInput\PlasticTest.cshtml" />
     <Content Include="Views\DataInput\ProductDetail.cshtml" />
+    <Content Include="Views\DataInput\PlasticDetail.cshtml" />
+    <Content Include="Views\Material\GumReportAdd.cshtml" />
+    <Content Include="Views\Material\ProductReportAdd.cshtml" />
+    <Content Include="Views\Material\GumReportSearch.cshtml" />
+    <Content Include="Views\Material\GumReportDetail.cshtml" />
+    <Content Include="Views\Material\ProductReportSearch.cshtml" />
+    <Content Include="Views\Material\ProductReportDetail.cshtml" />
+    <Content Include="Views\Material\TrialReportAdd.cshtml" />
     <None Include="Views\OnlineData\MachineLayout.cshtml.bak2" />
     <Content Include="Views\BasicData\Machine.cshtml" />
     <None Include="Views\OnlineData\MachineLayout.cshtml.bak" />
@@ -1221,6 +1233,9 @@
     <Content Include="Views\BasicData\ParamUnit.cshtml" />
     <Content Include="Views\System\UserConf.cshtml" />
     <Content Include="Views\StoreMgmt\MaterialSearch.cshtml" />
+    <Content Include="Views\QualityTrace\TraceDetail.cshtml" />
+    <Content Include="Views\QualityTrace\HalfProduct.cshtml" />
+    <Content Include="Views\QualityTrace\MachineHistory.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
