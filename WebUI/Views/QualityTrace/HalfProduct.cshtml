@@ -25,7 +25,7 @@
                             <label class="col-sm-2 control-label" style="text-align:right; padding-right:0px;margin-top:8px">轴号：</label>
                             <div class="col-sm-7">
                                 <div class="input-group" style="margin-left:2px">
-                                    <input type="text" id="axis_input" value="CP0420161106040001" class="form-control">
+                                    <input type="text" id="axis_input" value="" class="form-control">
                                     <div class="input-group-btn">
                                         @*<button type="button" class="btn btn-white dropdown-toggle" data-toggle="dropdown">
                                                 <span class="caret"></span>
@@ -133,7 +133,7 @@
             var $link = $(link);
             var id = $link.attr("id");
             console.log(id);
-            mcAdmin.addTab("成品证书", "/DataInput/ProductDetail/" + id);
+            mcAdmin.addTab("成品证书", "/DataInput/MachineHistory/" + id);
 
         }
 
@@ -145,10 +145,12 @@
             mcAdmin.addTab("物料证书", "/DataInput/PlasticDetail/" + id);
         }
 
-        function viewHisMachine(div) {
-            var machineId = $(div).attr("machineId");
-            var axisNum = $(div).attr("axisNum");
-            mcAdmin.addTab("历史数据", "/HistoryData/MachineLayout/"+machineId);
+        function viewHisMachine(aLink) {
+            aLink = $(aLink);
+            var axisNum = aLink.attr("axisnum");
+            var machineId = aLink.attr("machineid");
+            var id = axisNum + ",_," + machineId;
+            window.parent.mcAdmin.addTab("历史数据", "/QualityTrace/MachineHistory/" + id);
         }
 
         function showCertProduct() {

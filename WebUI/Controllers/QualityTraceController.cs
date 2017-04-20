@@ -207,7 +207,7 @@ namespace WebUI.Controllers {
 
                 List<List<MesWeb.Model.T_HisMain>> hisMainListArray = new List<List<MesWeb.Model.T_HisMain>>();
                 var bllSpec = new MesWeb.BLL.T_Specification();
-               
+
                 if(cond.StartTime.HasValue && cond.EndTime.HasValue && cond.StartTime < cond.EndTime) {
                     //同一年
                     if(cond.StartTime.Value.Year == cond.EndTime.Value.Year) {
@@ -228,7 +228,7 @@ namespace WebUI.Controllers {
                             hisMainListArray.AddRange(listArray);
                         }
                     }
-                }else if(!string.IsNullOrEmpty(cond.AxisNum)) {
+                } else if(!string.IsNullOrEmpty(cond.AxisNum)) {
                     var axisNum = new HisMain(cond.AxisNum);
                     var hisTabName = "HISMAIN" + axisNum.Year + axisNum.Month + axisNum.MachineTypeID.Trim();
                     var bllHisMain = new MesWeb.BLL.T_HisMain(hisTabName);
@@ -465,10 +465,15 @@ namespace WebUI.Controllers {
             var axisNum = new HisMain(axisNumStr);
             var hisTabName = "HISMAIN" + axisNum.Year + axisNum.Month + axisNum.MachineTypeID.Trim();
             var bllHisMain = new MesWeb.BLL.T_HisMain(hisTabName);
-            var hisMain = bllHisMain.GetModelList("Axis_No = '" + axisNumStr + "'").FirstOrDefault();
+            var hisMain = bllHisMain.GetModelList("Axis_No like '%" + axisNumStr + "%'").FirstOrDefault();
+            if(hisMain == null) {
+                return null;
+            }
             var machineType = bllMachineType.GetModel(int.Parse(axisNum.MachineTypeID));
-            var material = bllMaterial.GetModelList("MaterialRFID = '" + hisMain.MaterialRFID + "'").FirstOrDefault();
-
+            MesWeb.Model.T_MaterialOutput material = null;
+            if(hisMain != null) {
+                material = bllMaterial.GetModelList("MaterialRFID = '" + hisMain.MaterialRFID + "'").FirstOrDefault();
+            }
             if(material != null) {
                 hisMain.SpecColor = material.Color;
                 hisMain.SpecName = material.MaterialType;

@@ -32,25 +32,25 @@
                 <div class="panel-heading">
                     <i class="fa fa-info-circle"></i> 历史数据
                 </div>
-                <div class="panel-body" >
-                    <span class="maxTitle">皮厚: <span id="skin_thick_max"></span>mm<span class="minRemark">（最大）</span></span><br />
-                    <span class="maxTitle"><span style="visibility:hidden">皮厚: </span><span id="skin_thick_min"></span>mm<span class="minRemark">（最小）</span></span><br />
+                <div class="panel-body">
+                    <span class="maxTitle">皮厚: <span id="skin_thick_max" style="color:blue"></span>mm<span class="minRemark">（最大）</span></span><br />
+                     <span class="maxTitle"><span style="visibility:hidden">皮厚: </span><span id="skin_thick_min" style="color:blue"></span>mm<span class="minRemark">（最小）</span></span><br />
                     <hr />
-                    <span class="maxTitle">凹凸: <span id="aotu"></span></span><br />
+                    <span class="maxTitle">凹凸: <span id="aotu" style="color:darkgreen"></span></span><br />
                     <hr />
-                    <span class="maxTitle">报警: 无</span><br />
-                    <span class="maxTitle">火花: <span id="fire"></span></span>
+                    <span class="maxTitle">报警: <span style="color:orange">无</span></span><br />
+                    <span class="maxTitle">火花: <span id="fire" style="color:red"></span></span>
                     <hr />
                 </div>
 
             </div>
-          
+
         </div>
     </div>
 </body>
 
 @section Footer{
-@Scripts.Render("~/Scripts/highstock")
+    @Scripts.Render("~/Scripts/highstock")
     <script>
         var searchArray = @Html.Raw(Json.Encode(Model));
         var specCode = {};
@@ -65,42 +65,80 @@
         cond.axisNum = searchArray[0];
         cond.machineId = searchArray[1];
 
+
+
         $(function(mcAdmin){
             //highcharts时差问题
             Highcharts.setOptions({ global: { useUTC: false } });
-           
+            //将重复的时间往后移一秒
+            function uniqueTime(data){
+                var uniqueHash = {};
+                var uniqueData = [];
+                function unique(element){
+                    var timeP = "p"+element[0];
+                    if(uniqueHash[timeP] != true){
+                        uniqueData.push(element);
+                        uniqueHash[timeP] = true;
+                    }else{
+                        element[0] += 1000;
+                        unique(element);
+                    }
+
+                }
+                for(var i =0;i<data.length;++i){
+                    unique(data[i]);
+                }
+                return uniqueData;
+            }
             $.post("/QualityTrace/GetMahineHistoryDataAction/",{cond:cond},function(retData){
                 mcAdmin.dealRetData(retData,function(){
                     var  allData = retData.Appendix;
                     var  numRegexp = /\d+\.?\d/;
 
                     allData.map(data=>{
-                        data.CollectedTime = +data.CollectedTime.match(numRegexp)[0];
                         try{
+                            data.CollectedTime = +data.CollectedTime.match(numRegexp)[0];
                             data.CollectedValue=+data.CollectedValue;
                         }catch(e){
-                            console.error(data.CollectedValue)
+                            swal({
+                                title:"数据出错",
+                                text:"该机台数据没有记录，或者出现异常",
+                                type:"error",
+                                showConfirmButton:true,
+                                confirmButtonText:"确定"
+                            },function(isConfirm){
+                                console.log("in");
+                            })
                         }
-                        return data; 
+                        return data;
                     })
                     var outterOd = getSpecParamData(allData, specCode.outterOd);
                     var innerOd = getSpecParamData(allData,specCode.innerOd);
-                    console.log("innerOd",innerOd);
-                    console.log("outterOd",outterOd)
                     var aotu = getSpecParamData(allData,specCode.aotu).pop();
                     var fire = getSpecParamData(allData,specCode.fire).length;
-                    $("#fire").html(fire+"次");
-                   
-                    $("#aotu").html(aotu.CollectedValue);
-                    $("#skin_thick_max").html(clacThick(outterOd,innerOd).max)
-                    $("#skin_thick_min").html(clacThick(outterOd,innerOd).min)
-                     
+                    try{
+                        $("#fire").html(fire+"次");
+                        $("#aotu").html(aotu.CollectedValue);
+                        $("#skin_thick_max").html(clacThick(outterOd,innerOd).max)
+                        $("#skin_thick_min").html(clacThick(outterOd,innerOd).min)
+                    }catch(e){
+                        swal({
+                            title:"数据出错",
+                            text:"该机台数据没有记录，或者出现异常",
+                            type:"error",
+                            showConfirmButton:true,
+                            confirmButtonText:"确定"
+                        },function(isConfirm){
+                            mcAdmin.closeCurrentTab(); 
+                        })
+                    }
                     var outterChartData  = [];
                     outterOd.forEach(data=>{
                         outterChartData.push([data.CollectedTime,data.CollectedValue]);
                     })
-                    console.log(outterChartData[0])
-                    chartOd = initChartPline({maxValue:20,minValue:-10,symbol:'mm',title:"外径值"},"chart_od",[{
+                    outterChartData = uniqueTime(outterChartData);
+                    console.log(outterChartData.length);
+                    chartOd = initChartPline({maxValue:20,minValue:0,symbol:'mm',title:"外径值"},"chart_od",[{
                         name:"外径值",
                         data:outterChartData,
                         tooltip:{
@@ -117,7 +155,7 @@
                 var maxValue = p.maxValue;
                 var minValue = p.minValue;
                 var valueSuffix = p.symbol;
-  
+
 
                 return new Highcharts.StockChart({
                     chart : {
@@ -149,7 +187,7 @@
                         title: {
                             text: valueSuffix
                         },
-                  
+
                         tickInterval: 2,
                     },
                     xAxis:{
@@ -213,9 +251,8 @@
                 var outterLimit = {};
                 var innerLimit = {};
                 try{
-                    errorMark = "外径值出错"
+                    errorMark = "数据异常"
                     outterLimit = getLimitCollected(outterOd);
-                    errorMark = "内径值出错"
                     innerLimit = getLimitCollected(innerOd);
 
                 }catch(e){
