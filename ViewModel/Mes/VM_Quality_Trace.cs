@@ -11,6 +11,7 @@ namespace MesWeb.ViewModel.Mes {
         public string SpecNum { get; set; }
         public string PrintCode { get; set; }
         public string AxisNum { get; set; }
+        public string MachineType { get; set; }
     }
 
     public class VM_Trace_Bref {

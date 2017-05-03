@@ -41,7 +41,15 @@
             aLink  =$(aLink);
             var axisNum = aLink.attr("axisnum");
             var machineId = aLink.attr("machineid");
-            var id = axisNum + ",_,"+machineId;
+            var axisColor = aLink.attr("axisColor");
+            var printCode = aLink.attr("printCode");
+            var machineName = aLink.attr("machineName");
+            var splitor = ",_,";
+            var id = axisNum + splitor
+                     +machineId+splitor
+                     +machineName+splitor
+                     +axisColor+splitor
+                     +printCode
             window.parent.mcAdmin.addTab("历史数据", "/QualityTrace/MachineHistory/"+id);
 
         }

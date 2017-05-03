@@ -14,7 +14,10 @@
 
 /// <var>The  admin overall object</var>
 var mcAdmin = {};
+
 (function ($, mcAdmin) {
+
+
     /// <summary>
     /// 
     /// </summary>
@@ -83,7 +86,7 @@ var mcAdmin = {};
         } else {
             swal({
                 title: "抱歉！",
-                text: retData.Content+"" != "" ?retData.Content:"网络异常",
+                text: retData.Content + "" != "" ? retData.Content : "网络异常",
                 type: "error",
             }, function () {
                 if (typeof errorFunc == "function") {

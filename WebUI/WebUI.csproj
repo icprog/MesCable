@@ -25,7 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <TypeScriptToolsVersion>1.8</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>2.1</TypeScriptToolsVersion>
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -1236,6 +1236,7 @@
     <Content Include="Views\QualityTrace\TraceDetail.cshtml" />
     <Content Include="Views\QualityTrace\HalfProduct.cshtml" />
     <Content Include="Views\QualityTrace\MachineHistory.cshtml" />
+    <Content Include="Views\QualityTrace\HalfSearch.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

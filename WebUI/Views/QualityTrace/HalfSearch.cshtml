@@ -1,0 +1,171 @@
+﻿@section Style{
+    @Styles.Render("~/Content/jsmind")
+    @Styles.Render("~/Content/bootstrap-table")
+    @Styles.Render("~/Content/bootstrap-datepicker")
+
+
+
+
+}
+
+@section Header{
+    <style type="text/css">
+        #proc_jsmind {
+            height: 400px;
+        }
+
+        .top-label {
+            text-align: right;
+            padding-right: 0px;
+            margin-top: 8px;
+        }
+
+        .form-group {
+            margin-left: 20px !important;
+        }
+    </style>}
+<body class="gray-bg">
+
+    <div class="row">
+
+        <div class="col-sm-12" id="qt_picture">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <form role="form" class="form-inline" id="search_cond">
+                                <div class="form-group">
+                                    <label>工序：</label>
+                                    <select class="form-control" name="MachineType" id="machine_type">
+                                        <option value="1">导体绞合</option>
+                                        <option value="2">挤绝缘</option>
+                                        <option value="3">成缆</option>
+                                        <option value="4">编织机</option>
+                                        <option value="5">挤护套</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>开始时间：</label>
+                                    <div class="input-group date" style="z-index:9999">
+                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                        <input name="StartTime" type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>结束时间：</label>
+                                    <div class="input-group date" style="z-index:9999">
+                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                        <input name="EndTime" type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>轴号：</label>
+                                    <input type="text" id="axis_input" value="" name="AxisNum" class="form-control">
+
+                                </div>
+                                <div class="form-group">
+                                    <button type="button" class="btn btn-white" id="axis_btn">
+                                        <span class="fa fa-search"></span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row " style="background-color:white">
+            <div class="col-sm-12">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <i class="fa fa-info-circle"></i> 详情
+                    </div>
+                    <div class="panel-body" style="padding:initial">
+                        <div class="container" style="width:100%">
+                            <table id="qt_bref_table"></table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+@section Footer{
+    @Scripts.Render("~/Scripts/bootstrap-table")
+    @Scripts.Render("~/Scripts/bootstrap-datepicker")
+    <script type="text/javascript">
+        
+        var $brefTable = $("#qt_bref_table");
+
+        var mcAdmin = window.parent.mcAdmin;
+        function showTraceDetail(link) {
+            var mcAdmin = window.parent.mcAdmin;
+            var $link = $(link);
+            var tabName = $link.attr("tabname");
+            var tabId = $link.attr("tabid");
+            var axisNum = $link.attr("axisnum");
+            mcAdmin.addTab("回溯详情", "/QualityTrace/TraceDetail/" + axisNum);
+
+
+        }
+        $(function () {
+            $('.input-group.date').datepicker({
+                todayBtn: "linked",
+                keyboardNavigation: false,
+                forceParse: false,
+                calendarWeeks: true,
+                autoclose: true
+            })
+            var $detailTable = $('#qt_detail_table');
+            $("#axis_btn").on("click", function () {
+                var axisNumStr = $("#axis_input").val();
+                var cond = $("#search_cond").serializeForm();
+                $.post("SearchTraceBrefAction", { cond, cond }, function (retData) {
+                    mcAdmin.dealRetData(retData, function () {
+                        $brefTable.bootstrapTable("load", retData.Appendix);
+
+                    })
+                })
+            })
+            function autoTableIndex(value, row, index) {
+                return index + 1;
+            }
+            $brefTable.bootstrapTable({
+                columns: [{
+                    formatter: autoTableIndex,
+                    title: '序号'
+                }, {
+                    field: 'Date',
+                    title: '时间'
+                }, {
+                    field: 'Axis_No',
+                    title: '轴号'
+                }, {
+                    field: 'PrintCode',
+                    title: '成品盘号'
+                },
+                 {
+                     field: 'Detail',
+                     title: '详细'
+                 }
+                ]
+
+            })
+        }())
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+}

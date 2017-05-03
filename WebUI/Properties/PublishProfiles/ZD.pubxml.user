@@ -67,10 +67,10 @@
       <publishTime>04/18/2017 17:54:44</publishTime>
     </File>
     <File Include="bin/MesWeb.DBUtility.dll">
-      <publishTime>04/18/2017 17:54:14</publishTime>
+      <publishTime>05/03/2017 15:50:19</publishTime>
     </File>
     <File Include="bin/MesWeb.DBUtility.pdb">
-      <publishTime>04/18/2017 17:54:14</publishTime>
+      <publishTime>05/03/2017 15:50:19</publishTime>
     </File>
     <File Include="bin/MesWeb.IDAL.dll">
       <publishTime>04/18/2017 17:54:16</publishTime>
@@ -79,10 +79,10 @@
       <publishTime>04/18/2017 17:54:16</publishTime>
     </File>
     <File Include="bin/MesWeb.Model.dll">
-      <publishTime>04/18/2017 17:54:11</publishTime>
+      <publishTime>05/03/2017 17:32:53</publishTime>
     </File>
     <File Include="bin/MesWeb.Model.pdb">
-      <publishTime>04/18/2017 17:54:11</publishTime>
+      <publishTime>05/03/2017 17:32:53</publishTime>
     </File>
     <File Include="bin/MesWeb.SQLServerDAL.dll">
       <publishTime>04/19/2017 10:17:34</publishTime>
@@ -91,10 +91,10 @@
       <publishTime>04/19/2017 10:17:34</publishTime>
     </File>
     <File Include="bin/MesWeb.ViewModel.dll">
-      <publishTime>04/18/2017 17:54:45</publishTime>
+      <publishTime>05/03/2017 17:32:55</publishTime>
     </File>
     <File Include="bin/MesWeb.ViewModel.pdb">
-      <publishTime>04/18/2017 17:54:45</publishTime>
+      <publishTime>05/03/2017 17:32:55</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
       <publishTime>01/12/2017 09:35:45</publishTime>
@@ -229,10 +229,10 @@
       <publishTime>01/12/2017 09:35:49</publishTime>
     </File>
     <File Include="bin/WebUI.dll">
-      <publishTime>04/19/2017 11:14:00</publishTime>
+      <publishTime>05/03/2017 17:34:43</publishTime>
     </File>
     <File Include="bin/WebUI.pdb">
-      <publishTime>04/19/2017 11:14:00</publishTime>
+      <publishTime>05/03/2017 17:34:43</publishTime>
     </File>
     <File Include="bin/x64/SQLite.Interop.dll">
       <publishTime>01/12/2017 09:35:48</publishTime>
@@ -1417,7 +1417,7 @@
       <publishTime>01/12/2017 09:35:43</publishTime>
     </File>
     <File Include="Scripts/admin/index.js">
-      <publishTime>03/21/2017 11:33:21</publishTime>
+      <publishTime>04/23/2017 16:15:34</publishTime>
     </File>
     <File Include="Scripts/ai.0.22.9-build00167.js">
       <publishTime>01/12/2017 09:35:30</publishTime>
@@ -1441,7 +1441,7 @@
       <publishTime>02/19/2017 10:52:22</publishTime>
     </File>
     <File Include="Scripts/lib/content.js">
-      <publishTime>01/12/2017 09:35:31</publishTime>
+      <publishTime>04/23/2017 16:16:11</publishTime>
     </File>
     <File Include="Scripts/lib/demo/bootstrap-table-demo.js">
       <publishTime>01/12/2017 09:35:31</publishTime>
@@ -1507,7 +1507,7 @@
       <publishTime>01/12/2017 09:35:31</publishTime>
     </File>
     <File Include="Scripts/lib/jquery-1.12.4.min.js">
-      <publishTime>02/19/2017 10:52:07</publishTime>
+      <publishTime>04/23/2017 16:18:34</publishTime>
     </File>
     <File Include="Scripts/lib/jquery-ui-1.10.4.min.js">
       <publishTime>01/12/2017 09:35:31</publishTime>
@@ -2332,10 +2332,10 @@
       <publishTime>01/12/2017 09:35:33</publishTime>
     </File>
     <File Include="Scripts/lib/plugins/fusioncharts-suite-xt/jquery-1.11.3.min.js">
-      <publishTime>04/19/2017 21:37:12</publishTime>
+      <publishTime>05/03/2017 17:38:01</publishTime>
     </File>
     <File Include="Scripts/lib/plugins/fusioncharts-suite-xt/jquery-1.11.3.min.js.map">
-      <publishTime>04/19/2017 21:37:12</publishTime>
+      <publishTime>05/03/2017 17:38:01</publishTime>
     </File>
     <File Include="Scripts/lib/plugins/fusioncharts-suite-xt/maps/fusioncharts.usa.js">
       <publishTime>01/12/2017 09:35:33</publishTime>
@@ -3082,16 +3082,19 @@
       <publishTime>01/12/2017 09:35:35</publishTime>
     </File>
     <File Include="Views/QualityTrace/HalfProduct.cshtml">
-      <publishTime>02/21/2017 10:36:33</publishTime>
+      <publishTime>04/23/2017 15:48:51</publishTime>
+    </File>
+    <File Include="Views/QualityTrace/HalfSearch.cshtml">
+      <publishTime>04/23/2017 16:18:53</publishTime>
     </File>
     <File Include="Views/QualityTrace/Index.cshtml">
       <publishTime>01/12/2017 09:35:35</publishTime>
     </File>
     <File Include="Views/QualityTrace/MachineHistory.cshtml">
-      <publishTime>04/19/2017 21:36:02</publishTime>
+      <publishTime>05/03/2017 16:24:40</publishTime>
     </File>
     <File Include="Views/QualityTrace/TraceDetail.cshtml">
-      <publishTime>04/18/2017 17:02:07</publishTime>
+      <publishTime>04/23/2017 11:06:52</publishTime>
     </File>
     <File Include="Views/QualityTrace/TraceSearch.cshtml">
       <publishTime>04/19/2017 11:23:34</publishTime>
@@ -3118,7 +3121,7 @@
       <publishTime>01/12/2017 09:35:36</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>04/18/2017 17:55:12</publishTime>
+      <publishTime>05/03/2017 17:38:01</publishTime>
     </File>
   </ItemGroup>
 </Project>

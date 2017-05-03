@@ -15,14 +15,24 @@
     </style>
 }
 <body>
+
     <div class="row">
         <div class="col-sm-6">
             <div class="panel panel-info">
                 <div class="panel-heading">
-                    <i class="fa fa-info-circle"></i> 历史曲线
+                    <i class="fa fa-info-circle"></i>机台信息
                 </div>
                 <div class="panel-body">
-                    <div class="echarts" id="chart_od" style="height:480px"></div>
+                    <span class="maxTitle">机台名称: <span id="machine_name" style="color:blue"></span></span>
+                    <br />
+                    <span class="maxTitle" id="machine_info_fill" style="visibility:hidden"><span style="visibility:hidden">皮厚: </span><span id="skin_thick_min" style="color:blue"></span>mm<span class="minRemark">（最小）</span></span><br />
+                    <hr />
+                    <span class="maxTitle"><span>轴号: </span><span id="axis_num" style="color:darkgreen"></span></span>
+                    <hr />
+                    <span class="maxTitle">盘号: <span id="print_code" style="color:orange">无</span></span>
+                    <hr />
+                    <span class="maxTitle">颜色: <span id="axis_color" style="color:black"></span></span><br />
+                    <hr />
                 </div>
 
             </div>
@@ -34,17 +44,30 @@
                 </div>
                 <div class="panel-body">
                     <span class="maxTitle">皮厚: <span id="skin_thick_max" style="color:blue"></span>mm<span class="minRemark">（最大）</span></span><br />
-                     <span class="maxTitle"><span style="visibility:hidden">皮厚: </span><span id="skin_thick_min" style="color:blue"></span>mm<span class="minRemark">（最小）</span></span><br />
+                    <span class="maxTitle" id="skin_min"><span style="visibility:hidden">皮厚: </span><span id="skin_thick_min" style="color:blue"></span>mm<span class="minRemark">（最小）</span></span><br />
                     <hr />
-                    <span class="maxTitle">凹凸: <span id="aotu" style="color:darkgreen"></span></span><br />
+                    <span class="maxTitle" style="visibility:hidden">凹凸: <span id="aotu" style="color:darkgreen"></span></span><br />
                     <hr />
-                    <span class="maxTitle">报警: <span style="color:orange">无</span></span><br />
+                    <span class="maxTitle">报警: <span style="color:orange">无</span></span><hr />
                     <span class="maxTitle">火花: <span id="fire" style="color:red"></span></span>
                     <hr />
                 </div>
 
             </div>
 
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <i class="fa fa-info-circle"></i>历史曲线
+                </div>
+                <div class="panel-body">
+                    <div class="echarts" id="chart_od" style="height:300px"></div>
+                </div>
+
+            </div>
         </div>
     </div>
 </body>
@@ -62,12 +85,34 @@
 
         var cond = {};
         var chartOd = {};
+        var notFound = "无数据";
         cond.axisNum = searchArray[0];
         cond.machineId = searchArray[1];
-
+        cond.machineName = searchArray[2] != "" ? searchArray[2]:notFound;
+        cond.axisColor = searchArray[3] != "" ? searchArray[3]: notFound;
+        cond.printCode = searchArray[4] != "" ? searchArray[4] : notFound;
 
 
         $(function(mcAdmin){
+            function setMachineInfo(){
+                $("#machine_name").html(cond.machineName);
+                $("#axis_color").html(cond.axisColor);
+                $("#print_code").html(cond.printCode);
+                $("#axis_num").html(cond.axisNum);
+            }
+
+            function exitByError(e) {
+                console.error(e);
+                swal({
+                    title:"数据出错",
+                    text:"该机台数据没有记录，或者出现异常",
+                    type:"error",
+                    showConfirmButton:true,
+                    confirmButtonText:"确定"
+                },function(isConfirm){
+                    mcAdmin.closeCurrentTab();
+                })
+            }
             //highcharts时差问题
             Highcharts.setOptions({ global: { useUTC: false } });
             //将重复的时间往后移一秒
@@ -95,51 +140,44 @@
                     var  allData = retData.Appendix;
                     var  numRegexp = /\d+\.?\d/;
 
+                    setMachineInfo();
                     allData.map(data=>{
                         try{
                             data.CollectedTime = +data.CollectedTime.match(numRegexp)[0];
                             data.CollectedValue=+data.CollectedValue;
                         }catch(e){
-                            swal({
-                                title:"数据出错",
-                                text:"该机台数据没有记录，或者出现异常",
-                                type:"error",
-                                showConfirmButton:true,
-                                confirmButtonText:"确定"
-                            },function(isConfirm){
-                                console.log("in");
-                            })
+                            exitByError(e);
                         }
                         return data;
                     })
                     var outterOd = getSpecParamData(allData, specCode.outterOd);
                     var innerOd = getSpecParamData(allData,specCode.innerOd);
                     var aotu = getSpecParamData(allData,specCode.aotu).pop();
-                    var fire = getSpecParamData(allData,specCode.fire).length;
+                    var fire = getSpecParamData(allData,specCode.fire).filter(d => d.CollectedValue != "0").length;
                     try{
                         $("#fire").html(fire+"次");
                         $("#aotu").html(aotu.CollectedValue);
                         $("#skin_thick_max").html(clacThick(outterOd,innerOd).max)
                         $("#skin_thick_min").html(clacThick(outterOd,innerOd).min)
                     }catch(e){
-                        swal({
-                            title:"数据出错",
-                            text:"该机台数据没有记录，或者出现异常",
-                            type:"error",
-                            showConfirmButton:true,
-                            confirmButtonText:"确定"
-                        },function(isConfirm){
-                            mcAdmin.closeCurrentTab(); 
-                        })
+                        //exitByError(e); 
+                        $("#skin_thick_max").html(clacThick(outterOd, innerOd).max)
+                        $("#skin_thick_min").html(clacThick(outterOd, innerOd).min)
                     }
                     var outterChartData  = [];
                     outterOd.forEach(data=>{
                         outterChartData.push([data.CollectedTime,data.CollectedValue]);
                     })
                     outterChartData = uniqueTime(outterChartData);
-                    console.log(outterChartData.length);
-                    chartOd = initChartPline({maxValue:20,minValue:0,symbol:'mm',title:"外径值"},"chart_od",[{
-                        name:"外径值",
+                    console.log("数据数量",outterChartData.length);
+                    if(outterChartData.length == 0){
+                        exitByError();
+                    }
+                    var title = "OD值"
+
+
+                    chartOd = initChartPline({maxValue:20,minValue:0,symbol:'mm',title:title},"chart_od",[{
+                        name:title,
                         data:outterChartData,
                         tooltip:{
                             valueDecimals:2
@@ -164,7 +202,7 @@
                         //边框
                         borderWidth: 2,
                         borderRadius: 15,
-                        height:480
+                        height:300
                     },
                     ////缩放按钮
                     rangeSelector: {
@@ -251,11 +289,17 @@
                 var outterLimit = {};
                 var innerLimit = {};
                 try{
-                    errorMark = "数据异常"
                     outterLimit = getLimitCollected(outterOd);
                     innerLimit = getLimitCollected(innerOd);
-
                 }catch(e){
+                    if(cond.axisNum.indexOf("CP02") != -1){
+                        errorMark = "无铜线外径"
+                    }
+                    else if(cond.axisNum.indexOf("CP05") != -1){
+                        errorMark = "无护套内径"
+                    }
+                    $("#skin_min").css("display","none")
+                    $("#machine_info_fill").css("display","none");
                     return {max:errorMark,min:errorMark}
                 }
 
@@ -268,12 +312,14 @@
                 var max = -1;
                 var min = 1;
                 array.forEach(data=>{
-                    if(data.CollectedValue > max){
-                        max = data.CollectedValue;
-                    }
-                    if(data.CollectedValue < min){
-                        min = data.CollectedValue;
-                    }
+                    try {
+                        if (data.CollectedValue > max) {
+                            max = data.CollectedValue;
+                        }
+                        if (data.CollectedValue < min) {
+                            min = data.CollectedValue;
+                        }
+                    }catch(e){}
                 })
 
                 return {max:max,min:min}

@@ -35,7 +35,13 @@ namespace WebUI.Models {
 
         private void init(string axisNumStr) {
             axisNumStr = axisNumStr.Trim();
-            if(!axisNumStr.StartsWith("CP")) {
+            if (!axisNumStr.StartsWith("CP"))
+
+            {
+                Year = axisNumStr.Substring(2, 4);
+                Month = axisNumStr.Substring(6, 2);
+                MachineTypeId = "5";
+                Day = axisNumStr.Substring(8, 2);
                 return;
             }
             try {

@@ -1,6 +1,9 @@
 ﻿@section Style{
     @Styles.Render("~/Content/jsmind")
     @Styles.Render("~/Content/bootstrap-table")
+    @Styles.Render("~/Content/bootstrap-datepicker")
+
+
 
 
 }
@@ -9,6 +12,16 @@
     <style type="text/css">
         #proc_jsmind {
             height: 400px;
+        }
+
+        .top-label {
+            text-align: right;
+            padding-right: 0px;
+            margin-top: 8px;
+        }
+
+        .form-group {
+            margin-left: 20px !important;
         }
     </style>}
 <body class="gray-bg">
@@ -20,31 +33,45 @@
                 <div class="ibox-title">
 
                     <div class="row">
-
-                        <div class="col-sm-9">
-                            <label class="col-sm-2 control-label" style="text-align:right; padding-right:0px;margin-top:8px">轴号：</label>
-                            <div class="col-sm-7">
-                                <div class="input-group" style="margin-left:2px">
-                                    <input type="text" id="axis_input" value="CP0420161106040001" class="form-control">
-                                    <div class="input-group-btn">
-                                        @*<button type="button" class="btn btn-white dropdown-toggle" data-toggle="dropdown">
-                                                <span class="caret"></span>
-                                            </button>*@
-                                        <button type="button" class="btn btn-white" id="axis_btn">
-                                            <span class="fa fa-search"></span>
-                                        </button>
-                                        <ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>
+                        <div class="col-sm-12">
+                            <form role="form" class="form-inline" id="search_cond">
+                                <div class="form-group">
+                                    <label>工序：</label>
+                                    <select class="form-control" name="MachineType" id="machine_type">
+                                        <option  value="1">导体绞合</option>
+                                        <option value="2">挤绝缘</option>
+                                        <option value="3">成缆</option>
+                                        <option value="4">编织机</option>
+                                        <option value="5">挤护套</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>开始时间：</label>
+                                    <div class="input-group date" style="z-index:9999">
+                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                        <input name="StartTime" type="text" class="form-control">
                                     </div>
                                 </div>
-                                <!-- /btn-group -->
-                            </div>
+                                <div class="form-group">
+                                    <label>结束时间：</label>
+                                    <div class="input-group date" style="z-index:9999">
+                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                        <input name="EndTime" type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>轴号：</label>
+                                    <input type="text" id="axis_input" value="" name="AxisNum" class="form-control">
 
-                            @*<div class="col-sm-3">
-                                    <button class="btn btn-success " type="button" id="download_btn">
-                                        <i class="fa fa-download"></i>&nbsp;&nbsp;<span class="bold">下载报告</span>
+                                </div>
+                                <div class="form-group">
+                                    <button type="button" class="btn btn-white" id="axis_btn">
+                                        <span class="fa fa-search"></span>
                                     </button>
-                                </div>*@
+                                </div>
+                            </form>
                         </div>
+
                     </div>
                 </div>
                 <div class="ibox-content">
@@ -63,58 +90,6 @@
                             <table id="qt_detail_table"></table>
                         </div>
                     </div>
-
-                </div>
-
-
-            </div>
-        </div>
-    </div>
-
-    <div class="modal inmodal" id="download_report_modal" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content animated flipInY">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                    <h4 class="modal-title">下载报告</h4>
-                </div>
-                <div class="modal-body">
-                    <div class="row" id="ts_downloadd_panel">
-                        @*<div class="col-sm-6">
-                                <a href="#" class="btn  btn-info btn-lg"><i class="fa fa-cloud-download "></i>下载质量检验报告</a>
-                                <h5>更新日期：2016/09/01</h5>
-
-                            </div>
-                            <div class="col-sm-6" style="text-align:right">
-                                <a href="#" class="btn  btn-info btn-lg"><i class="fa fa-cloud-download "></i> 下载物料检验报告</a>
-                                <h5 style="text-align:center">更新日期：2016/09/01</h5>
-
-                            </div>*@
-                    </div>
-                    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal inmodal" id="report_modal" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content animated flipInY">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                    <h4 class="modal-title">下载报告</h4>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-
-                    </div>
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>
                 </div>
             </div>
         </div>
@@ -124,16 +99,23 @@
     @Scripts.Render("~/Scripts/bootstrap-suggest")
     @Scripts.Render("~/Scripts/jsmind")
     @Scripts.Render("~/Scripts/bootstrap-table")
-
-
+    @Scripts.Render("~/Scripts/bootstrap-datepicker")
     <script type="text/javascript">
         var mcAdmin = window.parent.mcAdmin;
-
+        $(function () {
+            $('.input-group.date').datepicker({
+                todayBtn: "linked",
+                keyboardNavigation: false,
+                forceParse: false,
+                calendarWeeks: true,
+                autoclose: true
+            })
+        }())
         function showRportProduct(link) {
             var $link = $(link);
             var id = $link.attr("id");
             console.log(id);
-            mcAdmin.addTab("成品证书", "/DataInput/ProductDetail/" + id);
+            mcAdmin.addTab("成品证书", "/DataInput/MachineHistory/" + id);
 
         }
 
@@ -145,10 +127,20 @@
             mcAdmin.addTab("物料证书", "/DataInput/PlasticDetail/" + id);
         }
 
-        function viewHisMachine(div) {
-            var machineId = $(div).attr("machineId");
-            var axisNum = $(div).attr("axisNum");
-            mcAdmin.addTab("历史数据", "/HistoryData/MachineLayout/"+machineId);
+        function viewHisMachine(aLink) {
+            aLink = $(aLink);
+            var axisNum = aLink.attr("axisnum");
+            var machineId = aLink.attr("machineid");
+            var axisColor = aLink.attr("axisColor");
+            var printCode = aLink.attr("printCode");
+            var machineName = aLink.attr("machineName");
+            var splitor = ",_,";
+            var id = axisNum + splitor
+                     + machineId + splitor
+                     + machineName + splitor
+                     + axisColor + splitor
+                     + printCode;
+            window.parent.mcAdmin.addTab("历史数据", "/QualityTrace/MachineHistory/" + id);
         }
 
         function showCertProduct() {
@@ -162,12 +154,12 @@
         var procJsMind = {};
 
         var $detailTable = $('#qt_detail_table');
-        ///////////////////////quality trace picture load //////////////////////
         $("#axis_btn").on("click", function () {
             var axisNumStr = $("#axis_input").val();
-
-            $.post("GetTraceDataAction", { axisNumStr: axisNumStr }, function (retData) {
-                console.log("结果",retData)
+            var cond = $("#search_cond").serializeForm();
+            console.log("search cond", cond);
+            $.post("gettracedataaction", { axisNumStr: axisNumStr }, function (retData) {
+                console.log("结果", retData)
                 if (retData.Code == RESULT_CODE.OK) {
 
                     var retMind = retData.Appendix;
@@ -187,13 +179,11 @@
                         editable: false,
                         theme: 'primary',
                         dblclickNode: function (selectNode) {
-                            $detailTable.bootstrapTable("removeAll");
-
                             $.post("/QualityTrace/GetProcDetail", { procDetail: selectNode.data.data }, function (retData) {
 
                                 if (retData.Code == RESULT_CODE.OK) {
                                     var tabData = retData.Appendix;
-                                    $detailTable.bootstrapTable('append', tabData);
+                                    $detailTable.bootstrapTable('load', tabData);
                                 } else {
                                     swal({
                                         title: "抱歉！",
@@ -259,9 +249,9 @@
              {
                  field: 'Supplier',
                  title: '供应商'
-             },{
+             }, {
                  field: 'CertProduct',
-                 title:'证书'
+                 title: '证书'
              },
             {
                 field: 'Comment',
@@ -285,7 +275,7 @@
 
                     var fileName = file.split("\\")[1];
                     $("#ts_downloadd_panel").append('<div class="col-sm-6" style="text-align:left">\
-                            <a href="/UploadFile/Certificates' + file + '"  class="btn  btn-info btn-lg" download="'+file+'" ><i class="fa fa-cloud-download "></i> ' + fileName + '</a>\
+                            <a href="/UploadFile/Certificates' + file + '"  class="btn  btn-info btn-lg" download="' + file + '" ><i class="fa fa-cloud-download "></i> ' + fileName + '</a>\
                         </div>');
 
                 });

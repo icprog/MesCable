@@ -52,3 +52,10 @@ C:\Users\ychost\Desktop\MesCable\MesCable\DBUtility\bin\Debug\System.Data.SQLite
 C:\Users\ychost\Desktop\MesCable\MesCable\DBUtility\obj\Debug\DBUtility.csprojResolveAssemblyReference.cache
 C:\Users\ychost\Desktop\MesCable\MesCable\DBUtility\obj\Debug\MesWeb.DBUtility.dll
 C:\Users\ychost\Desktop\MesCable\MesCable\DBUtility\obj\Debug\MesWeb.DBUtility.pdb
+C:\Users\ychost\Desktop\workdspace\MesCable\MesCable\DBUtility\bin\Debug\MesWeb.DBUtility.dll
+C:\Users\ychost\Desktop\workdspace\MesCable\MesCable\DBUtility\bin\Debug\MesWeb.DBUtility.pdb
+C:\Users\ychost\Desktop\workdspace\MesCable\MesCable\DBUtility\bin\Debug\MySql.Data.dll
+C:\Users\ychost\Desktop\workdspace\MesCable\MesCable\DBUtility\bin\Debug\System.Data.SQLite.DLL
+C:\Users\ychost\Desktop\workdspace\MesCable\MesCable\DBUtility\obj\Debug\DBUtility.csprojResolveAssemblyReference.cache
+C:\Users\ychost\Desktop\workdspace\MesCable\MesCable\DBUtility\obj\Debug\MesWeb.DBUtility.dll
+C:\Users\ychost\Desktop\workdspace\MesCable\MesCable\DBUtility\obj\Debug\MesWeb.DBUtility.pdb
