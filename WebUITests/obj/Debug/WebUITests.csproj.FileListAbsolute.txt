@@ -380,3 +380,4 @@ C:\Users\ychost\Desktop\MesCable\WebUITests\bin\Debug\zh-Hans\System.Web.WebPage
 C:\Users\ychost\Desktop\MesCable\WebUITests\bin\Debug\zh-Hans\System.Web.WebPages.Deployment.resources.dll
 C:\Users\ychost\Desktop\MesCable\WebUITests\obj\Debug\WebUITests.exe
 C:\Users\ychost\Desktop\MesCable\WebUITests\obj\Debug\WebUITests.pdb
+C:\Users\ychost\Desktop\workdspace\MesCable\MesCable\WebUITests\obj\Debug\WebUITests.csprojResolveAssemblyReference.cache

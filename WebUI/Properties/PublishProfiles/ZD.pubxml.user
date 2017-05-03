@@ -49,52 +49,55 @@
       <publishTime>01/12/2017 09:35:52</publishTime>
     </File>
     <File Include="bin/MesWeb.BLL.dll">
-      <publishTime>04/18/2017 17:54:44</publishTime>
+      <publishTime>05/04/2017 06:58:39</publishTime>
     </File>
     <File Include="bin/MesWeb.BLL.pdb">
-      <publishTime>04/18/2017 17:54:44</publishTime>
+      <publishTime>05/04/2017 06:58:39</publishTime>
     </File>
     <File Include="bin/MesWeb.Common.dll">
-      <publishTime>04/18/2017 17:54:18</publishTime>
+      <publishTime>05/04/2017 06:57:30</publishTime>
     </File>
     <File Include="bin/MesWeb.Common.pdb">
-      <publishTime>04/18/2017 17:54:18</publishTime>
+      <publishTime>05/04/2017 06:57:30</publishTime>
     </File>
     <File Include="bin/MesWeb.DALFactory.dll">
-      <publishTime>04/18/2017 17:54:44</publishTime>
+      <publishTime>05/04/2017 06:58:38</publishTime>
+    </File>
+    <File Include="bin/MesWeb.DALFactory.dll.config">
+      <publishTime>01/12/2017 09:35:26</publishTime>
     </File>
     <File Include="bin/MesWeb.DALFactory.pdb">
-      <publishTime>04/18/2017 17:54:44</publishTime>
+      <publishTime>05/04/2017 06:58:38</publishTime>
     </File>
     <File Include="bin/MesWeb.DBUtility.dll">
-      <publishTime>05/03/2017 15:50:19</publishTime>
+      <publishTime>05/04/2017 06:57:30</publishTime>
     </File>
     <File Include="bin/MesWeb.DBUtility.pdb">
-      <publishTime>05/03/2017 15:50:19</publishTime>
+      <publishTime>05/04/2017 06:57:30</publishTime>
     </File>
     <File Include="bin/MesWeb.IDAL.dll">
-      <publishTime>04/18/2017 17:54:16</publishTime>
+      <publishTime>05/04/2017 06:58:38</publishTime>
     </File>
     <File Include="bin/MesWeb.IDAL.pdb">
-      <publishTime>04/18/2017 17:54:16</publishTime>
+      <publishTime>05/04/2017 06:58:38</publishTime>
     </File>
     <File Include="bin/MesWeb.Model.dll">
-      <publishTime>05/03/2017 17:32:53</publishTime>
+      <publishTime>05/04/2017 06:58:08</publishTime>
     </File>
     <File Include="bin/MesWeb.Model.pdb">
-      <publishTime>05/03/2017 17:32:53</publishTime>
+      <publishTime>05/04/2017 06:58:08</publishTime>
     </File>
     <File Include="bin/MesWeb.SQLServerDAL.dll">
-      <publishTime>04/19/2017 10:17:34</publishTime>
+      <publishTime>05/04/2017 06:58:44</publishTime>
     </File>
     <File Include="bin/MesWeb.SQLServerDAL.pdb">
-      <publishTime>04/19/2017 10:17:34</publishTime>
+      <publishTime>05/04/2017 06:58:44</publishTime>
     </File>
     <File Include="bin/MesWeb.ViewModel.dll">
-      <publishTime>05/03/2017 17:32:55</publishTime>
+      <publishTime>05/04/2017 06:58:35</publishTime>
     </File>
     <File Include="bin/MesWeb.ViewModel.pdb">
-      <publishTime>05/03/2017 17:32:55</publishTime>
+      <publishTime>05/04/2017 06:58:35</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
       <publishTime>01/12/2017 09:35:45</publishTime>
@@ -229,10 +232,10 @@
       <publishTime>01/12/2017 09:35:49</publishTime>
     </File>
     <File Include="bin/WebUI.dll">
-      <publishTime>05/03/2017 17:34:43</publishTime>
+      <publishTime>05/04/2017 06:58:50</publishTime>
     </File>
     <File Include="bin/WebUI.pdb">
-      <publishTime>05/03/2017 17:34:43</publishTime>
+      <publishTime>05/04/2017 06:58:50</publishTime>
     </File>
     <File Include="bin/x64/SQLite.Interop.dll">
       <publishTime>01/12/2017 09:35:48</publishTime>
@@ -2332,10 +2335,10 @@
       <publishTime>01/12/2017 09:35:33</publishTime>
     </File>
     <File Include="Scripts/lib/plugins/fusioncharts-suite-xt/jquery-1.11.3.min.js">
-      <publishTime>05/03/2017 17:38:01</publishTime>
+      <publishTime>05/04/2017 06:59:42</publishTime>
     </File>
     <File Include="Scripts/lib/plugins/fusioncharts-suite-xt/jquery-1.11.3.min.js.map">
-      <publishTime>05/03/2017 17:38:01</publishTime>
+      <publishTime>05/04/2017 06:59:42</publishTime>
     </File>
     <File Include="Scripts/lib/plugins/fusioncharts-suite-xt/maps/fusioncharts.usa.js">
       <publishTime>01/12/2017 09:35:33</publishTime>
@@ -3085,16 +3088,16 @@
       <publishTime>04/23/2017 15:48:51</publishTime>
     </File>
     <File Include="Views/QualityTrace/HalfSearch.cshtml">
-      <publishTime>04/23/2017 16:18:53</publishTime>
+      <publishTime>05/04/2017 06:26:13</publishTime>
     </File>
     <File Include="Views/QualityTrace/Index.cshtml">
       <publishTime>01/12/2017 09:35:35</publishTime>
     </File>
     <File Include="Views/QualityTrace/MachineHistory.cshtml">
-      <publishTime>05/03/2017 16:24:40</publishTime>
+      <publishTime>05/04/2017 06:54:47</publishTime>
     </File>
     <File Include="Views/QualityTrace/TraceDetail.cshtml">
-      <publishTime>04/23/2017 11:06:52</publishTime>
+      <publishTime>05/04/2017 06:37:12</publishTime>
     </File>
     <File Include="Views/QualityTrace/TraceSearch.cshtml">
       <publishTime>04/19/2017 11:23:34</publishTime>
@@ -3121,7 +3124,7 @@
       <publishTime>01/12/2017 09:35:36</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>05/03/2017 17:38:01</publishTime>
+      <publishTime>05/04/2017 06:59:42</publishTime>
     </File>
   </ItemGroup>
 </Project>

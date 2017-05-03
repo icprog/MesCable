@@ -46,7 +46,7 @@
                     <span class="maxTitle">皮厚: <span id="skin_thick_max" style="color:blue"></span>mm<span class="minRemark">（最大）</span></span><br />
                     <span class="maxTitle" id="skin_min"><span style="visibility:hidden">皮厚: </span><span id="skin_thick_min" style="color:blue"></span>mm<span class="minRemark">（最小）</span></span><br />
                     <hr />
-                    <span class="maxTitle" style="visibility:hidden">凹凸: <span id="aotu" style="color:darkgreen"></span></span><br />
+                    <span class="maxTitle" id="skin_min"><span>人员: </span><span id="employee" style="color:darkgreen"></span></span><br />
                     <hr />
                     <span class="maxTitle">报警: <span style="color:orange">无</span></span><hr />
                     <span class="maxTitle">火花: <span id="fire" style="color:red"></span></span>
@@ -85,15 +85,17 @@
 
         var cond = {};
         var chartOd = {};
-        var notFound = "无数据";
+        var notFound = "无";
         cond.axisNum = searchArray[0];
         cond.machineId = searchArray[1];
         cond.machineName = searchArray[2] != "" ? searchArray[2]:notFound;
         cond.axisColor = searchArray[3] != "" ? searchArray[3]: notFound;
         cond.printCode = searchArray[4] != "" ? searchArray[4] : notFound;
-
+        cond.employee = (searchArray[5] != "abc123" && searchArray[5] != "") ? searchArray[5] : notFound;
+        console.log(cond)
 
         $(function(mcAdmin){
+
             function setMachineInfo(){
                 $("#machine_name").html(cond.machineName);
                 $("#axis_color").html(cond.axisColor);
@@ -155,21 +157,18 @@
                     var aotu = getSpecParamData(allData,specCode.aotu).pop();
                     var fire = getSpecParamData(allData,specCode.fire).filter(d => d.CollectedValue != "0").length;
                     try{
-                        $("#fire").html(fire+"次");
-                        $("#aotu").html(aotu.CollectedValue);
-                        $("#skin_thick_max").html(clacThick(outterOd,innerOd).max)
-                        $("#skin_thick_min").html(clacThick(outterOd,innerOd).min)
-                    }catch(e){
-                        //exitByError(e); 
+                        $("#employee").html(cond.employee);
+                        $("#fire").html(fire + "次");
                         $("#skin_thick_max").html(clacThick(outterOd, innerOd).max)
                         $("#skin_thick_min").html(clacThick(outterOd, innerOd).min)
+                    }catch(e){
+                        $("#skin_thick_max").html(clacThick(outterOd, innerOd).max)
                     }
                     var outterChartData  = [];
                     outterOd.forEach(data=>{
                         outterChartData.push([data.CollectedTime,data.CollectedValue]);
                     })
                     outterChartData = uniqueTime(outterChartData);
-                    console.log("数据数量",outterChartData.length);
                     if(outterChartData.length == 0){
                         exitByError();
                     }
@@ -297,9 +296,13 @@
                     }
                     else if(cond.axisNum.indexOf("CP05") != -1){
                         errorMark = "无护套内径"
+                    } else if (cond.axisNum.indexOf("ZD") != -1) {
+                        errorMark = "无护套内径"
+
                     }
-                    $("#skin_min").css("display","none")
-                    $("#machine_info_fill").css("display","none");
+                    $("#skin_min").css("display", "none")
+                    $("#machine_info_fill").css("display", "none");
+
                     return {max:errorMark,min:errorMark}
                 }
 

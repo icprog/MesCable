@@ -96,7 +96,7 @@ namespace WebUI.Controllers
 
             return View(vmJsMind);
         }
-        
+
 
         public ActionResult MachineHistory(string id)
         {
@@ -116,7 +116,7 @@ namespace WebUI.Controllers
                 var hisData = new HisData(cond.axisNum);
                 var bllHisData = new MesWeb.BLL.T_HisData(hisData.TableName);
                 //string querySql = "select * From  "+hisData.TableName + " where Axis_No = '" + cond.axisNum + " order by 'CollectedTime'";
-                var allData = bllHisData.GetModelList("Axis_No  LIKE '%" + cond.axisNum + "%' ORDER BY  'CollectedTime'");
+                var allData = bllHisData.GetModelList("Axis_No  LIKE '%" + hisData.AxisNumStr + "%' ORDER BY  'CollectedTime'");
                 if (allData.Count > 0 && allData[0].MachineID.HasValue)
                 {
                     var bllMachine = new MesWeb.BLL.T_Machine();
@@ -192,69 +192,70 @@ namespace WebUI.Controllers
             List<List<MesWeb.Model.T_HisMain>> hisMainListArray = new List<List<MesWeb.Model.T_HisMain>>();
             string cp = "CP0" + machineType;
             List<MesWeb.Model.T_HisMain> hisMainTmps;
-            for (var i = startMonth; i <= endMonth; ++i)
+            try
             {
-                var tableName = "HISMAIN" + startTime.Value.Year + i.ToString("00") + machineType;
-                var bllHisMain = new MesWeb.BLL.T_HisMain(tableName);
-                //同一月
-                if (startMonth == endMonth)
+                for (var i = startMonth; i <= endMonth; ++i)
                 {
-                    for (var j = startTime.Value.Day; j <= endTime.Value.Day; ++j)
+                    var tableName = "HISMAIN" + startTime.Value.Year + i.ToString("00") + machineType;
+                    var bllHisMain = new MesWeb.BLL.T_HisMain(tableName);
+                    //同一月
+                    if (startMonth == endMonth)
                     {
-                        hisMainTmps = bllHisMain.GetModelList("Axis_No like '" + cp + "" + startTime.Value.Year + i.ToString("00") + j.ToString("00") + "%" + "'");
-                        if (hisMainTmps.Count > 0) hisMainList.AddRange(hisMainTmps);
-                        hisMainTmps = bllHisMain.GetModelList("Axis_No like 'ZD" + startTime.Value.Year + i.ToString("00") + j.ToString("00") + "%" + "'");
-                        if (hisMainTmps.Count > 0) hisMainList.AddRange(hisMainTmps);
-                    }
-                    //不是同一月
-                }
-                else
-                {
-                    //起始月
-                    if (i == startMonth)
-                    {
-
-                        //遍历起始月
-                        for (var j = startTime.Value.Day; j <= 31; ++j)
+                        for (var j = startTime.Value.Day; j <= endTime.Value.Day; ++j)
                         {
                             hisMainTmps = bllHisMain.GetModelList("Axis_No like '" + cp + "" + startTime.Value.Year + i.ToString("00") + j.ToString("00") + "%" + "'");
                             if (hisMainTmps.Count > 0) hisMainList.AddRange(hisMainTmps);
                             hisMainTmps = bllHisMain.GetModelList("Axis_No like 'ZD" + startTime.Value.Year + i.ToString("00") + j.ToString("00") + "%" + "'");
                             if (hisMainTmps.Count > 0) hisMainList.AddRange(hisMainTmps);
                         }
-                        //遍历终止月
-                    }
-                    else if (i == endMonth)
-                    {
-                        for (var j = 1; j <= endTime.Value.Day; ++j)
-                        {
-                            hisMainTmps = bllHisMain.GetModelList("Axis_No like '" + cp + "" + startTime.Value.Year + i.ToString("00") + j.ToString("00") + "%" + "'");
-                            if (hisMainTmps.Count > 0) hisMainList.AddRange(hisMainTmps);
-                            hisMainTmps = bllHisMain.GetModelList("Axis_No like 'ZD" + startTime.Value.Year + i.ToString("00") + j.ToString("00") + "%" + "'");
-                            if (hisMainTmps.Count > 0) hisMainList.AddRange(hisMainTmps);
-                        }
-                        //遍历其它月
+                        //不是同一月
                     }
                     else
                     {
-                        for (var j = 1; j <= 31; ++j)
+                        //起始月
+                        if (i == startMonth)
                         {
-                            hisMainTmps = bllHisMain.GetModelList("Axis_No like '" + cp + "" + startTime.Value.Year + i.ToString("00") + j.ToString("00") + "%" + "'");
-                            if (hisMainTmps.Count > 0) hisMainList.AddRange(hisMainTmps);
-                            hisMainTmps = bllHisMain.GetModelList("Axis_No like 'ZD" + startTime.Value.Year + i.ToString("00") + j.ToString("00") + "%" + "'");
-                            if (hisMainTmps.Count > 0) hisMainList.AddRange(hisMainTmps);
+
+                            //遍历起始月
+                            for (var j = startTime.Value.Day; j <= 31; ++j)
+                            {
+                                hisMainTmps = bllHisMain.GetModelList("Axis_No like '" + cp + "" + startTime.Value.Year + i.ToString("00") + j.ToString("00") + "%" + "'");
+                                if (hisMainTmps.Count > 0) hisMainList.AddRange(hisMainTmps);
+                                hisMainTmps = bllHisMain.GetModelList("Axis_No like 'ZD" + startTime.Value.Year + i.ToString("00") + j.ToString("00") + "%" + "'");
+                                if (hisMainTmps.Count > 0) hisMainList.AddRange(hisMainTmps);
+                            }
+                            //遍历终止月
+                        }
+                        else if (i == endMonth)
+                        {
+                            for (var j = 1; j <= endTime.Value.Day; ++j)
+                            {
+                                hisMainTmps = bllHisMain.GetModelList("Axis_No like '" + cp + "" + startTime.Value.Year + i.ToString("00") + j.ToString("00") + "%" + "'");
+                                if (hisMainTmps.Count > 0) hisMainList.AddRange(hisMainTmps);
+                                hisMainTmps = bllHisMain.GetModelList("Axis_No like 'ZD" + startTime.Value.Year + i.ToString("00") + j.ToString("00") + "%" + "'");
+                                if (hisMainTmps.Count > 0) hisMainList.AddRange(hisMainTmps);
+                            }
+                            //遍历其它月
+                        }
+                        else
+                        {
+                            for (var j = 1; j <= 31; ++j)
+                            {
+                                hisMainTmps = bllHisMain.GetModelList("Axis_No like '" + cp + "" + startTime.Value.Year + i.ToString("00") + j.ToString("00") + "%" + "'");
+                                if (hisMainTmps.Count > 0) hisMainList.AddRange(hisMainTmps);
+                                hisMainTmps = bllHisMain.GetModelList("Axis_No like 'ZD" + startTime.Value.Year + i.ToString("00") + j.ToString("00") + "%" + "'");
+                                if (hisMainTmps.Count > 0) hisMainList.AddRange(hisMainTmps);
+                            }
                         }
                     }
                 }
-                try
-                {
-                    hisMainListArray.Add(hisMainList);
-                }
-                catch
-                {
-                    return hisMainListArray;
-                }
+                hisMainListArray.Add(hisMainList);
             }
+            catch (Exception e)
+            {
+                return hisMainListArray;
+            }
+
             return hisMainListArray;
         }
 
@@ -290,6 +291,7 @@ namespace WebUI.Controllers
                 }
                 else if (cond.StartTime.HasValue && cond.EndTime.HasValue && cond.StartTime < cond.EndTime)
                 {
+
                     //同一年
                     if (cond.StartTime.Value.Year == cond.EndTime.Value.Year)
                     {
@@ -346,9 +348,9 @@ namespace WebUI.Controllers
                             bref.Detail = "<a  tabId=" + h.CurrentDataID + "  tabName = '" + axisNum.GetHisDataTableName() + "' axisNum='" + axisNum.AxisNumStr + "' onclick='showTraceDetail(this)'>详情</a>";
                             brefList.Add(bref);
                         }
-                        catch(Exception e)
+                        catch (Exception e)
                         {
-                        
+
                         }
                     });
                 });
@@ -510,7 +512,7 @@ namespace WebUI.Controllers
                     //查询OD的最值
                     var hisDs = DbHelperSQL.Query("SELECT MAX(CollectedValue) AS Max,MIN(CollectedValue) AS Min" +
                                 " FROM  " + hisData.TableName +
-                                " WHERE(ParameterCodeID = " + (int)SPEC_PARAM_CODE.OUTTER_OD + ") AND(Axis_No = '" + procDetail.Axis_No + "')" +
+                                " WHERE(ParameterCodeID = " + (int)SPEC_PARAM_CODE.OUTTER_OD + ") AND(Axis_No = '" + hisData.AxisNumStr + "')" +
                                 " GROUP BY Axis_No");
 
                     var hisRow = hisDs.Tables[0].Rows[0];
@@ -560,7 +562,7 @@ namespace WebUI.Controllers
                         var machineName = machine.MachineName ?? "";
                         var axisColor = procDetail.SpecColor ?? "";
                         var printCode = procDetail.Printcode ?? "";
-                        procDetail.MachineName = "<a  href='javascript: void(0)' printCode='" + printCode + "' axisColor='" + axisColor + "'  machineName='" + machineName + "'   axisNum='" + procDetail.Axis_No + "'  onclick='viewHisMachine(this)' machineId='" + machine.MachineID + "'>" + machine.MachineName + "</a>";
+                        procDetail.MachineName = "<a  href='javascript: void(0)' employee='" + procDetail.EmployeeName + "'  printCode='" + printCode + "' axisColor='" + axisColor + "'  machineName='" + machineName + "'   axisNum='" + procDetail.Axis_No + "'  onclick='viewHisMachine(this)' machineId='" + machine.MachineID + "'>" + machine.MachineName + "</a>";
                     }
                     else
                     {

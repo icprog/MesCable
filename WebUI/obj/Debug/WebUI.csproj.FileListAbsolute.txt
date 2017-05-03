@@ -839,3 +839,4 @@ C:\Users\ychost\Desktop\workdspace\MesCable\MesCable\WebUI\bin\zh-Hans\System.We
 C:\Users\ychost\Desktop\workdspace\MesCable\MesCable\WebUI\obj\Debug\WebUI.csprojResolveAssemblyReference.cache
 C:\Users\ychost\Desktop\workdspace\MesCable\MesCable\WebUI\obj\Debug\WebUI.dll
 C:\Users\ychost\Desktop\workdspace\MesCable\MesCable\WebUI\obj\Debug\WebUI.pdb
+C:\Users\ychost\Desktop\workdspace\MesCable\MesCable\WebUI\bin\MesWeb.DALFactory.dll.config
