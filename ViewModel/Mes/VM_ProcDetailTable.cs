@@ -14,6 +14,7 @@ namespace MesWeb.ViewModel.Mes {
         public string CertProduct { get; set; }
         public string CertPlastic { get; set; }
         private string supplier = "中德电线公司";
+        public string BatchNo { get; set; }
         public string Supplier {
             get { return supplier; }
             set { supplier = value; }

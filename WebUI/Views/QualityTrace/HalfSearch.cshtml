@@ -116,13 +116,22 @@
                 keyboardNavigation: false,
                 forceParse: false,
                 calendarWeeks: true,
-                autoclose: true
+                autoclose: true,
+                format: 'yyyy-mm',
+                startView: "year",
+                minViewMode: "months"
+                //showMeridian:true
             })
             var $detailTable = $('#qt_detail_table');
             $("#axis_btn").on("click", function () {
                 var axisNumStr = $("#axis_input").val();
                 var cond = $("#search_cond").serializeForm();
+                cond.StartTime = cond.StartTime + "-01";
+                cond.EndTime = cond.EndTime + "-01";
                 $.post("SearchTraceBrefAction", { cond, cond }, function (retData) {
+                    if (retData.Code != RESULT_CODE.OK) {
+                        $brefTable.bootstrapTable("removeAll");
+                    }
                     mcAdmin.dealRetData(retData, function () {
                         $brefTable.bootstrapTable("load", retData.Appendix);
 

@@ -194,8 +194,17 @@ namespace WebUI.Controllers
             List<MesWeb.Model.T_HisMain> hisMainTmps;
             try
             {
+               if(startTime.Value.Year > DateTime.Now.Year)
+                {
+                    return hisMainListArray;
+                }
                 for (var i = startMonth; i <= endMonth; ++i)
                 {
+                    if(i > DateTime.Now.Month)
+                    {
+                        hisMainListArray.Add(hisMainList);
+                        return hisMainListArray;
+                    }
                     var tableName = "HISMAIN" + startTime.Value.Year + i.ToString("00") + machineType;
                     var bllHisMain = new MesWeb.BLL.T_HisMain(tableName);
                     //同一月
@@ -485,23 +494,20 @@ namespace WebUI.Controllers
             var bllAxis = new MesWeb.BLL.T_Axis();
             try
             {
-                if (!string.IsNullOrEmpty(procDetail.Printcode))
+                if (!string.IsNullOrEmpty(procDetail.BatchNo))
                 {
-                    //var bllPd = new MesWeb.BLL.T_Report_Product();
-                    //var pd = bllPd.GetModelList("VolNum = '" + procDetail.Printcode + "'").FirstOrDefault();
-                    //if(pd != null) {
-                    //    procDetail.CertProduct += "<a id=" + pd.Id + " onclick='showRportProduct(this)'>成品表 , </a>";
-                    //} else {
-                    //    procDetail.CertProduct += "<a style='text-decoration:line-through'>未录入 , </a>";
-
-                    //}
-                    var bllAllReport = new MesWeb.BLL.T_AllReport();
-                    var productRp = bllAllReport.GetModelList("IndexValue like '" + procDetail.Printcode + "%'").FirstOrDefault();
-                    if (productRp != null)
+                    var searchCond = new List<string>();
+                    searchCond.Add(procDetail.BatchNo);
+                    try
                     {
-                        procDetail.CertProduct += "<a id=" + productRp.Id + " onclick='showRportProduct(this)'>成品表 , </a>";
-                    }
+                        var gumId = MaterialController.SearchReportId(searchCond, MaterialController.gumReportType);
 
+                        procDetail.CertPlastic = "<a  href='javascript: void(0)' onclick='showReportPlastic(this)' id='" + gumId + "'>胶料表</a>";
+                    }
+                    catch
+                    {
+
+                    }
                 }
 
 
@@ -541,18 +547,19 @@ namespace WebUI.Controllers
                 //机台
                 var machine = bllMachine.GetModel((int)procDetail.MachineID);
                 //规格
-                var specID = procDetail.SpecificationID;
-                if (specID.HasValue)
-                {
-                    var certPls = "<a style='text-decoration:line-through'> 未录入</a>";
-                    procDetail.CertProduct += certPls;
-                    var spec = bllSpec.GetModel((int)specID);
-                    if (spec != null)
-                    {
-                        procDetail.SpecName = spec.SpecificationName;
-                        procDetail.SpecColor = spec.SpecificationColor;
-                    }
-                }
+                //var specID = procDetail.SpecificationID;
+                //if (specID.HasValue)
+                //{
+                //    var certPls = "<a style='text-decoration:line-through'> 未录入</a>";
+                //    procDetail.CertProduct += certPls;
+                //    var spec = bllSpec.GetModel((int)specID);
+                //    if (spec != null)
+                //    {
+                //        procDetail.SpecName = spec.SpecificationName;
+                //        procDetail.SpecColor = spec.SpecificationColor;
+
+                //    }
+                //}
 
                 if (machine != null)
                 {
@@ -628,6 +635,7 @@ namespace WebUI.Controllers
                 hisMain.SpecColor = material.Color;
                 hisMain.SpecName = material.MaterialType;
                 hisMain.Supplier = material.SupplyCompany;
+                hisMain.BatchNo = material.BatchNo;
             }
 
 

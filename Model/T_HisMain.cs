@@ -8,6 +8,7 @@ namespace MesWeb.Model {
         public string SpecName;
         public string SpecColor;
         public string Supplier;
+        public string BatchNo;
 
     }
 }

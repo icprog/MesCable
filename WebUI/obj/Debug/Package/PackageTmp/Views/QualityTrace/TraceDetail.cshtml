@@ -66,9 +66,10 @@
         function showReportPlastic(link){
             var $link = $(link);
             var mcAdmin = window.parent.mcAdmin;
+       
             var id = $link.attr("id");
             console.log(id);
-            mcAdmin.addTab("物料证书", "/DataInput/PlasticDetail/"+id);
+            mcAdmin.addTab("物料证书", "/Material/GumReportDetail/"+id);
         }
 
         $(function(){
@@ -95,6 +96,7 @@
                     editable: false,
                     theme: 'primary',
                     dblclickNode: function (selectNode) {
+                        console.log(selectNode);
                         selectNode.data.data.EmployeeName= selectNode.data.data.EmployeeID_Main;
 
                         $.post("/QualityTrace/GetProcDetail", { procDetail: selectNode.data.data }, function (retData) {
@@ -161,7 +163,7 @@
                          field: 'Supplier',
                          title: '供应商'
                      },{
-                         field: 'CertProduct',
+                         field: 'CertPlastic',
                          title:'证书'
                      },
                     {
