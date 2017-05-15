@@ -12,6 +12,10 @@
             font-size: 20px;
             font-weight: bolder;
         }
+
+        hr {
+            margin-top: 5px
+        }
     </style>
 }
 <body>
@@ -24,15 +28,15 @@
                 </div>
                 <div class="panel-body">
                     <span class="maxTitle">机台名称: <span id="machine_name" style="color:blue"></span></span>
-                   
-                    <span class="maxTitle" id="machine_info_fill" style="visibility:hidden"><span style="visibility:hidden">皮厚: </span><span " style="color:blue"></span>mm<span class="minRemark">（最小）</span></span><br />
+
+                    <span class="maxTitle" id="machine_info_fill" style="visibility:hidden"><span style="visibility:hidden">皮厚: </span><span style="color:blue"></span>mm<span class="minRemark">（最小）</span></span><br />
                     <hr />
                     <span class="maxTitle"><span>轴号: </span><span id="axis_num" style="color:darkgreen"></span></span>
                     <hr />
                     <span class="maxTitle">盘号: <span id="print_code" style="color:orange">无</span></span>
                     <hr />
                     <span class="maxTitle">颜色: <span id="axis_color" style="color:black"></span></span><br />
-                 
+
                 </div>
 
             </div>
@@ -44,13 +48,13 @@
                 </div>
                 <div class="panel-body">
                     <span class="maxTitle">皮厚: <span id="skin_thick_max" style="color:blue"></span>mm<span class="minRemark">（最大）</span></span>
-                    <span class="maxTitle" id="skin_min"><span style="visibility:hidden">皮厚: </span><span id="skin_thick_min" style="color:blue"></span>mm<span class="minRemark">（最小）</span></span><br />
+                    <span class="maxTitle" id="skin_min"><span id="skin_thick_min" style="color:blue"></span>mm<span class="minRemark">（最小）</span></span><br />
                     <hr />
                     <span class="maxTitle" id="skin_min"><span>人员: </span><span id="employee" style="color:darkgreen"></span></span><br />
                     <hr />
-                    <span class="maxTitle">报警: <span style="color:orange">无</span></span><hr />
+                    <span class="maxTitle">报警: <span style="color:orange" id="alarm_times"></span></span><hr />
                     <span class="maxTitle">火花: <span id="fire" style="color:red"></span></span>
-                   
+
                 </div>
 
             </div>
@@ -92,6 +96,7 @@
         cond.axisColor = searchArray[3] != "" ? searchArray[3]: notFound;
         cond.printCode = searchArray[4] != "" ? searchArray[4] : notFound;
         cond.employee = (searchArray[5] != "abc123" && searchArray[5] != "") ? searchArray[5] : notFound;
+        cond.machineType = searchArray[6];
         console.log(cond)
 
         $(function(mcAdmin){
@@ -137,11 +142,11 @@
                 }
                 return uniqueData;
             }
+
             $.post("/QualityTrace/GetMahineHistoryDataAction/",{cond:cond},function(retData){
                 mcAdmin.dealRetData(retData,function(){
                     var  allData = retData.Appendix;
-                    var  numRegexp = /\d+\.?\d/;
-
+                    var numRegexp = /\d+\.?\d/;
                     setMachineInfo();
                     allData.map(data=>{
                         try{
@@ -152,18 +157,22 @@
                         }
                         return data;
                     })
-                    
+
                     var outterOd = getSpecParamData(allData, specCode.outterOd);
                     var innerOd = getSpecParamData(allData, specCode.innerOd);
                     var aotu = getSpecParamData(allData,specCode.aotu).pop();
-                    var fire = getSpecParamData(allData,specCode.fire).filter(d => d.CollectedValue != "0").length;
+                    var fire = getSpecParamData(allData, specCode.fire).filter(d => d.CollectedValue != "0").length;
+
                     try{
                         $("#employee").html(cond.employee);
                         $("#fire").html(fire + "次");
+                        var spec = retData.Content;
+                        var alarm = getAlarmTimes(outterOd, spec.upper, spec.lower);
+                        $("#alarm_times").html(alarm.lenght + "次");
                         var thick = clacThick(outterOd, innerOd);
-                        console.log("thick", thick);
                         $("#skin_thick_max").html(thick.max.toFixed(2))
                         $("#skin_thick_min").html(thick.min.toFixed(2));
+
                     }catch(e){
                         $("#skin_thick_max").html(clacThick(outterOd, innerOd).max)
                     }
@@ -177,25 +186,39 @@
                     }
                     var title = "OD值"
 
-
-                    chartOd = initChartPline({maxValue:20,minValue:0,symbol:'mm',title:title},"chart_od",[{
+                    chartOd = initChartPline({
+                        limitMax: spec.upper,
+                        limitMin: spec.lower,
+                        maxValue: alarm.maxValue,
+                        minValue: alarm.minValue,
+                        symbol: 'mm', title: title
+                    }, "chart_od", [{
                         name:title,
                         data:outterChartData,
                         tooltip:{
                             valueDecimals:2
-                        }
+                        },
+                        zones: [{
+                            value: spec.lower,
+                            color: 'red',
+                        }, {
+                            value: spec.upper,
+                                color:'green'
+                            }, {
+                                value: alarm.maxValue,
+                                color:'red'
+                        }]
                     }]);
-
-
-
                 })
             })
 
             function initChartPline(p,chartId,chartSeries){
                 var maxValue = p.maxValue;
                 var minValue = p.minValue;
+                var limitMax = p.limitMax;
+                var limitMin = p.limitMin;
                 var valueSuffix = p.symbol;
-
+                console.log(p)
 
                 return new Highcharts.StockChart({
                     chart : {
@@ -224,11 +247,28 @@
                         selected: 0
                     },
                     yAxis: {
+                        max: maxValue,
+                        min: minValue,
                         title: {
                             text: valueSuffix
                         },
 
-                        tickInterval: 2,
+                        tickInterval: 0.1,
+                        plotLines: [{
+                            value: limitMax,
+                            color: 'orange',
+                            width:2,
+                            label: {
+                                text: "最大值: " + limitMax+"mm"
+                            }
+                        }, {
+                            value: limitMin,
+                            color: 'orange',
+                            width:2,
+                            label: {
+                                text: "最小值: " + limitMin+"mm"
+                            }
+                        }]
                     },
                     xAxis:{
                         type: 'datetime',
@@ -256,12 +296,10 @@
                             var content = '<span style="font-size: 10px;">' + this.x + '</span><br/>';
                             content = '';
                             for (var i = 0; i < this.points.length; i++) {
-                                var maxValue = this.points[i].series.maxValue;
-                                var minValue = this.points[i].series.minValue;
                                 var color = "black";
-                                if(this.points[i].y<minValue){
+                                if (this.points[i].y < limitMin) {
                                     color = warningColor;
-                                }else if(this.points[i].y > maxValue ){
+                                } else if (this.points[i].y > limitMax) {
                                     color=errorColor;
                                 }
                                 //采集值
@@ -284,6 +322,28 @@
 
             function getSpecParamData(allData,id){
                 return allData.filter(data=>{return data.ParameterCodeID == id;})
+            }
+
+            function getAlarmTimes(outterOd, max, min) {
+                var valueMax = max;
+                var valueMin = min;
+                var alarm = outterOd.filter(data => {
+                     if (data.CollectedValue > valueMax) {
+                            valueMax = data.CollectedValue;
+                        }
+                        if (data.CollectedValue < valueMin) {
+                              valueMin = data.CollectedValue;
+                        }
+                        if (data.CollectedValue > max) {
+                            return true;
+                        } else if (data.CollectedValue < min) {
+                            return true;
+
+                        }
+                        return false;
+                });
+                return { lenght: alarm.length, maxValue: valueMax + 0.1 , minValue: valueMin - 0.1 }
+
             }
 
             function clacThick(outterOd,innerOd){

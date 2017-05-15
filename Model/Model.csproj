@@ -124,6 +124,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="ILayoutTypeTable.cs" />
+    <Compile Include="Procedure.cs" />
+    <Compile Include="ProductType.cs" />
+    <Compile Include="Specification.cs" />
     <Compile Include="SysNode.cs">
       <SubType>Code</SubType>
     </Compile>

@@ -25,5 +25,12 @@ namespace MesWeb.ViewModel.Mes {
     public class MahineHistoryQueryCond {
         public string axisNum { get; set;}
         public string machineId { get; set; }
+        public string  machineType { get; set; }
+    }
+
+    public class ParamLimitQueryCond
+    {
+        public string MachineType { get; set; }
+        public string ParamCode { get; set; }
     }
 }

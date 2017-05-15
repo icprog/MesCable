@@ -117,17 +117,15 @@ namespace WebUI.Controllers
                 var bllHisData = new MesWeb.BLL.T_HisData(hisData.TableName);
                 //string querySql = "select * From  "+hisData.TableName + " where Axis_No = '" + cond.axisNum + " order by 'CollectedTime'";
                 var allData = bllHisData.GetModelList("Axis_No  LIKE '%" + hisData.AxisNumStr + "%' ORDER BY  'CollectedTime'");
-                if (allData.Count > 0 && allData[0].MachineID.HasValue)
-                {
-                    var bllMachine = new MesWeb.BLL.T_Machine();
-                    var machine = bllMachine.GetModel(allData[0].MachineID.Value);
-
-                }
+                var bllSpec = new MesWeb.BLL.Specification();
+                var spec = bllSpec.GetModelList("procedureId = " + cond.machineType+ " and paramTypeId = 2").FirstOrDefault();
+              
                 retData.Appendix = allData;
-                retData.Content = "加载成功";
-                retData.Code = RESULT_CODE.OK;
-
-
+                retData.Content = spec;
+                if (allData.Count > 0)
+                {
+                    retData.Code = RESULT_CODE.OK;
+                }
             }
             catch (Exception e)
             {
@@ -194,13 +192,13 @@ namespace WebUI.Controllers
             List<MesWeb.Model.T_HisMain> hisMainTmps;
             try
             {
-               if(startTime.Value.Year > DateTime.Now.Year)
+                if (startTime.Value.Year > DateTime.Now.Year)
                 {
                     return hisMainListArray;
                 }
                 for (var i = startMonth; i <= endMonth; ++i)
                 {
-                    if(i > DateTime.Now.Month)
+                    if (i > DateTime.Now.Month)
                     {
                         hisMainListArray.Add(hisMainList);
                         return hisMainListArray;
@@ -396,85 +394,7 @@ namespace WebUI.Controllers
             }
         }
 
-        [HttpPost]
-        public JsonResult GetTraceDataActionTest(string volNum)
-        {
-            var retData = new VM_Result_Data();
-            log = LogFactory.GetLogger(MethodBase.GetCurrentMethod().DeclaringType.FullName + ":" + MethodBase.GetCurrentMethod().Name);
-            retData.Content = "查询失败";
-
-            if (volNum.ToUpper() == "A1501")
-            {
-                VM_JSMind vmJsMind = new VM_JSMind();
-                VM_ProcDetail detail1 = new VM_ProcDetail()
-                {
-                    Axis_No = "CP0420161106040001",
-                    SpecColor = "黑色",
-                    ODMax = "3.1",
-                    ODMin = "1.7",
-                    MachineName = "904护套",
-                    EmployeeName = "李云",
-                    GeneratorTime = "2016-11-06",
-                    Supplier = "中德电缆公司"
-                };
-                VM_ProcDetail detail2 = new VM_ProcDetail()
-                {
-                    Axis_No = "CP0420161106040001",
-                    SpecColor = "黑色",
-                    ODMax = "3.1",
-                    ODMin = "1.7",
-                    MachineName = "2#编织",
-                    EmployeeName = "李云",
-                    GeneratorTime = "2016-11-06",
-                    Supplier = "中德电缆公司"
-                };
-                VM_ProcDetail detail3 = new VM_ProcDetail()
-                {
-                    Axis_No = "CP0420161106040001",
-                    SpecColor = "黑色",
-                    ODMax = "3.1",
-                    ODMin = "1.7",
-                    MachineName = "1#成缆",
-                    EmployeeName = "李云",
-                    GeneratorTime = "2016-11-06",
-                    Supplier = "中德电缆公司"
-                };
-                VM_ProcDetail detail4 = new VM_ProcDetail()
-                {
-                    Axis_No = "CP0420161106040001",
-                    SpecColor = "黑色",
-                    ODMax = "3.1",
-                    ODMin = "1.7",
-                    MachineName = "604挤绝缘",
-                    EmployeeName = "李云",
-                    GeneratorTime = "2016-11-06",
-                    Supplier = "中德电缆公司"
-                };
-                VM_ProcDetail detail5 = new VM_ProcDetail()
-                {
-                    Axis_No = "CP0420161106040001",
-                    SpecColor = "黑色",
-                    ODMax = "3.1",
-                    ODMin = "1.7",
-                    MachineName = "605挤护套",
-                    EmployeeName = "李云",
-                    GeneratorTime = "2016-11-06",
-                    Supplier = "中德电缆公司",
-
-                };
-
-                vmJsMind.data = new List<JSMind_Data> {
-                    new JSMind_Data("r1","","904护套",detail1,true),
-                    new JSMind_Data("r2","r1","2#编织",detail2),
-                    new JSMind_Data("r3","r2","1#成缆",detail3),
-                    new JSMind_Data("r4","r3","604挤绝缘",detail4),
-                    new JSMind_Data("r5","r3","605挤护套",detail5),
-                };
-                retData.Code = RESULT_CODE.OK;
-                retData.Appendix = vmJsMind;
-            }
-            return Json(retData);
-        }
+       
 
         [HttpPost]
         public JsonResult GetProcDetail(VM_ProcDetail procDetail)
@@ -490,7 +410,6 @@ namespace WebUI.Controllers
             var bllMachine = new MesWeb.BLL.T_Machine();
             var bllEmp = new MesWeb.BLL.T_Employee();
             var bllSpec = new MesWeb.BLL.T_Specification();
-            var bllCodeUsed = new MesWeb.BLL.T_CodeUsed();
             var bllAxis = new MesWeb.BLL.T_Axis();
             try
             {
@@ -501,7 +420,6 @@ namespace WebUI.Controllers
                     try
                     {
                         var gumId = MaterialController.SearchReportId(searchCond, MaterialController.gumReportType);
-
                         procDetail.CertPlastic = "<a  href='javascript: void(0)' onclick='showReportPlastic(this)' id='" + gumId + "'>胶料表</a>";
                     }
                     catch
@@ -526,6 +444,9 @@ namespace WebUI.Controllers
                     var odMin = hisRow["min"].ToString();
                     procDetail.ODMax = odMax;
                     procDetail.ODMin = odMin;
+                    var axis = new HisMain(procDetail.Axis_No);
+
+                    procDetail.GeneratorTime = axis.Year + "-" + axis.Month + "-" + axis.Day;
                 }
                 catch
                 {
@@ -538,28 +459,9 @@ namespace WebUI.Controllers
                 {
                     procDetail.Comment = axisInfo.comment;
                 }
-                var codeUsed = bllCodeUsed.GetModelList("Axis_No = '" + procDetail.Axis_No + "'").FirstOrDefault();
-                //时间
-                if (codeUsed != null)
-                {
-                    procDetail.GeneratorTime = codeUsed.GeneratorTime.Value.ToShortDateString();
-                }
                 //机台
                 var machine = bllMachine.GetModel((int)procDetail.MachineID);
-                //规格
-                //var specID = procDetail.SpecificationID;
-                //if (specID.HasValue)
-                //{
-                //    var certPls = "<a style='text-decoration:line-through'> 未录入</a>";
-                //    procDetail.CertProduct += certPls;
-                //    var spec = bllSpec.GetModel((int)specID);
-                //    if (spec != null)
-                //    {
-                //        procDetail.SpecName = spec.SpecificationName;
-                //        procDetail.SpecColor = spec.SpecificationColor;
 
-                //    }
-                //}
 
                 if (machine != null)
                 {
@@ -569,7 +471,7 @@ namespace WebUI.Controllers
                         var machineName = machine.MachineName ?? "";
                         var axisColor = procDetail.SpecColor ?? "";
                         var printCode = procDetail.Printcode ?? "";
-                        procDetail.MachineName = "<a  href='javascript: void(0)' employee='" + procDetail.EmployeeName + "'  printCode='" + printCode + "' axisColor='" + axisColor + "'  machineName='" + machineName + "'   axisNum='" + procDetail.Axis_No + "'  onclick='viewHisMachine(this)' machineId='" + machine.MachineID + "'>" + machine.MachineName + "</a>";
+                        procDetail.MachineName = "<a  href='javascript: void(0)' machineType='"+machine.MachineTypeID+"'  employee='" + procDetail.EmployeeName + "'  printCode='" + printCode + "' axisColor='" + axisColor + "'  machineName='" + machineName + "'   axisNum='" + procDetail.Axis_No + "'  onclick='viewHisMachine(this)' machineId='" + machine.MachineID + "'>" + machine.MachineName + "</a>";
                     }
                     else
                     {

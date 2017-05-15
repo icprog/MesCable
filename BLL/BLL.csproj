@@ -120,6 +120,9 @@
     <Compile Include="AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Procedure.cs" />
+    <Compile Include="ProductType.cs" />
+    <Compile Include="Specification.cs" />
     <Compile Include="SysManage.cs">
       <SubType>Code</SubType>
     </Compile>

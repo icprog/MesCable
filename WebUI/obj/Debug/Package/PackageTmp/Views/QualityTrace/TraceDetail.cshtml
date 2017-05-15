@@ -45,13 +45,15 @@
             var printCode = aLink.attr("printCode");
             var machineName = aLink.attr("machineName");
             var employee = aLink.attr("employee");
+            var machineType = aLink.attr("machineType")
             var splitor = ",_,";
             var id = axisNum + splitor
-                     +machineId+splitor
-                     +machineName+splitor
-                     +axisColor+splitor
-                     + printCode+splitor
-                     + employee
+                + machineId + splitor
+                + machineName + splitor
+                + axisColor + splitor
+                + printCode + splitor
+                + employee + splitor
+                + machineType;
             window.parent.mcAdmin.addTab("历史数据", "/QualityTrace/MachineHistory/"+id);
 
         }
