@@ -96,7 +96,7 @@
     @Scripts.Render("~/Scripts/bootstrap-table")
     @Scripts.Render("~/Scripts/bootstrap-datepicker")
     <script type="text/javascript">
-        
+
         var $brefTable = $("#qt_bref_table");
 
         var mcAdmin = window.parent.mcAdmin;
@@ -124,13 +124,13 @@
             })
             var $detailTable = $('#qt_detail_table');
             $("#axis_btn").on("click", function () {
+                $brefTable.bootstrapTable("removeAll");
                 var axisNumStr = $("#axis_input").val();
                 var cond = $("#search_cond").serializeForm();
                 cond.StartTime = cond.StartTime + "-01";
                 cond.EndTime = cond.EndTime + "-01";
                 $.post("SearchTraceBrefAction", { cond, cond }, function (retData) {
                     if (retData.Code != RESULT_CODE.OK) {
-                        $brefTable.bootstrapTable("removeAll");
                     }
                     mcAdmin.dealRetData(retData, function () {
                         $brefTable.bootstrapTable("load", retData.Appendix);
@@ -155,10 +155,10 @@
                     field: 'PrintCode',
                     title: '成品盘号'
                 },
-                 {
-                     field: 'Detail',
-                     title: '详细'
-                 }
+                {
+                    field: 'Detail',
+                    title: '详细'
+                }
                 ]
 
             })

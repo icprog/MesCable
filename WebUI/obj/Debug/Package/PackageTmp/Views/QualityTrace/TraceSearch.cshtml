@@ -113,16 +113,13 @@
             var $brefTable = $("#qt_bref_table");
             ///////////////////////quality trace picture load //////////////////////
             $("#qt_search_btn").on("click", function () {
+                $brefTable.bootstrapTable("removeAll")
                 var cond = $("#qt_cond").serializeForm();
          
-
                 $.post("SearchTraceBrefAction", { cond: cond }, function (retData) {
-         
-
                     mcAdmin.dealRetData(retData, function () {
                         console.log(retData.Appendix)
                         $brefTable.bootstrapTable("load", retData.Appendix);
-                    
                     })
            
 

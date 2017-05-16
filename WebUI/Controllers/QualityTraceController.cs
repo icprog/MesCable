@@ -118,8 +118,8 @@ namespace WebUI.Controllers
                 //string querySql = "select * From  "+hisData.TableName + " where Axis_No = '" + cond.axisNum + " order by 'CollectedTime'";
                 var allData = bllHisData.GetModelList("Axis_No  LIKE '%" + hisData.AxisNumStr + "%' ORDER BY  'CollectedTime'");
                 var bllSpec = new MesWeb.BLL.Specification();
-                var spec = bllSpec.GetModelList("procedureId = " + cond.machineType+ " and paramTypeId = 2").FirstOrDefault();
-              
+                var spec = bllSpec.GetModelList("procedureId = " + cond.machineType + " and paramTypeId = 2").FirstOrDefault();
+
                 retData.Appendix = allData;
                 retData.Content = spec;
                 if (allData.Count > 0)
@@ -271,7 +271,30 @@ namespace WebUI.Controllers
             return View();
         }
 
-
+        private void filterListMainArrary(List<MesWeb.Model.T_HisMain> hisMainListArray, List<List<MesWeb.Model.T_HisMain>> listArray, string axisNum)
+        {
+            if (listArray.Count > 0)
+            {
+                    listArray.ForEach(l =>
+                   {
+                       l.ForEach(h =>
+                       {
+                           if (!string.IsNullOrEmpty(axisNum))
+                           {
+                               if(h.Axis_No.ToUpper().Contains(axisNum.ToUpper()))
+                               {
+                                   hisMainListArray.Add(h);
+                               }
+                           }
+                           else
+                           {
+                               hisMainListArray.Add(h);
+                           }
+                       });
+                   });
+              
+            }
+        }
 
         [HttpPost]
         public JsonResult SearchTraceBrefAction(VM_Trace_Search_Cond cond)
@@ -285,32 +308,26 @@ namespace WebUI.Controllers
             var brefList = new List<VM_Trace_Bref>();
             try
             {
+                var isFirstSearch = true;
 
-                List<List<MesWeb.Model.T_HisMain>> hisMainListArray = new List<List<MesWeb.Model.T_HisMain>>();
-                var bllSpec = new MesWeb.BLL.T_Specification();
-                if (!string.IsNullOrEmpty(cond.AxisNum))
+                List<MesWeb.Model.T_HisMain> hisMainListArray = new List<MesWeb.Model.T_HisMain>();
+                if (cond.StartTime.HasValue && cond.EndTime.HasValue && cond.StartTime < cond.EndTime)
                 {
-                    var axisNum = new HisMain(cond.AxisNum);
-                    var hisTabName = "HISMAIN" + axisNum.Year + axisNum.Month + axisNum.MachineTypeID.Trim();
-                    var bllHisMain = new MesWeb.BLL.T_HisMain(hisTabName);
-                    var hisMainList = bllHisMain.GetModelList("Axis_No like '%" + cond.AxisNum + "%'");
-                    hisMainListArray.Add(hisMainList);
-                }
-                else if (cond.StartTime.HasValue && cond.EndTime.HasValue && cond.StartTime < cond.EndTime)
-                {
-
+                    isFirstSearch = false;
+                    List<List<MesWeb.Model.T_HisMain>> listArray = null;
                     //同一年
                     if (cond.StartTime.Value.Year == cond.EndTime.Value.Year)
                     {
-                        var listArray = getSameYearData(cond.StartTime, cond.EndTime, cond.MachineType);
-                        hisMainListArray.AddRange(listArray);
-                        //不是同一年
+                        listArray = getSameYearData(cond.StartTime, cond.EndTime, cond.MachineType);
+                        filterListMainArrary(hisMainListArray, listArray, cond.AxisNum);
                     }
+
+                    //不是同一年
                     else
                     {
                         for (var y = cond.StartTime.Value.Year; y <= cond.EndTime.Value.Year; ++y)
                         {
-                            List<List<MesWeb.Model.T_HisMain>> listArray = null;
+
                             if (y == cond.StartTime.Value.Year)
                             {
                                 listArray = getSameYearData(cond.StartTime, new DateTime(y, 12, 31), cond.MachineType);
@@ -323,44 +340,40 @@ namespace WebUI.Controllers
                             {
                                 listArray = getSameYearData(new DateTime(y, 1, 1), new DateTime(y, 12, 31), cond.MachineType);
                             }
-
-                            hisMainListArray.AddRange(listArray);
+                            filterListMainArrary(hisMainListArray, listArray, cond.AxisNum);
                         }
                     }
+
+                }
+                if (!string.IsNullOrEmpty(cond.AxisNum) && isFirstSearch)
+                {
+                    var axisNum = new HisMain(cond.AxisNum);
+                    var hisTabName = "HISMAIN" + axisNum.Year + axisNum.Month + axisNum.MachineTypeID.Trim();
+                    var bllHisMain = new MesWeb.BLL.T_HisMain(hisTabName);
+                    var hisMainList = bllHisMain.GetModelList("Axis_No like '%" + cond.AxisNum + "%'");
+                    hisMainListArray.AddRange(hisMainList);
                 }
 
-
-                hisMainListArray.ForEach(hlist =>
+                hisMainListArray.ForEach(h =>
                 {
                     //生成结果
-                    hlist.ForEach(h =>
+                    try
                     {
-                        try
-                        {
-                            var bref = new VM_Trace_Bref();
-                            bref.SpecNum = "未录入";
-                            if (h.SpecificationID.HasValue)
-                            {
-                                var spec = bllSpec.GetModel(h.SpecificationID.Value);
-                                if (spec != null)
-                                {
-                                    bref.SpecNum = spec.SpecificationName;
-                                }
-                            }
-                            bref.Axis_No = h.Axis_No.Replace(",", "");
-                            var axisNum = new HisMain(h.Axis_No);
-                            bref.Date = axisNum.Year + "-" + axisNum.Month + "-" + axisNum.Day;
+                        var bref = new VM_Trace_Bref();
+                        bref.SpecNum = "未录入";
+                        bref.Axis_No = h.Axis_No.Replace(",", "");
+                        var axisNum = new HisMain(h.Axis_No);
+                        bref.Date = axisNum.Year + "-" + axisNum.Month + "-" + axisNum.Day;
+                        bref.PrintCode = string.IsNullOrEmpty(h.Printcode) ? "未录入" : h.Printcode;
+                        bref.Detail = "<a  tabId=" + h.CurrentDataID + "  tabName = '" + axisNum.GetHisDataTableName() + "' axisNum='" + axisNum.AxisNumStr + "' onclick='showTraceDetail(this)'>详情</a>";
+                        brefList.Add(bref);
+                    }
+                    catch
+                    {
 
-                            bref.PrintCode = string.IsNullOrEmpty(h.Printcode) ? "未录入" : h.Printcode;
-                            bref.Detail = "<a  tabId=" + h.CurrentDataID + "  tabName = '" + axisNum.GetHisDataTableName() + "' axisNum='" + axisNum.AxisNumStr + "' onclick='showTraceDetail(this)'>详情</a>";
-                            brefList.Add(bref);
-                        }
-                        catch (Exception e)
-                        {
-
-                        }
-                    });
+                    }
                 });
+
 
 
 
@@ -394,7 +407,7 @@ namespace WebUI.Controllers
             }
         }
 
-       
+
 
         [HttpPost]
         public JsonResult GetProcDetail(VM_ProcDetail procDetail)
@@ -471,7 +484,7 @@ namespace WebUI.Controllers
                         var machineName = machine.MachineName ?? "";
                         var axisColor = procDetail.SpecColor ?? "";
                         var printCode = procDetail.Printcode ?? "";
-                        procDetail.MachineName = "<a  href='javascript: void(0)' machineType='"+machine.MachineTypeID+"'  employee='" + procDetail.EmployeeName + "'  printCode='" + printCode + "' axisColor='" + axisColor + "'  machineName='" + machineName + "'   axisNum='" + procDetail.Axis_No + "'  onclick='viewHisMachine(this)' machineId='" + machine.MachineID + "'>" + machine.MachineName + "</a>";
+                        procDetail.MachineName = "<a  href='javascript: void(0)' machineType='" + machine.MachineTypeID + "'  employee='" + procDetail.EmployeeName + "'  printCode='" + printCode + "' axisColor='" + axisColor + "'  machineName='" + machineName + "'   axisNum='" + procDetail.Axis_No + "'  onclick='viewHisMachine(this)' machineId='" + machine.MachineID + "'>" + machine.MachineName + "</a>";
                     }
                     else
                     {
