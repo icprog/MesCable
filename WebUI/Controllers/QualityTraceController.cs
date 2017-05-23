@@ -146,6 +146,34 @@ namespace WebUI.Controllers
 
         public static string SERACH_ASIX = "AXISNUM";
 
+        public JsonResult TestSuccItems(VM_Trace_Search_Cond cond)
+        {
+            var retData = new VM_Result_Data();
+
+            var items = SearchTraceBrefAction(cond);
+            List<List<MesWeb.Model.T_HisMain>> listArray = null;
+            List<MesWeb.Model.T_HisMain> hisMainListArray = new List<MesWeb.Model.T_HisMain>();
+            listArray = getSameYearData(cond.StartTime, cond.EndTime, cond.MachineType);
+            filterListMainArrary(hisMainListArray, listArray, cond.AxisNum);
+            List<VM_JSMind> jsMindList = new List<VM_JSMind>();
+            hisMainListArray.ForEach(h =>
+            {
+                VM_JSMind vmJsMind = new VM_JSMind();
+                genMindStruct(h.Axis_No.Trim(), "root", ref vmJsMind, isRoot: true);
+                jsMindList.Add(vmJsMind);
+            });
+            var succTimes = 0;
+            jsMindList.ForEach(mind =>
+            {
+                if(mind.data.Count >= 4)
+                {
+                    succTimes++;
+                }
+            });
+            retData.Code = RESULT_CODE.OK;
+            retData.Content = succTimes;
+            return Json(retData);
+        }
 
 
         [HttpPost]
@@ -275,24 +303,24 @@ namespace WebUI.Controllers
         {
             if (listArray.Count > 0)
             {
-                    listArray.ForEach(l =>
+                listArray.ForEach(l =>
+               {
+                   l.ForEach(h =>
                    {
-                       l.ForEach(h =>
+                       if (!string.IsNullOrEmpty(axisNum))
                        {
-                           if (!string.IsNullOrEmpty(axisNum))
-                           {
-                               if(h.Axis_No.ToUpper().Contains(axisNum.ToUpper()))
-                               {
-                                   hisMainListArray.Add(h);
-                               }
-                           }
-                           else
+                           if (h.Axis_No.ToUpper().Contains(axisNum.ToUpper()))
                            {
                                hisMainListArray.Add(h);
                            }
-                       });
+                       }
+                       else
+                       {
+                           hisMainListArray.Add(h);
+                       }
                    });
-              
+               });
+
             }
         }
 

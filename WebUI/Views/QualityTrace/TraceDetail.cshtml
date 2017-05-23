@@ -70,7 +70,6 @@
             var mcAdmin = window.parent.mcAdmin;
        
             var id = $link.attr("id");
-            console.log(id);
             mcAdmin.addTab("物料证书", "/Material/GumReportDetail/"+id);
         }
 
@@ -82,7 +81,6 @@
                 var procJsMind = {};
                 var mindData = @Html.Raw(Json.Encode(Model));
                 var retMind = mindData;
-                console.log(mindData);
                 var mind = {
                     "meta": {
                         "name": "qualitytrace",
@@ -98,11 +96,9 @@
                     editable: false,
                     theme: 'primary',
                     dblclickNode: function (selectNode) {
-                        console.log(selectNode);
                         selectNode.data.data.EmployeeName= selectNode.data.data.EmployeeID_Main;
 
                         $.post("/QualityTrace/GetProcDetail", { procDetail: selectNode.data.data }, function (retData) {
-
 
                             if (retData.Code == RESULT_CODE.OK) {
                                 var tabData = retData.Appendix;

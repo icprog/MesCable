@@ -70,10 +70,10 @@
       <publishTime>05/15/2017 21:39:01</publishTime>
     </File>
     <File Include="bin/MesWeb.DBUtility.dll">
-      <publishTime>05/15/2017 21:38:27</publishTime>
+      <publishTime>05/23/2017 12:11:56</publishTime>
     </File>
     <File Include="bin/MesWeb.DBUtility.pdb">
-      <publishTime>05/15/2017 21:38:27</publishTime>
+      <publishTime>05/23/2017 12:11:56</publishTime>
     </File>
     <File Include="bin/MesWeb.IDAL.dll">
       <publishTime>05/15/2017 21:38:27</publishTime>
@@ -94,10 +94,10 @@
       <publishTime>05/15/2017 21:38:31</publishTime>
     </File>
     <File Include="bin/MesWeb.ViewModel.dll">
-      <publishTime>05/15/2017 21:38:51</publishTime>
+      <publishTime>05/23/2017 12:11:56</publishTime>
     </File>
     <File Include="bin/MesWeb.ViewModel.pdb">
-      <publishTime>05/15/2017 21:38:51</publishTime>
+      <publishTime>05/23/2017 12:11:56</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
       <publishTime>01/12/2017 09:35:45</publishTime>
@@ -232,10 +232,10 @@
       <publishTime>01/12/2017 09:35:49</publishTime>
     </File>
     <File Include="bin/WebUI.dll">
-      <publishTime>05/16/2017 11:33:17</publishTime>
+      <publishTime>05/23/2017 13:58:30</publishTime>
     </File>
     <File Include="bin/WebUI.pdb">
-      <publishTime>05/16/2017 11:33:17</publishTime>
+      <publishTime>05/23/2017 13:58:30</publishTime>
     </File>
     <File Include="bin/x64/SQLite.Interop.dll">
       <publishTime>01/12/2017 09:35:48</publishTime>
@@ -2335,10 +2335,10 @@
       <publishTime>01/12/2017 09:35:33</publishTime>
     </File>
     <File Include="Scripts/lib/plugins/fusioncharts-suite-xt/jquery-1.11.3.min.js">
-      <publishTime>05/16/2017 11:38:24</publishTime>
+      <publishTime>05/23/2017 13:58:28</publishTime>
     </File>
     <File Include="Scripts/lib/plugins/fusioncharts-suite-xt/jquery-1.11.3.min.js.map">
-      <publishTime>05/16/2017 11:38:24</publishTime>
+      <publishTime>05/23/2017 13:58:28</publishTime>
     </File>
     <File Include="Scripts/lib/plugins/fusioncharts-suite-xt/maps/fusioncharts.usa.js">
       <publishTime>01/12/2017 09:35:33</publishTime>
@@ -3088,19 +3088,19 @@
       <publishTime>04/23/2017 15:48:51</publishTime>
     </File>
     <File Include="Views/QualityTrace/HalfSearch.cshtml">
-      <publishTime>05/16/2017 11:37:26</publishTime>
+      <publishTime>05/22/2017 11:18:32</publishTime>
     </File>
     <File Include="Views/QualityTrace/Index.cshtml">
       <publishTime>01/12/2017 09:35:35</publishTime>
     </File>
     <File Include="Views/QualityTrace/MachineHistory.cshtml">
-      <publishTime>05/15/2017 21:54:41</publishTime>
+      <publishTime>05/22/2017 12:01:55</publishTime>
     </File>
     <File Include="Views/QualityTrace/TraceDetail.cshtml">
-      <publishTime>05/15/2017 20:32:53</publishTime>
+      <publishTime>05/23/2017 13:02:32</publishTime>
     </File>
     <File Include="Views/QualityTrace/TraceSearch.cshtml">
-      <publishTime>05/16/2017 11:09:47</publishTime>
+      <publishTime>05/23/2017 13:16:03</publishTime>
     </File>
     <File Include="Views/StoreMgmt/MaterialSearch.cshtml">
       <publishTime>01/12/2017 09:35:36</publishTime>

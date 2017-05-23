@@ -202,7 +202,7 @@ namespace WebUI.Controllers
             {
                 cond.ForEach(c =>
                 {
-                    condStr = condStr + spliter + c + "%";
+                    condStr = condStr + spliter +"%"+ c + "%";
                 });
                 condStr = condStr.Substring(spliter.Length);
             }
